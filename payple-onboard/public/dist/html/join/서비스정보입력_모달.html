@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--    서버반영시 -->
+    <link rel="stylesheet" href="https://image.payple.kr/onboard/css/payple_component.css?ver=1.2">
+    <link rel="stylesheet" href="https://image.payple.kr/onboard/css/payple_pages.css?ver=1.2">
+    <script src="https://image.payple.kr/onboard/js/bundle.js?ver=1.2"></script>
+    <script src="https://image.payple.kr/onboard/js/common.js?ver=1.2"></script>
+    <!--    로컬작업시-->
+<!--    <link rel="stylesheet" href="../../css/payple_component.css">-->
+<!--    <link rel="stylesheet" href="../../css/payple_pages.css">-->
+<!--    <script src="../../js/bundle.js"></script>-->
+<!--    <script src="../../js/common.js"></script>-->
+</head>
+<body>
+<header class="header">
+    <div class="header__container">
+        <div class="header__navi">
+            <h1 class="header__logo">
+                <a href="https://onboard.payple.co" target="_blank">
+                    <img src="https://image.payple.kr/onboard/common/header__logo.png" alt="페이플로고">
+                </a>
+            </h1>
+            <ul class="header__navi__link">
+                <li>
+                    <a href="https://payple.kr/developer-guide" target="_blank">개발자센터</a>
+                </li>
+                <li>
+                    <a href="https://payple.kr/cs" target="_blank">고객센터</a>
+                </li>
+            </ul>
+        </div>
+        <div class="position_relative">
+            <i class="icon ico_account_btn _ico_account_btn">계정관리</i>
+            <ul class=" position_absolute header__account_info _header__account_info">
+                <li>
+                    <span>dw.junglses@payple.kr</span>
+                </li>
+                <li>
+                    <a href=""><i class="icon ico_setting"></i><span>계정설정</span></a>
+                </li>
+                <li>
+                    <a href=""><i class="icon ico_member_join"></i><span>관리자 초대</span></a>
+                </li>
+                <li>
+                    <a href=""><i class="icon ico_logout"></i><span>로그아웃</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+<div class="join_container">
+    <div class="progress_box">
+        <progress class="progress_value" value="40" min="0" max="100"></progress>
+    </div>
+    <ul class="step_list">
+        <li class="step">사업자번호 확인</li>
+        <li class="step active">서비스정보 입력</li>
+        <li class="step">결제수단 선택</li>
+        <li class="step">담당자정보 입력</li>
+        <li class="step">신청완료</li>
+    </ul>
+    <div class="join_wrap">
+        <div class="join_content_section">
+            <h3 class="main_title font_weight_bold">회사와 운영중인 서비스의<br>정보를 알려주세요.</h3>
+            <div class="service__info__section">
+                <div class="info_box">
+                    <p class="info_main_title font_weight_bold">회사정보</p>
+                    <div class="input_box">
+                        <p class="info_sub_title">사업자 등록증에 기재된 상호명</p>
+                        <label class="form_label w-100">
+                            <input class="form_control" type="text">
+                        </label>
+                    </div>
+                    <div class="input_box">
+                        <p class="info_sub_title">사업자등록증 업로드</p>
+                        <label class="form_label w-100 file_custom">
+                            <input class="form_control" type="file">
+                            <span class="icon_area">
+                                <i class="icon ico_download"></i>
+                            </span>
+                        </label>
+                        <p class="caption">jpg, jpeg, png 이미지 또는 pdf</p>
+                    </div>
+                </div>
+                <div class="info_box">
+                    <p class="info_main_title font_weight_bold">서비스정보</p>
+                    <div class="input_box">
+                        <p class="info_sub_title">서비스명</p>
+                        <label class="form_label w-100">
+                            <input class="form_control" type="text">
+                        </label>
+                    </div>
+                    <div class="input_box">
+                        <p class="info_sub_title">결제를 도입할 홈페이지 주소</p>
+                        <label class="form_label w-100">
+                            <input class="form_control" type="text">
+                        </label>
+                    </div>
+                    <div class="input_box">
+                        <p class="info_sub_title">판매상품</p>
+                        <div class="gray_box _result_checkbox">
+                            <div id="result"></div>
+                        </div>
+                        <div class="text_right">
+                            <div class="btn" onclick="openModal('modal0')">선택</div>
+                        </div>
+                    </div>
+                    <div class="modal modal_xl modal0 show fade">
+                        <div class="modal_dialog modal_xl modal_checkbox">
+                            <div class="modal_content">
+                                <div class="modal_header">
+                                    <h2 class="modal_title font_weight_bold">판매하시려는 상품을 선택해 주세요.</h2>
+                                    <i class="icon ico_close_btn _modal_close_btn">종료버튼</i>
+                                </div>
+                                <div class="modal_body">
+                                    <div class="radio_list_box">
+                                        <div class="type_select_list">
+                                            <p class="title">플랫폼</p>
+                                            <ul class="select_list">
+                                                <li>
+                                                    <input id="check1" type="checkbox" class="_checkbox_list"
+                                                           name="checkList">
+                                                    <label class="check_label" for="check1">
+                                                        창작(크리에이터)
+                                                    </label>
+
+                                                </li>
+                                                <li>
+                                                    <input id="check2" type="checkbox" class="_checkbox_list"
+                                                           name="checkList">
+                                                    <label class="check_label" for="check2">
+                                                        비대면 진료
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <input id="check3" type="checkbox" class="_checkbox_list"
+                                                           name="checkList">
+                                                    <label class="check_label" for="check3">
+                                                        OTT 계정 공유
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <input id="check4" type="checkbox" class="_checkbox_list"
+                                                           name="checkList">
+                                                    <label class="check_label" for="check4">
+                                                        공간, 숙소
+                                                    </label>
+
+                                                </li>
+                                                <li>
+                                                    <input id="check5" type="checkbox" class="_checkbox_list"
+                                                           name="checkList">
+                                                    <label class="check_label" for="check5">
+                                                        트립, 액티비티, 취미
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <input id="check6" type="checkbox" class="_checkbox_list"
+                                                           name="checkList">
+                                                    <label class="check_label" for="check6">
+                                                        모빌리티(교통)
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <input id="check7" type="checkbox" class="_checkbox_list"
+                                                           name="checkList">
+                                                    <label class="check_label" for="check7">
+                                                        후원, 기부
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <input id="check8" type="checkbox" class="_checkbox_list"
+                                                           name="checkList">
+                                                    <label class="check_label" for="check8">
+                                                        크라우드펀딩
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <input id="check9" type="checkbox" class="_checkbox_list"
+                                                           name="checkList">
+                                                    <label class="check_label" for="check9">
+                                                        중고마켓
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <input id="check10" type="checkbox" class="_checkbox_list"
+                                                           name="checkList">
+                                                    <label class="check_label" for="check10">
+                                                        라이브커머스, 오픈마켓
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <input id="check11" type="checkbox" class="_checkbox_list"
+                                                           name="checkList">
+                                                    <label class="check_label" for="check11">
+                                                        구매대행, 해외직구
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="type_select_list">
+                                            <p class="title">소프트웨어</p>
+                                            <ul class="select_list">
+
+                                                <li>
+                                                    <input id="check12" type="checkbox" class="_checkbox_list"
+                                                           name="checkList">
+                                                    <label class="check_label" for="check12">
+                                                        SaaS(1년 미만 구독형)
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <input id="check13" type="checkbox" class="_checkbox_list"
+                                                           name="checkList">
+                                                    <label class="check_label" for="check13">
+                                                        SaaS(1년 이상 구독형)
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <input id="check14" type="checkbox" class="_checkbox_list"
+                                                           name="checkList">
+                                                    <label class="check_label" for="check14">
+                                                        SaaS(판매형)
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <input id="check15" type="checkbox" class="_checkbox_list"
+                                                           name="checkList">
+                                                    <label class="check_label" for="check15">
+                                                        홈페이지 제작
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <input id="check16" type="checkbox" class="_checkbox_list"
+                                                           name="checkList">
+                                                    <label class="check_label" for="check16">
+                                                        호스팅
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="type_select_list">
+                                            <p class="title">디지털컨텐츠</p>
+                                            <ul class="select_list">
+                                                <li>
+                                                    <input id="check17" type="checkbox" class="_checkbox_list"
+                                                           name="checkList">
+                                                    <label class="check_label" for="check17">
+                                                        전자책, 웹툰, 웹소설
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <input id="check18" type="checkbox" class="_checkbox_list"
+                                                           name="checkList">
+                                                    <label class="check_label" for="check18">
+                                                        게임
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <input id="check19" type="checkbox" class="_checkbox_list"
+                                                           name="checkList">
+                                                    <label class="check_label" for="check19">
+                                                        음원
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <input id="check20" type="checkbox" class="_checkbox_list"
+                                                           name="checkList">
+                                                    <label class="check_label" for="check20">
+                                                        인터넷강의
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <input id="check21" type="checkbox" class="_checkbox_list"
+                                                           name="checkList">
+                                                    <label class="check_label" for="check21">
+                                                        모바일상품권(기프티콘)
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <input id="check22" type="checkbox" class="_checkbox_list"
+                                                           name="checkList">
+                                                    <label class="check_label" for="check22">
+                                                        OTT
+                                                    </label>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                        <div class="type_select_list">
+                                            <p class="title">커머스 - 패션, 뷰티</p>
+                                            <ul class="select_list">
+                                                <li>
+                                                    <input id="check23" type="checkbox" class="_checkbox_list"
+                                                           name="checkList">
+                                                    <label class="check_label" for="check23">
+                                                        패션 - 의류
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <input id="check24" type="checkbox" class="_checkbox_list"
+                                                           name="checkList">
+                                                    <label class="check_label" for="check24">
+                                                        패션 - 잡화
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <input id="check25" type="checkbox" class="_checkbox_list"
+                                                           name="checkList">
+                                                    <label class="check_label" for="check25">
+                                                        패션 - 악세서리
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <input id="check26" type="checkbox" class="_checkbox_list"
+                                                           name="checkList">
+                                                    <label class="check_label" for="check26">
+                                                        뷰티
+                                                    </label>
+
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                        <div class="type_select_list">
+                                            <p class="title">커머스 - 용품</p>
+                                            <ul class="select_list">
+                                                <li>
+                                                    <input id="check27" type="checkbox" class="_checkbox_list"
+                                                           name="checkList">
+                                                    <label class="check_label" for="check27">
+                                                        생활
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <input id="check28" type="checkbox" class="_checkbox_list"
+                                                           name="checkList">
+                                                    <label class="check_label" for="check28">
+                                                        주방
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <input id="check29" type="checkbox" class="_checkbox_list"
+                                                           name="checkList">
+                                                    <label class="check_label" for="check29">
+                                                        건강
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <input id="check30" type="checkbox" class="_checkbox_list"
+                                                           name="checkList">
+                                                    <label class="check_label" for="check30">
+                                                        반려동물
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <input id="check31" type="checkbox" class="_checkbox_list"
+                                                           name="checkList">
+                                                    <label class="check_label" for="check31">
+                                                        문구, 사무
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <input id="check32" type="checkbox" class="_checkbox_list"
+                                                           name="checkList">
+                                                    <label class="check_label" for="check32">
+                                                        출산, 유아
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <input id="check33" type="checkbox" class="_checkbox_list"
+                                                           name="checkList">
+                                                    <label class="check_label" for="check33">
+                                                        스포츠, 레저
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <input id="check34" type="checkbox" class="_checkbox_list"
+                                                           name="checkList">
+                                                    <label class="check_label" for="check34">
+                                                        자동차
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <input id="check35" type="checkbox" class="_checkbox_list"
+                                                           name="checkList">
+                                                    <label class="check_label" for="check35">
+                                                        공구, 안전, 산업
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <input id="check36" type="checkbox" class="_checkbox_list"
+                                                           name="checkList">
+                                                    <label class="check_label" for="check36">
+                                                        성인
+                                                    </label>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                        <div class="type_select_list">
+                                            <p class="title">커머스 - 식품</p>
+                                            <ul class="select_list">
+                                                <li>
+                                                    <input id="check37" type="checkbox" class="_checkbox_list"
+                                                           name="checkList">
+                                                    <label class="check_label" for="check37">
+                                                        일반
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <input id="check38" type="checkbox" class="_checkbox_list"
+                                                           name="checkList">
+                                                    <label class="check_label" for="check38">
+                                                        주류
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <input id="check39" type="checkbox" class="_checkbox_list"
+                                                           name="checkList">
+                                                    <label class="check_label" for="check39">
+                                                        농산물, 수산물, 축산물
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <input id="check40" type="checkbox" class="_checkbox_list"
+                                                           name="checkList">
+                                                    <label class="check_label" for="check40">
+                                                        건강기능
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <input id="check41" type="checkbox" class="_checkbox_list"
+                                                           name="checkList">
+                                                    <label class="check_label" for="check41">
+                                                        의약품
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="type_select_list">
+                                            <p class="title">커머스 - 기타</p>
+                                            <ul class="select_list">
+                                                <li>
+                                                    <input id="check42" type="checkbox" class="_checkbox_list"
+                                                           name="checkList">
+                                                    <label class="check_label" for="check42">
+                                                        가구
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <input id="check43" type="checkbox" class="_checkbox_list"
+                                                           name="checkList">
+                                                    <label class="check_label" for="check43">
+                                                        가전
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <input id="check44" type="checkbox" class="_checkbox_list"
+                                                           name="checkList">
+                                                    <label class="check_label" for="check44">
+                                                        전자, 통신기기
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <input id="check45" type="checkbox" class="_checkbox_list"
+                                                           name="checkList">
+                                                    <label class="check_label" for="check45">
+                                                        도서
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <input id="check46" type="checkbox" class="_checkbox_list"
+                                                           name="checkList">
+                                                    <label class="check_label" for="check46">
+                                                        음반
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="type_select_list">
+                                            <p class="title">기타</p>
+                                            <ul class="select_list">
+                                                <li>
+                                                    <input id="check47" type="checkbox" class="_checkbox_list"
+                                                           name="checkList">
+                                                    <label class="check_label" for="check47">
+                                                        멤버십
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <input id="check48" type="checkbox" class="_checkbox_list"
+                                                           name="checkList">
+                                                    <label class="check_label" for="check48">
+                                                        학원
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <input id="check49" type="checkbox" class="_checkbox_list"
+                                                           name="checkList">
+                                                    <label class="check_label" for="check49">
+                                                        광고, 마케팅 대행
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <input id="check50" type="checkbox" class="_checkbox_list"
+                                                           name="checkList">
+                                                    <label class="check_label" for="check50">
+                                                        세무회계, 법률상담
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <input id="check51" type="checkbox" class="_checkbox_list"
+                                                           name="checkList">
+                                                    <label class="check_label" for="check51">
+                                                        학회, 행사
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <input id="check52" type="checkbox" class="_checkbox_list"
+                                                           name="checkList">
+                                                    <label class="check_label" for="check52">
+                                                        영화, 공연, 전시
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <input id="check53" type="checkbox" class="_checkbox_list"
+                                                           name="checkList">
+                                                    <label class="check_label" for="check53">
+                                                        항공
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <input id="check54" type="checkbox" class="_checkbox_list"
+                                                           name="checkList">
+                                                    <label class="check_label" for="check54">
+                                                        운세, 사주
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <input id="check55" type="checkbox" class="_checkbox_list"
+                                                           name="checkList">
+                                                    <label class="check_label" for="check55">
+                                                        NFT
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <input id="check56" type="checkbox" class="_checkbox_list"
+                                                           name="checkList">
+                                                    <label class="check_label" for="check56">
+                                                        블록체인
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <input id="check57" type="checkbox" class="_checkbox_list"
+                                                           name="checkList">
+                                                    <label class="check_label" for="check57">
+                                                        가상자산
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <input id="check58" type="checkbox" class="_checkbox_list"
+                                                           name="checkList">
+                                                    <label class="check_label" for="check58">
+                                                        조각투자(공동소유)
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <input id="check59" type="checkbox" class="_checkbox_list"
+                                                           name="checkList">
+                                                    <label class="check_label" for="check59">
+                                                        BNPL
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal_footer check_btn_footer">
+                                    <span class="btn btn_primary _modal_close_btn">선택 완료</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input_box mb-170">
+                        <p class="info_sub_title">월거래액</p>
+                        <div class="select_box _select_box">
+                            <div class="select_value">
+                                월거래액 선택
+                            </div>
+                            <i class="icon ico_select_arrow_down">아래화살표</i>
+                            <ul class="options">
+                                <li class="option" value="1">신규 도입(현재 거래 없음)</li>
+                                <li class="option" value="2">1억원 미만</li>
+                                <li class="option" value="3">1억원 ~ 5억원</li>
+                                <li class="option" value="4">5억원 이상</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="btn_next_prev_wrap">
+    <button class="btn btn_next btn_secondary"><i class="icon ico_left_white">이전</i><span>이전</span></button>
+    <button class="btn _next_btn btn_prev btn_primary _btn" disabled><span>다음</span><i class="icon ico_right_white">다음</i></button>
+</div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+<script>
+    $(document).ready(function() {
+        $("._checkbox_list").change(function() {
+            var checkedValue = $(this).next(".check_label").text().trim();
+            var isChecked = $(this).is(":checked");
+            if (isChecked) {
+                var result = "<span class='is_check_box'>" + checkedValue + "<i class='icon ico_close_gray_sm'></i></span>";
+                $("#result").append(result);
+            } else {
+                $("#result").find(".is_check_box:contains('" + checkedValue + "')").remove();
+            }
+        });
+
+        $("#result").on("click", ".ico_close_gray_sm", function() {
+            var span = $(this).closest(".is_check_box");
+            var labelText = span.text().trim();
+            var checkbox = $("._checkbox_list").filter(function() {
+                return $(this).next(".check_label").text().trim() === labelText;
+            });
+
+            checkbox.prop("checked", false);
+            span.remove();
+        });
+    });
+
+
+</script>
+
+</html>

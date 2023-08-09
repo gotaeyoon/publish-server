@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--    서버반영시 -->
+    <link rel="stylesheet" href="https://image.payple.kr/onboard/css/payple_component.css?ver=1.2">
+    <link rel="stylesheet" href="https://image.payple.kr/onboard/css/payple_pages.css?ver=1.2">
+    <script src="https://image.payple.kr/onboard/js/bundle.js?ver=1.2"></script>
+    <script src="https://image.payple.kr/onboard/js/common.js?ver=1.2"></script>
+    <!--    로컬작업시-->
+<!--    <link rel="stylesheet" href="../../css/payple_component.css">-->
+<!--    <link rel="stylesheet" href="../../css/payple_pages.css">-->
+<!--    <script src="../../js/bundle.js"></script>-->
+<!--    <script src="../../js/common.js"></script>-->
+</head>
+<body>
+<header class="header">
+    <div class="header__container">
+        <div class="header__navi">
+            <h1 class="header__logo">
+                <a href="https://onboard.payple.co" target="_blank">
+                    <img src="https://image.payple.kr/onboard/common/header__logo.png" alt="페이플로고">
+                </a>
+            </h1>
+            <ul class="header__navi__link">
+                <li>
+                    <a href="https://payple.kr/developer-guide" target="_blank">개발자센터</a>
+                </li>
+                <li>
+                    <a href="https://payple.kr/cs" target="_blank">고객센터</a>
+                </li>
+            </ul>
+        </div>
+        <div class="position_relative">
+            <i class="icon ico_account_btn _ico_account_btn">계정관리</i>
+            <ul class=" position_absolute header__account_info _header__account_info">
+                <li>
+                    <span>dw.junglses@payple.kr</span>
+                </li>
+                <li>
+                    <a href=""><i class="icon ico_setting"></i><span>계정설정</span></a>
+                </li>
+                <li>
+                    <a href=""><i class="icon ico_member_join"></i><span>관리자 초대</span></a>
+                </li>
+                <li>
+                    <a href=""><i class="icon ico_logout"></i><span>로그아웃</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+<div class="join_container">
+    <div class="progress_box">
+        <progress class="progress_value" value="80" min="0" max="100"></progress>
+    </div>
+    <ul class="step_list">
+        <li class="step">사업자번호 확인</li>
+        <li class="step">서비스정보 입력</li>
+        <li class="step">결제수단 선택</li>
+        <li class="step active">담당자정보 입력</li>
+        <li class="step">신청완료</li>
+    </ul>
+    <div class="join_wrap">
+        <div class="join_content_section">
+            <h3 class="main_title font_weight_bold">dw.jung@naver.com님이<br>
+                계약을 진행할 담당자이신가요?
+            </h3>
+            <div class="label__design_box contract">
+                <div class="label__design">
+                    <input name="checkType" type="radio" id="check1">
+                    <label for="check1" class="checked__label">
+                        <span>담당자가 따로 있어요.</span>
+                    </label>
+                </div>
+                <div class="label__design _modal_btn">
+                    <input name="checkType" type="radio" id="check2">
+                    <label for="check2" class="checked__label" onclick="openModal('modal0')">
+                        <span>네 맞아요.</span>
+                    </label>
+                </div>
+            </div>
+            <div class="detail_area _detail_area">
+                <div class="pc_show"><h3 class="main_title font_weight_bold">담당자 정보를 입력해주세요.<br>
+                    계약을 비롯한 모든 절차는<br>
+                    입력해주신 담당자님을 통해 진행됩니다.
+                </h3></div>
+                <div class="mo_show"><h3 class="main_title font_weight_bold" style="font-size: 18px">담당자 정보를 입력해주세요.<br>
+                    계약을 비롯한 모든 절차는 입력해주신<br>담당자님을 통해 진행됩니다.
+                </h3></div>
+                <div class="detail__list">
+                    <div class="input__area">
+                        <p class="input_title">이름</p>
+                        <label class="w-100"><input class="form_control"></label>
+                    </div>
+                    <div class="input__area">
+                        <p class="input_title">이메일 주소</p>
+                        <div class="position_relative">
+                            <label class="w-100"><input class="form_control border_danger"></label>
+                            <div class="validation_area ">
+                                <p class="validation color_danger">이메일 주소에 ‘@’를 포함해 주세요. </p>
+                            </div>
+                            <div class="validation_area show">
+                                <p class="validation color_danger">이메일 형식을 다시 확인해 주세요.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input__area">
+                        <p class="input_title">휴대폰 번호</p>
+                        <label class="w-100"><input class="form_control _input_phone" type="tel" maxlength="13"></label>
+                    </div>
+                </div>
+                <div class="btn_next_prev_wrap">
+                    <button class="btn btn_next btn_secondary"><i class="icon ico_left_white">이전</i><span>이전</span></button>
+                    <button class="btn _next_btn btn_prev btn_primary _btn" onclick="openModal('modal0')"><span>다음</span><i class="icon ico_right_white">다음</i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal modal0 show fade">
+    <div class="modal_dialog modal_confirmation">
+        <div class="modal_content">
+            <div class="modal_header">
+                <h2 class="modal_title font_weight_bold">최종 확인</h2>
+                <i class="icon ico_close_btn _modal_close_btn">종료버튼</i>
+            </div>
+            <div class="modal_body">
+                <div class="confirm_area">
+                    <div class="confirm_list">
+                        <p class="font_weight_bold confirm_title">회사정보</p>
+                        <div class="confirm_desc_area">
+                            <p class="confirm_desc"><span class="confirm_desc_title">사업자번호</span><span>3318701049</span>
+                            </p>
+                            <p class="confirm_desc"><span
+                                    class="confirm_desc_title">회사명</span><span>(주)정다운 나라 </span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="confirm_list">
+                        <p class="font_weight_bold confirm_title">서비스정보</p>
+                        <div class="confirm_desc_area">
+                            <p class="confirm_desc"><span
+                                    class="confirm_desc_title">서비스명</span><span>정다운세상</span></p>
+                            <p class="confirm_desc"><span
+                                    class="confirm_desc_title">홈페이지</span><span>www.dawoony.com</span></p>
+                            <p class="confirm_desc"><span class="confirm_desc_title">판매상품</span>
+                                <span class="confirm_desc_list">
+                                    <span>반려동물용품</span>
+                                    <span>크라우드 펀딩</span>
+                                    <span>생산,제조업</span>
+                                    <span>배달, 물류, 배송</span>
+                                    <span>제무회계, 법률상담</span>
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="confirm_list">
+                        <p class="font_weight_bold confirm_title">국내 결제서비스</p>
+                        <div class="confirm_desc_area">
+                            <p class="confirm_desc">
+                                <span class="confirm_desc_title">카드</span>
+                                <span class="confirm_desc_list">
+                                    <span>앱카드, 빌링(정기결제)</span>
+                                </span>
+                            </p>
+                            <p class="confirm_desc">
+                                <span class="confirm_desc_title">계좌</span>
+                                <span class="confirm_desc_list">
+                                    <span>빌링(정기결제)</span>
+                                </span>
+                            </p>
+                            <p class="confirm_desc">
+                                <span class="confirm_desc_title">허브</span>
+                                <span class="confirm_desc_list">
+                                    <span>플랫폼 자동 정산</span>
+                                </span>
+                            </p>
+                            <p class="confirm_desc">
+                                <span class="confirm_desc_title">간편결제</span>
+                                <span class="confirm_desc_list">
+                                    <span>네이버페이, 애플페이, 카카오페이</span>
+                                </span>
+                            </p>
+                            <p class="confirm_desc">
+                                <span class="confirm_desc_title">기타</span>
+                                <span class="confirm_desc_list">
+                                    <span>가상계좌</span>
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="confirm_list">
+                        <p class="font_weight_bold confirm_title">담당자 정보</p>
+                        <div class="confirm_desc_area">
+                            <p class="confirm_desc"><span class="confirm_desc_title">이름</span><span>정다운</span>
+                            </p>
+                            <p class="confirm_desc"><span
+                                    class="confirm_desc_title">이메일 주소</span><span>dw.jung@naver.com</span>
+                            </p>
+                            <p class="confirm_desc"><span
+                                    class="confirm_desc_title">휴대폰 번호</span><span>010-7308-3111</span>
+                            </p>
+                        </div>
+                    </div>
+                    <p class="modify_text"><i class="icon ico_alert_gray"></i><span>수정을 원하실 경우 상단의 닫기버튼을 누르고 해당페이지로 돌아가 수정을
+                        진행해 주세요.</span></p>
+                </div>
+            </div>
+            <div class="modal_footer confirm">
+                <button class="btn btn_primary">신청하기</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function showDetail() {
+        $('#check1').on('click', function () {
+            $('.detail_area').show();
+
+        });
+        $('#check2').on('click', function () {
+            $('.detail_area').hide();
+        });
+    }
+
+    showDetail();
+</script>
+</body>
+</html>
