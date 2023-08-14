@@ -56,7 +56,7 @@ function toggleAccountInfo() {
     });
 }
 
-//selectbox 공통
+//selectBox 공통
 function selectBox() {
     let selectBox = $('._select_box')
     selectBox.on('click', function () {

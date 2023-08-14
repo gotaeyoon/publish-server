@@ -4,21 +4,105 @@ data.email = {
     list: [
         {
             stateClass: 'complete',
-            url: '가입완료',
+            url: '회원가입_인증',
             category: 'email',
-            page: '가입완료'
+            page: '회원가입_인증'
+        },
+        {
+            stateClass: 'confirm',
+            url: '회원가입_완료',
+            category: 'email',
+            page: '회원가입_완료'
         },
         {
             stateClass: 'complete',
-            url: '임시비밀번호',
+            url: '비밀번호_재설정',
             category: 'email',
-            page: '임시비밀번호'
+            page: '비밀번호_재설정'
         },
         {
             stateClass: 'complete',
-            url: '초대이메일',
+            url: '관리자_초대',
             category: 'email',
-            page: '초대이메일'
+            page: '관리자_초대'
+        },
+        {
+            stateClass: 'confirm',
+            url: '상태변경_심사_서비스신청후',
+            category: 'email',
+            page: '상태변경_심사_서비스신청후'
+        },
+        {
+            stateClass: 'confirm',
+            url: '상태변경_심사_통과',
+            category: 'email',
+            page: '상태변경_심사_통과'
+        },
+        {
+            stateClass: 'confirm',
+            url: '상태변경_심사_일부통과',
+            category: 'email',
+            page: '상태변경_심사_일부통과'
+        },
+        {
+            stateClass: 'confirm',
+            url: '상태변경_심사_불가',
+            category: 'email',
+            page: '상태변경_심사_불가'
+        },
+        {
+            stateClass: 'confirm',
+            url: '상태변경_계약서발송',
+            category: 'email',
+            page: '상태변경_계약서발송'
+        },
+        {
+            stateClass: 'confirm',
+            url: '상태변경_계약완료',
+            category: 'email',
+            page: '상태변경_계약완료'
+        },
+        {
+            stateClass: 'confirm',
+            url: '이메일_민원',
+            category: 'email',
+            page: '이메일_민원'
+        },
+        {
+            stateClass: 'confirm',
+            url: '이메일_차지백',
+            category: 'email',
+            page: '이메일_차지백'
+        },
+        {
+            stateClass: 'confirm',
+            url: '이메일_공지',
+            category: 'email',
+            page: '이메일_공지'
+        },
+        {
+            stateClass: 'confirm',
+            url: '이메일_보증보험갱신_2주전',
+            category: 'email',
+            page: '이메일_보증보험갱신_2주전'
+        },
+        {
+            stateClass: 'confirm',
+            url: '이메일_보증보험갱신_3일전',
+            category: 'email',
+            page: '이메일_보증보험갱신_3일전'
+        },
+        {
+            stateClass: 'confirm',
+            url: '이메일_보증보험미갱신_서비스정지',
+            category: 'email',
+            page: '이메일_보증보험미갱신_서비스정지'
+        },
+        {
+            stateClass: 'confirm',
+            url: '이메일_보증보험미갱신_정산보류',
+            category: 'email',
+            page: '이메일_보증보험미갱신_정산보류'
         },
     ]
 }
