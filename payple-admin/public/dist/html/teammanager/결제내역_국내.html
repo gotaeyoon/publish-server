@@ -641,25 +641,422 @@
 </div>
         <!-- 컨텐츠 s-->
         <article class="content-container">
-            <section>
-                <!-- Nav tabs -->
-                <ul class="nav nav-tabs" role="tablist">
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link active" data-toggle="tab" data-target="#dummy1" type="button" role="tab" aria-controls="dummy1">개인사업자</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link"  data-toggle="tab" data-target="#dummy2" aria-controls="dummy1">법인</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link"  data-toggle="tab" data-target="#dummy3" type="button" role="tab">건별</button>
-                    </li>
-                </ul>
-                <!-- Tab panes -->
-                <div class="tab-content">
-                    <div class="tab-pane active" id="dummy1" role="tabpanel">탭리스트1</div>
-                    <div class="tab-pane" id="dummy2" role="tabpanel">탭리스트2</div>
-                    <div class="tab-pane" id="dummy3" role="tabpanel">탭리스트3</div>
+            <section class="payment-history-section">
+                <h3 class="main-title font-weight-bold">결제내역-국내</h3>
+                <div class="card">
+                    <h5 class="filter-title font-weight-semi-bold">
+                        <i class="icon ico_filter"></i>
+                        <span>검색 필터</span>
+                    </h5>
+                    <div class="row">
+                        <div class="col-xl" style="flex:0 0 20%">
+                            <div class="form-group">
+                                <div class="btn-group w-100">
+                                    <input class="radio_label" type="radio" name="example1" id="test1" checked="">
+                                    <label class="btn btn-secondary" for="test1">거래일</label>
+                                    <input class="radio_label" type="radio" name="example1" id="test2">
+                                    <label class="btn btn-secondary" for="test2">정산일</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex" style="flex: 1 1 80%">
+                            <div class="form-group" style="padding: 0 15px; min-width: 25%">
+                                <div>
+                                    <button class="btn btn-secondary" id="threeMonthAgoBtn">3개월</button>
+                                    <button class="btn btn-secondary" id="lastMonthBtn">지난달</button>
+                                    <button class="btn btn-secondary" id="thisMonthBtn">이번달</button>
+                                    <button class="btn btn-secondary" id="yesterdayBtn">어제</button>
+                                    <button class="btn btn-secondary" id="todayBtn">오늘</button>
+                                </div>
+                            </div>
+                            <div class="form-group" style="padding: 0 15px; min-width: 25%">
+                                <label class="calender_input mb-0 w-100">
+                                    <input class="form-control" type="text" placeholder="Default input"
+                                           name="modalDataPickerBtn">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl">
+                            <div class="form-group">
+                                <div class="btn-group w-100">
+                                    <input class="radio_label" type="radio" name="example2" id="test5" checked="">
+                                    <label class="btn btn-secondary" for="test5">전체</label>
+                                    <input class="radio_label" type="radio" name="example2" id="test3" checked="">
+                                    <label class="btn btn-secondary" for="test3">결제완료</label>
+                                    <input class="radio_label" type="radio" name="example2" id="test4">
+                                    <label class="btn btn-secondary" for="test4">취소(환불)</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl">
+                            <div class="form-group">
+                                <label class="select-box _select-box">
+                                    <input type="hidden" class="select_value" value="0">
+                                    <span class="value_text">결제수단(전체)</span>
+                                    <i class="icon ico_select_arrow_down">아래화살표</i>
+                                    <ul class="options">
+                                        <li class="option" value="0">결제수단(전체)</li>
+                                        <li class="option" value="1">카드 - 앱카드</li>
+                                        <li class="option" value="2">카드 - 키인</li>
+                                        <li class="option" value="3">카드 - 빌링</li>
+                                        <li class="option" value="4">카드 - 간편</li>
+                                        <li class="option" value="5">계좌 - 빌링</li>
+                                        <li class="option" value="6">계좌 - 간편</li>
+                                        <li class="option" value="7">네이버페이</li>
+                                        <li class="option" value="8">카카오페이</li>
+                                        <li class="option" value="9">애플페이</li>
+                                        <li class="option" value="10">가상계좌</li>
+                                    </ul>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-xl">
+                            <div class="form-group">
+                                <label class="select-box _select-box">
+                                    <input type="hidden" class="select_value" value="0">
+                                    <span class="value_text">카드사(전체)</span>
+                                    <i class="icon ico_select_arrow_down">아래화살표</i>
+                                    <ul class="options">
+                                        <li class="option" value="0">카드사(전체)</li>
+                                        <li class="option" value="1">신한카드</li>
+                                        <li class="option" value="2">삼성카드</li>
+                                        <li class="option" value="3">KB국민카드</li>
+                                        <li class="option" value="4">현대카드</li>
+                                        <li class="option" value="5">BC카드</li>
+                                        <li class="option" value="6">하나카드</li>
+                                        <li class="option" value="7">롯데카드</li>
+                                        <li class="option" value="8">NH농협카드</li>
+                                        <li class="option" value="9">우리카드</li>
+                                    </ul>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-xl">
+                            <div class="form-group">
+                                <label class="select-box _select-box">
+                                    <input type="hidden" class="select_value" value="0">
+                                    <span class="value_text">원천사(전체)</span>
+                                    <i class="icon ico_select_arrow_down">아래화살표</i>
+                                    <ul class="options h-auto">
+                                        <li class="option" value="0">원천사(전체)</li>
+                                        <li class="option" value="1">나이스</li>
+                                        <li class="option" value="2">다날</li>
+                                    </ul>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-xl empty">&nbsp;</div>
+                    </div>
+                    <hr>
+                    <div class="row">
+
+                        <div class="col-xl">
+                            <div class="form-group">
+                                <label class="w-100 mb-0">
+                                    <input class="form-control search" type="text" placeholder="주문자명">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-xl">
+                            <div class="form-group">
+                                <label class="w-100 mb-0">
+                                    <input class="form-control search" type="text" placeholder="상품명">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-xl">
+                            <div class="form-group">
+                                <label class="w-100 mb-0">
+                                    <input class="form-control search" type="text" placeholder="서비스 MID">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-xl">
+                            <div class="form-group">
+                                <label class="w-100 mb-0">
+                                    <input class="form-control search" type="text" placeholder="승인번호 입력">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-xl empty">&nbsp;</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl">
+                            <div class="form-group">
+                                <label class="w-100 mb-0">
+                                    <input class="form-control search" type="text" placeholder="카드번호 입력">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-xl">
+                            <div class="form-group">
+                                <label class="w-100 mb-0">
+                                    <input class="form-control search" type="text" placeholder="주문번호">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-xl">
+                            <div class="form-group">
+                                <label class="w-100 mb-0">
+                                    <input class="form-control search" type="text" placeholder="상호명">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-xl">
+                            <div class="form-group">
+                                <label class="w-100 mb-0">
+                                    <input class="form-control search" type="text" placeholder="빌링키">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-xl empty">&nbsp;</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl">
+                            <div class="form-group">
+                                <label class="w-100 mb-0">
+                                    <input class="form-control search" type="text" placeholder="거래액">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-xl">
+                            <div class="form-group">
+                                <label class="w-100 mb-0">
+                                    <input class="form-control search" type="text" placeholder="휴대폰 번호">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-xl">
+                            <div class="form-group">
+                                <label class="w-100 mb-0">
+                                    <input class="form-control search" type="text" placeholder="서비스명">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-xl">
+                            <div class="form-group">
+                                <label class="w-100 mb-0 position-relative">
+                                    <input class="form-control search question" type="text" placeholder="OPID">
+                                    <i class="icon ico_question_gray input_ico_hover _input_ico_hover"></i>
+                                    <span class="input_caption _input_cation">거래마다 다르며 결제, 취소(환불)의 OPID는 동일</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-xl">
+                            <div class="form-group">
+                                <label class="w-100 mb-0 position-relative">
+                                    <input class="form-control search" type="text" placeholder="PID">
+                                    <i class="icon ico_question_gray input_ico_hover _input_ico_hover pid"></i>
+                                    <span class="input_caption _input_cation">거래마다 다르며 결제, 취소(환불) 모두 다른 PID</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearfix filter-button-area">
+                        <div class="float-right">
+                            <a class="a-reset align-bottom" href="">Clear all</a>
+                            <button class="btn btn-dark btn-round ml-3 btn-md">조회하기</button>
+                        </div>
+                    </div>
                 </div>
+                <div class="card">
+                    <div class="result-title-area d-flex justify-content-between align-items-center">
+                        <h5 class="result-title font-weight-semi-bold">
+                            <i class="icon ico_bs_list"></i>
+                            <span>조회결과</span>
+                        </h5>
+                        <div>
+                            <button class="btn-reset"><i class="icon ico_excel">엑셀출력</i></button>
+                        </div>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-spread table-fixed">
+                            <colgroup>
+                                <col style="width: 50px">
+                                <col style="width: 133px">
+                                <col style="width: 133px">
+                                <col style="width: 169px">
+                                <col style="width: 74px">
+                                <col style="width: 112px">
+                                <col style="width: 162px">
+                                <col style="width: 162px">
+                                <col style="width: 102px">
+                                <col style="width: 126px">
+                                <col style="width: 112px">
+                                <col style="width: 229px">
+                                <col style="width: 80px">
+                                <col style="width: 105px">
+                                <col style="width: 99px">
+                                <col style="width: 161px">
+                                <col style="width: 91px">
+                                <col style="width: 80px">
+                                <col style="width: 80px">
+                            </colgroup>
+                            <thead>
+                            <tr>
+                                <th class="text-center">No</th>
+                                <th>상호명</th>
+                                <th>서비스명</th>
+                                <th>서비스 MID</th>
+                                <th>상태</th>
+                                <th>결제수단</th>
+                                <th>PID(OPID)</th>
+                                <th>주문번호</th>
+                                <th>거래일시</th>
+                                <th class="text-center">거래액</th>
+                                <th class="text-center">수수료</th>
+                                <th>상품명</th>
+                                <th>주문자명</th>
+                                <th>휴대폰번호</th>
+                                <th>카드사/은행</th>
+                                <th>카드/계좌번호</th>
+                                <th>승인번호</th>
+                                <th>상담관리</th>
+                                <th>취소하기</th>
+                            </tr>
+                            </thead>
+                            <!--데이터 있는 경우 s-->
+                            <tbody>
+                            <tr>
+                                <td class="text-center align-middle"><span>20</span></td>
+                                <td class="align-middle"><span>벨루가</span></td>
+                                <td class="align-middle"><span>벨루가</span></td>
+                                <td class="align-middle"><span>Service0010012345678</span></td>
+                                <td class="align-middle"><span>취소</span></td>
+                                <td class="align-middle"><span>카드-앱카드</span></td>
+                                <td class="align-middle">
+                                    <a class="a-reset"
+                                       href="javascript:void(0)"
+                                       onclick="openSlideModal('_slide_modal_backdrop','_payment')">ONDOCTOR47598PURCHASE2308291016146099</a>
+                                    <span>(56465456456456)</span>
+                                </td>
+                                <td class="align-middle"><span>19397981</span></td>
+                                <td class="align-middle">
+                                    <span>2023-07-28<br>12:05:55</span>
+                                </td>
+                                <td class="text-right align-middle"><span>100,000</span></td>
+                                <td class="text-right align-middle">2,500</td>
+                                <td class="align-middle"><span>LEE+HELEN+HYOJUNG님의 2023년 08월 29일 진료비</span></td>
+                                <td class="align-middle"><span>김*김</span></td>
+                                <td class="align-middle"><span>010****3111</span></td>
+                                <td class="align-middle"><span>KB국민카드</span></td>
+                                <td class="align-middle"><span>1234-56**-****-0987</span></td>
+                                <td class="align-middle"><span>54265853</span></td>
+                                <td class="text-center align-middle">
+                                    <button class="btn-reset"
+                                            onclick="openSlideModal('_slide_modal_backdrop','_consulting')"><i
+                                            class="icon ico_consulting"></i></button>
+                                </td>
+                                <td class="text-center  align-middle">
+                                    <button class="btn btn-danger btn-sm"
+                                            onclick="openSlideModal('_slide_modal_backdrop','_cancel')">
+                                        취소
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center align-middle"><span>20</span></td>
+                                <td class="align-middle"><span>벨루가</span></td>
+                                <td class="align-middle"><span>벨루가</span></td>
+                                <td class="align-middle"><span>Service0010012345678</span></td>
+                                <td class="align-middle"><span>취소</span></td>
+                                <td class="align-middle"><span>카드-앱카드</span></td>
+                                <td class="align-middle">
+                                    <a class="a-reset"
+                                       href="javascript:void(0)">ONDOCTOR47598PURCHASE2308291016146099</a>
+                                    <span>(56465456456456)</span>
+                                </td>
+                                <td class="align-middle"><span>19397981</span></td>
+                                <td class="align-middle">
+                                    <span>2023-07-28<br>12:05:55</span>
+                                </td>
+                                <td class="text-right align-middle"><span>100,000</span></td>
+                                <td class="text-right align-middle">2,500</td>
+                                <td class="align-middle"><span>LEE+HELEN+HYOJUNG님의 2023년 08월 29일 진료비</span></td>
+                                <td class="align-middle"><span>김*김</span></td>
+                                <td class="align-middle"><span>010****3111</span></td>
+                                <td class="align-middle"><span>KB국민카드</span></td>
+                                <td class="align-middle"><span>1234-56**-****-0987</span></td>
+                                <td class="align-middle"><span>54265853</span></td>
+                                <td class="text-center align-middle">
+                                    <button class="btn-reset"><i class="icon ico_consulting"></i></button>
+                                </td>
+                                <td class="text-center  align-middle">
+                                    <button class="btn btn-danger btn-sm">취소</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center align-middle"><span>20</span></td>
+                                <td class="align-middle"><span>벨루가</span></td>
+                                <td class="align-middle"><span>벨루가</span></td>
+                                <td class="align-middle"><span>Service0010012345678</span></td>
+                                <td class="align-middle"><span>취소</span></td>
+                                <td class="align-middle"><span>카드-앱카드</span></td>
+                                <td class="align-middle">
+                                    <a class="a-reset"
+                                       href="javascript:void(0)">ONDOCTOR47598PURCHASE2308291016146099</a>
+                                    <span>(56465456456456)</span>
+                                </td>
+                                <td class="align-middle"><span>19397981</span></td>
+                                <td class="align-middle">
+                                    <span>2023-07-28<br>12:05:55</span>
+                                </td>
+                                <td class="text-right align-middle"><span>100,000</span></td>
+                                <td class="text-right align-middle">2,500</td>
+                                <td class="align-middle"><span>LEE+HELEN+HYOJUNG님의 2023년 08월 29일 진료비</span></td>
+                                <td class="align-middle"><span>김*김</span></td>
+                                <td class="align-middle"><span>010****3111</span></td>
+                                <td class="align-middle"><span>KB국민카드</span></td>
+                                <td class="align-middle"><span>1234-56**-****-0987</span></td>
+                                <td class="align-middle"><span>54265853</span></td>
+                                <td class="text-center align-middle">
+                                    <button class="btn-reset"><i class="icon ico_consulting"></i></button>
+                                </td>
+                                <td class="text-center  align-middle">
+                                    <button class="btn btn-danger btn-sm">취소</button>
+                                </td>
+                            </tr>
+
+
+                            <!--데이터 있는 경우 e-->
+                            <!--데이터 없을경우 s-->
+                            <!--<tr class="empty-data _empty-data">
+                                <td class="text-center" colspan="19">
+                                    <div class="empty-data-area">
+                                        <i class="bg-box"></i>
+                                        <p class="text">조회결과가 없습니다.</p>
+                                    </div>
+                                </td>
+                            </tr>-->
+                            <!--데이터 있을경우 e-->
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="pagination-area">
+    <ul class="pagination-list">
+        <li class="pagination-icon">
+            <i class="icon ico_first_page">처음으로가기</i>
+        </li>
+        <li class="pagination-icon">
+            <i class="icon ico_previous_page">이전으로가기</i>
+        </li>
+        <li class="active">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li class="pagination-icon">
+            <i class="icon ico_next_page">다음으로가기</i>
+        </li>
+        <li class="pagination-icon">
+            <i class="icon ico_last_page">맨뒤로가기</i>
+        </li>
+    </ul>
+</div>
+                </div>
+
+
             </section>
         </article>
         <!-- 컨텐츠 e-->
@@ -671,5 +1068,549 @@
     </div>
 </footer>
 </div>
+<!--달력 s-->
+<div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered calender_modal">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div id="modalDataPicker"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--달력 e-->
+
+
+<!--취소 모달 s-->
+<div class="slide_modal_backdrop _slide_modal_backdrop _slide_modal_backdrop_cancel">
+    <div class="slide-modal slide-modal-md">
+        <div class="modal_header">
+            <h3 class="title font-weight-bold">취소하기</h3>
+            <i class="ico_close_btn _close_slide_modal"></i>
+        </div>
+        <div class="modal_body">
+            <div class="payment_cancel_wrap">
+                <!--취소하기 시작 s-->
+                <div class="payment_cancel_area position-relative">
+                    <!--에러 팝업 (클래스 show 추가시 팝업 호출) s-->
+                    <div class="error_popup">
+                        <p class="text-left"><i class="icon ico_danger"></i><span class="text">취소할 금액을 입력해주세요.</span>
+                        </p>
+                    </div>
+                    <!--에러 팝업 (show 추가시 생성) s-->
+
+
+                    <!--취소금액 input s-->
+                    <p class="account_text font-weight-semi-bold"><span class="title">취소액</span>
+                        <label class="mb-0"><input class="form-control"></label>
+                        <span class="unit">원</span>
+                    </p>
+                    <!--취소금액 input e-->
+
+                    <!--취소금액 text s-->
+                    <!--<p class="account_text font-weight-semi-bold">
+                        <span class="title">취소액</span>
+                        <span class="color-red-100">8000</span>
+                        <span class="unit">원</span>
+                    </p>-->
+                    <!--취소금액 text e-->
+
+                    <!--취소 영수증 테이블 s-->
+                   <table class="data-table">
+                        <colgroup>
+                            <col style="width:30%">
+                            <col style="width:70%">
+                        </colgroup>
+                        <tr>
+                            <th>주문번호</th>
+                            <td>1111aaaa</td>
+                        </tr>
+                        <tr>
+                            <th>상품명</th>
+                            <td>상품명입니다.</td>
+                        </tr>
+                        <tr>
+                            <th>주문자명</th>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>원 거래일시</th>
+                            <td>2023-08-20 11:01:55</td>
+                        </tr>
+                        <tr>
+                            <th>원 거래액</th>
+                            <td>10,000</td>
+                        </tr>
+                        <tr>
+                            <th>취소 가능액</th>
+                            <td>8,000</td>
+                        </tr>
+                    </table>
+                    <!--취소 영수증 테이블 e-->
+
+                    <!--탭 문구-->
+                    <div class="tab_area">
+                        <p class="main-title font-weight-semi-bold">가상계좌 환불을 위한 계좌인증</p>
+                        <div class="tab_list">
+                            <div class="list_row">
+                                <div class="title">구분</div>
+                                <div class="content">
+                                    <ul class="nav nav-tabs" role="tablist">
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link active" data-toggle="tab" data-target="#dummy1"
+                                                    type="button" role="tab" aria-controls="dummy1">개인사업자
+                                            </button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link" data-toggle="tab" data-target="#dummy2"
+                                                    aria-controls="dummy1">법인
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="tab-content">
+                                <!--개인(사업자) - 생년월일 s-->
+                                <div class="tab-pane active" id="dummy1" role="tabpanel">
+                                    <div class="list_row">
+                                        <div class="title">생년월일</div>
+                                        <div class="content">
+                                            <label class="mb-0 w-100">
+                                                <input class="form-control" placeholder="YYMMDD">
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--개인(사업자) - 생년월일 e-->
+
+                                <!--법인 - 사업자번호 s-->
+                                <div class="tab-pane" id="dummy2" role="tabpanel">
+                                    <div class="list_row">
+                                        <div class="title">사업자번호</div>
+                                        <div class="content">
+                                            <label class="mb-0 w-100">
+                                                <input class="form-control" placeholder="사업자번호10자리">
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--법인 - 사업자번호 e-->
+                            </div>
+                            <div class="list_row">
+                                <div class="title">은행</div>
+                                <div class="content">
+                                    <label class="select-box _select-box">
+                                        <input type="hidden" class="select_value" disabled>
+                                        <span class="value_text" style="color:#BABAC2">은행선택</span>
+                                        <i class="icon ico_select_arrow_down">아래화살표</i>
+                                        <ul class="options">
+                                            <li class="option" value="1">KDB산업은행</li>
+                                            <li class="option" value="2">IBK기업은행</li>
+                                            <li class="option" value="3">KB국민은행</li>
+                                            <li class="option" value="4">수협은행(수협중앙회)</li>
+                                            <li class="option" value="5">NH농협은행</li>
+                                            <li class="option" value="6">농협중앙회(단위농축협)</li>
+                                            <li class="option" value="7">우리은행</li>
+                                            <li class="option" value="8">SC제일은행</li>
+                                            <li class="option" value="9">한국시티은행</li>
+                                            <li class="option" value="10">대구은행</li>
+                                            <li class="option" value="11">부산은행</li>
+                                            <li class="option" value="12">광주은행</li>
+                                            <li class="option" value="13">제주은행</li>
+                                            <li class="option" value="14">전북은행</li>
+                                            <li class="option" value="15">경남은행</li>
+                                            <li class="option" value="16">하나은행</li>
+                                            <li class="option" value="17">신한은행</li>
+                                            <li class="option" value="18">케이뱅크</li>
+                                            <li class="option" value="19">카카오뱅크</li>
+                                            <li class="option" value="20">토스뱅크</li>
+                                            <li class="option" value="21">새마을금고중앙회</li>
+                                            <li class="option" value="22">신협중앙회</li>
+                                            <li class="option" value="23">저축은행중앙회</li>
+                                            <li class="option" value="24">산림조합중앙회</li>
+                                            <li class="option" value="25">우정사업본부(우체국)</li>
+                                        </ul>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="list_row">
+                                <div class="title">계좌번호</div>
+                                <div class="content">
+                                    <label class="mb-0 w-100">
+                                        <input class="form-control">
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="list_row">
+                                <div class="title">예금주명</div>
+                                <div class="content">
+                                    <label class="mb-0 w-100">
+                                        <input class="form-control">
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--카드 취소시 재확인 문구 s-->
+                    <!--<p class="caption font-weight-semi-bold">취소가 진행되면 <span class="underline">수정할 수 없습니다.</span><br>취소를 진행할까요?</p>-->
+                    <!--카드 취소시 재확인 문구 e-->
+
+                    <!--가상 계좌(개인) 처리 시 문구 s-->
+<!--                                        <p class="caption font-weight-semi-bold">인증이 완료되었습니다.<br>-->
+<!--                                            취소가 진행되면 <span class="underline">수정할 수 없습니다.</span><br>-->
+<!--                                            취소를 진행할까요?-->
+<!--                                        </p>-->
+                    <!--가상 계좌(개인) 처리 시 문구 e-->
+
+                    <!--가상 계좌(개인) 처리 시 문구 s-->
+                    <!--<p class="caption font-weight-semi-bold">인증이 완료되었습니다.<br>
+                          예금주명 <span>정다운(페이앱)</span>으로 취소를 진행할까요?<br>
+                          취소가 진행되면 <span class="underline">수정할 수 없습니다.</span>
+                      </p>-->
+                    <!--가상 계좌(개인) 처리 시 문구 e-->
+
+
+                    <!--취소처리 완료시 s-->
+                    <!--<p class="caption font-weight-semi-bold">취소처리가 완료 되었습니다.</p>-->
+                    <!--취소처리 완료시 e-->
+
+
+                    <!--validation 문구-->
+                    <p class="validation color-red-100"><span>사업자번호 오류</span></p>
+                </div>
+                <!--취소하기 시작 e-->
+            </div>
+        </div>
+        <div class="modal_footer clearfix">
+            <div class="float-right">
+                <!--<button class="btn btn-primary font-weight-bold btn-md">진행하기</button>-->
+                <!--계좌인증 disabled-->
+                <button class="btn btn-primary font-weight-bold btn-md" disabled>계좌인증</button>
+                <!--계좌인증 disabled-->
+            </div>
+        </div>
+    </div>
+</div>
+<!--취소 모달 e-->
+
+<!--상담 모달 s-->
+<div class="slide_modal_backdrop _slide_modal_backdrop _slide_modal_backdrop_consulting">
+    <div class="slide-modal slide-modal-lg">
+        <div class="modal_header">
+            <h3 class="title font-weight-bold">상담관리</h3>
+            <i class="ico_close_btn _close_slide_modal"></i>
+        </div>
+        <div class="modal_body">
+            <div class="management_content">
+                <ul class="nav nav-tabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" data-toggle="tab" data-target="#tab01" type="button" role="tab"
+                                aria-controls="dummy1">상담등록
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" data-toggle="tab" data-target="#tab02" type="button" role="tab">
+                            알림톡(LMS)
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" data-toggle="tab" data-target="#tab03" type="button" role="tab">결제내역
+                            이메일
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" data-toggle="tab" data-target="#tab04" type="button" role="tab">영수증
+                        </button>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="tab01" role="tabpanel">
+                        <div class="tab-content-area">
+                            <div class="row select-box_container">
+                                <div class="col-xl">
+                                    <div class="form-group mb-0">
+                                        <p class="title">유입채널</p>
+                                        <label class="select-box _select-box">
+                                            <input type="hidden" class="select_value">
+                                            <span class="value_text">선택</span>
+                                            <i class="icon ico_select_arrow_down">아래화살표</i>
+                                            <ul class="options">
+                                                <li class="option" value="0">유선</li>
+                                                <li class="option" value="1">채널톡</li>
+                                                <li class="option" value="2">이메일</li>
+                                                <li class="option" value="3">기타</li>
+                                            </ul>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-xl">
+                                    <div class="form-group mb-0">
+                                        <p class="title">문의자</p>
+                                        <label class="select-box _select-box">
+                                            <input type="hidden" class="select_value">
+                                            <span class="value_text">선택</span>
+                                            <i class="icon ico_select_arrow_down">아래화살표</i>
+                                            <ul class="options">
+                                                <li class="option" value="0">고객</li>
+                                                <li class="option" value="1">기존 파트너</li>
+                                                <li class="option" value="2">신규 파트너</li>
+                                                <li class="option" value="3">기타</li>
+                                            </ul>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-xl">
+                                    <div class="form-group mb-0">
+                                        <p class="title">유형</p>
+                                        <label class="select-box _select-box">
+                                            <input type="hidden" class="select_value">
+                                            <span class="value_text">선택</span>
+                                            <i class="icon ico_select_arrow_down">아래화살표</i>
+                                            <ul class="options">
+                                                <li class="option" value="0">결제내역</li>
+                                                <li class="option" value="1">취소/해지</li>
+                                                <li class="option" value="2">결제오류</li>
+                                                <li class="option" value="3">가입문의</li>
+                                                <li class="option" value="4">개발문의</li>
+                                                <li class="option" value="5">가입문의</li>
+                                                <li class="option" value="6">기능문의</li>
+                                                <li class="option" value="7">기능개선</li>
+                                                <li class="option" value="8">보증보험</li>
+                                                <li class="option" value="9">연결불가</li>
+                                                <li class="option" value="10">제휴/마케팅</li>
+                                                <li class="option" value="11">기타</li>
+                                            </ul>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-xl">
+                                    <div class="form-group mb-0">
+                                        <p class="title">유형 상세</p>
+                                        <label class="select-box _select-box">
+                                            <input type="hidden" class="select_value">
+                                            <span class="value_text">선택</span>
+                                            <i class="icon ico_select_arrow_down">아래화살표</i>
+                                            <ul class="options">
+                                                <li class="option" value="0">결제내역</li>
+                                                <li class="option" value="1">취소/해지</li>
+                                                <li class="option" value="2">등록수단 해지</li>
+                                                <li class="option" value="3">등록수단 변경</li>
+                                                <li class="option" value="4">일반오류</li>
+                                                <li class="option" value="5">시스템오류</li>
+                                                <li class="option" value="6">국내가입</li>
+                                                <li class="option" value="7">해외가입</li>
+                                                <li class="option" value="8">개발문의</li>
+                                                <li class="option" value="9">정산내역</li>
+                                                <li class="option" value="10">정산주기</li>
+                                                <li class="option" value="11">정산한도</li>
+                                                <li class="option" value="12">정산계좌</li>
+                                                <li class="option" value="13">파트너관리자</li>
+                                                <li class="option" value="14">상점정보변경</li>
+                                                <li class="option" value="15">양수양도</li>
+                                                <li class="option" value="16">계약해지</li>
+                                                <li class="option" value="17">기능개선</li>
+                                                <li class="option" value="18">보증보험</li>
+                                                <li class="option" value="19">제휴/마케팅</li>
+                                                <li class="option" value="20">불만</li>
+                                                <li class="option" value="21">강성불만</li>
+                                                <li class="option" value="22">기타</li>
+                                            </ul>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group text-area_container">
+                                <p class="title">내용</p>
+                                <textarea class="form-control text-area"></textarea>
+                            </div>
+                            <div class="clearfix">
+                                <div class="float-right">
+                                    <button class="btn btn-primary font-weight-bold btn-md">등록하기</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="tab02" role="tabpanel">
+                        <div class="tab-content-area">
+                            <div class="row select-box_container">
+                                <div class="col-sm-3">
+                                    <div class="form-group mb-0">
+                                        <p class="title">수신번호</p>
+                                        <label class="w-100 mb-0">
+                                            <input class="form-control" type="text">
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group text-area_container">
+                                <p class="title">내용</p>
+                                <textarea class="form-control text-area">
+[페이플 고객센터]
+고객님, 안녕하세요.
+결제대행사 페이플입니다. 고객님께서 결제하신 상점의 문의방법을 안내드립니다.
+
+• 상호명:
+• 서비스명: 포카마켓
+• 홈페이지: phocamarket.com,pocamarket.com
+• 고객센터 전화번호: -
+• 고객센터 문의방법 : 홈페이지 접속 → 로그인 → 맨 오른쪽 하단 → Chat 클릭 후 문의하기
+
+오늘도 행복한 하루 보내세요.
+고맙습니다.
+                                </textarea>
+                            </div>
+                            <div class="clearfix">
+                                <div class="float-right">
+                                    <button class="btn btn-primary font-weight-bold btn-md">발송하기</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="tab03" role="tabpanel">
+                        <div class="tab-content-area">
+                            <div class="form-group mb-0 form-group-row">
+                                <p class="title">이메일</p>
+                                <label class="mb-0">
+                                    <input class="form-control" type="text">
+                                </label>
+                                <span class="desc">(으)로 결제내역 이메일을 발송할까요?</span>
+                                <button class="btn btn-primary font-weight-bold btn-md">발송하기</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="tab04" role="tabpanel">
+                        <div class="tab-content-area">
+                            <div class="img">
+                                <img src="../../img/common/img_dummy.png" style="width: 458px; height: 781px">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal_footer">
+
+        </div>
+    </div>
+</div>
+<!--상담 모달 e-->
+
+<!--거래 이력 s-->
+<div class="slide_modal_backdrop _slide_modal_backdrop _slide_modal_backdrop_payment">
+    <div class="slide-modal slide-modal-lg">
+        <div class="modal_header">
+            <i class="ico_close_btn _close_slide_modal"></i>
+        </div>
+        <div class="modal_body">
+            <div class="payment-list">
+                <div class="list-area">
+                    <h3 class="font-weight-bold title">거래내역</h3>
+                    <table class="data-table">
+                        <colgroup>
+                            <col style="width: 80px">
+                            <col style="width: 203px">
+                            <col style="width: 203px">
+                            <col style="width: 104px">
+                            <col style="width: 102px">
+                            <col style="width: 102px">
+                            <col style="width: 102px">
+                            <col style="width: 102px">
+                            <col style="width: 102px">
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th rowspan="2">상태</th>
+                            <th rowspan="2">PID</th>
+                            <th rowspan="2">OPID</th>
+                            <th rowspan="2">거래일시</th>
+                            <th rowspan="2">거래액</th>
+                            <th rowspan="2">잔여액</th>
+                            <th colspan="3" class="text-center">수수료</th>
+                        </tr>
+                        <tr>
+                            <th class="text-center">합계</th>
+                            <th class="text-center">공급가</th>
+                            <th class="text-center">부가세</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>취소</td>
+                            <td>12345678912345645</td>
+                            <td>12345678912345645</td>
+                            <td>
+                                2023-07-29<br>
+                                12:05:55
+                            </td>
+                            <td class="text-right">-2,000</td>
+                            <td class="text-right">8,000</td>
+                            <td class="text-right">-64</td>
+                            <td class="text-right">-58</td>
+                            <td class="text-right">-6</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="list-area">
+                    <h3 class="font-weight-bold title">상세내역</h3>
+                    <table class="data-table">
+                        <colgroup>
+                            <col style="width: 211px">
+                            <col style="width: 74px">
+                            <col style="width: 74px">
+                            <col style="width: 183px">
+                            <col style="width: 104px">
+                            <col style="width: 104px">
+                            <col style="width: 283px">
+                            <col style="width: 74px">
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th class="text-center">주문번호</th>
+                            <th class="text-center">과세유형</th>
+                            <th class="text-center">링크결제<br>
+                                여부
+                            </th>
+                            <th class="text-center">이메일</th>
+                            <th class="text-center">가상계좌<br>
+                                발급일시
+                            </th>
+                            <th class="text-center">가상계좌<br>
+                                만료일시
+                            </th>
+                            <th class="text-center">빌링키</th>
+                            <th class="text-center">원천사</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>123456789123456451234567891234564512345678</td>
+                            <td>과세</td>
+                            <td>N</td>
+                            <td>jdw0906@naver.com</td>
+                            <td>2023-07-29<br>
+                                12:05:55
+                            </td>
+                            <td>2023-07-29<br>
+                                12:05:55
+                            </td>
+                            <td>01234567890123456789012345678912</td>
+                            <td>나이스</td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="modal_footer">
+
+        </div>
+    </div>
+</div>
+<!--거래 이력 e-->
+
+
 </body>
 </html>

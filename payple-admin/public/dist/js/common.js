@@ -21,7 +21,7 @@ function openAsideBtn() {
 
 //selectBox
 function selectBox() {
-    let selectBox = $('._select_box')
+    let selectBox = $('._select-box')
     selectBox.on('click', function () {
         $(this).toggleClass('active');
     })
@@ -29,11 +29,21 @@ function selectBox() {
     selectBox.find('.option').on('click', function () {
         let text = $(this).text();
         let value = $(this).val();
-        let selectBoxValue =  $(this).closest('._select_box')
+        let selectBoxValue = $(this).closest('._select-box')
 
         selectBoxValue.find('.select_value').attr('value', value);
         selectBoxValue.find('.value_text').text(text).css({'color': '#1F1F1F'});
     });
+
+    //disabled 처리
+    if ($(".select_value").is(':disabled')) {
+        $(".select_value:disabled").parent('._select-box').css({
+            "background": "#F8F8F8",
+            "border": "1px solid #CED4DA"
+        })
+        $(".select_value:disabled").parent('._select-box').off('click');
+    }
+
 
     $(document).on('click', function (e) {
         let target = $(e.target);
@@ -57,7 +67,7 @@ function dataRangePicker() {
             autoApply: true,
             "locale": {
                 "format": "YYYY-MM-DD",
-                "separator": " ~ ",
+                "separator": "~",
                 "weekLabel": "주",
                 "daysOfWeek": ["일", "월", "화", "수", "목", "금", "토"],
                 "monthNames": ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"],
@@ -71,7 +81,7 @@ function dataRangePicker() {
             "parentEl": modalDataPicker,
         },
         function (start, end, label) {
-            console.log('선택된 날짜: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
+
         });
     dateRangePicker.on('show.daterangepicker', function (ev, picker) {
         $('#myModal').modal('show')
@@ -79,27 +89,35 @@ function dataRangePicker() {
     dateRangePicker.on('hide.daterangepicker', function (ev, picker) {
         $('#myModal').modal('hide')
     });
+    // three Month 버튼 클릭 시 지난달 범위 선택
+    $('#threeMonthAgoBtn').on('click', function () {
+        const startDate = moment().subtract(3, 'month');
+        const endDate = moment();
+        dateRangePicker.data('daterangepicker').setStartDate(startDate);
+        dateRangePicker.data('daterangepicker').setEndDate(endDate);
+    });
+
 
     // Last Month 버튼 클릭 시 지난달 범위 선택
     $('#lastMonthBtn').on('click', function () {
-        var startDate = moment().subtract(1, 'month').startOf('month');
-        var endDate = moment().subtract(1, 'month').endOf('month');
+        const startDate = moment().subtract(1, 'month');
+        const endDate = moment();
         dateRangePicker.data('daterangepicker').setStartDate(startDate);
         dateRangePicker.data('daterangepicker').setEndDate(endDate);
     });
 
     // This Month 버튼 클릭 시 이번달 범위 선택
     $('#thisMonthBtn').click(function () {
-        var startDate = moment().startOf('month');
-        var endDate = moment().endOf('month');
+        const startDate = moment().startOf('month');
+        const endDate = moment();
         dateRangePicker.data('daterangepicker').setStartDate(startDate);
         dateRangePicker.data('daterangepicker').setEndDate(endDate);
     });
 
     // Yesterday 버튼 클릭 시 어제 범위 선택
     $('#yesterdayBtn').click(function () {
-        var startDate = moment().subtract(1, 'day');
-        var endDate = moment().subtract(1, 'day');
+        const startDate = moment().subtract(1, 'day');
+        const endDate = moment().subtract(1, 'day');
         dateRangePicker.data('daterangepicker').setStartDate(startDate);
         dateRangePicker.data('daterangepicker').setEndDate(endDate);
     });
@@ -115,21 +133,20 @@ function dataRangePicker() {
 
 
 //slideModal
-function openSlideModal(){
-    $('._open_slide_modal').on('click',function(){
-        $('.slide_modal_backdrop').addClass('on');
-    })
+function openSlideModal(modalName,i) {
+    $("." + modalName + i).addClass('on');
 }
-function closeSlideModal(){
-    $('._close_slide_modal').on('click',function(){
+
+function closeSlideModal() {
+    $('._close_slide_modal').on('click', function () {
         $('._slide_modal_backdrop').removeClass('on');
     })
 }
 
 //Aside ToolTip
-function asideTooltip(){
-    let links =$('.link');
-    links.mouseover(function() {
+function asideTooltip() {
+    let links = $('.link');
+    links.mouseover(function () {
         var hoverTitle = $(this).find('a');
         var top = hoverTitle[0].getBoundingClientRect().top;
         var arrow = $(this).find('.arrow_box');
@@ -138,17 +155,27 @@ function asideTooltip(){
 }
 
 //mobile Aside Btn
-function asideMobileBtn(){
-    $('._aside_button').on('click',function(){
+function asideMobileBtn() {
+    $('._aside_button').on('click', function () {
         $(this).toggleClass('active');
-        if( $(this).hasClass('active')  ){
-            $('.aside').css({'left' : 0})
-        }else{
-            $('.aside').css({'left' : -100 + '%'})
+        if ($(this).hasClass('active')) {
+            $('.aside').css({'left': 0})
+        } else {
+            $('.aside').css({'left': -100 + '%'})
         }
     })
 }
 
+function inputIcoHover() {
+    $('._input_ico_hover').hover(
+        function () {
+            $(this).siblings('._input_cation').css('display', 'block')
+        },
+        function () {
+            $(this).siblings('._input_cation').css('display', 'none')
+        }
+    )
+}
 
 
 //달력
@@ -187,8 +214,8 @@ $(document).ready(function () {
     asideSlideBtn();
     openAsideBtn();
     selectBox();
-    openSlideModal();
     closeSlideModal();
     asideTooltip();
     asideMobileBtn();
+    inputIcoHover();
 })
