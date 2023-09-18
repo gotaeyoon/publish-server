@@ -73,73 +73,85 @@ data.teamManager = {
     title:'팀관리자',
     list:[
         {
-            stateClass: 'working',
-            url: '결제내역_국내',
+            stateClass: 'confirm',
+            url: '결제내역_국내_조회결과있음',
             category: 'teammanager',
-            page: '결제내역_국내'
+            page: '결제내역_국내_조회결과있음'
         },
         {
-            stateClass: 'complete',
+            stateClass: 'confirm',
+            url: '결제내역_type2',
+            category: 'teammanager',
+            page: '결제내역_type2'
+        },
+        {
+            stateClass: 'confirm',
+            url: '결제내역_국내_조회결과없음',
+            category: 'teammanager',
+            page: '결제내역_국내_조회결과없음'
+        },
+        {
+            stateClass: 'confirm',
             url: '결재내역_취소버튼클릭시',
             category: 'teammanager',
             page: '결재내역_취소버튼클릭시'
         },
         {
-            stateClass: 'complete',
+            stateClass: 'confirm',
             url: '결재내역_취소버튼클릭시_에러',
             category: 'teammanager',
             page: '결재내역_취소버튼클릭시_에러'
         },
         {
-            stateClass: 'complete',
+            stateClass: 'confirm',
             url: '카드_취소_더블체크',
             category: 'teammanager',
             page: '카드_취소_더블체크'
         },
         {
-            stateClass: 'complete',
-            url: '계좌_취소',
+            stateClass: 'confirm',
+            url: '가상계좌_취소',
             category: 'teammanager',
-            page: '계좌_취소'
+            page: '가상계좌_취소'
         },
         {
-            stateClass: 'complete',
-            url: '계좌_취소_입력값입력시',
+            stateClass: 'confirm',
+            url: '가상계좌_취소_입력값입력시',
             category: 'teammanager',
-            page: '계좌_취소_입력값입력시'
+            page: '가상계좌_취소_입력값입력시'
         },
         {
-            stateClass: 'complete',
-            url: '계좌_취소_입력값오류',
+            stateClass: 'confirm',
+            url: '가상계좌_취소_입력값오류',
             category: 'teammanager',
-            page: '계좌_취소_입력값오류'
+            page: '가상계좌_취소_입력값오류'
         },
         {
-            stateClass: 'complete',
-            url: '계좌_취소_더블체크_개인',
+            stateClass: 'confirm',
+            url: '가상계좌_취소_더블체크_개인',
             category: 'teammanager',
-            page: '계좌_취소_더블체크_개인'
+            page: '가상계좌_취소_더블체크_개인'
         },
         {
-            stateClass: 'complete',
-            url: '계좌_취소_더블체크_법인',
+            stateClass: 'confirm',
+            url: '가상계좌_취소_더블체크_법인',
             category: 'teammanager',
-            page: '계좌_취소_더블체크_법인'
+            page: '가상계좌_취소_더블체크_법인'
         },
         {
-            stateClass: 'complete',
+            stateClass: 'confirm',
             url: '카드_계좌_취소_완료',
             category: 'teammanager',
-            page: '카드_계좌_취소_완료'
+            page: '카드_가상계좌_취소_완료'
         },
         {
-            stateClass: 'complete',
+            stateClass: 'confirm',
             url: '상담관리',
             category: 'teammanager',
             page: '상담관리'
         },
         {
-            stateClass: 'working',
+            stateClass: 'confirm',
             url: '거래상세',
             category: 'teammanager',
             page: '거래상세'

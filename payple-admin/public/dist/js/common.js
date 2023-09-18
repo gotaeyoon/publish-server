@@ -38,8 +38,9 @@ function selectBox() {
     //disabled 처리
     if ($(".select_value").is(':disabled')) {
         $(".select_value:disabled").parent('._select-box').css({
-            "background": "#F8F8F8",
-            "border": "1px solid #CED4DA"
+            "background": "#e9ecef",
+            "border": "1px solid #CED4DA",
+            "cursor": "auto"
         })
         $(".select_value:disabled").parent('._select-box').off('click');
     }
@@ -57,10 +58,29 @@ function selectBox() {
 }
 
 
+function moreSearch(){
+    const moreSearchBtn = $('._more-search-btn')
+    let count = 0;
+    moreSearchBtn.on('click',function(){
+        $('.detail-search').toggleClass('d-block')
+        count++;
+        if(count % 2 === 0){
+            moreSearchBtn.text('More Search');
+        }else{
+            moreSearchBtn.text('Close Search');
+        }
+    })
+
+
+
+
+
+}
+
 // dataPickerRange
 function dataRangePicker() {
-    const modalDataPicker = $('#modalDataPicker');
-    let dateRangePicker = $('input[name=modalDataPickerBtn]');
+    const modalDataPicker = $('._modalDataPicker');
+    const dateRangePicker = $('._dataPickerRange');
     dateRangePicker.daterangepicker(
         {
             linkedCalendars: true,
@@ -83,12 +103,10 @@ function dataRangePicker() {
         function (start, end, label) {
 
         });
-    dateRangePicker.on('show.daterangepicker', function (ev, picker) {
-        $('#myModal').modal('show')
-    });
     dateRangePicker.on('hide.daterangepicker', function (ev, picker) {
-        $('#myModal').modal('hide')
+        $('._modal-calendar').modal('hide')
     });
+
     // three Month 버튼 클릭 시 지난달 범위 선택
     $('#threeMonthAgoBtn').on('click', function () {
         const startDate = moment().subtract(3, 'month');
@@ -132,8 +150,16 @@ function dataRangePicker() {
 }
 
 
+function nodataTable() {
+   if($('tr').hasClass('_empty-data') === true){
+        $('._empty-data').closest('table').removeClass('table-fixed')
+        $('._empty-data').closest('table').find($('colgroup')).empty()
+        $('._empty-data').closest('table').find($('thead')).empty()
+   }
+}
+
 //slideModal
-function openSlideModal(modalName,i) {
+function openSlideModal(modalName, i) {
     $("." + modalName + i).addClass('on');
 }
 
@@ -147,9 +173,9 @@ function closeSlideModal() {
 function asideTooltip() {
     let links = $('.link');
     links.mouseover(function () {
-        var hoverTitle = $(this).find('a');
-        var top = hoverTitle[0].getBoundingClientRect().top;
-        var arrow = $(this).find('.arrow_box');
+        const hoverTitle = $(this).find('a');
+        const top = hoverTitle[0].getBoundingClientRect().top;
+        const arrow = $(this).find('.arrow_box');
         arrow.css('top', top + 10 + 'px');
     });
 }
@@ -218,4 +244,6 @@ $(document).ready(function () {
     asideTooltip();
     asideMobileBtn();
     inputIcoHover();
+    moreSearch();
+    nodataTable();
 })
