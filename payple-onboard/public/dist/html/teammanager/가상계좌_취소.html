@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./../../css/payple_component.css">
+    <link rel="stylesheet" href="./../../css/payple_pages.css">
+    <script src="../../js/bundle.js"></script>
+    <script src="../../js/common.js"></script>
+    <title></title>
+</head>
+
+<body>
+
+<!--취소 모달 s-->
+<div class="slide-modal-backdrop _slide_modal_backdrop _slide_modal_backdrop_cancel on">
+    <div class="slide-modal slide-modal-md">
+        <div class="modal_header">
+            <h3 class="title font-weight-bold">취소하기</h3>
+            <i class="ico_close_btn _close_slide_modal"></i>
+        </div>
+        <div class="modal_body">
+            <div class="payment_cancel_wrap">
+                <!--취소하기 시작 s-->
+                <div class="payment_cancel_area position-relative">
+
+                    <p class="account-text font-weight-semi-bold">
+                        <span class="title">취소액</span>
+                        <span class="color-red-100">8,000</span>
+                        <span class="unit">원</span>
+                    </p>
+                    <!--탭 문구-->
+                    <div class="tab-area">
+                        <p class="main-title font-weight-semi-bold">가상계좌 환불을 위한 계좌인증</p>
+                        <div class="tab-list">
+                            <div class="list-row">
+                                <div class="title">구분</div>
+                                <div class="content">
+                                    <ul class="nav nav-tabs" role="tablist">
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link active" data-toggle="tab" data-target="#dummy1"
+                                                    type="button" role="tab" aria-controls="dummy1">개인(사업자)
+                                            </button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link" data-toggle="tab" data-target="#dummy2"
+                                                    aria-controls="dummy1">법인
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="tab-content">
+                                <!--개인(사업자) -  s-->
+                                <div class="tab-pane active" id="dummy1" role="tabpanel">
+                                    <div class="list-row">
+                                        <div class="title">생년월일</div>
+                                        <div class="content">
+                                            <label class="mb-0 w-100">
+                                                <input class="form-control _only-number" placeholder="YYMMDD">
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--개인(사업자) -  e-->
+
+                                <!--법인 - 사업자번호 s-->
+                                <div class="tab-pane" id="dummy2" role="tabpanel">
+                                    <div class="list-row">
+                                        <div class="title">사업자번호</div>
+                                        <div class="content">
+                                            <label class="mb-0 w-100">
+                                                <input class="form-control _only-number" placeholder="사업자번호10자리">
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--법인 - 사업자번호 e-->
+                            </div>
+                            <div class="list-row">
+                                <div class="title">은행</div>
+                                <div class="content">
+                                    <label class="select-box _select-box">
+                                        <input type="hidden" class="select_value">
+                                        <span class="value_text" style="color:#BABAC2">은행선택</span>
+                                        <i class="icon ico_select_arrow_down">아래화살표</i>
+                                        <ul class="options view-8">
+                                            <li class="option" value="1">KDB산업은행</li>
+                                            <li class="option" value="2">IBK기업은행</li>
+                                            <li class="option" value="3">KB국민은행</li>
+                                            <li class="option" value="4">수협은행(수협중앙회)</li>
+                                            <li class="option" value="5">NH농협은행</li>
+                                            <li class="option" value="6">농협중앙회(단위농축협)</li>
+                                            <li class="option" value="7">우리은행</li>
+                                            <li class="option" value="8">SC제일은행</li>
+                                            <li class="option" value="9">한국시티은행</li>
+                                            <li class="option" value="10">대구은행</li>
+                                            <li class="option" value="11">부산은행</li>
+                                            <li class="option" value="12">광주은행</li>
+                                            <li class="option" value="13">제주은행</li>
+                                            <li class="option" value="14">전북은행</li>
+                                            <li class="option" value="15">경남은행</li>
+                                            <li class="option" value="16">하나은행</li>
+                                            <li class="option" value="17">신한은행</li>
+                                            <li class="option" value="18">케이뱅크</li>
+                                            <li class="option" value="19">카카오뱅크</li>
+                                            <li class="option" value="20">토스뱅크</li>
+                                            <li class="option" value="21">새마을금고중앙회</li>
+                                            <li class="option" value="22">신협중앙회</li>
+                                            <li class="option" value="23">저축은행중앙회</li>
+                                            <li class="option" value="24">산림조합중앙회</li>
+                                            <li class="option" value="25">우정사업본부(우체국)</li>
+                                        </ul>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="list-row">
+                                <div class="title">계좌번호</div>
+                                <div class="content">
+                                    <label class="mb-0 w-100">
+                                        <input class="form-control _only-number">
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="list-row">
+                                <div class="title">예금주명</div>
+                                <div class="content">
+                                    <label class="mb-0 w-100">
+                                        <input class="form-control">
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--취소하기 시작 e-->
+            </div>
+        </div>
+        <div class="modal_footer clearfix">
+            <div class="float-right">
+                <!--<button class="btn btn-primary font-weight-bold btn-md">진행하기</button>-->
+                <!--계좌인증 disabled-->
+                <button class="btn btn-primary font-weight-bold btn-md" disabled>계좌인증</button>
+                <!--계좌인증 disabled-->
+            </div>
+        </div>
+    </div>
+</div>
+<!--취소 모달 e-->
+
+</body>
+</html>

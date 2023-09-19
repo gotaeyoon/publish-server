@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./../../css/payple_component.css">
+    <link rel="stylesheet" href="./../../css/payple_pages.css">
+    <script src="../../js/bundle.js"></script>
+    <script src="../../js/common.js"></script>
+    <title></title>
+</head>
+
+<body>
+<!--상담 모달 s-->
+<div class="slide-modal-backdrop _slide_modal_backdrop _slide_modal_backdrop_consulting on">
+    <div class="slide-modal slide-modal-lg">
+        <div class="modal_header">
+            <h3 class="title font-weight-bold">상담관리</h3>
+            <i class="ico_close_btn _close_slide_modal"></i>
+        </div>
+        <div class="modal_body">
+            <div class="management-content">
+                <ul class="nav nav-tabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" data-toggle="tab" data-target="#tab01" type="button" role="tab"
+                                aria-controls="dummy1">상담등록
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" data-toggle="tab" data-target="#tab02" type="button" role="tab">
+                            알림톡(LMS)
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" data-toggle="tab" data-target="#tab03" type="button" role="tab">결제내역
+                            이메일
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" data-toggle="tab" data-target="#tab04" type="button" role="tab">영수증
+                        </button>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="tab01" role="tabpanel">
+                        <div class="tab-content-area">
+                            <div class="row select-box_container">
+                                <div class="col-xl">
+                                    <div class="form-group mb-0">
+                                        <p class="title">유입채널</p>
+                                        <label class="select-box _select-box">
+                                            <input type="hidden" class="select_value">
+                                            <span class="value_text">선택</span>
+                                            <i class="icon ico_select_arrow_down">아래화살표</i>
+                                            <ul class="options">
+                                                <li class="option" value="0">유선</li>
+                                                <li class="option" value="1">채널톡</li>
+                                                <li class="option" value="2">이메일</li>
+                                                <li class="option" value="3">기타</li>
+                                            </ul>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-xl">
+                                    <div class="form-group mb-0">
+                                        <p class="title">문의자</p>
+                                        <label class="select-box _select-box">
+                                            <input type="hidden" class="select_value">
+                                            <span class="value_text">선택</span>
+                                            <i class="icon ico_select_arrow_down">아래화살표</i>
+                                            <ul class="options">
+                                                <li class="option" value="0">고객</li>
+                                                <li class="option" value="1">기존 파트너</li>
+                                                <li class="option" value="2">신규 파트너</li>
+                                                <li class="option" value="3">기타</li>
+                                            </ul>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-xl">
+                                    <div class="form-group mb-0">
+                                        <p class="title">유형</p>
+                                        <label class="select-box _select-box">
+                                            <input type="hidden" class="select_value">
+                                            <span class="value_text">선택</span>
+                                            <i class="icon ico_select_arrow_down">아래화살표</i>
+                                            <ul class="options">
+                                                <li class="option" value="0">결제내역</li>
+                                                <li class="option" value="1">취소/해지</li>
+                                                <li class="option" value="2">결제오류</li>
+                                                <li class="option" value="3">가입문의</li>
+                                                <li class="option" value="4">개발문의</li>
+                                                <li class="option" value="5">가입문의</li>
+                                                <li class="option" value="6">기능문의</li>
+                                                <li class="option" value="7">기능개선</li>
+                                                <li class="option" value="8">보증보험</li>
+                                                <li class="option" value="9">연결불가</li>
+                                                <li class="option" value="10">제휴/마케팅</li>
+                                                <li class="option" value="11">기타</li>
+                                            </ul>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-xl">
+                                    <div class="form-group mb-0">
+                                        <p class="title">유형 상세</p>
+                                        <label class="select-box _select-box">
+                                            <input type="hidden" class="select_value">
+                                            <span class="value_text">선택</span>
+                                            <i class="icon ico_select_arrow_down">아래화살표</i>
+                                            <ul class="options view-8">
+                                                <li class="option" value="0">결제내역</li>
+                                                <li class="option" value="1">취소/해지</li>
+                                                <li class="option" value="2">등록수단 해지</li>
+                                                <li class="option" value="3">등록수단 변경</li>
+                                                <li class="option" value="4">일반오류</li>
+                                                <li class="option" value="5">시스템오류</li>
+                                                <li class="option" value="6">국내가입</li>
+                                                <li class="option" value="7">해외가입</li>
+                                                <li class="option" value="8">개발문의</li>
+                                                <li class="option" value="9">정산내역</li>
+                                                <li class="option" value="10">정산주기</li>
+                                                <li class="option" value="11">정산한도</li>
+                                                <li class="option" value="12">정산계좌</li>
+                                                <li class="option" value="13">파트너관리자</li>
+                                                <li class="option" value="14">상점정보변경</li>
+                                                <li class="option" value="15">양수양도</li>
+                                                <li class="option" value="16">계약해지</li>
+                                                <li class="option" value="17">기능개선</li>
+                                                <li class="option" value="18">보증보험</li>
+                                                <li class="option" value="19">제휴/마케팅</li>
+                                                <li class="option" value="20">불만</li>
+                                                <li class="option" value="21">강성불만</li>
+                                                <li class="option" value="22">기타</li>
+                                            </ul>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group text-area_container">
+                                <p class="title">내용</p>
+                                <textarea class="form-control text-area"></textarea>
+                            </div>
+                            <div class="clearfix">
+                                <div class="float-right">
+                                    <button class="btn btn-primary font-weight-bold btn-md">등록하기</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="tab02" role="tabpanel">
+                        <div class="tab-content-area">
+                            <div class="row select-box_container">
+                                <div class="col-sm-3">
+                                    <div class="form-group mb-0">
+                                        <p class="title">수신번호</p>
+                                        <label class="w-100 mb-0">
+                                            <input class="form-control" type="text">
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group text-area_container">
+                                <p class="title">내용</p>
+                                <textarea class="form-control text-area">
+[페이플 고객센터]
+고객님, 안녕하세요.
+결제대행사 페이플입니다. 고객님께서 결제하신 상점의 문의방법을 안내드립니다.
+
+• 상호명:
+• 서비스명: 포카마켓
+• 홈페이지: phocamarket.com,pocamarket.com
+• 고객센터 전화번호: -
+• 고객센터 문의방법 : 홈페이지 접속 → 로그인 → 맨 오른쪽 하단 → Chat 클릭 후 문의하기
+
+오늘도 행복한 하루 보내세요.
+고맙습니다.
+                                </textarea>
+                            </div>
+                            <div class="clearfix">
+                                <div class="float-right">
+                                    <button class="btn btn-primary font-weight-bold btn-md">발송하기</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="tab03" role="tabpanel">
+                        <div class="tab-content-area">
+                            <div class="form-group mb-0 form-group-row">
+                                <p class="title">이메일</p>
+                                <label class="mb-0">
+                                    <input class="form-control" type="text">
+                                </label>
+                                <span class="desc">(으)로 결제내역 이메일을 발송할까요?</span>
+                                <button class="btn btn-primary font-weight-bold btn-md">발송하기</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="tab04" role="tabpanel">
+                        <div class="tab-content-area">
+                            <div class="img">
+                                <img src="../../img/common/img_dummy.png" style="width: 458px; height: 781px">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal_footer">
+
+        </div>
+    </div>
+</div>
+<!--상담 모달 e-->
+</body>
+</html>

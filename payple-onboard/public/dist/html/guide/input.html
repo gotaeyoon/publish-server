@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./../../css/payple_component.css">
+    <link rel="stylesheet" href="./../../css/payple_pages.css">
+    <script src="../../js/bundle.js"></script>
+    <script src="../../js/common.js"></script>
+    <title></title>
+</head>
+
+<body>
+<div class="wrap">
+    <div class="guide-section">
+        <div class="card">
+            <h5 class="font-weight-semi-bold">셀렉트박스</h5>
+            <!--셀렉트 박스 기본 value O s-->
+            <div class="form-group">
+                <label class="select-box _select-box">
+                    <input type="hidden" class="select_value" value="0">
+                    <span class="value_text">전체</span>
+                    <i class="icon ico_select_arrow_down">아래화살표</i>
+                    <ul class="options">
+                        <li class="option" value="0">전체</li>
+                        <li class="option" value="1">성공</li>
+                        <li class="option" value="2">실패</li>
+                    </ul>
+                </label>
+            </div>
+            <!--셀렉트 박스 기본 value O e-->
+            <!--검색 input s -->
+            <h5 class="font-weight-semi-bold">검색Input</h5>
+
+            <div class="form-group">
+                <label class="w-100 mb-0">
+                    <input class="form-control search" type="text">
+                </label>
+            </div>
+            <!--검색 input e -->
+
+            <h5 class="font-weight-semi-bold">달력</h5>
+            <!--달력 input s-->
+            <div class="form-group">
+                <label class="mb-0 calender-input">
+                    <input class="form-control" type="text" placeholder="Default input" name="modalDataPickerBtn">
+                </label>
+                <button class="btn btn-secondary" id="threeMonthAgoBtn">3개월</button>
+                <button class="btn btn-secondary" id="lastMonthBtn">지난달</button>
+                <button class="btn btn-secondary" id="thisMonthBtn">이번달</button>
+                <button class="btn btn-secondary" id="yesterdayBtn">어제</button>
+                <button class="btn btn-secondary" id="todayBtn">오늘</button>
+            </div>
+
+            <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered calender_modal">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <div id="modalDataPicker"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--달력 input e -->
+        </div>
+    </div>
+</div>
+</body>
+</html>
