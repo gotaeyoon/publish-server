@@ -12,7 +12,7 @@ function asideSlideBtn() {
 
 //Aside open UI
 function openAsideBtn() {
-    let openAsideBtn = $('._btn_open_depths')
+    let openAsideBtn = $('._btn-open-depths')
     openAsideBtn.on('click', function () {
         $(this).parent('.aside').toggleClass('on')
         $('.footer').toggleClass('on')
@@ -31,18 +31,19 @@ function selectBox() {
         let value = $(this).val();
         let selectBoxValue = $(this).closest('._select-box')
 
-        selectBoxValue.find('.select_value').attr('value', value);
-        selectBoxValue.find('.value_text').text(text).css({'color': '#1F1F1F'});
+        selectBoxValue.find('._select-value').attr('value', value);
+        selectBoxValue.find('._value-text').text(text).css({'color': '#1F1F1F'});
     });
 
     //disabled 처리
-    if ($(".select_value").is(':disabled')) {
-        $(".select_value:disabled").parent('._select-box').css({
+    if ($("._select-value").is(':disabled')) {
+        const disableSelectBox = $("._select-value:disabled")
+        disableSelectBox.parent('._select-box').css({
             "background": "#e9ecef",
             "border": "1px solid #CED4DA",
             "cursor": "auto"
         })
-        $(".select_value:disabled").parent('._select-box').off('click');
+        disableSelectBox.parent('._select-box').off('click');
     }
 
 
@@ -70,11 +71,6 @@ function moreSearch(){
             moreSearchBtn.text('Close Search');
         }
     })
-
-
-
-
-
 }
 
 // dataPickerRange
@@ -160,12 +156,12 @@ function nodataTable() {
 
 //slideModal
 function openSlideModal(modalName, i) {
-    $("." + modalName + i).addClass('on');
+    $("." + modalName + i).addClass('show');
 }
 
 function closeSlideModal() {
-    $('._close_slide_modal').on('click', function () {
-        $('._slide_modal_backdrop').removeClass('on');
+    $('._close-slide-modal-btn').on('click', function () {
+        $('._slide-modal-wrap').removeClass('show');
     })
 }
 
@@ -175,7 +171,7 @@ function asideTooltip() {
     links.mouseover(function () {
         const hoverTitle = $(this).find('a');
         const top = hoverTitle[0].getBoundingClientRect().top;
-        const arrow = $(this).find('.arrow_box');
+        const arrow = $(this).find('.arrow-box');
         arrow.css('top', top + 10 + 'px');
     });
 }
@@ -192,6 +188,8 @@ function asideMobileBtn() {
     })
 }
 
+
+/*input buttno*/
 function inputIcoHover() {
     $('._input_ico_hover').hover(
         function () {
@@ -204,36 +202,12 @@ function inputIcoHover() {
 }
 
 
-//달력
-// function calender(){
-//     const parentElement = $('#datepickerParent');
-//     let dateRangePicker = $('input[name=dateRangePicker]');
-//     dateRangePicker.daterangepicker(
-//       ,
-//
-//         function (start, end, label) {
-//         console.log('선택된 날짜: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
-//     });
-//     dateRangePicker.on('hide.daterangepicker', function (ev, picker) {
-//         let modals = $('.modal')
-//         modals.removeClass('fade')
-//         setTimeout(function () {
-//             modals.removeClass('show')
-//         }, 200)
-//     });
-//
-//     dateRangePicker.on('showCalendar.daterangepicker', function (ev, picker) {
-//         const trList = $('.daterangepicker').find("tr");
-//         trList.each(function() {
-//             var offEndsAvailableCount = $(this).find(".off.ends.available").length;
-//             if (offEndsAvailableCount === 7) {
-//                 $(this).hide();
-//             }
-//         });
-//     });
-//
-// }
-
+/*only-number*/
+function onlyNumber(){
+    $('._only-number').on('input',function(){
+        this.value =  this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');
+    })
+}
 
 $(document).ready(function () {
     dataRangePicker();
@@ -246,4 +220,5 @@ $(document).ready(function () {
     inputIcoHover();
     moreSearch();
     nodataTable();
+    onlyNumber();
 })

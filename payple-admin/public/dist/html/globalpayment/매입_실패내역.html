@@ -13,7 +13,6 @@
 </head>
 
 <body>
-
 <div class="wrap">
     <header>
     <div class="header">
@@ -642,13 +641,582 @@
 </div>
         <!-- 컨텐츠 s-->
         <article class="content-container">
-            <section>
-                <div id='calendar'>
+            <section class="payment-history-section">
+                <h3 class="main-title font-weight-bold">매입-실패내역</h3>
+                <div class="card">
+                    <h5 class="filter-title font-weight-semi-bold">
+                        <i class="icon ico_filter"></i>
+                        <span>필터</span>
+                    </h5>
+                    <div class="row">
+                        <div class="col-xl-auto">
+                            <p class="card-title font-weight-semi-bold">기간</p>
+                            <div class="row row-col-3">
+                                <div class="col-xl">
+                                    <div class="form-group">
+                                        <div class="btn-group w-100 custom-radio-container">
+                                            <div class="custom-radio-group fsz-0">
+                                                <input class="radio-input" type="radio" name="example1" checked
+                                                       id="customRadio1">
+                                                <label for="customRadio1" class="btn btn-secondary btn-md">거래일</label>
+                                            </div>
+                                            <div class="custom-radio-group fsz-0">
+                                                <input class="radio-input" type="radio" name="example1"
+                                                       id="customRadio2">
+                                                <label for="customRadio2" class="btn btn-secondary btn-md">정산일</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-auto">
+                                    <div class="form-group">
+                                        <div class="btn-group-month">
+                                            <button class="btn btn-secondary" id="threeMonthAgoBtn">3개월</button>
+                                            <button class="btn btn-secondary" id="lastMonthBtn">지난달</button>
+                                            <button class="btn btn-secondary" id="thisMonthBtn">이번달</button>
+                                            <button class="btn btn-secondary" id="yesterdayBtn">어제</button>
+                                            <button class="btn btn-secondary" id="todayBtn">오늘</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-auto">
+                                    <div class="form-group">
+                                        <label class="calender-input mb-0">
+                                            <input class="form-control _dataPickerRange" type="text">
+                                            <i class="icon ico_calendar" onclick="$('._modal-calendar').modal('show')">달력이미지</i>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-auto">
+                            <p class="font-weight-semi-bold card-title">결제상태</p>
+                            <div class="row">
+                                <div class="col-xl">
+                                    <div class="form-group">
+                                        <div class="btn-group w-100 custom-radio-container">
+                                            <div class="custom-radio-group">
+                                                <input class="radio-input" type="radio" name="example2" checked
+                                                       id="customRadio3">
+                                                <label for="customRadio3" class="btn btn-secondary btn-md">전체</label>
+                                            </div>
+                                            <div class="custom-radio-group ">
+                                                <input class="radio-input" type="radio" name="example2"
+                                                       id="customRadio4">
+                                                <label for="customRadio4" class="btn btn-secondary btn-md">실패</label>
+                                            </div>
+                                            <div class="custom-radio-group ">
+                                                <input class="radio-input" type="radio" name="example2"
+                                                       id="customRadio5">
+                                                <label for="customRadio5"
+                                                       class="btn btn-secondary btn-md">취소</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-auto">
+                            <p class="font-weight-semi-bold card-title">결제수단</p>
+                            <div class="row">
+                                <div class="col-xl">
+                                    <div class="form-group">
+                                        <div class="btn-group w-100 custom-radio-container">
+                                            <div class="custom-radio-group">
+                                                <input class="radio-input" type="radio" name="example3" checked
+                                                       id="customRadio10">
+                                                <label for="customRadio10" class="btn btn-secondary btn-md">전체</label>
+                                            </div>
+                                            <div class="custom-radio-group ">
+                                                <input class="radio-input" type="radio" name="example3"
+                                                       id="customRadio11">
+                                                <label for="customRadio11" class="btn btn-secondary btn-md">키인</label>
+                                            </div>
+                                            <div class="custom-radio-group ">
+                                                <input class="radio-input" type="radio" name="example3"
+                                                       id="customRadio12">
+                                                <label for="customRadio12"
+                                                       class="btn btn-secondary btn-md">빌링</label>
+                                            </div>
+                                            <div class="custom-radio-group ">
+                                                <input class="radio-input" type="radio" name="example3"
+                                                       id="customRadio13">
+                                                <label for="customRadio13"
+                                                       class="btn btn-secondary btn-md">간편</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="font-weight-semi-bold card-title">상세검색</p>
+                    <div class="row">
+                        <div class="col-xl">
+                            <div class="card-number-input">
+                                <div class="form-group first-number">
+                                    <label class="mb-0 w-100 ">
+                                        <input class="form-control _only-number search" type="text"
+                                               placeholder="카드/계좌 앞 6자리">
+                                    </label>
 
+                                </div>
+                                <div class="form-group last-number">
+                                    <label class="mb-0 w-100">
+                                        <input class="form-control search _only-number" type="text" placeholder="뒤 4자리">
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl">
+                            <div class="form-group">
+                                <label class="w-100 mb-0">
+                                    <input class="form-control search" type="text" placeholder="거래액">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-xl">
+                            <div class="form-group">
+                                <label class="w-100 mb-0">
+                                    <input class="form-control search" type="text" placeholder="주문번호">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-xl-d-none">&nbsp;</div>
+                        <div class="col-xl-d-none">&nbsp;</div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-xl">
+                            <div class="form-group">
+                                <label class="w-100 mb-0">
+                                    <input class="form-control search" type="text" placeholder="상호명">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-xl">
+                            <div class="form-group">
+                                <label class="w-100 mb-0">
+                                    <input class="form-control search" type="text" placeholder="서비스명">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-xl">
+                            <div class="form-group">
+                                <label class="w-100 mb-0">
+                                    <input class="form-control search" type="text" placeholder="서비스 MID">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-xl">
+                            <div class="form-group">
+                                <label class="w-100 mb-0">
+                                    <input class="form-control search" type="text" placeholder="빌링키">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-xl-d-none">&nbsp;</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl">
+                            <div class="form-group">
+                                <label class="w-100 mb-0">
+                                    <input class="form-control search" type="text" placeholder="주문자명">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-xl">
+                            <div class="form-group">
+                                <label class="w-100 mb-0">
+                                    <input class="form-control search" type="text" placeholder="상품명">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-xl">
+                            <div class="form-group">
+                                <label class="w-100 mb-0 position-relative">
+                                    <input class="form-control search" type="text" placeholder="PID(거래 ID)">
+                                    <i class="icon ico_question_gray input-ico-hover _input_ico_hover pid"></i>
+                                    <span class="speech-bubble _input_cation">거래마다 다르며 결제, 취소 모두 다른 PID</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-xl">
+                            <div class="form-group">
+                                <label class="w-100 mb-0 position-relative">
+                                    <input class="form-control search question" type="text"
+                                           placeholder="OPID(원거래 ID)">
+                                    <i class="icon ico_question_gray input-ico-hover _input_ico_hover"></i>
+                                    <span class="speech-bubble _input_cation">거래마다 다르며 결제, 취소의 OPID는 동일</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-xl-d-none">&nbsp;</div>
+                    </div>
+                    <p class="font-weight-semi-bold card-title">DCC/통화 상세검색</p>
+                    <div class="row">
+                        <div class="col-xl">
+                            <div class="form-group min-w-190">
+                                <label class="select-box _select-box">
+                                    <input type="hidden" class="select-value _select-value" value="0">
+                                    <span class="value-text _value-text">매입사(전체)</span>
+                                    <i class="icon ico_select_arrow_down">아래화살표</i>
+                                    <ul class="options h-auto">
+                                        <li class="option" value="0">매입사(전체)</li>
+                                        <li class="option" value="1">롯데카드</li>
+                                        <li class="option" value="2">하나카드</li>
+                                    </ul>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-xl">
+                            <div class="form-group min-w-190">
+                                <label class="select-box _select-box">
+                                    <input type="hidden" class="select-value _select-value" value="0">
+                                    <span class="value-text _value-text">브랜드(전체)</span>
+                                    <i class="icon ico_select_arrow_down">아래화살표</i>
+                                    <ul class="options h-auto">
+                                        <li class="option" value="0">브랜드(전체)</li>
+                                        <li class="option" value="1">VISA</li>
+                                        <li class="option" value="2">MASTER</li>
+                                        <li class="option" value="3">JCB</li>
+                                    </ul>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-xl-d-none">&nbsp;</div>
+                        <div class="col-xl-d-none">&nbsp;</div>
+                        <div class="col-xl-d-none">&nbsp;</div>
+                        <div class="col-xl-d-none">&nbsp;</div>
+                        <div class="col-xl-d-none">&nbsp;</div>
+                        <div class="col-xl-d-none">&nbsp;</div>
+                        <div class="col-xl-d-none">&nbsp;</div>
+                        <div class="col-xl-d-none">&nbsp;</div>
+                    </div>
+                    <div class="filter-button-area ">
+                        <div class="float-right">
+                            <a class=" align-bottom" href="">Clear all</a>
+                            <button class="btn btn-dark btn-round ml-3 btn-md">조회하기</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="result-title-area d-flex justify-content-between align-items-center">
+                        <h5 class="result-title font-weight-semi-bold">
+                            <i class="icon ico_bs_list"></i>
+                            <span>조회결과</span>
+                        </h5>
+                        <div>
+                            <button class="btn-reset"><i class="icon ico_excel">엑셀출력</i></button>
+                        </div>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-spread table-fixed">
+                            <colgroup>
+                                <col style="width: 50px">
+                                <col style="width: 200px">
+                                <col style="width: 170px">
+
+                                <col style="width: 423px">
+                                <col style="width: 100px">
+                                <col style="width: 220px">
+                                <col style="width: 220px">
+                                <col style="width: 103px">
+                                <col style="width: 65px">
+                                <col style="width: 100px">
+                                <col style="width: 100px">
+                                <col style="width: 74px">
+                                <col style="width: 240px">
+                                <col style="width: 74px">
+                                <col style="width: 105px">
+                                <col style="width: 154px">
+                                <col style="width: 160px">
+                                <col style="width: 82px">
+
+                            </colgroup>
+                            <thead>
+                            <tr>
+                                <th class="text-center">No</th>
+                                <th class="text-center">상호명/서비스명</th>
+                                <th class="text-center">서비스 MID</th>
+
+                                <th class="text-center">실패 사유</th>
+                                <th class="text-center">결제수단</th>
+                                <th class="text-center">PID(OPID)</th>
+                                <th class="text-center">주문번호</th>
+                                <th class="text-center">거래일시</th>
+                                <th class="text-center">승인통화</th>
+                                <th class="text-center">거래액</th>
+                                <th class="text-center">수수료</th>
+                                <th class="text-center">DM</th>
+                                <th class="text-center">상품명</th>
+                                <th class="text-center">주문자명</th>
+                                <th class="text-center">브랜드</th>
+                                <th class="text-center">카드사/은행</th>
+                                <th class="text-center">카드/계좌번호</th>
+                                <th class="text-center">DCC 여부</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td class="text-center align-middle"><span>10</span></td>
+                                <td class="align-middle">
+                                    <span>벨루가</span><br>
+                                    <span>kitems</span>
+                                </td>
+                                <td class="align-middle text-center"><span>Service0010012345678</span></td>
+
+                                <td class="align-middle text-left"><span>Decline-Invalid Card Verification Number(CVN)</span></td>
+                                <td class="align-middle text-center"><span>카드-앱카드</span></td>
+                                <td class="align-middle">
+                                    <a class=" color-blue-100" href="javascript:void(0)"
+                                       onclick="openSlideModal('_slide-modal-wrap','-detail')">abcdeabcdeabcdeabcdeabcde</a>
+                                    <span class="color-gray-000">(56465456456456)</span>
+                                </td>
+                                <td class="align-middle">
+                                    <span>193979811939798119397981199397981193979811939798119397981</span></td>
+                                <td class="align-middle text-center">
+                                    <span>2023-07-28<br>12:05:55</span>
+                                </td>
+                                <td class="align-middle text-center">
+                                    <span>KRW</span>
+                                </td>
+                                <td class="text-right align-middle"><span>100,000</span></td>
+                                <td class="text-right align-middle"><span>2,500</span></td>
+                                <td class="text-center align-middle"><span>20</span></td>
+                                <td class="align-middle"><span>LEE+HELEN+HYOJUNG님의 2023년 08월 29일 진료비</span></td>
+                                <td class="align-middle text-center"><span>김*김</span></td>
+                                <td class="align-middle text-center"><span>VISA</span></td>
+                                <td class="align-middle text-center"><span>KB국민카드</span></td>
+                                <td class="align-middle text-center"><span>1234-56**-****-0987</span></td>
+                                <td class="align-middle text-center"><span>Y</span></td>
+                            </tr>
+                            <tr>
+                                <td class="text-center align-middle"><span>10</span></td>
+                                <td class="align-middle">
+                                    <span>벨루가</span><br>
+                                    <span>kitems</span>
+                                </td>
+                                <td class="align-middle text-center"><span>Service0010012345678</span></td>
+
+                                <td class="align-middle text-left"><span>Decline-Invalid Card Verification Number(CVN)</span></td>
+                                <td class="align-middle text-center"><span>카드-앱카드</span></td>
+                                <td class="align-middle">
+                                    <a class=" color-blue-100" href="javascript:void(0)"
+                                       onclick="openSlideModal('_slide-modal-wrap','-detail')">abcdeabcdeabcdeabcdeabcde</a>
+                                    <span class="color-gray-000">(56465456456456)</span>
+                                </td>
+                                <td class="align-middle">
+                                    <span>193979811939798119397981199397981193979811939798119397981</span></td>
+                                <td class="align-middle text-center">
+                                    <span>2023-07-28<br>12:05:55</span>
+                                </td>
+                                <td class="align-middle text-center">
+                                    <span>KRW</span>
+                                </td>
+                                <td class="text-right align-middle"><span>100,000</span></td>
+                                <td class="text-right align-middle"><span>2,500</span></td>
+                                <td class="text-center align-middle"><span>20</span></td>
+                                <td class="align-middle"><span>LEE+HELEN+HYOJUNG님의 2023년 08월 29일 진료비</span></td>
+                                <td class="align-middle text-center"><span>김*김</span></td>
+                                <td class="align-middle text-center"><span>VISA</span></td>
+                                <td class="align-middle text-center"><span>KB국민카드</span></td>
+                                <td class="align-middle text-center"><span>1234-56**-****-0987</span></td>
+                                <td class="align-middle text-center"><span>Y</span></td>
+                            </tr>
+                            <tr>
+                                <td class="text-center align-middle"><span>10</span></td>
+                                <td class="align-middle">
+                                    <span>벨루가</span><br>
+                                    <span>kitems</span>
+                                </td>
+                                <td class="align-middle text-center"><span>Service0010012345678</span></td>
+
+                                <td class="align-middle text-left"><span>Decline-Invalid Card Verification Number(CVN)</span></td>
+                                <td class="align-middle text-center"><span>카드-앱카드</span></td>
+                                <td class="align-middle">
+                                    <a class=" color-blue-100" href="javascript:void(0)"
+                                       onclick="openSlideModal('_slide-modal-wrap','-detail')">abcdeabcdeabcdeabcdeabcde</a>
+                                    <span class="color-gray-000">(56465456456456)</span>
+                                </td>
+                                <td class="align-middle">
+                                    <span>193979811939798119397981199397981193979811939798119397981</span></td>
+                                <td class="align-middle text-center">
+                                    <span>2023-07-28<br>12:05:55</span>
+                                </td>
+                                <td class="align-middle text-center">
+                                    <span>KRW</span>
+                                </td>
+                                <td class="text-right align-middle"><span>100,000</span></td>
+                                <td class="text-right align-middle"><span>2,500</span></td>
+                                <td class="text-center align-middle"><span>20</span></td>
+                                <td class="align-middle"><span>LEE+HELEN+HYOJUNG님의 2023년 08월 29일 진료비</span></td>
+                                <td class="align-middle text-center"><span>김*김</span></td>
+                                <td class="align-middle text-center"><span>VISA</span></td>
+                                <td class="align-middle text-center"><span>KB국민카드</span></td>
+                                <td class="align-middle text-center"><span>1234-56**-****-0987</span></td>
+                                <td class="align-middle text-center"><span>Y</span></td>
+                            </tr>
+                            <tr>
+                                <td class="text-center align-middle"><span>10</span></td>
+                                <td class="align-middle">
+                                    <span>벨루가</span><br>
+                                    <span>kitems</span>
+                                </td>
+                                <td class="align-middle text-center"><span>Service0010012345678</span></td>
+
+                                <td class="align-middle text-left"><span>Decline-Invalid Card Verification Number(CVN)</span></td>
+                                <td class="align-middle text-center"><span>카드-앱카드</span></td>
+                                <td class="align-middle">
+                                    <a class=" color-blue-100" href="javascript:void(0)"
+                                       onclick="openSlideModal('_slide-modal-wrap','-detail')">abcdeabcdeabcdeabcdeabcde</a>
+                                    <span class="color-gray-000">(56465456456456)</span>
+                                </td>
+                                <td class="align-middle">
+                                    <span>193979811939798119397981199397981193979811939798119397981</span></td>
+                                <td class="align-middle text-center">
+                                    <span>2023-07-28<br>12:05:55</span>
+                                </td>
+                                <td class="align-middle text-center">
+                                    <span>KRW</span>
+                                </td>
+                                <td class="text-right align-middle"><span>100,000</span></td>
+                                <td class="text-right align-middle"><span>2,500</span></td>
+                                <td class="text-center align-middle"><span class="underline-text line-bg-red-200 color-red-100">100</span></td>
+                                <td class="align-middle"><span>LEE+HELEN+HYOJUNG님의 2023년 08월 29일 진료비</span></td>
+                                <td class="align-middle text-center"><span>김*김</span></td>
+                                <td class="align-middle text-center"><span>VISA</span></td>
+                                <td class="align-middle text-center"><span>KB국민카드</span></td>
+                                <td class="align-middle text-center"><span>1234-56**-****-0987</span></td>
+                                <td class="align-middle text-center"><span>Y</span></td>
+                            </tr>
+                            <tr>
+                                <td class="text-center align-middle"><span>10</span></td>
+                                <td class="align-middle">
+                                    <span>벨루가</span><br>
+                                    <span>kitems</span>
+                                </td>
+                                <td class="align-middle text-center"><span>Service0010012345678</span></td>
+
+                                <td class="align-middle text-left"><span>Decline-Invalid Card Verification Number(CVN)</span></td>
+                                <td class="align-middle text-center"><span>카드-앱카드</span></td>
+                                <td class="align-middle">
+                                    <a class=" color-blue-100" href="javascript:void(0)"
+                                       onclick="openSlideModal('_slide-modal-wrap','-detail')">abcdeabcdeabcdeabcdeabcde</a>
+                                    <span class="color-gray-000">(56465456456456)</span>
+                                </td>
+                                <td class="align-middle">
+                                    <span>193979811939798119397981199397981193979811939798119397981</span></td>
+                                <td class="align-middle text-center">
+                                    <span>2023-07-28<br>12:05:55</span>
+                                </td>
+                                <td class="align-middle text-center">
+                                    <span>KRW</span>
+                                </td>
+                                <td class="text-right align-middle"><span>100,000</span></td>
+                                <td class="text-right align-middle"><span>2,500</span></td>
+                                <td class="text-center align-middle"><span>20</span></td>
+                                <td class="align-middle"><span>LEE+HELEN+HYOJUNG님의 2023년 08월 29일 진료비</span></td>
+                                <td class="align-middle text-center"><span>김*김</span></td>
+                                <td class="align-middle text-center"><span>VISA</span></td>
+                                <td class="align-middle text-center"><span>KB국민카드</span></td>
+                                <td class="align-middle text-center"><span>1234-56**-****-0987</span></td>
+                                <td class="align-middle text-center"><span>Y</span></td>
+                            </tr>
+                            <tr>
+                                <td class="text-center align-middle"><span>10</span></td>
+                                <td class="align-middle">
+                                    <span>벨루가</span><br>
+                                    <span>kitems</span>
+                                </td>
+                                <td class="align-middle text-center"><span>Service0010012345678</span></td>
+
+                                <td class="align-middle text-left"><span>Decline-Invalid Card Verification Number(CVN)</span></td>
+                                <td class="align-middle text-center"><span>카드-앱카드</span></td>
+                                <td class="align-middle">
+                                    <a class=" color-blue-100" href="javascript:void(0)"
+                                       onclick="openSlideModal('_slide-modal-wrap','-detail')">abcdeabcdeabcdeabcdeabcde</a>
+                                    <span class="color-gray-000">(56465456456456)</span>
+                                </td>
+                                <td class="align-middle">
+                                    <span>193979811939798119397981199397981193979811939798119397981</span></td>
+                                <td class="align-middle text-center">
+                                    <span>2023-07-28<br>12:05:55</span>
+                                </td>
+                                <td class="align-middle text-center">
+                                    <span>KRW</span>
+                                </td>
+                                <td class="text-right align-middle"><span>100,000</span></td>
+                                <td class="text-right align-middle"><span>2,500</span></td>
+                                <td class="text-center align-middle"><span>20</span></td>
+                                <td class="align-middle"><span>LEE+HELEN+HYOJUNG님의 2023년 08월 29일 진료비</span></td>
+                                <td class="align-middle text-center"><span>김*김</span></td>
+                                <td class="align-middle text-center"><span>VISA</span></td>
+                                <td class="align-middle text-center"><span>KB국민카드</span></td>
+                                <td class="align-middle text-center"><span>1234-56**-****-0987</span></td>
+                                <td class="align-middle text-center"><span>Y</span></td>
+                            </tr>
+                            <tr>
+                                <td class="text-center align-middle"><span>10</span></td>
+                                <td class="align-middle">
+                                    <span>벨루가</span><br>
+                                    <span>kitems</span>
+                                </td>
+                                <td class="align-middle text-center"><span>Service0010012345678</span></td>
+
+                                <td class="align-middle text-left"><span>Decline-Invalid Card Verification Number(CVN)</span></td>
+                                <td class="align-middle text-center"><span>카드-앱카드</span></td>
+                                <td class="align-middle">
+                                    <a class=" color-blue-100" href="javascript:void(0)"
+                                       onclick="openSlideModal('_slide-modal-wrap','-detail')">abcdeabcdeabcdeabcdeabcde</a>
+                                    <span class="color-gray-000">(56465456456456)</span>
+                                </td>
+                                <td class="align-middle">
+                                    <span>193979811939798119397981199397981193979811939798119397981</span></td>
+                                <td class="align-middle text-center">
+                                    <span>2023-07-28<br>12:05:55</span>
+                                </td>
+                                <td class="align-middle text-center">
+                                    <span>KRW</span>
+                                </td>
+                                <td class="text-right align-middle"><span>100,000</span></td>
+                                <td class="text-right align-middle"><span>2,500</span></td>
+                                <td class="text-center align-middle"><span>20</span></td>
+                                <td class="align-middle"><span>LEE+HELEN+HYOJUNG님의 2023년 08월 29일 진료비</span></td>
+                                <td class="align-middle text-center"><span>김*김</span></td>
+                                <td class="align-middle text-center"><span>VISA</span></td>
+                                <td class="align-middle text-center"><span>KB국민카드</span></td>
+                                <td class="align-middle text-center"><span>1234-56**-****-0987</span></td>
+                                <td class="align-middle text-center"><span>Y</span></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="pagination-area">
+    <ul class="pagination-list">
+        <li class="pagination-icon">
+            <i class="icon ico_first_page">처음으로가기</i>
+        </li>
+        <li class="pagination-icon">
+            <i class="icon ico_previous_page">이전으로가기</i>
+        </li>
+        <li class="active">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li class="pagination-icon">
+            <i class="icon ico_next_page">다음으로가기</i>
+        </li>
+        <li class="pagination-icon">
+            <i class="icon ico_last_page">맨뒤로가기</i>
+        </li>
+    </ul>
+</div>
                 </div>
             </section>
         </article>
         <!-- 컨텐츠 e-->
+
     </main>
     <footer>
     <div class="footer">
@@ -657,177 +1225,273 @@
     </div>
 </footer>
 </div>
+<!--달력 s-->
+<div class="modal fade _modal-calendar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered calender_modal">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="_modalDataPicker"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--달력 e-->
+<div class="slide-modal-wrap _slide-modal-wrap _slide-modal-wrap-detail ">
+    <div class="slide-modal slide-modal-lg">
+        <div class="slide-modal-header">
+            <h3 class="title font-weight-bold">상세내역</h3>
+            <i class="ico_close_btn _close-slide-modal-btn"></i>
+        </div>
+        <div class="slide-modal-body">
+            <div class="tab-container">
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" data-toggle="tab" data-target="#dummy1" type="button" role="tab"
+                                aria-controls="dummy1">거래
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" data-toggle="tab" data-target="#dummy2" aria-controls="dummy1">DM
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" data-toggle="tab" data-target="#dummy3" type="button" role="tab">DCC
+                        </button>
+                    </li>
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div class="tab-pane active" id="dummy1" role="tabpanel">
+                        <p class="font-weight-semi-bold sub-title">거래 정보</p>
+                        <div class="custom-response-table">
+                            <div class="table-row">
+                                <div class="data-area">
+                                    <div class="title"><span>주문번호</span></div>
+                                    <div class="content"><span>asdasd</span></div>
+                                </div>
+                                <div class="data-area">
+                                    <div class="title"><span>가맹점번호</span></div>
+                                    <div class="content"><span>asdasd</span></div>
+                                </div>
+                            </div>
+                            <div class="table-row">
+                                <div class="data-area">
+                                    <div class="title"><span>링크결제 여부</span></div>
+                                    <div class="content"><span>N</span></div>
+                                </div>
+                                <div class="data-area">
+                                    <div class="title"><span>브랜드</span></div>
+                                    <div class="content"><span>VISA Credit</span></div>
+                                </div>
+                            </div>
+                            <div class="table-row">
+                                <div class="data-area">
+                                    <div class="title"><span>매입사</span></div>
+                                    <div class="content"><span>하나카드</span></div>
+                                </div>
+                                <div class="data-area">
+                                    <div class="title"><span>카드 발행국가</span></div>
+                                    <div class="content"><span>US</span></div>
+                                </div>
+                            </div>
+                            <div class="table-row">
+                                <div class="data-area one">
+                                    <div class="title"><span>빌링키</span></div>
+                                    <div class="content"><span>kkkkkk</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="font-weight-semi-bold sub-title">개인 정보</p>
+                        <div class="custom-response-table">
+                            <div class="table-row">
+                                <div class="data-area">
+                                    <div class="title"><span>주문번호</span></div>
+                                    <div class="content"><span>asdasd</span></div>
+                                </div>
+                                <div class="data-area">
+                                    <div class="title"><span>가맹점번호</span></div>
+                                    <div class="content"><span>asdasd</span></div>
+                                </div>
+                            </div>
+                            <div class="table-row">
+                                <div class="data-area">
+                                    <div class="title"><span>링크결제 여부</span></div>
+                                    <div class="content"><span>N</span></div>
+                                </div>
+                                <div class="data-area">
+                                    <div class="title"><span>브랜드</span></div>
+                                    <div class="content"><span>VISA Credit</span></div>
+                                </div>
+                            </div>
+                            <div class="table-row">
+                                <div class="data-area">
+                                    <div class="title"><span>매입사</span></div>
+                                    <div class="content"><span>하나카드</span></div>
+                                </div>
+                                <div class="data-area">
+                                    <div class="title"><span>카드 발행국가</span></div>
+                                    <div class="content"><span>US</span></div>
+                                </div>
+                            </div>
+                            <div class="table-row">
+                                <div class="data-area one">
+                                    <div class="title"><span>빌링키</span></div>
+                                    <div class="content"><span>kkkkkk</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="dummy2" role="tabpanel">
+                        <p class="font-weight-semi-bold sub-title">거래 정보</p>
+                        <div class="custom-response-table">
+                            <div class="table-row">
+                                <div class="data-area">
+                                    <div class="title"><span>Score</span></div>
+                                    <div class="content"><span>75</span></div>
+                                </div>
+                                <div class="data-area">
+                                    <div class="title"><span>User Loacality</span></div>
+                                    <div class="content"><span>4522158610</span></div>
+                                </div>
+                            </div>
+                            <div class="table-row">
+                                <div class="data-area">
+                                    <div class="title"><span>ID</span></div>
+                                    <div class="content"><span>ABCDEABCDEABCDEABCDEABCDEABCDEABCDEABCDEABCDEABCDE</span></div>
+                                </div>
+                                <div class="data-area">
+                                    <div class="title"><span>User Administrative Area</span></div>
+                                    <div class="content"><span>4522158610</span></div>
+                                </div>
+                            </div>
+                            <div class="table-row">
+                                <div class="data-area">
+                                    <div class="title"><span>Profile</span></div>
+                                    <div class="content"><span>kkkkkk</span></div>
+                                </div>
+                                <div class="data-area">
+                                    <div class="title"><span>IP</span></div>
+                                    <div class="content"><span>52.193.141.75</span></div>
+                                </div>
+                            </div>
+                            <div class="table-row">
+                                <div class="data-area">
+                                    <div class="title"><span>User Country</span></div>
+                                    <div class="content"><span>하나카드</span></div>
+                                </div>
+                                <div class="data-area">
+                                    <div class="title"><span>브라우저</span></div>
+                                    <div class="content"><span>Chrome</span></div>
+                                </div>
+                            </div>
+                            <div class="table-row">
+                                <div class="data-area one">
+                                    <div class="title"><span>User Agent</span></div>
+                                    <div class="content fsz-15px"><span>Mozilla/5.0(Maintosh; Intel Mac OS X 10_15_7) AppleWebKit/57.36(KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36</span></div>
+                                </div>
+                            </div>
+                            <div class="table-row">
+                                <div class="data-area one">
+                                    <div class="title"><span>User Accept</span></div>
+                                    <div class="content fsz-15px"><span>application/json, text/javascript. */*, q=0.01</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="font-weight-semi-bold sub-title">DM 상세</p>
+                        <div class="custom-response-table">
+                            <div class="table-row">
+                                <div class="data-area">
+                                    <div class="title"><span>Risk Model</span></div>
+                                    <div class="content"><span>default_asia</span></div>
+                                </div>
+                                <div class="data-area">
+                                    <div class="title"><span>Factor Definitions</span></div>
+                                    <div class="content"><span>V</span></div>
+                                </div>
+                            </div>
+                            <div class="table-row">
+                                <div class="data-area one">
+                                    <div class="title"><span>Information Codes</span></div>
+                                    <div class="content fsz-15px"><span>COR-BA : 청구지 주소에 수정 요소가 있거나 정규화될 수 있습니다.<br>MM-BIN : 카드번호(BIN) 앞 6자리가 국가와 일치하지 않습니다.</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="dummy3" role="tabpanel">
+                        <p class="font-weight-semi-bold sub-title">DCC 정보</p>
+                        <div class="custom-response-table w-50">
+                            <div class="table-row">
+                                <div class="data-area one">
+                                    <div class="title"><span>구분</span></div>
+                                    <div class="content"><span>DCC</span></div>
+                                </div>
+                            </div>
+                            <div class="table-row">
+                                <div class="data-area one">
+                                    <div class="title"><span>Transaction ID</span></div>
+                                    <div class="content"><span>abcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcde</span></div>
+                                </div>
+                            </div>
+                            <div class="table-row">
+                                <div class="data-area one">
+                                    <div class="title"><span>DCC 통화</span></div>
+                                    <div class="content"><span>EUR</span></div>
+                                </div>
+                            </div>
+                            <div class="table-row">
+                                <div class="data-area one">
+                                    <div class="title"><span>승인통화</span></div>
+                                    <div class="content"><span>하나카드</span></div>
+                                </div>
+                            </div>
+                            <div class="table-row">
+                                <div class="data-area one">
+                                    <div class="title"><span>수수료</span></div>
+                                    <div class="content"><span>5.00%</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="font-weight-semi-bold sub-title">환율</p>
+                        <div class="custom-response-table w-50">
+                            <div class="table-row">
+                                <div class="data-area one">
+                                    <div class="title"><span>Rate ID</span></div>
+                                    <div class="content"><span>kkkkkkkkkkkkkkkkkkkkkkkkk</span></div>
+                                </div>
+                            </div>
+                            <div class="table-row">
+                                <div class="data-area one">
+                                    <div class="title"><span>환율</span></div>
+                                    <div class="content"><span>752.59</span></div>
+                                </div>
+                            </div>
+                            <div class="table-row">
+                                <div class="data-area one">
+                                    <div class="title"><span>비율값</span></div>
+                                    <div class="content"><span>0.52232286</span></div>
+                                </div>
+                            </div>
+                            <div class="table-row">
+                                <div class="data-area one">
+                                    <div class="title"><span>역비율값</span></div>
+                                    <div class="content"><span>0.52232286</span></div>
+                                </div>
+                            </div>
+                            <div class="table-row">
+                                <div class="data-area one">
+                                    <div class="title"><span>패이플 역비율값</span></div>
+                                    <div class="content"><span>0.52232286</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slide-modal-footer"></div>
+    </div>
+</div>
 
 </body>
-
-<!--풀캘린더 함수의 경우 전역으로 넣을시 에러가 발생해서 페이지 별로 스크립트 분리-->
-<script>
-
-    // full calender
-    (function () {
-        let calendarEl = document.getElementById('calendar');
-        let calendar = new FullCalendar.Calendar(calendarEl, {
-
-            customButtons: {
-                blackText: {
-                    text: '정산액',
-                },
-                blueText: {
-                    text: '예정 정산액',
-                },
-                orangeText: {
-                    text: '보류액',
-                }
-
-            },
-            headerToolbar: {
-                right: 'prev,next,today',
-                center: 'title',
-                left: 'blackText,blueText,orangeText'
-            },
-            nowIndicator: true,
-            locale: 'ko', // 한국어 설정
-            weekNumberCalculation: 'ISO',
-            editable: false,
-            selectable: true,
-            dayMaxEvents: false,
-            dateClick: function() {
-                alert('모달나오면 열거에요');
-            },
-            eventSources: [
-                {
-                    events: [
-                        {
-                            id:'test1',
-                            classNames: 'settlement_amount data_block',
-                            title: '5,000',
-                            start: '2023-08-11',
-                            end: '2023-08-11',
-                            display: 'block',
-                        },
-                    ],
-                    backgroundColor: "#fff",
-                    textColor: "#28282E",
-                    borderColor : "#fff",
-
-                },
-                {
-                    events: [
-                        {
-                            id: 'test2',
-                            classNames: 'hold_amount data_block',
-                            title: '5,000',
-                            start: '2023-08-11',
-                            end: '2023-08-11',
-                        },
-                    ],
-                    backgroundColor: "#fff",
-                    textColor: "#FF6F42",
-
-                },
-                {
-                    events: [
-                        {
-                            id:'test1',
-                            classNames: 'settlement_amount data_block',
-                            title: '5,000',
-                            start: '2023-08-11',
-                            end: '2023-08-11',
-                            display: 'block',
-                        },
-                    ],
-                    backgroundColor: "#fff",
-                    textColor: "#28282E",
-                    borderColor : "#fff",
-
-                },
-                {
-                    events: [
-                        {
-                            id:'test1',
-                            classNames: 'settlement_amount data_block',
-                            title: '5,000',
-                            start: '2023-08-11',
-                            end: '2023-08-11',
-                            display: 'block',
-                        },
-                    ],
-                    backgroundColor: "#fff",
-                    textColor: "#28282E",
-                    borderColor : "#fff",
-
-                },
-                {
-                    events: [
-                        {
-                            id:'test1',
-                            classNames: 'settlement_amount data_block',
-                            title: '5,000',
-                            start: '2023-08-11',
-                            end: '2023-08-11',
-                            display: 'block',
-                        },
-                    ],
-                    backgroundColor: "#fff",
-                    textColor: "#28282E",
-                    borderColor : "#fff",
-
-                },
-                {
-                    events: [
-                        {
-                            id:'test1',
-                            classNames: 'settlement_amount data_block',
-                            title: '5,000',
-                            start: '2023-08-11',
-                            end: '2023-08-11',
-                            display: 'block',
-                        },
-                    ],
-                    backgroundColor: "#fff",
-                    textColor: "#28282E",
-                    borderColor : "#fff",
-
-                },
-                {
-                    events: [
-                        {
-                            id:'test1',
-                            classNames: 'settlement_amount data_block',
-                            title: '5,000',
-                            start: '2023-08-11',
-                            end: '2023-08-11',
-                            display: 'block',
-                        },
-                    ],
-                    backgroundColor: "#fff",
-                    textColor: "#28282E",
-                    borderColor : "#fff",
-
-                },
-                {
-                    events: [
-                        {
-                            id:'test1',
-                            classNames: 'settlement_amount data_block',
-                            title: '5,000',
-                            start: '2023-08-11',
-                            end: '2023-08-11',
-                            display: 'block',
-                        },
-                    ],
-                    backgroundColor: "#fff",
-                    textColor: "#28282E",
-                    borderColor : "#fff",
-
-                },
-
-            ]
-        });
-        calendar.render();
-
-        console.log(calendar.getEventById('amount'))
-    }());
-</script>
-
 </html>
