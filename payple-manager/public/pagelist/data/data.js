@@ -254,6 +254,25 @@ data.lnikpay = {
 
     ]
 }
+data.notice = {
+    title:'공지사항',
+    list:[
+        {
+            stateClass: 'confirm',
+            url: '공지사항',
+            category: 'notice',
+            page: '공지사항'
+        },
+        {
+            stateClass: 'confirm',
+            url: '공지사항_작성',
+            category: 'notice',
+            page: '공지사항_작성'
+        },
+
+
+    ]
+}
 
 
 
