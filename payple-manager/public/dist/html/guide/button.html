@@ -5,11 +5,12 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./../../css/payple_component.css?v0.51">
-    <link rel="stylesheet" href="./../../css/payple_pages.css?v0.51">
-    <script src="../../js/bundle.js?v0.51"></script>
-    <script src="../../js/common.js?v0.51"></script>
-    <title>페이플</title>
+    <link rel="icon" href="https://image.payple.kr/common/favicon.ico" sizes="32x32">
+    <link rel="stylesheet" href="./../../css/payple_component.css?v0.52">
+    <link rel="stylesheet" href="./../../css/payple_pages.css?v0.52">
+    <script src="../../js/bundle.js?v0.52"></script>
+    <script src="../../js/common.js?v0.52"></script>
+    <title>페이플 관리자 페이지</title>
 </head>
 
 <style>
@@ -18,38 +19,65 @@
 <div class="wrap">
     <div class="guide-section">
         <div class="card mb-5">
-            <h5 style="margin-bottom: 30px; font-weight: 600">작은 버튼 (btn-sm)</h5>
-            <div>
-                <button class="btn btn-sm btn-primary">btn-primary</button>
-                <button class="btn btn-sm btn-secondary">btn-secondary</button>
-                <button class="btn btn-sm btn-danger">btn-danger</button>
+            <h3 style="margin-bottom: 30px; font-weight: 600">기본 버튼</h3>
+            <p class="card-title font-weight-semi-bold">btn-md (width:100px)</p>
+            <div style="margin-bottom: 1rem">
+                <button class="btn btn-md btn-primary">btn-primary</button>
+                <button class="btn btn-md btn-secondary">btn-secondary</button>
+                <button class="btn btn-md btn-danger">btn-danger</button>
+                <button class="btn btn-md btn-info">btn-info</button>
             </div>
-        </div>
-        <div class="card mb-5">
-            <h5 style="margin-bottom: 30px; font-weight: 600">중간 버튼 (btn-md)</h5>
-            <div>
-                <button class="btn btn-primary">btn-primary</button>
-                <button class="btn btn-secondary">btn-secondary</button>
-                <button class="btn btn-danger">btn-danger</button>
-            </div>
-        </div>
-        <div class="card mb-5">
-            <h5 style="margin-bottom: 30px; font-weight: 600">큰 버튼 (btn-lg)</h5>
-            <div>
+            <p class="card-title font-weight-semi-bold">btn-lg (width:120px)</p>
+            <div style="margin-bottom: 1rem">
                 <button class="btn btn-lg btn-primary">btn-primary</button>
                 <button class="btn btn-lg btn-secondary">btn-secondary</button>
                 <button class="btn btn-lg btn-danger">btn-danger</button>
+                <button class="btn btn-lg btn-info">btn-info</button>
+            </div>
+            <p class="card-title font-weight-semi-bold">btn-round</p>
+            <div style="margin-bottom: 1rem">
+                <button class="btn btn-md btn-round btn-primary">btn-primary</button>
+                <button class="btn btn-md btn-round btn-secondary">btn-secondary</button>
+                <button class="btn btn-md btn-round btn-danger">btn-danger</button>
+                <button class="btn btn-md btn-round btn-info">btn-info</button>
+            </div>
+
+        </div>
+        <div class="card mb-5">
+            <h5 style="margin-bottom: 30px; font-weight: 600">라디오 버튼</h5>
+            <p class="card-title font-weight-semi-bold">라디오 버튼</p>
+            <div class="form-group">
+                <div class="btn-group w-100 custom-radio-container">
+                    <div class="custom-radio-group fsz-0">
+                        <input class="radio-input" type="radio" name="example1" checked="" id="customRadio1">
+                        <label for="customRadio1" class="btn btn-secondary btn-md">거래일</label>
+                    </div>
+                    <div class="custom-radio-group fsz-0">
+                        <input class="radio-input" type="radio" name="example1" id="customRadio2">
+                        <label for="customRadio2" class="btn btn-secondary btn-md">정산일</label>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="card mb-5">
-            <h5 style="margin-bottom: 30px; font-weight: 600">Label 버튼</h5>
-            <div class="btn-group w-100">
-                <input class="radio-input" type="radio" name="example1" id="test1" checked>
-                <label class="btn btn-secondary" for="test1">버튼1</label>
-                <input class="radio-input" type="radio" name="example1" id="test2">
-                <label class="btn btn-secondary" for="test2">버튼2</label>
+            <h5 style="margin-bottom: 30px; font-weight: 600">체크 박스</h5>
+            <p class="card-title font-weight-semi-bold">상태별</p>
+            <div class="row">
+                <div class="col-xl">
+                    <label>
+                        <input type="checkbox" name="notice" class="custom-checkbox">
+                        <i class="icon ico_checkBox">체크박스</i>
+                    </label>
+                    <label>
+                        <input type="checkbox" name="notice" class="custom-checkbox" checked>
+                        <i class="icon ico_checkBox">체크박스</i>
+                    </label>
+                    <label>
+                        <input type="checkbox" name="notice" class="custom-checkbox" disabled>
+                        <i class="icon ico_checkBox">체크박스</i>
+                    </label>
+                </div>
             </div>
-            <p class="mt-3">id, for 동일하게 맞추기</p>
         </div>
     </div>
 </div>

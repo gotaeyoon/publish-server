@@ -28,21 +28,21 @@ data.guide = {
             page: 'layout'
         },
         {
-            stateClass: 'working',
+            stateClass: 'complete',
             url: 'input',
             category: 'guide',
             page: 'input'
         },
 
         {
-            stateClass: 'working',
+            stateClass: 'complete',
             url: 'button',
             category: 'guide',
             page: 'button'
         },
 
         {
-            stateClass: 'working',
+            stateClass: 'complete',
             url: 'table',
             category: 'guide',
             page: 'table'
@@ -73,91 +73,91 @@ data.domesticPayment = {
     title:'결제내역-국내',
     list:[
         {
-            stateClass: 'confirm',
+            stateClass: 'complete',
             url: '결제내역_국내_조회결과있음',
             category: 'domesticpayment',
             page: '결제내역_국내_조회결과있음'
         },
         {
-            stateClass: 'confirm',
+            stateClass: 'complete',
             url: '결제내역_국내_요청실패내역',
             category: 'domesticpayment',
             page: '결제내역_국내_요청실패내역'
         },
         {
-            stateClass: 'confirm',
+            stateClass: 'complete',
             url: '결제내역_국내_등록해지정보',
             category: 'domesticpayment',
             page: '결제내역_국내_등록해지정보'
         },
         {
-            stateClass: 'confirm',
+            stateClass: 'complete',
             url: '결제내역_국내_조회결과없음',
             category: 'domesticpayment',
             page: '결제내역_국내_조회결과없음'
         },
         {
-            stateClass: 'confirm',
+            stateClass: 'complete',
             url: '결재내역_취소버튼클릭시',
             category: 'domesticpayment',
             page: '결재내역_취소버튼클릭시'
         },
         {
-            stateClass: 'confirm',
+            stateClass: 'complete',
             url: '결재내역_취소버튼클릭시_에러',
             category: 'domesticpayment',
             page: '결재내역_취소버튼클릭시_에러'
         },
         {
-            stateClass: 'confirm',
+            stateClass: 'complete',
             url: '카드_취소_더블체크',
             category: 'domesticpayment',
             page: '카드_취소_더블체크'
         },
         {
-            stateClass: 'confirm',
+            stateClass: 'complete',
             url: '가상계좌_취소',
             category: 'domesticpayment',
             page: '가상계좌_취소'
         },
         {
-            stateClass: 'confirm',
+            stateClass: 'complete',
             url: '가상계좌_취소_입력값입력시',
             category: 'domesticpayment',
             page: '가상계좌_취소_입력값입력시'
         },
         {
-            stateClass: 'confirm',
+            stateClass: 'complete',
             url: '가상계좌_취소_입력값오류',
             category: 'domesticpayment',
             page: '가상계좌_취소_입력값오류'
         },
         {
-            stateClass: 'confirm',
+            stateClass: 'complete',
             url: '가상계좌_취소_더블체크_개인',
             category: 'domesticpayment',
             page: '가상계좌_취소_더블체크_개인'
         },
         {
-            stateClass: 'confirm',
+            stateClass: 'complete',
             url: '가상계좌_취소_더블체크_법인',
             category: 'domesticpayment',
             page: '가상계좌_취소_더블체크_법인'
         },
         {
-            stateClass: 'confirm',
+            stateClass: 'complete',
             url: '카드_계좌_취소_완료',
             category: 'domesticpayment',
             page: '카드_가상계좌_취소_완료'
         },
         {
-            stateClass: 'confirm',
+            stateClass: 'complete',
             url: '상담관리',
             category: 'domesticpayment',
             page: '상담관리'
         },
         {
-            stateClass: 'confirm',
+            stateClass: 'complete',
             url: '거래상세',
             category: 'domesticpayment',
             page: '거래상세'
@@ -243,13 +243,13 @@ data.lnikpay = {
             stateClass: 'confirm',
             url: '링크결제_상품내역_국내검색시',
             category: 'linkpay',
-            page: '링크결제_상품내역'
+            page: '링크결제_상품내역_국내검색시'
         },
         {
             stateClass: 'confirm',
             url: '링크결제_상품내역_해외검색시',
             category: 'linkpay',
-            page: '링크결제_상품내역'
+            page: '링크결제_상품내역_해외검색시'
         },
 
     ]
@@ -268,6 +268,30 @@ data.notice = {
             url: '공지사항_작성',
             category: 'notice',
             page: '공지사항_작성'
+        },
+        {
+            stateClass: 'confirm',
+            url: '이메일발송하기_체크박스체크전',
+            category: 'notice',
+            page: '이메일발송하기_체크박스체크전'
+        },
+        {
+            stateClass: 'confirm',
+            url: '이메일발송하기_체크박스체크후',
+            category: 'notice',
+            page: '이메일발송하기_체크박스체크후'
+        },
+        {
+            stateClass: 'working',
+            url: '이메일발송하기_발송후_더블체크',
+            category: 'notice',
+            page: '이메일발송하기_발송후_더블체크'
+        },
+        {
+            stateClass: 'working',
+            url: '이메일발송하기_완료',
+            category: 'notice',
+            page: '이메일발송하기_완료'
         },
 
 

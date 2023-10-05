@@ -5,11 +5,12 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./../../css/payple_component.css?v0.51">
-    <link rel="stylesheet" href="./../../css/payple_pages.css?v0.51">
-    <script src="../../js/bundle.js?v0.51"></script>
-    <script src="../../js/common.js?v0.51"></script>
-    <title>페이플</title>
+    <link rel="icon" href="https://image.payple.kr/common/favicon.ico" sizes="32x32">
+    <link rel="stylesheet" href="./../../css/payple_component.css?v0.52">
+    <link rel="stylesheet" href="./../../css/payple_pages.css?v0.52">
+    <script src="../../js/bundle.js?v0.52"></script>
+    <script src="../../js/common.js?v0.52"></script>
+    <title>페이플 관리자 페이지</title>
 </head>
 
 <style>
@@ -18,81 +19,293 @@
 <div class="wrap">
     <div class="guide-section">
         <div class="card mb-5">
-            <h3 style="margin-bottom: 30px; font-weight: 600">responsive Table</h3>
+            <h3 style="margin-bottom: 30px; font-weight: 600">스크롤 테이블</h3>
+            <p class="card-title font-weight-semi-bold">table-spread(default)</p>
             <div class="table-responsive">
-                <table>
+                <table class="table table-spread table-fixed">
+                    <colgroup>
+                        <col style="width: 50px">
+                        <col style="width: 200px">
+                        <col style="width: 170px">
+                        <col style="width: 75px">
+                        <col style="width: 103px">
+                        <col style="width: 74px">
+                        <col style="width: 74px">
+                        <col style="width: 240px">
+                        <col style="width: 105px">
+                        <col style="width: 160px">
+                        <col style="width: 74px">
+
+                    </colgroup>
                     <thead>
-                    <tr class="bg-color-gray-500">
-                        <th class="font-weight-normal">Header 1</th>
-                        <th class="font-weight-normal">Header 2</th>
-                        <th class="font-weight-normal">Header 3</th>
-                        <th class="font-weight-normal">Header 4</th>
-                        <th class="font-weight-normal">Header 5</th>
-                        <th class="font-weight-normal">Header 6</th>
-                        <th class="font-weight-normal">Header 7</th>
-                        <th class="font-weight-normal">Header 8</th>
+                    <tr>
+                        <th class="text-center">No</th>
+                        <th class="text-center">상호명/서비스명</th>
+                        <th class="text-center">서비스 MID</th>
+                        <th class="text-center">상태</th>
+                        <th class="text-center">거래일시</th>
+                        <th class="text-center">DM</th>
+                        <th class="text-center">주문자명</th>
+                        <th class="text-center">이메일</th>
+                        <th class="text-center">브랜드</th>
+                        <th class="text-center">카드/계좌번호</th>
+                        <th class="text-center">발급국가</th>
+
                     </tr>
                     </thead>
                     <tbody>
                     <tr>
-                        <td class="text-center">Cell01</td>
-                        <td class="text-center">Cell02</td>
-                        <td class="text-center">Cell03</td>
-                        <td class="text-center">Cell04</td>
-                        <td class="text-center">Cell05</td>
-                        <td class="text-center">Cell06</td>
-                        <td class="text-center">Cell07</td>
-                        <td class="text-center">Cell08</td>
+                        <td class="text-center align-middle"><span>10</span></td>
+                        <td class="align-middle">
+                            <span>벨루가</span><br>
+                            <span>kitems</span>
+                        </td>
+                        <td class="align-middle text-center"><span>Service0010012345678</span></td>
+                        <td class="align-middle text-center"><span class="color-red-100">취소</span></td>
+                        <td class="align-middle text-center">
+                            <span>2023-07-28<br>12:05:55</span>
+                        </td>
+                        <td class="align-middle text-center"><span class="underline-text line-bg-red-200 color-red-100">100</span></td>
+                        <td class="align-middle text-center"><span>고*윤</span></td>
+                        <td class="align-middle text-left"><span>ty.go@payple.kr</span></td>
+                        <td class="align-middle text-center"><span>VISA</span></td>
+                        <td class="align-middle text-center"><span>1234-56**-****-0987</span></td>
+                        <td class="align-middle text-center"><span>US</span></td>
                     </tr>
                     <tr>
-                        <td class="text-center">Cell01</td>
-                        <td class="text-center">Cell02</td>
-                        <td class="text-center">Cell03</td>
-                        <td class="text-center">Cell04</td>
-                        <td class="text-center">Cell05</td>
-                        <td class="text-center">Cell06</td>
-                        <td class="text-center">Cell07</td>
-                        <td class="text-center">Cell08</td>
+                        <td class="text-center align-middle"><span>10</span></td>
+                        <td class="align-middle">
+                            <span>벨루가</span><br>
+                            <span>kitems</span>
+                        </td>
+                        <td class="align-middle text-center"><span>Service0010012345678</span></td>
+                        <td class="align-middle text-center"><span class="color-red-100">취소</span></td>
+                        <td class="align-middle text-center">
+                            <span>2023-07-28<br>12:05:55</span>
+                        </td>
+                        <td class="align-middle text-center"><span class="underline-text line-bg-red-200 color-red-100">100</span></td>
+                        <td class="align-middle text-center"><span>고*윤</span></td>
+                        <td class="align-middle text-left"><span>ty.go@payple.kr</span></td>
+                        <td class="align-middle text-center"><span>VISA</span></td>
+                        <td class="align-middle text-center"><span>1234-56**-****-0987</span></td>
+                        <td class="align-middle text-center"><span>US</span></td>
                     </tr>
                     <tr>
-                        <td class="text-center">Cell01</td>
-                        <td class="text-center">Cell02</td>
-                        <td class="text-center">Cell03</td>
-                        <td class="text-center">Cell04</td>
-                        <td class="text-center">Cell05</td>
-                        <td class="text-center">Cell06</td>
-                        <td class="text-center">Cell07</td>
-                        <td class="text-center">Cell08</td>
+                        <td class="text-center align-middle"><span>10</span></td>
+                        <td class="align-middle">
+                            <span>벨루가</span><br>
+                            <span>kitems</span>
+                        </td>
+                        <td class="align-middle text-center"><span>Service0010012345678</span></td>
+                        <td class="align-middle text-center"><span>승인</span></td>
+                        <td class="align-middle text-center">
+                            <span>2023-07-28<br>12:05:55</span>
+                        </td>
+                        <td class="align-middle text-center"><span>40</span></td>
+                        <td class="align-middle text-center"><span>고*윤</span></td>
+                        <td class="align-middle text-left"><span>ty.go@payple.kr</span></td>
+                        <td class="align-middle text-center"><span>VISA</span></td>
+                        <td class="align-middle text-center"><span>1234-56**-****-0987</span></td>
+                        <td class="align-middle text-center"><span>US</span></td>
                     </tr>
                     <tr>
-                        <td class="text-center">Cell01</td>
-                        <td class="text-center">Cell02</td>
-                        <td class="text-center">Cell03</td>
-                        <td class="text-center">Cell04</td>
-                        <td class="text-center">Cell05</td>
-                        <td class="text-center">Cell06</td>
-                        <td class="text-center">Cell07</td>
-                        <td class="text-center">Cell08</td>
+                        <td class="text-center align-middle"><span>10</span></td>
+                        <td class="align-middle">
+                            <span>벨루가</span><br>
+                            <span>kitems</span>
+                        </td>
+                        <td class="align-middle text-center"><span>Service0010012345678</span></td>
+                        <td class="align-middle text-center"><span class="color-red-100">취소</span></td>
+                        <td class="align-middle text-center">
+                            <span>2023-07-28<br>12:05:55</span>
+                        </td>
+                        <td class="align-middle text-center"><span class="underline-text line-bg-red-200 color-red-100">100</span></td>
+                        <td class="align-middle text-center"><span>고*윤</span></td>
+                        <td class="align-middle text-left"><span>ty.go@payple.kr</span></td>
+                        <td class="align-middle text-center"><span>VISA</span></td>
+                        <td class="align-middle text-center"><span>1234-56**-****-0987</span></td>
+                        <td class="align-middle text-center"><span>US</span></td>
                     </tr>
                     <tr>
-                        <td class="text-center">Cell01</td>
-                        <td class="text-center">Cell02</td>
-                        <td class="text-center">Cell03</td>
-                        <td class="text-center">Cell04</td>
-                        <td class="text-center">Cell05</td>
-                        <td class="text-center">Cell06</td>
-                        <td class="text-center">Cell07</td>
-                        <td class="text-center">Cell08</td>
+                        <td class="text-center align-middle"><span>10</span></td>
+                        <td class="align-middle">
+                            <span>벨루가</span><br>
+                            <span>kitems</span>
+                        </td>
+                        <td class="align-middle text-center"><span>Service0010012345678</span></td>
+                        <td class="align-middle text-center"><span>승인</span></td>
+                        <td class="align-middle text-center">
+                            <span>2023-07-28<br>12:05:55</span>
+                        </td>
+                        <td class="align-middle text-center"><span>30</span></td>
+                        <td class="align-middle text-center"><span>고*윤</span></td>
+                        <td class="align-middle text-left"><span>ty.go@payple.kr</span></td>
+                        <td class="align-middle text-center"><span>VISA</span></td>
+                        <td class="align-middle text-center"><span>1234-56**-****-0987</span></td>
+                        <td class="align-middle text-center"><span>US</span></td>
                     </tr>
                     <tr>
-                        <td class="text-center">Cell01</td>
-                        <td class="text-center">Cell02</td>
-                        <td class="text-center">Cell03</td>
-                        <td class="text-center">Cell04</td>
-                        <td class="text-center">Cell05</td>
-                        <td class="text-center">Cell06</td>
-                        <td class="text-center">Cell07</td>
-                        <td class="text-center">Cell08</td>
+                        <td class="text-center align-middle"><span>10</span></td>
+                        <td class="align-middle">
+                            <span>벨루가</span><br>
+                            <span>kitems</span>
+                        </td>
+                        <td class="align-middle text-center"><span>Service0010012345678</span></td>
+                        <td class="align-middle text-center"><span class="color-red-100">취소</span></td>
+                        <td class="align-middle text-center">
+                            <span>2023-07-28<br>12:05:55</span>
+                        </td>
+                        <td class="align-middle text-center"><span class="underline-text line-bg-red-200 color-red-100">100</span></td>
+                        <td class="align-middle text-center"><span>고*윤</span></td>
+                        <td class="align-middle text-left"><span>ty.go@payple.kr</span></td>
+                        <td class="align-middle text-center"><span>VISA</span></td>
+                        <td class="align-middle text-center"><span>1234-56**-****-0987</span></td>
+                        <td class="align-middle text-center"><span>US</span></td>
+                    </tr>
+                    <tr>
+                        <td class="text-center align-middle"><span>10</span></td>
+                        <td class="align-middle">
+                            <span>벨루가</span><br>
+                            <span>kitems</span>
+                        </td>
+                        <td class="align-middle text-center"><span>Service0010012345678</span></td>
+                        <td class="align-middle text-center"><span class="color-red-100">취소</span></td>
+                        <td class="align-middle text-center">
+                            <span>2023-07-28<br>12:05:55</span>
+                        </td>
+                        <td class="align-middle text-center"><span class="underline-text line-bg-red-200 color-red-100">100</span></td>
+                        <td class="align-middle text-center"><span>고*윤</span></td>
+                        <td class="align-middle text-left"><span>ty.go@payple.kr</span></td>
+                        <td class="align-middle text-center"><span>VISA</span></td>
+                        <td class="align-middle text-center"><span>1234-56**-****-0987</span></td>
+                        <td class="align-middle text-center"><span>US</span></td>
+                    </tr>
+                    <tr>
+                        <td class="text-center align-middle"><span>10</span></td>
+                        <td class="align-middle">
+                            <span>벨루가</span><br>
+                            <span>kitems</span>
+                        </td>
+                        <td class="align-middle text-center"><span>Service0010012345678</span></td>
+                        <td class="align-middle text-center"><span class="color-red-100">취소</span></td>
+                        <td class="align-middle text-center">
+                            <span>2023-07-28<br>12:05:55</span>
+                        </td>
+                        <td class="align-middle text-center"><span class="underline-text line-bg-red-200 color-red-100">100</span></td>
+                        <td class="align-middle text-center"><span>고*윤</span></td>
+                        <td class="align-middle text-left"><span>ty.go@payple.kr</span></td>
+                        <td class="align-middle text-center"><span>VISA</span></td>
+                        <td class="align-middle text-center"><span>1234-56**-****-0987</span></td>
+                        <td class="align-middle text-center"><span>US</span></td>
+                    </tr>
+                    <tr>
+                        <td class="text-center align-middle"><span>10</span></td>
+                        <td class="align-middle">
+                            <span>벨루가</span><br>
+                            <span>kitems</span>
+                        </td>
+                        <td class="align-middle text-center"><span>Service0010012345678</span></td>
+                        <td class="align-middle text-center"><span class="color-red-100">취소</span></td>
+                        <td class="align-middle text-center">
+                            <span>2023-07-28<br>12:05:55</span>
+                        </td>
+                        <td class="align-middle text-center"><span class="underline-text line-bg-red-200 color-red-100">100</span></td>
+                        <td class="align-middle text-center"><span>고*윤</span></td>
+                        <td class="align-middle text-left"><span>ty.go@payple.kr</span></td>
+                        <td class="align-middle text-center"><span>VISA</span></td>
+                        <td class="align-middle text-center"><span>1234-56**-****-0987</span></td>
+                        <td class="align-middle text-center"><span>US</span></td>
+                    </tr>
+                    <tr>
+                        <td class="text-center align-middle"><span>10</span></td>
+                        <td class="align-middle">
+                            <span>벨루가</span><br>
+                            <span>kitems</span>
+                        </td>
+                        <td class="align-middle text-center"><span>Service0010012345678</span></td>
+                        <td class="align-middle text-center"><span class="color-red-100">취소</span></td>
+                        <td class="align-middle text-center">
+                            <span>2023-07-28<br>12:05:55</span>
+                        </td>
+                        <td class="align-middle text-center"><span class="underline-text line-bg-red-200 color-red-100">100</span></td>
+                        <td class="align-middle text-center"><span>고*윤</span></td>
+                        <td class="align-middle text-left"><span>ty.go@payple.kr</span></td>
+                        <td class="align-middle text-center"><span>VISA</span></td>
+                        <td class="align-middle text-center"><span>1234-56**-****-0987</span></td>
+                        <td class="align-middle text-center"><span>US</span></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="card-title font-weight-semi-bold">table-not-spread(공지 사항등에서 사용)</p>
+            <div class="table-responsive">
+                <table class="table table-fixed table-not-spread">
+                    <colgroup>
+                        <col style="width: 50px">
+                        <col style="width: 80px">
+                        <col style="width: 440px">
+                        <col style="width: 80px">
+                        <col style="width: 80px">
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th class="text-center">No</th>
+                        <th class="text-center">분류</th>
+                        <th class="text-center">제목</th>
+                        <th class="text-center">작성자</th>
+                        <th class="text-center">작성일</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="text-center align-middle ">
+                            <span>5</span></td>
+                        <td class="text-center align-middle ">
+                            <span>시스템</span></td>
+                        <td class="text-left align-middle"><span><a href="#" class="color-gray-000">계좌이체 전산 시스템 작업 안내[2023-07-28(금)]</a></span>
+                        </td>
+                        <td class="text-center align-middle"><span>관리자</span></td>
+                        <td class="text-center align-middle"><span>2023.07.01</span></td>
+                    </tr>
+                    <tr>
+                        <td class="text-center align-middle ">
+                            <span>5</span></td>
+                        <td class="text-center align-middle ">
+                            <span>시스템</span></td>
+                        <td class="text-left align-middle"><span><a href="#" class="color-gray-000">계좌이체 전산 시스템 작업 안내[2023-07-28(금)]</a></span>
+                        </td>
+                        <td class="text-center align-middle"><span>관리자</span></td>
+                        <td class="text-center align-middle"><span>2023.07.01</span></td>
+                    </tr>
+                    <tr>
+                        <td class="text-center align-middle ">
+                            <span>5</span></td>
+                        <td class="text-center align-middle ">
+                            <span>시스템</span></td>
+                        <td class="text-left align-middle"><span><a href="#" class="color-gray-000">계좌이체 전산 시스템 작업 안내[2023-07-28(금)]</a></span>
+                        </td>
+                        <td class="text-center align-middle"><span>관리자</span></td>
+                        <td class="text-center align-middle"><span>2023.07.01</span></td>
+                    </tr>
+                    <tr>
+                        <td class="text-center align-middle ">
+                            <span>5</span></td>
+                        <td class="text-center align-middle ">
+                            <span>시스템</span></td>
+                        <td class="text-left align-middle"><span><a href="#" class="color-gray-000">계좌이체 전산 시스템 작업 안내[2023-07-28(금)]</a></span>
+                        </td>
+                        <td class="text-center align-middle"><span>관리자</span></td>
+                        <td class="text-center align-middle"><span>2023.07.01</span></td>
+                    </tr>
+                    <tr>
+                        <td class="text-center align-middle ">
+                            <span>5</span></td>
+                        <td class="text-center align-middle ">
+                            <span>시스템</span></td>
+                        <td class="text-left align-middle"><span><a href="#" class="color-gray-000">계좌이체 전산 시스템 작업 안내[2023-07-28(금)]</a></span>
+                        </td>
+                        <td class="text-center align-middle"><span>관리자</span></td>
+                        <td class="text-center align-middle"><span>2023.07.01</span></td>
                     </tr>
                     </tbody>
                 </table>
