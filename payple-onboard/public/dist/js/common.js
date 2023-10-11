@@ -1,223 +1,308 @@
-//Aside UI
-function asideSlideBtn() {
-    let title = $('._title');
-    let slide = $('._slide');
-
-    title.on('click', function () {
-        $(this).next(slide).stop().slideToggle(300);
-        $(this).toggleClass('active').parent().siblings().find(title).removeClass('active');
-        $(this).parent().siblings().find(slide).slideUp(300);
+//open Modal
+function openModal(modalname) {
+    $("." + modalname).addClass('show')
+    setTimeout(function () {
+        $("." + modalname).addClass('fade')
+    }, 200);
+}
+// close Modal
+function closeModal() {
+    let modals = $('.modal')
+    let closeBtn = $('._modal_close_btn')
+    closeBtn.on('click', function () {
+        modals.removeClass('fade')
+        setTimeout(function () {
+            modals.removeClass('show')
+        }, 200);
+    })
+}
+// close dim
+function dimModal() {
+    let modals = $('.modal')
+    modals.on('click', function (e) {
+        if (e.target == this) {
+            modals.removeClass('fade')
+            setTimeout(function () {
+                modals.removeClass('show')
+            }, 200)
+        }
     })
 }
 
-//Aside open UI
-function openAsideBtn() {
-    let openAsideBtn = $('._btn_open_depths')
-    openAsideBtn.on('click', function () {
-        $(this).parent('.aside').toggleClass('on')
-        $('.footer').toggleClass('on')
+
+//전화번호 hyphen
+function formatPhoneNumber() {
+    $('._input_phone').on('input', function () {
+        this.value = this.value
+            .replace(/[^0-9]/g, '')
+            .replace(/^(\d{2,3})(\d{3,4})(\d{4})$/, `$1-$2-$3`);
     })
 }
 
-//selectBox
+
+// header 버튼
+function toggleAccountInfo() {
+    let accountInfo = $('._header__account_info');
+    let accountBtn = $('._ico_account_btn');
+    accountBtn.on('click', function (e) {
+        e.stopPropagation();
+        accountInfo.toggleClass('show');
+    });
+    $(document).on('click', function (event) {
+        let target = $(event.target);
+        if (!target.is(accountInfo) && !target.is(accountBtn)) {
+            accountInfo.removeClass('show');
+        }
+    });
+}
+
+//selectBox 공통
 function selectBox() {
-    let selectBox = $('._select-box')
+    let selectBox = $('._select_box')
+
     selectBox.on('click', function () {
         $(this).toggleClass('active');
     })
 
-    selectBox.find('.option').on('click', function () {
-        let text = $(this).text();
-        let value = $(this).val();
-        let selectBoxValue = $(this).closest('._select-box')
+    selectBox.each(function() {
+        const selectBox = $(this);
+        const innerInputElement = selectBox.find('input.select_value');
 
-        selectBoxValue.find('.select_value').attr('value', value);
-        selectBoxValue.find('.value_text').text(text).css({'color': '#1F1F1F'});
+        if (innerInputElement.val() !== '') {
+            const selectedValue = selectBox.find('.option[value="' + innerInputElement.val() + '"]');
+
+            if (selectedValue.length === 1) {
+                const selectedText = selectedValue.text();
+                console.log(selectedText);
+                innerInputElement.closest('._select_box').find('.select_value').text(selectedText);
+            }
+        }
+
+
     });
 
-    //disabled 처리
-    if ($(".select_value").is(':disabled')) {
-        $(".select_value:disabled").parent('._select-box').css({
-            "background": "#e9ecef",
-            "border": "1px solid #CED4DA",
-            "cursor": "auto"
-        })
-        $(".select_value:disabled").parent('._select-box').off('click');
-    }
-
-
-    $(document).on('click', function (e) {
-        let target = $(e.target);
-        selectBox.each(function () {
+    $(document).on('click', function (event) {
+        let target = $(event.target);
+        selectBox.each(function() {
             if (!target.is(this) && !target.closest(this).length) {
                 $(this).removeClass('active');
             }
         });
-    });
-
-}
-
-
-function moreSearch(){
-    const moreSearchBtn = $('._more-search-btn')
-    let count = 0;
-    moreSearchBtn.on('click',function(){
-        $('.detail-search').toggleClass('d-block')
-        count++;
-        if(count % 2 === 0){
-            moreSearchBtn.text('More Search');
-        }else{
-            moreSearchBtn.text('Close Search');
-        }
-    })
-}
-
-// dataPickerRange
-function dataRangePicker() {
-    const modalDataPicker = $('._modalDataPicker');
-    const dateRangePicker = $('._dataPickerRange');
-    dateRangePicker.daterangepicker(
-        {
-            linkedCalendars: true,
-            autoApply: true,
-            "locale": {
-                "format": "YYYY-MM-DD",
-                "separator": "~",
-                "weekLabel": "주",
-                "daysOfWeek": ["일", "월", "화", "수", "목", "금", "토"],
-                "monthNames": ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"],
-            },
-            "startDate": new Date(),
-            "endDate": new Date(),
-            "buttonClasses": "data_range_btn",
-            "applyButtonClasses": "apply_range_btn",
-            "cancelButtonClasses": "cancel_range_btn",
-            "showCustomRangeLabelranges": false,
-            "parentEl": modalDataPicker,
-        },
-        function (start, end, label) {
-
+        selectBox.find('.option').on('click', function() {
+            const text = $(this).text();
+            const value = $(this).attr("value");
+            $(this).closest('._select_box').find('.select_value').text(text).css('color', '#1F1F1F').attr('value', value);
         });
-    dateRangePicker.on('hide.daterangepicker', function (ev, picker) {
-        $('._modal-calendar').modal('hide')
-    });
-
-    // three Month 버튼 클릭 시 지난달 범위 선택
-    $('#threeMonthAgoBtn').on('click', function () {
-        const startDate = moment().subtract(3, 'month');
-        const endDate = moment();
-        dateRangePicker.data('daterangepicker').setStartDate(startDate);
-        dateRangePicker.data('daterangepicker').setEndDate(endDate);
-    });
-
-
-    // Last Month 버튼 클릭 시 지난달 범위 선택
-    $('#lastMonthBtn').on('click', function () {
-        const startDate = moment().subtract(1, 'month');
-        const endDate = moment();
-        dateRangePicker.data('daterangepicker').setStartDate(startDate);
-        dateRangePicker.data('daterangepicker').setEndDate(endDate);
-    });
-
-    // This Month 버튼 클릭 시 이번달 범위 선택
-    $('#thisMonthBtn').click(function () {
-        const startDate = moment().startOf('month');
-        const endDate = moment();
-        dateRangePicker.data('daterangepicker').setStartDate(startDate);
-        dateRangePicker.data('daterangepicker').setEndDate(endDate);
-    });
-
-    // Yesterday 버튼 클릭 시 어제 범위 선택
-    $('#yesterdayBtn').click(function () {
-        const startDate = moment().subtract(1, 'day');
-        const endDate = moment().subtract(1, 'day');
-        dateRangePicker.data('daterangepicker').setStartDate(startDate);
-        dateRangePicker.data('daterangepicker').setEndDate(endDate);
-    });
-
-    // Today 버튼 클릭 시 오늘 범위 선택
-    $('#todayBtn').click(function () {
-        var startDate = moment();
-        var endDate = moment();
-        dateRangePicker.data('daterangepicker').setStartDate(startDate);
-        dateRangePicker.data('daterangepicker').setEndDate(endDate);
     });
 }
 
 
-function nodataTable() {
-   if($('tr').hasClass('_empty-data') === true){
-        $('._empty-data').closest('table').removeClass('table-fixed')
-        $('._empty-data').closest('table').find($('colgroup')).empty()
-        $('._empty-data').closest('table').find($('thead')).empty()
-   }
-}
 
-//slideModal
-function openSlideModal(modalName, i) {
-    $("." + modalName + i).addClass('on');
-}
-
-function closeSlideModal() {
-    $('._close_slide_modal').on('click', function () {
-        $('._slide_modal_backdrop').removeClass('on');
+//입점불가 텍스트
+function HoverTextnotAllow(){
+    $('._result').on('mouseenter',function(){
+        $(this).parent().siblings('._hover_text_not_allowed').css({'display':'block'})
+    })
+    $('._result').on('mouseleave',function(){
+        $(this).parent().siblings('._hover_text_not_allowed').css({'display':'none'})
     })
 }
 
-//Aside ToolTip
-function asideTooltip() {
-    let links = $('.link');
-    links.mouseover(function () {
-        const hoverTitle = $(this).find('a');
-        const top = hoverTitle[0].getBoundingClientRect().top;
-        const arrow = $(this).find('.arrow_box');
-        arrow.css('top', top + 10 + 'px');
-    });
+//서비스 작성중 텍스트
+function HoverTextService(){
+    $('._service').on('mouseenter',function(){
+        $(this).parent().siblings('._hover_text_service').css({'display':'block'})
+    })
+    $('._service').on('mouseleave',function(){
+        $(this).parent().siblings('._hover_text_service').css({'display':'none'})
+    })
 }
 
-//mobile Aside Btn
-function asideMobileBtn() {
-    $('._aside_button').on('click', function () {
-        $(this).toggleClass('active');
-        if ($(this).hasClass('active')) {
-            $('.aside').css({'left': 0})
-        } else {
-            $('.aside').css({'left': -100 + '%'})
+//서비스 정지
+function HoverStopService(){
+    $('._stop').on('mouseenter',function(){
+        $(this).parent().siblings('._hover_stop_service').css({'display':'block'})
+    })
+    $('._stop').on('mouseleave',function(){
+        $(this).parent().siblings('._hover_stop_service').css({'display':'none'})
+    })
+}
+
+
+function checkAll() {
+    $('._check_all').on('click',function(){
+        if($("._check_all").is(":checked")){
+            $("input[name=chk]").prop("checked", true);
+        }else{
+            $("input[name=chk]").prop("checked", false);
         }
+
     })
+    $("input[name=chk]").click(function() {
+        let total = $("input[name=chk]").length;
+        let checked = $("input[name=chk]:checked").length;
+
+        if(total != checked) $("._check_all").prop("checked", false);
+        else $("._check_all").prop("checked", true);
+    });
+}
+
+//테이블 데이터가 없을경우
+function emptyTableData(){
+    $('.empty_data').parents('._scroll_table').css('tableLayout' , 'auto');
 }
 
 
-/*input buttno*/
-function inputIcoHover() {
-    $('._input_ico_hover').hover(
-        function () {
-            $(this).siblings('._input_cation').css('display', 'block')
+// 파일명 커스텀
+function inputFile(){
+    $("._file_input").on('change',function(){
+        var fileName = $(this).val().split('/').pop().split('\\').pop();
+        $("._file_name").text(fileName).css({'color' : '#212529'});
+    });
+}
+
+
+// ip 입력시 클릭안됨
+function getValidateIp(){
+    $('._input_ip').on('keypress', function(event) {
+        var inputValue = event.which;
+        if (inputValue != 46 && (inputValue < 48 || inputValue > 57)) {
+            event.preventDefault();
+        }
+    });
+}
+
+
+// header 테블릿 버튼
+function asideButton(){
+    $('._aside_button').on('click',function(){
+        $('.aside').toggleClass('show')
+        $(this).toggleClass('active')
+    })
+}
+
+//달력
+function modalCalender(){
+    const parentElement = $('#datepickerParent');
+    let twoCalender = $('._twoCalender');
+    let OneCalender = $('._oneCalender');
+    
+    
+    // 두개 보이는 달력
+    twoCalender.daterangepicker({
+        linkedCalendars: true,
+        autoApply : true,
+        "locale": {
+            "format": "YYYY-MM-DD",
+            "separator": "~",
+            "applyLabel": "확인",
+            "cancelLabel": "취소",
+            "fromLabel": "From",
+            "toLabel": "To",
+            "customRangeLabel": "Custom",
+            "weekLabel": "주",
+            "daysOfWeek": ["일", "월", "화", "수", "목", "금", "토"],
+            "monthNames": ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"],
         },
-        function () {
-            $(this).siblings('._input_cation').css('display', 'none')
+        "startDate": new Date(),
+        "endDate": new Date(),
+        // "minDate": new Date(new Date().getFullYear(), new Date().getMonth(), 1),
+        // "maxDate": new Date(),
+        "buttonClasses": "data_range_btn",
+        "applyButtonClasses": "apply_range_btn",
+        "cancelButtonClasses": "cancel_range_btn",
+        "showCustomRangeLabelranges": false,
+        "parentEl": parentElement,
+    }, function (start, end, label) {
+        console.log('선택된 날짜: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
+    });
+    twoCalender.on('hide.daterangepicker', function (ev, picker) {
+        let modals = $('.modal')
+        modals.removeClass('fade')
+    });
+    twoCalender.on('showCalendar.daterangepicker', function (ev, picker) {
+        const trList = $('.daterangepicker').find("tr");
+        trList.each(function() {
+            var offEndsAvailableCount = $(this).find(".off.ends.available").length;
+            if (offEndsAvailableCount === 7) {
+                $(this).hide();
+            }
+        });
+
+    });
+
+
+    //한개보이는 달력
+    OneCalender.daterangepicker({
+        linkedCalendars: true,
+        autoApply : true,
+        "locale": {
+            "format": "YYYY-MM-DD",
+            "separator":"~",
+            "applyLabel": "확인",
+            "cancelLabel": "취소",
+            "fromLabel": "From",
+            "toLabel": "To",
+            "customRangeLabel": "Custom",
+            "weekLabel": "주",
+            "daysOfWeek": ["일", "월", "화", "수", "목", "금", "토"],
+            "monthNames": ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"],
+        },
+        "startDate": new Date(),
+        "endDate": new Date(),
+        "maxDate": new Date(),
+        "buttonClasses": "data_range_btn",
+        "applyButtonClasses": "apply_range_btn",
+        "cancelButtonClasses": "cancel_range_btn",
+        "showCustomRangeLabelranges": false,
+        "parentEl": parentElement,
+    }, function (start, end, label) {
+        // console.log('선택된 날짜: ' + start.format('YYYY-MM-DD') + 'to' + end.format('YYYY-MM-DD'));
+    });
+    OneCalender.on('hide.daterangepicker', function (ev, picker) {
+        let modals = $('.modal')
+        modals.removeClass('fade')
+    });
+    OneCalender.on('showCalendar.daterangepicker', function (ev, picker) {
+        const trList = $('.daterangepicker').find("tr");
+        trList.each(function() {
+            var offEndsAvailableCount = $(this).find(".off.ends.available").length;
+            if (offEndsAvailableCount === 7) {
+                $(this).hide();
+            }
+        });
+    });
+    OneCalender.on('showCalendar.daterangepicker', function (ev, picker) {
+        if (picker.endDate.month() > picker.startDate.month()) {
+            alert('한 달 단위로 선택 가능하십니다.');
+            picker.startDate = moment();
+            picker.endDate = moment();
         }
-    )
+
+    });
+
+
+
+
+
+
 }
 
 
-/*only-number*/
-function onlyNumber(){
-    $('._only-number').on('input',function(){
-        this.value =  this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');
-    })
-}
-
+// 실행
 $(document).ready(function () {
-    dataRangePicker();
-    asideSlideBtn();
-    openAsideBtn();
+    formatPhoneNumber();
+    toggleAccountInfo();
+    closeModal();
+    dimModal();
     selectBox();
-    closeSlideModal();
-    asideTooltip();
-    asideMobileBtn();
-    inputIcoHover();
-    moreSearch();
-    nodataTable();
-    onlyNumber();
+    HoverTextnotAllow();
+    HoverTextService();
+    HoverStopService();
+    checkAll();
+    emptyTableData();
+    inputFile();
+    getValidateIp();
+    asideButton();
+    modalCalender();
 })

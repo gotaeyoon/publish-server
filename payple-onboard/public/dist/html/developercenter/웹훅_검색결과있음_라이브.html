@@ -6,15 +6,15 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!--    서버반영시 -->
-    <link rel="stylesheet" href="https://image.payple.kr/onboard/css/payple_component.css?ver=1.5">
-    <link rel="stylesheet" href="https://image.payple.kr/onboard/css/payple_pages.css?ver=1.5">
-    <script src="https://image.payple.kr/onboard/js/bundle.js?ver=1.5"></script>
-    <script src="https://image.payple.kr/onboard/js/common.js?ver=1.5"></script>
+<!--    <link rel="stylesheet" href="https://image.payple.kr/onboard/css/payple_component.css?ver=1.5">-->
+<!--    <link rel="stylesheet" href="https://image.payple.kr/onboard/css/payple_pages.css?ver=1.5">-->
+<!--    <script src="https://image.payple.kr/onboard/js/bundle.js?ver=1.5"></script>-->
+<!--    <script src="https://image.payple.kr/onboard/js/common.js?ver=1.5"></script>-->
     <!--    로컬작업시-->
-<!--    <link rel="stylesheet" href="../../css/payple_component.css">-->
-<!--    <link rel="stylesheet" href="../../css/payple_pages.css">-->
-<!--    <script src="../../js/bundle.js"></script>-->
-<!--    <script src="../../js/common.js"></script>-->
+    <link rel="stylesheet" href="../../css/payple_component.css?ver=1.3">
+    <link rel="stylesheet" href="../../css/payple_pages.css?ver=1.3">
+    <script src="../../js/bundle.js?ver=1.3"></script>
+    <script src="../../js/common.js?ver=1.3"></script>
 </head>
 <body>
 <header class="header developer_center">
@@ -218,21 +218,6 @@
                     <p class="title">웹훅 등록</p>
                 </div>
                 <div class="input__area__list">
-                    <div class="input__area name">
-                        <p class="input_title">이름</p>
-                        <div class="position_relative">
-                            <label><input class="form_control" placeholder="김이플"></label>
-                        </div>
-                    </div>
-                    <div class="input__area url">
-                        <p class="input_title">URL</p>
-                        <div class="position_relative">
-                            <label><input class="form_control border_danger" placeholder="https://"></label>
-                            <div class="validation_area show">
-                                <p class="validation color_danger">http:// 또는 https://를 추가해주세요.</p>
-                            </div>
-                        </div>
-                    </div>
                     <div class="input__area data">
                         <p class="input_title">수신할 데이터</p>
                         <div class="select_box _select_box">
@@ -255,6 +240,16 @@
                                 <li class="option" value="11">계좌 등록, 해지</li>
                                 <li class="option" value="12">이체결과 - 허브</li>
                             </ul>
+                        </div>
+                        <p class="caption_text">'전체'를 선택하면, 다른 데이터들은 무시되고 전체 데이터만 수신됩니다.</p>
+                    </div>
+                    <div class="input__area url">
+                        <p class="input_title">URL</p>
+                        <div class="position_relative">
+                            <label><input class="form_control border_danger" placeholder="https://"></label>
+                            <div class="validation_area show">
+                                <p class="validation color_danger">http:// 또는 https://를 추가해주세요.</p>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -83,15 +83,83 @@
                     </thead>
                     <tbody>
                     <tr>
-                        <td colspan="6" class="empty_data no_search">
-                            초대된 관리자가 없습니다.
+                        <td>10</td>
+                        <td class="text_left">
+                            <a href="#" class="link">aa@aaaa.com</a>
+                        </td>
+                        <td class="text_center">대기</td>
+                        <td class="text_left ">전체 > 전체 > 조회/실행/관리자 초대 > 전체</td>
+
+                        <td class="text_left">curl_error_msg</td>
+                        <td class="text_center">
+                            <button class="btn btn_secession" >탈퇴</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td class="text_left">
+                            <a href="#" class="link">aa@aaaa.com</a>
+                        </td>
+                        <td class="text_center">대기</td>
+                        <td class="text_left ">전체 > 전체 > 조회/실행/관리자 초대 > 전체</td>
+
+                        <td class="text_left">curl_error_msg</td>
+                        <td class="text_center">
+                            <button class="btn btn_secession">탈퇴</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td class="text_left">
+                            <a href="#" class="link">aa@aaaa.com</a>
+                        </td>
+                        <td class="text_center">대기</td>
+                        <td class="text_left ">전체 > 전체 > 조회/실행/관리자 초대 > 전체</td>
+
+                        <td class="text_left">curl_error_msg</td>
+                        <td class="text_center">
+                            <button class="btn btn_secession">탈퇴</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td class="text_left">
+                            <a href="#" class="link">aa@aaaa.com</a>
+                        </td>
+                        <td class="text_center">대기</td>
+                        <td class="text_left ">전체 > 전체 > 조회/실행/관리자 초대 > 전체</td>
+
+                        <td class="text_left">curl_error_msg</td>
+                        <td class="text_center">
+                            <button class="btn btn_secession">탈퇴</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td class="text_left">
+                            <a href="#" class="link">aa@aaaa.com</a>
+                        </td>
+                        <td class="text_center">대기</td>
+                        <td class="text_left ">전체 > 전체 > 조회/실행/관리자 초대 > 전체</td>
+
+                        <td class="text_left">curl_error_msg</td>
+                        <td class="text_center">
+                            <button class="btn btn_secession" disabled>탈퇴</button>
                         </td>
                     </tr>
                     </tbody>
                 </table>
             </div>
+            <div class="pagination_area">
+                <span class="pagination_arrow first_button"><i class="icon ico_pagination_left_arrow_first"></i></span>
+                <span class="pagination_arrow"><i class="icon ico_pagination_left_arrow"></i></span>
+                <ul class="pagination_list">
+                    <li class="active">1</li>
 
-
+                </ul>
+                <span class="pagination_arrow"><i class="icon ico_pagination_right_arrow"></i></span>
+                <span class="pagination_arrow last_button"><i class="icon ico_pagination_right_arrow_last"></i></span>
+            </div>
         </div>
     </div>
     <div class="membership_area ">
@@ -124,7 +192,7 @@
                         </div>
                         <i class="icon ico_select_arrow_down">아래화살표</i>
                         <ul class="options">
-                            <li class="option" value="0">전체</li>
+                            <li class="option" value="1">전체</li>
                             <li class="option" value="1">네이버(주)</li>
                             <li class="option" value="2">크림(주)</li>
                         </ul>
@@ -142,13 +210,6 @@
                             <li class="option" value="1">웹툰-국내</li>
                             <li class="option" value="2">웹툰-해외</li>
                         </ul>
-                        <script>
-                            $('._select_box').on('click',function(){
-                                $(".options").append("<li class='option'>하이</li>"); // 태그 추가
-
-
-                            })
-                        </script>
                     </div>
                 </div>
                 <div class="input__area mb-0">
@@ -175,13 +236,13 @@
                 <ul class="check__list">
                     <li class="check__all">
                         <label>
-                            <input type="checkbox" name="chk" class="_check_all">
+                            <input type="checkbox" name="chks" class="_check_all">
                             <i class="icon ico_checkBox">체크박스</i>
                             <span>전체</span>
                         </label>
                     </li>
                     <li>
-                        <ul class="check_list_select" >
+                        <ul class="check_list_select">
                             <li>
                                 <label>
                                     <input type="checkbox" name="chk">
@@ -198,42 +259,42 @@
                             </li>
                             <li>
                                 <label>
-                                    <input type="checkbox" name="chk">
+                                    <input type="checkbox" name="chks">
                                     <i class="icon ico_checkBox">체크박스</i>
                                     <span>등록 카드, 계좌정보</span>
                                 </label>
                             </li>
                             <li>
                                 <label>
-                                    <input type="checkbox" name="chk">
+                                    <input type="checkbox" name="chks">
                                     <i class="icon ico_checkBox">체크박스</i>
                                     <span>통계</span>
                                 </label>
                             </li>
                             <li>
                                 <label>
-                                    <input type="checkbox" name="chk">
+                                    <input type="checkbox" name="chks">
                                     <i class="icon ico_checkBox">체크박스</i>
                                     <span>부가세신고자료</span>
                                 </label>
                             </li>
                             <li>
                                 <label>
-                                    <input type="checkbox" name="chk">
+                                    <input type="checkbox" name="chks">
                                     <i class="icon ico_checkBox">체크박스</i>
                                     <span>링크결제</span>
                                 </label>
                             </li>
                             <li class="hub">
                                 <label>
-                                    <input type="checkbox" name="chk">
+                                    <input type="checkbox" name="chks">
                                     <i class="icon ico_checkBox">체크박스</i>
                                     <span>허브</span>
                                 </label>
                             </li>
                             <li>
                                 <label>
-                                    <input type="checkbox" name="chk">
+                                    <input type="checkbox" name="chks">
                                     <i class="icon ico_checkBox">체크박스</i>
                                     <span>상점정보</span>
                                 </label>
@@ -251,6 +312,23 @@
     </div>
 
 </section>
-
+<div class="modal _modal01 fade show">
+    <div class="modal_dialog modal_sm">
+        <div class="modal_content alert_modal_content">
+            <div class="modal_body">
+                <div class="text_center">
+                    <i class="icon ico_alert_red">경고</i>
+                    <p class="font_weight_bold title">탈퇴처리 하시겠습니까?</p>
+                    <p class="desc color_danger">즉시 탈퇴 처리 되며 상점관리자에<br>
+                        접근이 불가합니다.</p>
+                </div>
+            </div>
+            <div class="modal_footer">
+                <button>삭제하기</button>
+                <button class="_modal_close_btn">취소</button>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>

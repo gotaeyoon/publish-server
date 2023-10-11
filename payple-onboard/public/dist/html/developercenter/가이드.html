@@ -6,15 +6,15 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!--    서버반영시 -->
-    <link rel="stylesheet" href="https://image.payple.kr/onboard/css/payple_component.css?ver=1.5">
-    <link rel="stylesheet" href="https://image.payple.kr/onboard/css/payple_pages.css?ver=1.5">
-    <script src="https://image.payple.kr/onboard/js/bundle.js?ver=1.5"></script>
-    <script src="https://image.payple.kr/onboard/js/common.js?ver=1.5"></script>
+<!--    <link rel="stylesheet" href="https://image.payple.kr/onboard/css/payple_component.css?ver=1.5">-->
+<!--    <link rel="stylesheet" href="https://image.payple.kr/onboard/css/payple_pages.css?ver=1.5">-->
+<!--    <script src="https://image.payple.kr/onboard/js/bundle.js?ver=1.5"></script>-->
+<!--    <script src="https://image.payple.kr/onboard/js/common.js?ver=1.5"></script>-->
     <!--    로컬작업시-->
-<!--    <link rel="stylesheet" href="../../css/payple_component.css">-->
-<!--    <link rel="stylesheet" href="../../css/payple_pages.css">-->
-<!--    <script src="../../js/bundle.js"></script>-->
-<!--    <script src="../../js/common.js"></script>-->
+    <link rel="stylesheet" href="../../css/payple_component.css?ver=1.3">
+    <link rel="stylesheet" href="../../css/payple_pages.css?ver=1.3">
+    <script src="../../js/bundle.js?ver=1.3"></script>
+    <script src="../../js/common.js?ver=1.3"></script>
 </head>
 <body>
 <header class="header developer_center">
@@ -120,7 +120,7 @@
                 <div>
                     <h6>달력테스트진행</h6>
                     <div class="position_relative">
-                        <input type="text" class="form_control" id="myDateRangePicker" name="dateRangePicker"/>
+                        <input type="text" class="form_control _twoCalender" id="myDateRangePicker" name="dateRangePicker"/>
                         <label for="myDateRangePicker" class="input__date" onclick="openModal('modal01')">
                             <i class="icon ico_calender"></i>
                         </label>
@@ -140,18 +140,6 @@
                     <p class="title test">웹훅 목록</p>
                 </div>
                 <div class="input__area__list">
-                    <div class="input__area name">
-                        <p class="input_title">이름</p>
-                        <div class="position_relative">
-                            <label><input class="form_control" placeholder="김이플"></label>
-                        </div>
-                    </div>
-                    <div class="input__area url">
-                        <p class="input_title">URL</p>
-                        <div class="position_relative">
-                            <label><input class="form_control" placeholder="https://"></label>
-                        </div>
-                    </div>
                     <div class="input__area data">
                         <p class="input_title">수신할 데이터</p>
                         <div class="select_box _select_box">
@@ -175,6 +163,13 @@
                             </ul>
                         </div>
                     </div>
+                    <div class="input__area url">
+                        <p class="input_title">URL</p>
+                        <div class="position_relative">
+                            <label><input class="form_control" placeholder="https://"></label>
+                        </div>
+                    </div>
+
                 </div>
                 <div class="btn_area">
                     <button class="btn btn_secondary">호출 테스트</button>

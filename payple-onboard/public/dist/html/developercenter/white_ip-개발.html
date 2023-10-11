@@ -86,11 +86,23 @@
     <article class="developer_content">
         <section class="developer_section">
             <div class="title_area">
+                <!--테스트 s -->
                 <p class="title test">White IP</p>
+                <!--테스트 e-->
+
+                <!--라이브 s -->
+              <!--  <p class="title">White IP<span class="live_account">국내 - KREAM - MID001</span></p>-->
+                <!--라이브 e-->
             </div>
             <div class="developer_card">
                 <div class="title_area">
+                    <!--test s-->
                     <p class="title test">White IP 목록</p>
+                    <!--test e-->
+
+                    <!--live s-->
+                    <!--<p class="title">White IP 목록</p>-->
+                    <!--live e-->
                     <i class="icon ico_trashcan"></i>
                 </div>
                 <div class="response_table">
@@ -152,32 +164,100 @@
                             <td>131.12.101.22</td>
                             <td>2023-06-29 17:23:59</td>
                         </tr>
+                        <tr>
+                            <td class="check_table">
+                                <label>
+                                    <input type="checkbox" name="chk">
+                                    <i class="icon ico_checkBox">체크박스</i>
+                                </label>
+                            </td>
+                            <td>131.12.101.22</td>
+                            <td>2023-06-29 17:23:59</td>
+                        </tr>
+                        <tr>
+                            <td class="check_table">
+                                <label>
+                                    <input type="checkbox" name="chk">
+                                    <i class="icon ico_checkBox">체크박스</i>
+                                </label>
+                            </td>
+                            <td>131.12.101.22</td>
+                            <td>2023-06-29 17:23:59</td>
+                        </tr>
+                        <tr>
+                            <td class="check_table">
+                                <label>
+                                    <input type="checkbox" name="chk">
+                                    <i class="icon ico_checkBox">체크박스</i>
+                                </label>
+                            </td>
+                            <td>131.12.101.22</td>
+                            <td>2023-06-29 17:23:59</td>
+                        </tr>
+                        <tr>
+                            <td class="check_table">
+                                <label>
+                                    <input type="checkbox" name="chk">
+                                    <i class="icon ico_checkBox">체크박스</i>
+                                </label>
+                            </td>
+                            <td>131.12.101.22</td>
+                            <td>2023-06-29 17:23:59</td>
+                        </tr>
+                        <tr>
+                            <td class="check_table">
+                                <label>
+                                    <input type="checkbox" name="chk">
+                                    <i class="icon ico_checkBox">체크박스</i>
+                                </label>
+                            </td>
+                            <td>131.12.101.22</td>
+                            <td>2023-06-29 17:23:59</td>
+                        </tr>
+                        <tr>
+                            <td class="check_table">
+                                <label>
+                                    <input type="checkbox" name="chk">
+                                    <i class="icon ico_checkBox">체크박스</i>
+                                </label>
+                            </td>
+                            <td>131.12.101.22</td>
+                            <td>2023-06-29 17:23:59</td>
+                        </tr>
+
+                        <!--white IP 없을 경우 s-->
+                        <!--<tr><td class="empty_data" colspan="4">등록된 White IP가 없습니다.</td></tr>-->
+                        <!--white IP 없을 경우 e-->
                         </tbody>
                     </table>
-                </div>
-                <div class="pagination_area">
-                    <span class="pagination_arrow first_button"><i class="icon ico_pagination_left_arrow_first"></i></span>
-                    <span class="pagination_arrow"><i class="icon ico_pagination_left_arrow"></i></span>
-                    <ul class="pagination_list">
-                        <li class="active">1</li>
-                        <li>2</li>
-                        <li>3</li>
-                        <li>4</li>
-                    </ul>
-                    <span class="pagination_arrow"><i class="icon ico_pagination_right_arrow"></i></span>
-                    <span class="pagination_arrow last_button"><i class="icon ico_pagination_right_arrow_last"></i></span>
+                    <div class="pagination_area">
+                        <span class="pagination_arrow first_button"><i class="icon ico_pagination_left_arrow_first"></i></span>
+                        <span class="pagination_arrow"><i class="icon ico_pagination_left_arrow"></i></span>
+                        <ul class="pagination_list">
+                            <li class="active">1</li>
+
+                        </ul>
+                        <span class="pagination_arrow"><i class="icon ico_pagination_right_arrow"></i></span>
+                        <span class="pagination_arrow last_button"><i class="icon ico_pagination_right_arrow_last"></i></span>
+                    </div>
                 </div>
             </div>
             <div class="developer_card">
                 <div class="title_area">
+                    <!--test s-->
                     <p class="title test">White IP 등록</p>
+                    <!--test e-->
+
+                    <!--live s-->
+                    <!--<p class="title test">White IP 등록</p>-->
+                    <!--live e-->
                 </div>
                 <div class="input__area__list">
                     <div class="input__area input_one__button__area">
                         <p class="input_title">IP</p>
                         <div class="input_one__button">
                             <label><input class="form_control _input_ip" placeholder="123.10.101.12"></label>
-                            <button class="btn btn_secondary closeBtn">등록하기</button>
+                            <button class="btn btn_secondary">등록하기</button>
                         </div>
                     </div>
 
@@ -189,5 +269,22 @@
         </section>
     </article>
 </main>
+
+<!--show fade가 호출되면 모달창 호출-->
+<div class="modal modal_confirm show fade">
+    <div class="modal_dialog modal_confirm">
+        <div class="modal_content">
+            <div class="modal_header" style="min-height: 77px">
+            </div>
+            <div class="modal_body">
+                <p class="title font_weight_regular">White IP는 최대 10개까지 등록 가능합니다.</p>
+
+            </div>
+            <div class="modal_footer">
+                <button class="btn btn_primary _modal_close_btn text_center">닫기</button>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>

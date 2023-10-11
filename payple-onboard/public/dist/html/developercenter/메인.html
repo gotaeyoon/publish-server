@@ -6,15 +6,15 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!--    서버반영시 -->
-    <link rel="stylesheet" href="https://image.payple.kr/onboard/css/payple_component.css?ver=1.5">
-    <link rel="stylesheet" href="https://image.payple.kr/onboard/css/payple_pages.css?ver=1.5">
-    <script src="https://image.payple.kr/onboard/js/bundle.js?ver=1.5"></script>
-    <script src="https://image.payple.kr/onboard/js/common.js?ver=1.5"></script>
+<!--    <link rel="stylesheet" href="https://image.payple.kr/onboard/css/payple_component.css?ver=1.5">-->
+<!--    <link rel="stylesheet" href="https://image.payple.kr/onboard/css/payple_pages.css?ver=1.5">-->
+<!--    <script src="https://image.payple.kr/onboard/js/bundle.js?ver=1.5"></script>-->
+<!--    <script src="https://image.payple.kr/onboard/js/common.js?ver=1.5"></script>-->
     <!--    로컬작업시-->
-<!--    <link rel="stylesheet" href="../../css/payple_component.css">-->
-<!--    <link rel="stylesheet" href="../../css/payple_pages.css">-->
-<!--    <script src="../../js/bundle.js"></script>-->
-<!--    <script src="../../js/common.js"></script>-->
+    <link rel="stylesheet" href="../../css/payple_component.css?ver=1.3">
+    <link rel="stylesheet" href="../../css/payple_pages.css?ver=1.3">
+    <script src="../../js/bundle.js?ver=1.3"></script>
+    <script src="../../js/common.js?ver=1.3"></script>
 </head>
 <body>
 <header class="header developer_center">
@@ -86,8 +86,23 @@
     <article class="developer_content">
         <section class="developer_section">
             <div class="title_area">
+                <!--테스트 S-->
                 <p class="title test">API 키</p>
+                <!--테스트 E-->
+
+                <!--라이브 반영시 S-->
+                <!--<p class="title">API 키<span class="live_account">국내 - KREAM - MID001</span></p>-->
+                <!--라이브 반영시 E-->
                 <a href="#" target="_blank" class="guide_link"><span>가이드 확인하기</span>→</a>
+            </div>
+            <div class="input__area">
+                <p class="input_title">mid_key</p>
+                <div class="input_copy_box">
+                    <label>
+                        <input class="form_control mo_ellipsis" disabled="" value="dw.jung@payple.kr">
+                    </label>
+                    <i class="icon ico_copy"></i>
+                </div>
             </div>
             <div class="input__area">
                 <p class="input_title">secret_key</p>
@@ -109,8 +124,14 @@
             </div>
             <p class="caption_text"><span>secret_key 는 노출되면 안되는 정보이기에 유출되지 않도록 각별히
                 유의해주세요.</span> </p>
+            <!--팝업 s-->
+            <div class="alert_popup">
+                <p><i class="icon"></i><span class="text"></span></p>
+            </div>
+            <!--팝업e-->
         </section>
     </article>
+
 </main>
 </body>
 </html>
