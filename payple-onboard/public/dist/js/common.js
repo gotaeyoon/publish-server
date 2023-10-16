@@ -56,13 +56,23 @@ function toggleAccountInfo() {
     });
 }
 
-//selectBox 공통
+// 셀렉트박스 공통
 function selectBox() {
     let selectBox = $('._select_box')
 
+    // 셀렉트 박스 option창 호출
     selectBox.on('click', function () {
         $(this).toggleClass('active');
     })
+    // 외부 클릭시 셀렉트박스 종료
+    $(document).on('click', function (event) {
+        let target = $(event.target);
+        selectBox.each(function() {
+            if (!target.is(this) && !target.closest(this).length) {
+                $(this).removeClass('active');
+            }
+        });
+    });
 
     selectBox.each(function() {
         const selectBox = $(this);
@@ -73,30 +83,21 @@ function selectBox() {
 
             if (selectedValue.length === 1) {
                 const selectedText = selectedValue.text();
-                console.log(selectedText);
                 innerInputElement.closest('._select_box').find('.select_value').text(selectedText);
             }
         }
+    });
 
+    $(document).on('click','.option' ,function() {
+        const text = $(this).text();
+        const value = $(this).attr("value");
+
+        $(this).closest('._select_box').find('.select_value').text(text).css('color', '#1F1F1F').attr('value', value);
+        $(this).closest('._select_box').find('._select_value').attr('value', value);
 
     });
 
-    $(document).on('click', function (event) {
-        let target = $(event.target);
-        selectBox.each(function() {
-            if (!target.is(this) && !target.closest(this).length) {
-                $(this).removeClass('active');
-            }
-        });
-        selectBox.find('.option').on('click', function() {
-            const text = $(this).text();
-            const value = $(this).attr("value");
-            $(this).closest('._select_box').find('.select_value').text(text).css('color', '#1F1F1F').attr('value', value);
-        });
-    });
 }
-
-
 
 //입점불가 텍스트
 function HoverTextnotAllow(){
@@ -186,8 +187,8 @@ function modalCalender(){
     const parentElement = $('#datepickerParent');
     let twoCalender = $('._twoCalender');
     let OneCalender = $('._oneCalender');
-    
-    
+
+
     // 두개 보이는 달력
     twoCalender.daterangepicker({
         linkedCalendars: true,
@@ -238,7 +239,7 @@ function modalCalender(){
         autoApply : true,
         "locale": {
             "format": "YYYY-MM-DD",
-            "separator":"~",
+            "separator": "~",
             "applyLabel": "확인",
             "cancelLabel": "취소",
             "fromLabel": "From",
@@ -250,6 +251,7 @@ function modalCalender(){
         },
         "startDate": new Date(),
         "endDate": new Date(),
+        // "minDate": new Date(new Date().getFullYear(), new Date().getMonth(), 1),
         "maxDate": new Date(),
         "buttonClasses": "data_range_btn",
         "applyButtonClasses": "apply_range_btn",
@@ -257,7 +259,7 @@ function modalCalender(){
         "showCustomRangeLabelranges": false,
         "parentEl": parentElement,
     }, function (start, end, label) {
-        // console.log('선택된 날짜: ' + start.format('YYYY-MM-DD') + 'to' + end.format('YYYY-MM-DD'));
+        console.log('선택된 날짜: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
     });
     OneCalender.on('hide.daterangepicker', function (ev, picker) {
         let modals = $('.modal')
@@ -274,6 +276,7 @@ function modalCalender(){
     });
     OneCalender.on('showCalendar.daterangepicker', function (ev, picker) {
         if (picker.endDate.month() > picker.startDate.month()) {
+            // call send
             alert('한 달 단위로 선택 가능하십니다.');
             picker.startDate = moment();
             picker.endDate = moment();

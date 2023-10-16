@@ -468,31 +468,31 @@ data.membership = {
     title: '관리자 초대',
     list: [
         {
-            stateClass: 'confirm',
+            stateClass: 'complete',
             url: '관리자초대_초대관리자없음',
             category: 'membership',
             page: '관리자초대_초대관리자없음'
         },
         {
-            stateClass: 'confirm',
+            stateClass: 'complete',
             url: '관리자초대_초대관리자있음',
             category: 'membership',
             page: '관리자초대_초대관리자있음'
         },
         {
-            stateClass: 'confirm',
+            stateClass: 'complete',
             url: '관리자초대_수정',
             category: 'membership',
             page: '관리자초대_수정'
         },
         {
-            stateClass: 'confirm',
+            stateClass: 'complete',
             url: '관리자초대_초대수락완료',
             category: 'membership',
             page: '관리자초대_초대수락완료'
         },
         {
-            stateClass: 'confirm',
+            stateClass: 'complete',
             url: '관리자초대_권한삭제',
             category: 'membership',
             page: '관리자초대_권한삭제'
