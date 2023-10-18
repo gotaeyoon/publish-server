@@ -6,112 +6,280 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" href="https://image.payple.kr/common/favicon.ico" sizes="32x32">
-    <link rel="stylesheet" href="./../../css/payple_component.css?v0.53a">
-    <link rel="stylesheet" href="./../../css/payple_pages.css?v0.53a">
-    <script src="../../js/bundle.js?v0.53a"></script>
-    <script src="../../js/common.js?v0.53a"></script>
+    <link rel="stylesheet" href="./../../css/payple_component.css?v0.6">
+    <link rel="stylesheet" href="./../../css/payple_pages.css?v0.6">
+    <script src="../../js/bundle.js?v0.6"></script>
+    <script src="../../js/common.js?v0.6"></script>
     <title>페이플 관리자 페이지</title>
 </head>
 
 <body>
 <div class="slide-modal-wrap _slide-modal-wrap _slide-modal-wrap-cancel show">
-    <div class="slide-modal slide-modal-md">
+    <div class="slide-modal slide-modal-lg">
         <div class="slide-modal-header">
             <h3 class="title font-weight-bold">이메일 발송하기</h3>
             <i class="ico_close_btn _close-slide-modal-btn"></i>
         </div>
-        <div class="slide-modal-body">
+        <div class="slide-modal-body h-auto">
             <div class="position-relative email-container">
-                <span class="title">서비스 선택</span>
+                <p class="title"><span>결제수단 선택</span></p>
                 <div class="checkbox-wrap">
-                    <label>
-                        <input type="checkbox" name="payment" class="custom-checkbox"
-                               disabled>
-                        <i class="icon ico_checkbox">체크박스</i>
-                        <span>앱카드</span>
-                    </label>
-                    <label >
-                        <input type="checkbox" name="payment" class="custom-checkbox"
-                               disabled>
-                        <i class="icon ico_checkbox">체크박스</i>
-                        <span>키인 결제</span>
-                    </label>
-                    <label >
-                        <input type="checkbox" name="payment" class="custom-checkbox checked-disabled"
-                               disabled>
-                        <i class="icon ico_checkbox">체크박스</i>
-                        <span>빌링(정기결제)</span>
-                    </label>
-                    <label >
-                        <input type="checkbox" name="payment" class="custom-checkbox checked-disabled"
-                               disabled>
-                        <i class="icon ico_checkbox">체크박스</i>
-                        <span>비밀번호 간편결제</span>
-                    </label>
-                    <label >
-                        <input type="checkbox" name="payment" class="custom-checkbox"
-                               disabled>
-                        <i class="icon ico_checkbox">체크박스</i>
-                        <span>페이플 허브</span>
-                    </label>
-                    <label >
-                        <input type="checkbox" name="payment" class="custom-checkbox"
-                               disabled>
-                        <i class="icon ico_checkbox">체크박스</i>
-                        <span>가상계좌</span>
-                    </label>
-                    <label>
-                        <input type="checkbox" name="payment" class="custom-checkbox checked-disabled"
-                               disabled>
-                        <i class="icon ico_checkbox">체크박스</i>
-                        <span>네이버페이</span>
-                    </label>
-                    <label>
-                        <input type="checkbox" name="payment" class="custom-checkbox checked-disabled"
-                               disabled>
-                        <i class="icon ico_checkbox">체크박스</i>
-                        <span>카카오페이</span>
-                    </label>
-                    <label >
-                        <input type="checkbox" name="payment" class="custom-checkbox"
-                               disabled>
-                        <i class="icon ico_checkbox">체크박스</i>
-                        <span>애플페이</span>
-                    </label>
+                    <div class="checkbox-list-area">
+                        <span class="sub-title">서비스</span>
+                        <ul>
+                            <li>
+                                <label class="mb-0">
+                                    <input type="checkbox" name="" class="custom-checkbox" disabled>
+                                    <i class="icon ico_checkbox">체크박스</i>
+                                    <span>전체</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="mb-0">
+                                    <input type="checkbox" name="" class="custom-checkbox" disabled>
+                                    <i class="icon ico_checkbox">체크박스</i>
+                                    <span>국내</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="mb-0">
+                                    <input type="checkbox" name="" class="custom-checkbox" disabled>
+                                    <i class="icon ico_checkbox">체크박스</i>
+                                    <span>해외</span>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="domestic-checkbox-list-area">
+                        <div class="checkbox-list-area">
+                            <span class="sub-title">국내 카드</span>
+                            <ul>
+                                <li>
+                                    <label class="mb-0">
+                                        <input type="checkbox" name="payment" class="custom-checkbox" disabled
+                                        >
+                                        <i class="icon ico_checkbox">체크박스</i>
+                                        <span>전체</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="mb-0">
+                                        <input type="checkbox" name="payment" class="custom-checkbox" disabled
+                                        >
+                                        <i class="icon ico_checkbox">체크박스</i>
+                                        <span>앱카드</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="mb-0 checked-disabled">
+                                        <input type="checkbox" name="payment" class="custom-checkbox" disabled
+                                        >
+                                        <i class="icon ico_checkbox">체크박스</i>
+                                        <span>키인</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="mb-0 checked-disabled">
+                                        <input type="checkbox" name="payment" class="custom-checkbox checked-disabled" disabled
+                                        >
+                                        <i class="icon ico_checkbox">체크박스</i>
+                                        <span>빌링</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="mb-0 checked-disabled">
+                                        <input type="checkbox" name="payment" class="custom-checkbox checked-disabled" disabled
+                                        >
+                                        <i class="icon ico_checkbox">체크박스</i>
+                                        <span>비밀번호 간편</span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="checkbox-list-area">
+                            <span class="sub-title">국내 계좌</span>
+                            <ul>
+                                <li>
+                                    <label class="mb-0">
+                                        <input type="checkbox" name="domesticAccount" class="custom-checkbox" disabled
+                                        >
+                                        <i class="icon ico_checkbox">체크박스</i>
+                                        <span>전체</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="mb-0">
+                                        <input type="checkbox" name="domesticAccount" class="custom-checkbox checked-disabled" disabled
+                                        >
+                                        <i class="icon ico_checkbox">체크박스</i>
+                                        <span>빌링</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="mb-0 checked-disabled">
+                                        <input type="checkbox" name="domesticAccount" class="custom-checkbox" disabled
+                                        >
+                                        <i class="icon ico_checkbox">체크박스</i>
+                                        <span>비밀번호 간편</span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="checkbox-list-area">
+                            <span class="sub-title">국내 페이</span>
+                            <ul>
+                                <li>
+                                    <label class="mb-0">
+                                        <input type="checkbox" name="domesticPay"
+                                               class="custom-checkbox _check-all-domestic-pay" disabled
+                                        >
+                                        <i class="icon ico_checkbox">체크박스</i>
+                                        <span>전체</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="mb-0">
+                                        <input type="checkbox" name="domesticPay" class="custom-checkbox" disabled
+                                        >
+                                        <i class="icon ico_checkbox">체크박스</i>
+                                        <span>네이버페이</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="mb-0">
+                                        <input type="checkbox" name="domesticPay" class="custom-checkbox checked-disabled" disabled
+                                        >
+                                        <i class="icon ico_checkbox">체크박스</i>
+                                        <span>카카오페이</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="mb-0">
+                                        <input type="checkbox" name="domesticPay" class="custom-checkbox" disabled
+                                        >
+                                        <i class="icon ico_checkbox">체크박스</i>
+                                        <span>애플페이</span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="checkbox-list-area">
+                            <span class="sub-title">국내 허브</span>
+                            <ul>
+                                <li>
+                                    <label class="mb-0">
+                                        <input type="checkbox" name="domesticHub"
+                                               class="custom-checkbox _check-all-domestic-hub" disabled
+                                        >
+                                        <i class="icon ico_checkbox">체크박스</i>
+                                        <span>전체</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="mb-0">
+                                        <input type="checkbox" name="domesticHub" class="custom-checkbox" disabled
+                                        >
+                                        <i class="icon ico_checkbox">체크박스</i>
+                                        <span>인증+이체</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="mb-0">
+                                        <input type="checkbox" name="domesticHub" class="custom-checkbox" disabled
+                                        >
+                                        <i class="icon ico_checkbox">체크박스</i>
+                                        <span>인증</span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="checkbox-list-area">
+                        <span class="sub-title">해외 카드</span>
+                        <ul>
+                            <li>
+                                <label class="mb-0">
+                                    <input type="checkbox" name="overseasCard"
+                                           class="custom-checkbox _check-all-overseas-card" disabled
+                                    >
+                                    <i class="icon ico_checkbox">체크박스</i>
+                                    <span>전체</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="mb-0">
+                                    <input type="checkbox" name="overseasCard" class="custom-checkbox _domestic-card" disabled
+                                    >
+                                    <i class="icon ico_checkbox">체크박스</i>
+                                    <span>키인</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="mb-0">
+                                    <input type="checkbox" name="overseasCard" class="custom-checkbox _domestic-card checked-disabled" disabled
+                                    >
+                                    <i class="icon ico_checkbox">체크박스</i>
+                                    <span>빌링</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="mb-0">
+                                    <input type="checkbox" name="overseasCard" class="custom-checkbox _domestic-card checked-disabled" disabled
+                                    >
+                                    <i class="icon ico_checkbox">체크박스</i>
+                                    <span>비밀번호 간편</span>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <span class="title">발송 이메일 선택</span>
+                <p class="title"><span>이메일 발송 대상자 선택</span></p>
                 <div class="checkbox-wrap mb-0">
-                    <label>
-                        <input type="checkbox" name="email" class="custom-checkbox" disabled>
-                        <i class="icon ico_checkbox">체크박스</i>
-                        <span>전체</span>
-                    </label>
-                    <label >
-                        <input type="checkbox" name="email" class="custom-checkbox checked-disabled"
-                               disabled>
-                        <i class="icon ico_checkbox">체크박스</i>
-                        <span>회사공식. 고객센터</span>
-                    </label>
-                    <label >
-                        <input type="checkbox" name="email" class="custom-checkbox"
-                               disabled>
-                        <i class="icon ico_checkbox">체크박스</i>
-                        <span>개발 담당자</span>
-                    </label>
-                    <label >
-                        <input type="checkbox" name="email" class="custom-checkbox"
-                               disabled>
-                        <i class="icon ico_checkbox">체크박스</i>
-                        <span>정산 담당자</span>
-                    </label>
-                    <label >
-                        <input type="checkbox" name="email" class="custom-checkbox"
-                               disabled>
-                        <i class="icon ico_checkbox">체크박스</i>
-                        <span>계약 담당자</span>
-                    </label>
+                    <div class="checkbox-list-area email">
+                        <ul>
+                            <li>
+                                <label class="mb-0">
+                                    <input type="checkbox" name="email" class="custom-checkbox" disabled>
+                                    <i class="icon ico_checkbox">체크박스</i>
+                                    <span>전체</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="mb-0">
+                                    <input type="checkbox" name="email" class="custom-checkbox" disabled
+                                    >
+                                    <i class="icon ico_checkbox">체크박스</i>
+                                    <span>회사공식. 고객센터</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="mb-0">
+                                    <input type="checkbox" name="email" class="custom-checkbox checked-disabled" disabled
+                                    >
+                                    <i class="icon ico_checkbox">체크박스</i>
+                                    <span>개발 담당자</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="mb-0">
+                                    <input type="checkbox" name="email" class="custom-checkbox checked-disabled" disabled
+                                    >
+                                    <i class="icon ico_checkbox">체크박스</i>
+                                    <span>정산 담당자</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="mb-0">
+                                    <input type="checkbox" name="email" class="custom-checkbox" disabled
+                                    >
+                                    <i class="icon ico_checkbox">체크박스</i>
+                                    <span>계약 담당자</span>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <p class="caption">총 10,000건 발송이 완료되었습니다.</p>
+                <p class="caption">총 10,000건 메일을 발송완료되었습니다.</p>
             </div>
         </div>
     </div>

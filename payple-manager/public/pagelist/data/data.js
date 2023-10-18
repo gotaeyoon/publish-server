@@ -156,7 +156,7 @@ data.domesticPayment = {
             page: '카드_가상계좌_취소_완료'
         },
         {
-            stateClass: 'complete',
+            stateClass: 'working',
             url: '상담관리',
             category: 'domesticpayment',
             page: '상담관리'
@@ -174,61 +174,68 @@ data.globalPayment = {
     title:'결제내역-해외',
     list:[
         {
-            stateClass: 'confirm',
+            stateClass: 'complete',
             url: '결제내역_해외_조회결과있음',
             category: 'globalpayment',
             page: '결제내역_해외_조회결과있음'
         },
         {
-            stateClass: 'confirm',
+            stateClass: 'complete',
             url: '결재내역_취소버튼클릭시',
             category: 'globalpayment',
             page: '결재내역_취소버튼클릭시'
         },
         {
-            stateClass: 'confirm',
+            stateClass: 'complete',
             url: '결재내역_취소버튼클릭시_에러',
             category: 'globalpayment',
             page: '결재내역_취소버튼클릭시_에러'
         },
         {
-            stateClass: 'confirm',
+            stateClass: 'complete',
             url: '취소_더블체크',
             category: 'globalpayment',
             page: '취소_더블체크'
         },
         {
-            stateClass: 'confirm',
+            stateClass: 'complete',
             url: '취소_완료',
             category: 'globalpayment',
             page: '취소_완료'
         },
         {
             stateClass: 'confirm',
-            url: '결재내역_해외_상세내역',
+            url: '결제내역_해외_상세내역',
             category: 'globalpayment',
-            page: '결재내역_해외_상세내역'
+            page: '결제내역_해외_상세내역'
         },
+
         {
-            stateClass: 'confirm',
+            stateClass: 'complete',
             url: '승인_요청_실패내역',
             category: 'globalpayment',
             page: '승인_요청_실패내역'
         },
         {
-            stateClass: 'confirm',
+            stateClass: 'complete',
+            url: '승인_요청_실패내역_상세내역',
+            category: 'globalpayment',
+            page: '승인_요청_실패내역_상세내역'
+        },
+        {
+            stateClass: 'complete',
             url: '매입_실패내역',
             category: 'globalpayment',
             page: '매입_실패내역'
         },
         {
-            stateClass: 'confirm',
+            stateClass: 'complete',
             url: '해외_등록_해지정보',
             category: 'globalpayment',
             page: '해외_등록_해지정보'
         },
         {
-            stateClass: 'confirm',
+            stateClass: 'complete',
             url: '해외_1달러_인증',
             category: 'globalpayment',
             page: '해외_1달러_인증'
@@ -276,6 +283,18 @@ data.notice = {
         },
         {
             stateClass: 'confirm',
+            url: '공지사항_수정',
+            category: 'notice',
+            page: '공지사항_수정'
+        },
+        {
+            stateClass: 'confirm',
+            url: '공지사항_상세',
+            category: 'notice',
+            page: '공지사항_상세'
+        },
+        {
+            stateClass: 'working',
             url: '이메일발송하기_체크박스체크전',
             category: 'notice',
             page: '이메일발송하기_체크박스체크전'
