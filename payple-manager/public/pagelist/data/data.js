@@ -246,13 +246,13 @@ data.lnikpay = {
     title:'링크결제',
     list:[
         {
-            stateClass: 'confirm',
+            stateClass: 'complete',
             url: '링크결제_상품내역',
             category: 'linkpay',
             page: '링크결제_상품내역'
         },
         {
-            stateClass: 'confirm',
+            stateClass: 'complete',
             url: '링크결제_상품내역_국내검색시',
             category: 'linkpay',
             page: '링크결제_상품내역_국내검색시'
@@ -263,7 +263,6 @@ data.lnikpay = {
             category: 'linkpay',
             page: '링크결제_상품내역_해외검색시'
         },
-
     ]
 }
 data.notice = {
@@ -319,6 +318,34 @@ data.notice = {
         },
 
 
+    ]
+}
+data.signupko = {
+    title:'가입,신청정보-국내',
+    list:[
+        {
+            stateClass: 'working',
+            url: '신청정보_공통',
+            category: 'signupko',
+            page: '신청정보_공통'
+        },
+        {
+            stateClass: 'working',
+            url: '기본정보_국내',
+            category: 'signupko',
+            page: '기본정보_국내'
+        },
+    ]
+}
+data.signupen = {
+    title:'가입,신청정보-해외',
+    list:[
+        {
+            stateClass: 'working',
+            url: '기본정보_해외',
+            category: 'signupen',
+            page: '기본정보_해외'
+        },
     ]
 }
 

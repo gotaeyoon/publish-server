@@ -666,77 +666,677 @@
 </div>
         <article class="content-container">
             <!-- 컨텐츠 s-->
-            <section class="notice-section">
-                <h3 class="main-title font-weight-bold">공지사항</h3>
+            <section class="signup-section">
+                <h3 class="main-title font-weight-bold">가입, 신청정보</h3>
                 <div class="card">
                     <h5 class="filter-title font-weight-semi-bold">
-                        <i class="icon ico_edit_purple"></i>
-                        <span>게시글</span>
+                        <i class="icon ico_filter"></i>
+                        <span>필터</span>
                     </h5>
-                    <ul class="row notice-detail-list">
-                        <li class="col-lg-6">
-                            <span class="title font-weight-semi-bold">제목</span>
-                            <span class="desc">[정산] 해외 결제 정산 기준 안내</span>
-                        </li>
-                        <li class="col-lg-6">
-                            <span class="title font-weight-semi-bold">최종 수정자</span>
-                            <span class="desc">정다운</span>
-                        </li>
-                        <li class="col-lg-6">
-                            <span class="title font-weight-semi-bold">작성일</span>
-                            <span class="desc">2022-12-27</span>
-                        </li>
-                        <li class="col-lg-6">
-                            <span class="title font-weight-semi-bold">최종 수정일</span>
-                            <span class="desc">2022-12-28</span>
-                        </li>
-                        <li class="col-lg-6">
-                            <span class="title font-weight-semi-bold">작성자</span>
-                            <span class="desc">정다운</span>
-                        </li>
-                        <li class="col-lg-6">
-                            <span class="title font-weight-semi-bold">공개여부</span>
-                            <span class="desc">공개</span>
-                        </li>
-                        <li class="col-lg-6">
-                            <span class="title font-weight-semi-bold">조회수</span>
-                            <span class="desc">100</span>
-                        </li>
-                    </ul>
-                    <div class="text-container">
-                        <p class="title font-weight-semi-bold">내용</p>
-                        <div class="text-view">
-                            <!--content 영역-->
+                    <div class="row">
+                        <div class="col-xl-auto">
+                            <p class="card-title font-weight-semi-bold">기간</p>
+                            <div class="row row-col-3">
+                                <div class="col-xl">
+                                    <div class="form-group">
+                                        <div class="btn-group w-100 custom-radio-container">
+                                            <div class="custom-radio-group fsz-0">
+                                                <input class="radio-input" type="radio" name="example1" checked=""
+                                                       id="customRadio1">
+                                                <label for="customRadio1" class="btn btn-secondary btn-md">서비스
+                                                    신청일</label>
+                                            </div>
+                                            <div class="custom-radio-group fsz-0">
+                                                <input class="radio-input" type="radio" name="example1"
+                                                       id="customRadio2">
+                                                <label for="customRadio2" class="btn btn-secondary btn-md">회원
+                                                    가입일</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-auto">
+                                    <div class="form-group">
+                                        <div class="btn-group-month">
+                                            <button class="btn btn-secondary" id="threeMonthAgoBtn">3개월</button>
+                                            <button class="btn btn-secondary" id="lastMonthBtn">지난달</button>
+                                            <button class="btn btn-secondary" id="thisMonthBtn">이번달</button>
+                                            <button class="btn btn-secondary" id="yesterdayBtn">어제</button>
+                                            <button class="btn btn-secondary" id="todayBtn">오늘</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-auto">
+                                    <div class="form-group">
+                                        <label class="calender-input mb-0">
+                                            <input class="form-control _dataPickerRange" type="text">
+                                            <i class="icon ico_calendar" onclick="$('._modal-calendar').modal('show')">달력이미지</i>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-auto">
+                            <p class="card-title font-weight-semi-bold">서비스 구분/상태</p>
+                            <div class="row row-col-2">
+                                <div class="col-xl">
+                                    <div class="form-group min-w-190">
+                                        <label class="select-box _select-box">
+                                            <input type="hidden" class="select-value _select-value" value="0">
+                                            <span class="value-text _value-text">전체</span>
+                                            <i class="icon ico_select_arrow_down">아래화살표</i>
+                                            <ul class="options h-auto">
+                                                <li class="option" value="0">전체</li>
+                                                <li class="option" value="1">국내</li>
+                                                <li class="option" value="2">해외</li>
+                                            </ul>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-xl">
+                                    <div class="form-group min-w-190">
+                                        <label class="select-box _select-box">
+                                            <input type="hidden" class="select-value _select-value" value="0">
+                                            <span class="value-text _value-text">상태(전체)</span>
+                                            <i class="icon ico_select_arrow_down">아래화살표</i>
+                                            <ul class="options h-320px">
+                                                <li class="option" value="0">전체</li>
+                                                <li class="option" value="1">작성 중</li>
+                                                <li class="option" value="2">심사 중</li>
+                                                <li class="option" value="2">입점불가</li>
+                                                <li class="option" value="2">계약 중</li>
+                                                <li class="option" value="2">서비스 중</li>
+                                                <li class="option" value="2">정지</li>
+                                                <li class="option" value="2">해지</li>
+                                            </ul>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-xl-auto">
+                            <p class="card-title font-weight-semi-bold">결제수단 구분/상태</p>
+                            <div class="row row-col-2">
+                                <div class="col-xl">
+                                    <div class="form-group min-w-190">
+                                        <label class="select-box _select-box">
+                                            <input type="hidden" class="select-value _select-value" value="0">
+                                            <span class="value-text _value-text">상태(전체)</span>
+                                            <i class="icon ico_select_arrow_down">아래화살표</i>
+                                            <ul class="options h-auto">
+                                                <li class="option" value="0">상태(전체)</li>
+                                                <li class="option" value="1">등록</li>
+                                                <li class="option" value="2">해지</li>
+                                            </ul>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-xl">
+                                    <div class="form-group min-w-190">
+                                        <label class="select-box _select-box">
+                                            <input type="hidden" class="select-value _select-value" value="0">
+                                            <span class="value-text _value-text">상태(전체)</span>
+                                            <i class="icon ico_select_arrow_down">아래화살표</i>
+                                            <ul class="options h-auto">
+                                                <li class="option" value="0">상태(전체)</li>
+                                                <li class="option" value="1">등록</li>
+                                                <li class="option" value="2">해지</li>
+                                            </ul>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <p class="font-weight-semi-bold card-title">상세검색</p>
+                    <div class="row">
+                        <div class="col-xl">
+                            <div class="form-group">
+                                <label class="w-100 mb-0">
+                                    <input class="form-control search" type="text" placeholder="상호명">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-xl">
+                            <div class="form-group">
+                                <label class="w-100 mb-0">
+                                    <input class="form-control search" type="text" placeholder="서비스명">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-xl">
+                            <div class="form-group">
+                                <label class="w-100 mb-0">
+                                    <input class="form-control search" type="text" placeholder="서비스 MID">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-xl">
+                            <div class="form-group">
+                                <label class="w-100 mb-0">
+                                    <input class="form-control search" type="text" placeholder="가입자명">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-xl">
+                            <div class="form-group">
+                                <label class="w-100 mb-0">
+                                    <input class="form-control search" type="text" placeholder="이메일">
+                                </label>
+                            </div>
                         </div>
                     </div>
-                    <ul class="prev-next-text-list">
-                        <li class="next">
-                            <a href="#">
-                                <i>▲</i>
-                                <span class="title">다음글</span>
-                                <span class="content">
-                               [시스템] 케이뱅크(계좌이체) 전산시스템 작업공지[2023-07-09(일)]
-                            </span>
-                            </a>
-                        </li>
-                        <li class="prev">
-                            <a href="#">
-                                <i>▼</i>
-                                <span class="title">이전글</span>
-                                <span class="content">
-                                [시스템] 케이뱅크(계좌이체) 전산시스템 작업공지[2023-07-09(일)]
-                            </span>
-                            </a>
-                        </li>
-                    </ul>
-                    <div class="clearfix mt-3">
+                    <div class="clearfix filter-button-area position-static">
                         <div class="float-right">
-                            <button class="btn btn-secondary btn-sm btn-round" style="margin-right: 14px;padding: 6px 12px;">목록</button>
-                            <button class="btn btn-primary btn-md btn-round">수정하기</button>
+                            <a class=" align-bottom" href="">Clear all</a>
+                            <button class="btn btn-dark btn-round ml-3 btn-md">조회하기</button>
                         </div>
                     </div>
                 </div>
+                <div class="card">
+                    <div class="result-title-area d-flex justify-content-between align-items-center">
+                        <h5 class="result-title font-weight-semi-bold">
+                            <i class="icon ico_bs_list"></i>
+                            <span>조회결과</span>
+                        </h5>
+                        <div>
+                            <button class="btn-reset"><i class="icon ico_excel">엑셀출력</i></button>
+                        </div>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-not-spread table-fixed">
+                            <colgroup>
+                                <col style="width: 50px">
+                                <col style="width: 100px">
+                                <col style="width: 170px">
+                                <col style="width: 93px">
+                                <col style="width: 150px">
+                                <col style="width: 136px">
+                                <col style="width: 98px">
+                                <col style="width: 188px">
+                                <col style="width: 188px">
+                                <col style="width: 188px">
+                                <col style="width: 188px">
+                                <col style="width: 60px">
 
+                            </colgroup>
+                            <thead>
+                            <tr>
+                                <th class="text-center ">No</th>
+                                <th class="text-center ">신청일자</th>
+                                <th class="text-center ">서비스 MID</th>
+                                <th class="text-center">구분/상태</th>
+                                <th class="text-center">결제수단</th>
+                                <th class="text-center ">가맹점구분</th>
+                                <th class="text-center">가입일자</th>
+                                <th class="text-center">정보</th>
+                                <th class="text-center">상호명/서비스명</th>
+                                <th class="text-center">홈페이지</th>
+                                <th class="text-center">판매상품</th>
+                                <th class="text-center">로그인</th>
+
+
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td class="text-center "><span>10</span></td>
+                                <td class="text-center "><span>2023-07-21</span></td>
+                                <td class="text-center "><span>Service0010012345678</span></td>
+                                <td class="text-center">
+                                    <div class="two-word-list">
+                                        <div class="two-word">
+                                            <span class="title">국내</span>
+                                            <span class="color-green-100 font-weight-semi-bold">심사중</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="two-word-list">
+                                        <div class="two-word">
+                                            <span class="title">카드-키인</span>
+                                            <span class="color-yellow-100 font-weight-semi-bold">작성중</span>
+                                        </div>
+                                        <div class="two-word">
+                                            <span class="title">카드 - 앱카드</span>
+                                            <span class="color-green-100 font-weight-semi-bold">심사중</span>
+                                        </div>
+                                        <div class="two-word">
+                                            <span class="title">카드 - 키인</span>
+                                            <span class="color-blue-100 font-weight-semi-bold">계약중</span>
+                                        </div>
+                                        <div class="two-word">
+                                            <span class="title">카드 - 빌링</span>
+                                            <span class="color-red-100 font-weight-semi-bold">입점불가</span>
+                                        </div>
+                                        <div class="two-word">
+                                            <span class="title">카드 - 간편</span>
+                                            <span class="color-purple-100 font-weight-semi-bold">서비스중</span>
+                                        </div>
+                                        <div class="two-word">
+                                            <span class="title">계좌 - 빌링</span>
+                                            <span class="color-yellow-100 font-weight-semi-bold">작성중</span>
+                                        </div>
+                                        <div class="two-word">
+                                            <span class="title">계좌 - 간편</span>
+                                            <span class="color-yellow-100 font-weight-semi-bold">작성중</span>
+                                        </div>
+                                        <div class="two-word">
+                                            <span class="title">네이버페이</span>
+                                            <span class="color-yellow-100 font-weight-semi-bold">작성중</span>
+                                        </div>
+                                        <div class="two-word">
+                                            <span class="title">카카오페이</span>
+                                            <span class="color-yellow-100 font-weight-semi-bold">작성중</span>
+                                        </div>
+                                        <div class="two-word">
+                                            <span class="title">네이버페이</span>
+                                            <span class="color-yellow-100 font-weight-semi-bold">작성중</span>
+                                        </div>
+                                        <div class="two-word">
+                                            <span class="title">애플페이</span>
+                                            <span class="color-yellow-100 font-weight-semi-bold">작성중</span>
+                                        </div>
+                                        <div class="two-word">
+                                            <span class="title">가상계좌</span>
+                                            <span class="color-yellow-100 font-weight-semi-bold">작성중</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <span>미적용</span><br>
+                                    <span>선-일반</span>
+                                </td>
+                                <td class="text-center">
+                                    <span>2023-07-21</span>
+                                </td>
+                                <td class="text-left">
+                                    <span>dw.jung@payple.kr</span><br>
+                                    <span>정다운</span>
+                                </td>
+                                <td class="text-left">
+                                    <span>(주)케이컨</span><br>
+                                    <span>kitems</span>
+                                </td>
+                                <td class="text-center">
+                                    <span><a href="www.payple.kr" target="_blank">www.payple.kr</a></span>
+                                </td>
+                                <td class="text-center">
+                                    <span >Saas, 커머스커머스, 반려동물 용품</span>
+                                </td>
+                                <td class="text-center">
+                                     <span>
+                                        <a href="#" target="_blank">
+                                            <i class="icon ico_partner_login">파트너로그인</i>
+                                        </a>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center "><span>10</span></td>
+                                <td class="text-center "><span>2023-07-21</span></td>
+                                <td class="text-center "><span>Service0010012345678</span></td>
+                                <td class="text-center">
+                                    <div class="two-word-list">
+                                        <div class="two-word">
+                                            <span class="title">국내</span>
+                                            <span class="color-blue-100 font-weight-semi-bold">계약중</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="two-word-list">
+                                        <div class="two-word">
+                                            <span class="title">카드-키인</span>
+                                            <span class="color-yellow-100 font-weight-semi-bold">작성중</span>
+                                        </div>
+                                        <div class="two-word">
+                                            <span class="title">카드 - 앱카드</span>
+                                            <span class="color-green-100 font-weight-semi-bold">심사중</span>
+                                        </div>
+                                        <div class="two-word">
+                                            <span class="title">카드 - 키인</span>
+                                            <span class="color-blue-100 font-weight-semi-bold">계약중</span>
+                                        </div>
+                                        <div class="two-word">
+                                            <span class="title">카드 - 빌링</span>
+                                            <span class="color-red-100 font-weight-semi-bold">입점불가</span>
+                                        </div>
+                                        <div class="two-word">
+                                            <span class="title">카드 - 간편</span>
+                                            <span class="color-purple-100 font-weight-semi-bold">서비스중</span>
+                                        </div>
+                                        <div class="two-word">
+                                            <span class="title">계좌 - 빌링</span>
+                                            <span class="color-yellow-100 font-weight-semi-bold">작성중</span>
+                                        </div>
+                                        <div class="two-word">
+                                            <span class="title">계좌 - 간편</span>
+                                            <span class="color-yellow-100 font-weight-semi-bold">작성중</span>
+                                        </div>
+                                        <div class="two-word">
+                                            <span class="title">네이버페이</span>
+                                            <span class="color-yellow-100 font-weight-semi-bold">작성중</span>
+                                        </div>
+                                        <div class="two-word">
+                                            <span class="title">카카오페이</span>
+                                            <span class="color-yellow-100 font-weight-semi-bold">작성중</span>
+                                        </div>
+                                        <div class="two-word">
+                                            <span class="title">네이버페이</span>
+                                            <span class="color-yellow-100 font-weight-semi-bold">작성중</span>
+                                        </div>
+                                        <div class="two-word">
+                                            <span class="title">애플페이</span>
+                                            <span class="color-yellow-100 font-weight-semi-bold">작성중</span>
+                                        </div>
+                                        <div class="two-word">
+                                            <span class="title">가상계좌</span>
+                                            <span class="color-yellow-100 font-weight-semi-bold">작성중</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <span>미적용</span><br>
+                                    <span>선-일반</span>
+                                </td>
+                                <td class="text-center">
+                                    <span>2023-07-21</span>
+                                </td>
+                                <td class="text-left">
+                                    <span>dw.jung@payple.kr</span><br>
+                                    <span>정다운</span>
+                                </td>
+                                <td class="text-left">
+                                    <span>(주)케이컨</span><br>
+                                    <span>kitems</span>
+                                </td>
+                                <td class="text-center">
+                                    <span><a href="www.payple.kr" target="_blank">www.payple.kr</a></span>
+                                </td>
+                                <td class="text-center">
+                                    <span >Saas, 커머스커머스, 반려동물 용품</span>
+                                </td>
+                                <td class="text-center">
+                                  <span>
+                                        <a href="#" target="_blank">
+                                            <i class="icon ico_partner_login">파트너로그인</i>
+                                        </a>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center "><span>10</span></td>
+                                <td class="text-center "><span>2023-07-21</span></td>
+                                <td class="text-center "><span>Service0010012345678</span></td>
+                                <td class="text-center">
+                                    <div class="two-word-list">
+                                        <div class="two-word">
+                                            <span class="title">국내</span>
+                                            <span class="color-red-100 font-weight-semi-bold">입점불가</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="two-word-list">
+                                        <div class="two-word">
+                                            <span class="title">카드-키인</span>
+                                            <span class="color-yellow-100 font-weight-semi-bold">작성중</span>
+                                        </div>
+                                        <div class="two-word">
+                                            <span class="title">카드 - 앱카드</span>
+                                            <span class="color-green-100 font-weight-semi-bold">심사중</span>
+                                        </div>
+                                        <div class="two-word">
+                                            <span class="title">카드 - 키인</span>
+                                            <span class="color-blue-100 font-weight-semi-bold">계약중</span>
+                                        </div>
+                                        <div class="two-word">
+                                            <span class="title">카드 - 빌링</span>
+                                            <span class="color-red-100 font-weight-semi-bold">입점불가</span>
+                                        </div>
+                                        <div class="two-word">
+                                            <span class="title">카드 - 간편</span>
+                                            <span class="color-purple-100 font-weight-semi-bold">서비스중</span>
+                                        </div>
+                                        <div class="two-word">
+                                            <span class="title">계좌 - 빌링</span>
+                                            <span class="color-yellow-100 font-weight-semi-bold">작성중</span>
+                                        </div>
+                                        <div class="two-word">
+                                            <span class="title">계좌 - 간편</span>
+                                            <span class="color-yellow-100 font-weight-semi-bold">작성중</span>
+                                        </div>
+                                        <div class="two-word">
+                                            <span class="title">네이버페이</span>
+                                            <span class="color-yellow-100 font-weight-semi-bold">작성중</span>
+                                        </div>
+                                        <div class="two-word">
+                                            <span class="title">카카오페이</span>
+                                            <span class="color-yellow-100 font-weight-semi-bold">작성중</span>
+                                        </div>
+                                        <div class="two-word">
+                                            <span class="title">네이버페이</span>
+                                            <span class="color-yellow-100 font-weight-semi-bold">작성중</span>
+                                        </div>
+                                        <div class="two-word">
+                                            <span class="title">애플페이</span>
+                                            <span class="color-yellow-100 font-weight-semi-bold">작성중</span>
+                                        </div>
+                                        <div class="two-word">
+                                            <span class="title">가상계좌</span>
+                                            <span class="color-yellow-100 font-weight-semi-bold">작성중</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <span>미적용</span><br>
+                                    <span>선-일반</span>
+                                </td>
+                                <td class="text-center">
+                                    <span>2023-07-21</span>
+                                </td>
+                                <td class="text-left">
+                                    <span>dw.jung@payple.kr</span><br>
+                                    <span>정다운</span>
+                                </td>
+                                <td class="text-left">
+                                    <span>(주)케이컨</span><br>
+                                    <span>kitems</span>
+                                </td>
+                                <td class="text-center">
+                                    <span><a href="www.payple.kr" target="_blank">www.payple.kr</a></span>
+                                </td>
+                                <td class="text-center">
+                                    <span >Saas, 커머스커머스, 반려동물 용품Saas, 커머스커머스, 반려동물 용품커머스커머스, 반려동물 용품커머스커머스, 반려동물 용품커머스커머스, 반려동물 용품커머스커머스, 반려동물 용품커머스커머스, 반려동물 용품</span>
+                                </td>
+                                <td class="text-center">
+                                   <span>
+                                        <a href="#" target="_blank">
+                                            <i class="icon ico_partner_login">파트너로그인</i>
+                                        </a>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center "><span>10</span></td>
+                                <td class="text-center "><span>2023-07-21</span></td>
+                                <td class="text-center "><span>Service0010012345678</span></td>
+                                <td class="text-center">
+                                    <div class="two-word-list">
+                                        <div class="two-word">
+                                            <span class="title">해외</span>
+                                            <span class="color-purple-100 font-weight-semi-bold">서비스중</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="two-word-list">
+                                        <div class="two-word">
+                                            <span class="title">카드 - 키인</span>
+                                            <span class="color-yellow-100 font-weight-semi-bold">작성중</span>
+                                        </div>
+                                        <div class="two-word">
+                                            <span class="title">카드 - 빌링</span>
+                                            <span class="color-green-100 font-weight-semi-bold">심사중</span>
+                                        </div>
+                                        <div class="two-word">
+                                            <span class="title">카드 - 간편</span>
+                                            <span class="color-blue-100 font-weight-semi-bold">계약중</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <span>미적용</span><br>
+                                    <span>선-일반</span>
+                                </td>
+                                <td class="text-center">
+                                    <span>2023-07-21</span>
+                                </td>
+                                <td class="text-left">
+                                    <span>dw.jung@payple.kr</span><br>
+                                    <span>정다운</span>
+                                </td>
+                                <td class="text-left">
+                                    <span>(주)케이컨</span><br>
+                                    <span>kitems</span>
+                                </td>
+                                <td class="text-center">
+                                    <span><a href="www.payple.kr" target="_blank">www.payple.kr</a></span>
+                                </td>
+                                <td class="text-center">
+                                    <span >Saas, 커머스커머스, 반려동물 용품</span>
+                                </td>
+                                <td class="text-center">
+                                    <span>
+                                        <a href="#" target="_blank">
+                                            <i class="icon ico_partner_login">파트너로그인</i>
+                                        </a>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center "><span>10</span></td>
+                                <td class="text-center "><span>2023-07-21</span></td>
+                                <td class="text-center "><span>Service0010012345678</span></td>
+                                <td class="text-center">
+                                    <div class="two-word-list">
+                                        <div class="two-word">
+                                            <span class="title">국내</span>
+                                            <span class="color-orange-100 font-weight-semi-bold">정지</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="two-word-list">
+                                        <div class="two-word">
+                                            <span class="title">카드-키인</span>
+                                            <span class="color-yellow-100 font-weight-semi-bold">작성중</span>
+                                        </div>
+                                        <div class="two-word">
+                                            <span class="title">카드 - 앱카드</span>
+                                            <span class="color-green-100 font-weight-semi-bold">심사중</span>
+                                        </div>
+                                        <div class="two-word">
+                                            <span class="title">카드 - 키인</span>
+                                            <span class="color-blue-100 font-weight-semi-bold">계약중</span>
+                                        </div>
+                                        <div class="two-word">
+                                            <span class="title">카드 - 빌링</span>
+                                            <span class="color-red-100 font-weight-semi-bold">입점불가</span>
+                                        </div>
+                                        <div class="two-word">
+                                            <span class="title">카드 - 간편</span>
+                                            <span class="color-purple-100 font-weight-semi-bold">서비스중</span>
+                                        </div>
+                                        <div class="two-word">
+                                            <span class="title">계좌 - 빌링</span>
+                                            <span class="color-yellow-100 font-weight-semi-bold">작성중</span>
+                                        </div>
+                                        <div class="two-word">
+                                            <span class="title">계좌 - 간편</span>
+                                            <span class="color-yellow-100 font-weight-semi-bold">작성중</span>
+                                        </div>
+                                        <div class="two-word">
+                                            <span class="title">네이버페이</span>
+                                            <span class="color-yellow-100 font-weight-semi-bold">작성중</span>
+                                        </div>
+                                        <div class="two-word">
+                                            <span class="title">카카오페이</span>
+                                            <span class="color-yellow-100 font-weight-semi-bold">작성중</span>
+                                        </div>
+                                        <div class="two-word">
+                                            <span class="title">네이버페이</span>
+                                            <span class="color-yellow-100 font-weight-semi-bold">작성중</span>
+                                        </div>
+                                        <div class="two-word">
+                                            <span class="title">애플페이</span>
+                                            <span class="color-yellow-100 font-weight-semi-bold">작성중</span>
+                                        </div>
+                                        <div class="two-word">
+                                            <span class="title">가상계좌</span>
+                                            <span class="color-yellow-100 font-weight-semi-bold">작성중</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <span>미적용</span><br>
+                                    <span>선-일반</span>
+                                </td>
+                                <td class="text-center">
+                                    <span>2023-07-21</span>
+                                </td>
+                                <td class="text-left">
+                                    <span>dw.jung@payple.kr</span><br>
+                                    <span>정다운</span>
+                                </td>
+                                <td class="text-left">
+                                    <span>(주)케이컨</span><br>
+                                    <span>kitems</span>
+                                </td>
+                                <td class="text-center">
+                                    <span><a href="www.payple.kr" target="_blank">www.payple.kr</a></span>
+                                </td>
+                                <td class="text-center">
+                                    <span >Saas, 커머스커머스, 반려동물 용품</span>
+                                </td>
+                                <td class="text-center">
+                                    <span>
+                                        <a href="#" target="_blank">
+                                            <i class="icon ico_partner_login">파트너로그인</i>
+                                        </a>
+                                    </span>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="pagination-area">
+                        <ul class="pagination-list">
+                            <li class="pagination-icon">
+                                <i class="icon ico_first_page">처음으로가기</i>
+                            </li>
+                            <li class="pagination-icon">
+                                <i class="icon ico_previous_page">이전으로가기</i>
+                            </li>
+                            <li class="active">1</li>
+                            <li>2</li>
+                            <li>3</li>
+                            <li>4</li>
+                            <li class="pagination-icon">
+                                <i class="icon ico_next_page">다음으로가기</i>
+                            </li>
+                            <li class="pagination-icon">
+                                <i class="icon ico_last_page">맨뒤로가기</i>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </section>
             <!-- 컨텐츠 e-->
         </article>
@@ -748,6 +1348,183 @@
     </div>
 </footer>
 </div>
-
+<div class="modal fade _modal-calendar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered calender_modal">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="_modalDataPicker">
+                    <div class="daterangepicker ltr auto-apply show-calendar opensright"
+                         style="top: 290.469px; left: 840.208px; right: auto; display: none;">
+                        <div class="ranges"></div>
+                        <div class="drp-calendar left">
+                            <div class="calendar-table">
+                                <table class="table-condensed">
+                                    <thead>
+                                    <tr>
+                                        <th class="prev available"><span></span></th>
+                                        <th colspan="5" class="month">10월 2023</th>
+                                        <th></th>
+                                    </tr>
+                                    <tr>
+                                        <th>일</th>
+                                        <th>월</th>
+                                        <th>화</th>
+                                        <th>수</th>
+                                        <th>목</th>
+                                        <th>금</th>
+                                        <th>토</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td class="weekend off ends available" data-title="r0c0">24</td>
+                                        <td class="off ends available" data-title="r0c1">25</td>
+                                        <td class="off ends available" data-title="r0c2">26</td>
+                                        <td class="off ends available" data-title="r0c3">27</td>
+                                        <td class="off ends available" data-title="r0c4">28</td>
+                                        <td class="off ends available" data-title="r0c5">29</td>
+                                        <td class="weekend off ends available" data-title="r0c6">30</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="weekend available" data-title="r1c0">1</td>
+                                        <td class="available" data-title="r1c1">2</td>
+                                        <td class="available" data-title="r1c2">3</td>
+                                        <td class="available" data-title="r1c3">4</td>
+                                        <td class="available" data-title="r1c4">5</td>
+                                        <td class="available" data-title="r1c5">6</td>
+                                        <td class="weekend available" data-title="r1c6">7</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="weekend available" data-title="r2c0">8</td>
+                                        <td class="available" data-title="r2c1">9</td>
+                                        <td class="available" data-title="r2c2">10</td>
+                                        <td class="available" data-title="r2c3">11</td>
+                                        <td class="available" data-title="r2c4">12</td>
+                                        <td class="available" data-title="r2c5">13</td>
+                                        <td class="weekend available" data-title="r2c6">14</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="weekend available" data-title="r3c0">15</td>
+                                        <td class="available" data-title="r3c1">16</td>
+                                        <td class="available" data-title="r3c2">17</td>
+                                        <td class="today active start-date active end-date available" data-title="r3c3">
+                                            18
+                                        </td>
+                                        <td class="available" data-title="r3c4">19</td>
+                                        <td class="available" data-title="r3c5">20</td>
+                                        <td class="weekend available" data-title="r3c6">21</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="weekend available" data-title="r4c0">22</td>
+                                        <td class="available" data-title="r4c1">23</td>
+                                        <td class="available" data-title="r4c2">24</td>
+                                        <td class="available" data-title="r4c3">25</td>
+                                        <td class="available" data-title="r4c4">26</td>
+                                        <td class="available" data-title="r4c5">27</td>
+                                        <td class="weekend available" data-title="r4c6">28</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="weekend available" data-title="r5c0">29</td>
+                                        <td class="available" data-title="r5c1">30</td>
+                                        <td class="available" data-title="r5c2">31</td>
+                                        <td class="off ends available" data-title="r5c3">1</td>
+                                        <td class="off ends available" data-title="r5c4">2</td>
+                                        <td class="off ends available" data-title="r5c5">3</td>
+                                        <td class="weekend off ends available" data-title="r5c6">4</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="calendar-time" style="display: none;"></div>
+                        </div>
+                        <div class="drp-calendar right">
+                            <div class="calendar-table">
+                                <table class="table-condensed">
+                                    <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th colspan="5" class="month">11월 2023</th>
+                                        <th class="next available"><span></span></th>
+                                    </tr>
+                                    <tr>
+                                        <th>일</th>
+                                        <th>월</th>
+                                        <th>화</th>
+                                        <th>수</th>
+                                        <th>목</th>
+                                        <th>금</th>
+                                        <th>토</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td class="weekend off ends available" data-title="r0c0">29</td>
+                                        <td class="off ends available" data-title="r0c1">30</td>
+                                        <td class="off ends available" data-title="r0c2">31</td>
+                                        <td class="available" data-title="r0c3">1</td>
+                                        <td class="available" data-title="r0c4">2</td>
+                                        <td class="available" data-title="r0c5">3</td>
+                                        <td class="weekend available" data-title="r0c6">4</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="weekend available" data-title="r1c0">5</td>
+                                        <td class="available" data-title="r1c1">6</td>
+                                        <td class="available" data-title="r1c2">7</td>
+                                        <td class="available" data-title="r1c3">8</td>
+                                        <td class="available" data-title="r1c4">9</td>
+                                        <td class="available" data-title="r1c5">10</td>
+                                        <td class="weekend available" data-title="r1c6">11</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="weekend available" data-title="r2c0">12</td>
+                                        <td class="available" data-title="r2c1">13</td>
+                                        <td class="available" data-title="r2c2">14</td>
+                                        <td class="available" data-title="r2c3">15</td>
+                                        <td class="available" data-title="r2c4">16</td>
+                                        <td class="available" data-title="r2c5">17</td>
+                                        <td class="weekend available" data-title="r2c6">18</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="weekend available" data-title="r3c0">19</td>
+                                        <td class="available" data-title="r3c1">20</td>
+                                        <td class="available" data-title="r3c2">21</td>
+                                        <td class="available" data-title="r3c3">22</td>
+                                        <td class="available" data-title="r3c4">23</td>
+                                        <td class="available" data-title="r3c5">24</td>
+                                        <td class="weekend available" data-title="r3c6">25</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="weekend available" data-title="r4c0">26</td>
+                                        <td class="available" data-title="r4c1">27</td>
+                                        <td class="available" data-title="r4c2">28</td>
+                                        <td class="available" data-title="r4c3">29</td>
+                                        <td class="available" data-title="r4c4">30</td>
+                                        <td class="off ends available" data-title="r4c5">1</td>
+                                        <td class="weekend off ends available" data-title="r4c6">2</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="weekend off ends available" data-title="r5c0">3</td>
+                                        <td class="off ends available" data-title="r5c1">4</td>
+                                        <td class="off ends available" data-title="r5c2">5</td>
+                                        <td class="off ends available" data-title="r5c3">6</td>
+                                        <td class="off ends available" data-title="r5c4">7</td>
+                                        <td class="off ends available" data-title="r5c5">8</td>
+                                        <td class="weekend off ends available" data-title="r5c6">9</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="calendar-time" style="display: none;"></div>
+                        </div>
+                        <div class="drp-buttons"><span class="drp-selected">2023-10-18~2023-10-18</span>
+                            <button class="cancelBtn data_range_btn cancel_range_btn" type="button">Cancel</button>
+                            <button class="applyBtn data_range_btn apply_range_btn" type="button">Apply</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>
