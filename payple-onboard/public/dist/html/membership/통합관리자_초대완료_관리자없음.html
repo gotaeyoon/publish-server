@@ -54,119 +54,69 @@
     </div>
 </header>
 <section class="membership_section">
-    <p class="main_title">관리자 초대</p>
+    <p class="main_title">관리자 설정</p>
     <div class="membership_area">
         <div class="title_area">
-            <p class="title">초대된 관리자 목록</p>
-            <i class=""></i>
+            <p class="title">내 권한
+                <i class="icon ico_interrogation_fill_gray _speech_bubble"></i>
+            </p>
+            <div class="speech_bubble _hover_speech_bubble">
+                <div class="title">권한</div>
+                <div class="desc">통합관리자 : 사업자당 1명으로 최고 권한을 가지고 있습니다.</div>
+                <div class="desc">상점관리자 : 초대된 맴버로 접근 메뉴를 커스텀 설정할 수 있습니다.</div>
+            </div>
+        </div>
+        <div class="search_card">
+            <span class="badge"><i class="icon ico_crown_purple"></i>통합관리자</span>
+            <ul class="authority_list">
+                <li><span class="authority_title">사업자</span><span>네이버(주)</span></li>
+                <li><span class="authority_title">서비스</span><span>웹툰-국내</span></li>
+                <li><span class="authority_title">접근 권한</span><span>조회 및 설정</span></li>
+                <li><span class="authority_title">접근 메뉴</span><span class="menu">모든 메뉴</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="membership_area">
+        <div class="title_area">
+            <p class="title">상점 관리자 멤버</p>
         </div>
         <div class="border_line">
-            <div class="response_table table_space_normal">
+            <div class="response_table">
                 <table>
                     <colgroup>
-                        <col style="min-width: 50px">
-                        <col style="min-width: 152px">
-                        <col style="min-width: 90px">
-                        <col style="min-width: 380px">
-                        <col style="min-width: 190px">
-                        <col style="min-width: 90px">
+                        <col style="width: 50px">
+                        <col style="width: 152px">
+                        <col style="width: 50px">
+                        <col style="width: 380px">
+                        <col style="width: 190px">
+                        <col style="width: 50px">
                     </colgroup>
                     <thead>
                     <tr>
                         <th>NO</th>
-                        <th class="text_left">이메일</th>
+                        <th class="text_center">이메일</th>
                         <th class="text_center">가입상태</th>
-                        <th class="text_left">권한</th>
-                        <th class="text_left">메모</th>
+                        <th class="text_center">권한 부여 서비스</th>
+                        <th class="text_center">메모</th>
                         <th class="text_center">권한삭제</th>
                     </tr>
                     </thead>
                     <tbody>
                     <tr>
-                        <td>10</td>
-                        <td class="text_left">
-                            <a href="#" class="link">aa@aaaa.com</a>
-                        </td>
-                        <td class="text_center">대기</td>
-                        <td class="text_left ">
-                            <span>전체 > 전체 > 조회/실행/관리자 초대 > 전체</span>
-                        </td>
-
-                        <td class="text_left"><span>curl_error_msg</span></td>
-                        <td class="text_center">
-                            <button class="btn btn_secession">탈퇴</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>10</td>
-                        <td class="text_left">
-                            <a href="#" class="link">aa@aaaa.com</a>
-                        </td>
-                        <td class="text_center">대기</td>
-                        <td class="text_left ">전체 > 전체 > 조회/실행/관리자 초대 > 전체</td>
-
-                        <td class="text_left">curl_error_msg</td>
-                        <td class="text_center">
-                            <button class="btn btn_secession">탈퇴</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>10</td>
-                        <td class="text_left">
-                            <a href="#" class="link">aa@aaaa.com</a>
-                        </td>
-                        <td class="text_center">대기</td>
-                        <td class="text_left ">전체 > 전체 > 조회/실행/관리자 초대 > 전체</td>
-
-                        <td class="text_left">curl_error_msg</td>
-                        <td class="text_center">
-                            <button class="btn btn_secession">탈퇴</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>10</td>
-                        <td class="text_left">
-                            <a href="#" class="link">aa@aaaa.com</a>
-                        </td>
-                        <td class="text_center">대기</td>
-                        <td class="text_left ">전체 > 전체 > 조회/실행/관리자 초대 > 전체</td>
-
-                        <td class="text_left">curl_error_msg</td>
-                        <td class="text_center">
-                            <button class="btn btn_secession">탈퇴</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>10</td>
-                        <td class="text_left">
-                            <a href="#" class="link">aa@aaaa.com</a>
-                        </td>
-                        <td class="text_center">대기</td>
-                        <td class="text_left ">전체 > 전체 > 조회/실행/관리자 초대 > 전체</td>
-
-                        <td class="text_left">curl_error_msg</td>
-                        <td class="text_center">
-                            <button class="btn btn_secession" disabled>탈퇴</button>
+                        <td colspan="6" class="empty_data no_search">
+                            초대된 관리자가 없습니다.
                         </td>
                     </tr>
                     </tbody>
                 </table>
             </div>
-            <div class="pagination_area">
-                <span class="pagination_arrow first_button"><i class="icon ico_pagination_left_arrow_first"></i></span>
-                <span class="pagination_arrow"><i class="icon ico_pagination_left_arrow"></i></span>
-                <ul class="pagination_list">
-                    <li class="active">1</li>
 
-                </ul>
-                <span class="pagination_arrow"><i class="icon ico_pagination_right_arrow"></i></span>
-                <span class="pagination_arrow last_button"><i class="icon ico_pagination_right_arrow_last"></i></span>
-            </div>
+
         </div>
     </div>
     <div class="membership_area ">
         <div class="title_area">
-            <p class="title">관리자 초대</p>
+            <p class="title">상점 관리자 멤버 초대</p>
         </div>
         <div class="search_card">
             <div class="input__area__list">
@@ -176,9 +126,6 @@
                         <label class="w-100">
                             <input class="form_control">
                         </label>
-                        <div class="validation_area show">
-                            <p class="validation color_danger">유효한 이메일을 입력해주세요.</p>
-                        </div>
                     </div>
                 </div>
                 <div class="input__area">
@@ -197,13 +144,10 @@
                         </div>
                         <i class="icon ico_select_arrow_down">아래화살표</i>
                         <ul class="options">
-                            <li class="option" value="1">전체</li>
+                            <li class="option" value="0">전체</li>
                             <li class="option" value="1">네이버(주)</li>
                             <li class="option" value="2">크림(주)</li>
                         </ul>
-                    </div>
-                    <div class="validation_area show">
-                        <p class="validation color_danger">사업자를 선택해 주세요.</p>
                     </div>
                 </div>
                 <div class="input__area">
@@ -219,9 +163,6 @@
                             <li class="option" value="2">웹툰-해외</li>
                         </ul>
                     </div>
-                    <div class="validation_area show">
-                        <p class="validation color_danger">서비스를 선택해 주세요.</p>
-                    </div>
                 </div>
                 <div class="input__area mb-0">
                     <p class="input_title essentials">접근 권한</p>
@@ -236,9 +177,6 @@
                             <li class="option" value="2">조회/실행/관리자 초대</li>
                         </ul>
                     </div>
-                    <div class="validation_area show">
-                        <p class="validation color_danger">접근 권한을 선택해 주세요.</p>
-                    </div>
                     <div class="caption_area">
                         <p><span>실행 권한 기능</span>취소/환불, 현금영수증 발행, 허브-계좌인증, 허브-이체, 상점정보 수정, 엑셀 다운로드</p>
                     </div>
@@ -250,7 +188,7 @@
                 <ul class="check__list">
                     <li class="check__all">
                         <label>
-                            <input type="checkbox" name="chks" class="_check_all">
+                            <input type="checkbox" name="chk" class="_check_all">
                             <i class="icon ico_checkBox">체크박스</i>
                             <span>전체</span>
                         </label>
@@ -273,42 +211,42 @@
                             </li>
                             <li>
                                 <label>
-                                    <input type="checkbox" name="chks">
+                                    <input type="checkbox" name="chk">
                                     <i class="icon ico_checkBox">체크박스</i>
                                     <span>등록 카드, 계좌정보</span>
                                 </label>
                             </li>
                             <li>
                                 <label>
-                                    <input type="checkbox" name="chks">
+                                    <input type="checkbox" name="chk">
                                     <i class="icon ico_checkBox">체크박스</i>
                                     <span>통계</span>
                                 </label>
                             </li>
                             <li>
                                 <label>
-                                    <input type="checkbox" name="chks">
+                                    <input type="checkbox" name="chk">
                                     <i class="icon ico_checkBox">체크박스</i>
                                     <span>부가세신고자료</span>
                                 </label>
                             </li>
                             <li>
                                 <label>
-                                    <input type="checkbox" name="chks">
+                                    <input type="checkbox" name="chk">
                                     <i class="icon ico_checkBox">체크박스</i>
                                     <span>링크결제</span>
                                 </label>
                             </li>
                             <li class="hub">
                                 <label>
-                                    <input type="checkbox" name="chks">
+                                    <input type="checkbox" name="chk">
                                     <i class="icon ico_checkBox">체크박스</i>
                                     <span>허브</span>
                                 </label>
                             </li>
                             <li>
                                 <label>
-                                    <input type="checkbox" name="chks">
+                                    <input type="checkbox" name="chk">
                                     <i class="icon ico_checkBox">체크박스</i>
                                     <span>상점정보</span>
                                 </label>

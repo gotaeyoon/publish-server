@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--    서버반영시 -->
+<!--    <link rel="stylesheet" href="https://image.payple.kr/onboard/css/payple_component.css?ver=1.5">-->
+<!--    <link rel="stylesheet" href="https://image.payple.kr/onboard/css/payple_pages.css?ver=1.5">-->
+<!--    <script src="https://image.payple.kr/onboard/js/bundle.js?ver=1.5"></script>-->
+<!--    <script src="https://image.payple.kr/onboard/js/common.js?ver=1.5"></script>-->
+    <!--    로컬작업시-->
+    <link rel="stylesheet" href="../../css/payple_component.css?ver=1.5">
+    <link rel="stylesheet" href="../../css/payple_pages.css?ver=1.5">
+    <script src="../../js/bundle.js?ver=1.5"></script>
+    <script src="../../js/common.js?ver=1.5"></script>
+</head>
+<body>
+<header class="header">
+    <div class="header__container">
+        <div class="header__navi">
+            <h1 class="header__logo">
+                <a href="https://onboard.payple.co" target="_blank">
+                    <img src="https://image.payple.kr/onboard/common/header__logo.png" alt="페이플로고">
+                </a>
+            </h1>
+            <ul class="header__navi__link">
+                <li>
+                    <a href="https://payple.kr/developer-guide" target="_blank">개발자센터</a>
+                </li>
+                <li>
+                    <a href="https://payple.kr/cs" target="_blank">고객센터</a>
+                </li>
+            </ul>
+        </div>
+        <div class="position_relative">
+            <i class="icon ico_account_btn _ico_account_btn">계정관리</i>
+            <ul class=" position_absolute header__account_info _header__account_info">
+                <li>
+                    <span>dw.junglses@payple.kr</span>
+                </li>
+                <li>
+                    <a href=""><i class="icon ico_setting"></i><span>계정설정</span></a>
+                </li>
+                <li>
+                    <a href=""><i class="icon ico_member_join"></i><span>관리자 초대</span></a>
+                </li>
+                <li>
+                    <a href=""><i class="icon ico_logout"></i><span>로그아웃</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+<section class="membership_section">
+    <p class="main_title">관리자 설정</p>
+    <div class="membership_area">
+        <div class="title_area">
+            <p class="title">내 권한
+                <i class="icon ico_interrogation_fill_gray _speech_bubble"></i>
+            </p>
+            <div class="speech_bubble _hover_speech_bubble">
+                <div class="title">권한</div>
+                <div class="desc">통합관리자 : 사업자당 1명으로 최고 권한을 가지고 있습니다.</div>
+                <div class="desc">상점관리자 : 초대된 맴버로 접근 메뉴를 커스텀 설정할 수 있습니다.</div>
+            </div>
+        </div>
+        <div class="search_card">
+            <span class="badge"><i class="icon ico_member_purple"></i>상점관리자</span>
+            <ul class="authority_list">
+                <li><span class="authority_title">사업자</span><span>네이버(주)</span></li>
+                <li><span class="authority_title">서비스</span><span>웹툰-국내</span></li>
+                <li><span class="authority_title">접근 권한</span><span>조회 및 설정</span></li>
+                <li><span class="authority_title">접근 메뉴</span>
+                    <span class="menu">정산내역</span>
+                    <span class="menu">결제내역</span>
+                    <span class="menu">등록 카드, 계좌정보</span>
+                    <span class="menu">통계</span>
+                    <span class="menu">부가세신고자료</span>
+                    <span class="menu">링크결제</span>
+                    <span class="menu">허브</span>
+                    <span class="menu">상점정보</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="membership_area">
+        <div class="title_area">
+            <p class="title">상점 관리자 멤버</p>
+        </div>
+        <div class="border_line">
+            <div class="response_table">
+                <table>
+                    <colgroup>
+                        <col style="width: 50px">
+                        <col style="width: 152px">
+                        <col style="width: 50px">
+                        <col style="width: 380px">
+                        <col style="width: 190px">
+
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th>NO</th>
+                        <th class="text_center">이메일</th>
+                        <th class="text_center">가입상태</th>
+                        <th class="text_center">권한 부여 서비스</th>
+                        <th class="text_center">메모</th>
+
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>10</td>
+                        <td class="text_center">
+                            <a href="#" class="link">aa@aaaa.com</a>
+                        </td>
+                        <td class="text_center">대기</td>
+                        <td class="text_center ">[국내] 마피아컴퍼니(주) > 마피아컴퍼니(주)</td>
+                        <td class="text_center">curl_error_msg</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td class="text_center">
+                            <a href="#" class="link">aa@aaaa.com</a>
+                        </td>
+                        <td class="text_center">대기</td>
+                        <td class="text_center ">[해외] 사업자명 > 서비스명</td>
+                        <td class="text_center">curl_error_msg</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td class="text_center">
+                            <a href="#" class="link">aa@aaaa.com</a>
+                        </td>
+                        <td class="text_center">대기</td>
+                        <td class="text_center ">[해외] 사업자명 > 서비스명</td>
+                        <td class="text_center">curl_error_msg</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td class="text_center">
+                            <a href="#" class="link">aa@aaaa.com</a>
+                        </td>
+                        <td class="text_center">대기</td>
+                        <td class="text_center ">[해외] 사업자명 > 서비스명</td>
+                        <td class="text_center">curl_error_msg</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td class="text_center">
+                            <a href="#" class="link">aa@aaaa.com</a>
+                        </td>
+                        <td class="text_center">대기</td>
+                        <td class="text_center ">[해외] 사업자명 > 서비스명</td>
+                        <td class="text_center">curl_error_msg</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td class="text_center">
+                            <a href="#" class="link">aa@aaaa.com</a>
+                        </td>
+                        <td class="text_center">대기</td>
+                        <td class="text_center ">[해외] 사업자명 > 서비스명</td>
+                        <td class="text_center">curl_error_msg</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td class="text_center">
+                            <a href="#" class="link">aa@aaaa.com</a>
+                        </td>
+                        <td class="text_center">대기</td>
+                        <td class="text_center ">[해외] 사업자명 > 서비스명</td>
+                        <td class="text_center">curl_error_msg</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td class="text_center">
+                            <a href="#" class="link">aa@aaaa.com</a>
+                        </td>
+                        <td class="text_center">대기</td>
+                        <td class="text_center ">[해외] 사업자명 > 서비스명</td>
+                        <td class="text_center">curl_error_msg</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td class="text_center">
+                            <a href="#" class="link">aa@aaaa.com</a>
+                        </td>
+                        <td class="text_center">대기</td>
+                        <td class="text_center ">[해외] 사업자명 > 서비스명</td>
+                        <td class="text_center">curl_error_msg</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td class="text_center">
+                            <a href="#" class="link">aa@aaaa.com</a>
+                        </td>
+                        <td class="text_center">대기</td>
+                        <td class="text_center ">[해외] 사업자명 > 서비스명</td>
+                        <td class="text_center">curl_error_msg</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
+        </div>
+    </div>
+    <div class="membership_area ">
+        <div class="title_area">
+            <p class="title">상점 관리자 멤버 초대</p>
+        </div>
+        <p>멤버 초대 권한이 부여되지 않았습니다. 최고 관리자인 통합관리자에게 권한 부여를 요청해주세요.</p>
+    </div>
+
+</section>
+
+</body>
+</html>

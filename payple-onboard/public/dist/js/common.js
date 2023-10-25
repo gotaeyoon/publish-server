@@ -120,6 +120,16 @@ function HoverTextService(){
 }
 
 //서비스 정지
+function HoverSpeechBubble(){
+    $('._speech_bubble').on('mouseenter',function(){
+        $(this).parent().siblings('._hover_speech_bubble').css({'display':'block'})
+    })
+    $('._speech_bubble').on('mouseleave',function(){
+        $(this).parent().siblings('._hover_speech_bubble').css({'display':'none'})
+    })
+}
+
+//내 권한
 function HoverStopService(){
     $('._stop').on('mouseenter',function(){
         $(this).parent().siblings('._hover_stop_service').css({'display':'block'})
@@ -308,4 +318,5 @@ $(document).ready(function () {
     getValidateIp();
     asideButton();
     modalCalender();
+    HoverSpeechBubble();
 })

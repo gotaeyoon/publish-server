@@ -1,5 +1,5 @@
-<!doctype html>
-<html lang="ko">
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -53,39 +53,32 @@
         </div>
     </div>
 </header>
-<div class="email_container">
-    <div class="setting_wrap">
-        <h3 class="main_title font_weight_bold">계정설정</h3>
-        <h5 class="sub_title font_weight_bold">개인정보</h5>
-        <form>
-            <div class="input__area">
-                <p class="input_title">이메일 주소</p>
-                <div class="position_relative">
-                    <label class="w-100">
-                        <input class="form_control" disabled value="dw.jung@payple.kr">
-                    </label>
-                </div>
-            </div>
-            <div class="input__area">
-                <p class="input_title">이름</p>
-                <div class="position_relative">
-                    <label class="w-100">
-                        <input class="form_control">
-                    </label>
-                </div>
-            </div>
-            <div class="input__area">
-                <p class="input_title">휴대폰 번호</p>
-                <label class="w-100">
-                    <input class="form_control _input_phone" type="tel" maxlength="13">
-                </label>
-            </div>
-            <div class="btn_area pt-12">
-                <button class="btn btn_primary w-100 submit__btn" disabled>로그인</button>
-            </div>
-        </form>
+<section class="membership_section">
+    <div class="title_area detail">
+        <p class="title"><a href="#">관리자 설정</a></p>
+        <span><i class="icon ico_right_arrow_gary"></i>상세정보</span>
     </div>
-</div>
+    <div class="membership_area">
+        <div class="title_area">
+            <p class="title">멤버 권한</p>
+        </div>
+        <div class="search_card">
+            <span class="badge"><i class="icon ico_member_purple"></i>상점관리자</span>
+            <ul class="authority_list">
+                <li><span class="authority_title">사업자</span><span>네이버(주)</span></li>
+                <li><span class="authority_title">서비스</span><span>웹툰-국내</span></li>
+                <li><span class="authority_title">접근 권한</span><span>조회</span></li>
+                <li><span class="authority_title">메뉴</span><span class="menu">정산내역</span><span class="menu">결제내역</span><span class="menu">세금계산서 발행</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="membership_area ">
+        <div class="title_area">
+            <p class="title">멤버 권한 수정</p>
+        </div>
+        <p>멤버 초대 권한이 부여되지 않았습니다. 최고 관리자인 통합관리자에게 권한 부여를 요청해주세요.</p>
+    </div>
+</section>
 
 </body>
 </html>

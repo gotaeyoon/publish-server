@@ -467,29 +467,60 @@ data.developercenter = {
 data.membership = {
     title: '관리자 초대',
     list: [
+        // {
+        //     stateClass: 'complete',
+        //     url: '관리자초대_초대관리자없음',
+        //     category: 'membership',
+        //     page: '관리자초대_초대관리자없음'
+        // },
+        // {
+        //     stateClass: 'complete',
+        //     url: '관리자초대_초대관리자있음',
+        //     category: 'membership',
+        //     page: '관리자초대_초대관리자있음'
+        // },
+        // {
+        //     stateClass: 'complete',
+        //     url: '관리자초대_수정',
+        //     category: 'membership',
+        //     page: '관리자초대_수정'
+        // },
+
         {
-            stateClass: 'complete',
-            url: '관리자초대_초대관리자없음',
+            stateClass: 'confirm',
+            url: '통합관리자_초대완료_관리자없음',
             category: 'membership',
-            page: '관리자초대_초대관리자없음'
+            page: '통합관리자_초대완료_관리자없음'
         },
         {
-            stateClass: 'complete',
-            url: '관리자초대_초대관리자있음',
+            stateClass: 'confirm',
+            url: '통합관리자_초대완료_관리자있음',
             category: 'membership',
-            page: '관리자초대_초대관리자있음'
+            page: '통합관리자_초대완료_관리자있음'
         },
         {
-            stateClass: 'complete',
-            url: '관리자초대_수정',
+            stateClass: 'confirm',
+            url: '통합관리자_초대완료_상세보기',
             category: 'membership',
-            page: '관리자초대_수정'
+            page: '통합관리자_초대완료_상세보기'
         },
         {
-            stateClass: 'complete',
-            url: '관리자초대_초대수락완료',
+            stateClass: 'confirm',
+            url: '상점관리자_초대완료_관리자없음',
             category: 'membership',
-            page: '관리자초대_초대수락완료'
+            page: '상점관리자_초대완료_관리자없음'
+        },
+        {
+            stateClass: 'confirm',
+            url: '상점관리자_초대완료_관리자있음',
+            category: 'membership',
+            page: '상점관리자_초대완료_관리자있음'
+        },
+        {
+            stateClass: 'confirm',
+            url: '상점관리자_초대완료_상세보기',
+            category: 'membership',
+            page: '상점관리자_초대완료_상세보기'
         },
         {
             stateClass: 'complete',
@@ -497,6 +528,12 @@ data.membership = {
             category: 'membership',
             page: '관리자초대_권한삭제'
         },
+        {
+            stateClass: 'complete',
+            url: '관리자초대_초대수락완료',
+            category: 'membership',
+            page: '관리자초대_초대수락완료'
+        }
     ]}
 
 
