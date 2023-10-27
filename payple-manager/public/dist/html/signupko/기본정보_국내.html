@@ -6,10 +6,10 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" href="https://image.payple.kr/common/favicon.ico" sizes="32x32">
-    <link rel="stylesheet" href="./../../css/payple_component.css?v0.7">
-    <link rel="stylesheet" href="./../../css/payple_pages.css?v0.7">
-    <script src="../../js/bundle.js?v0.7"></script>
-    <script src="../../js/common.js?v0.7"></script>
+    <link rel="stylesheet" href="./../../css/payple_component.css?v0.8">
+    <link rel="stylesheet" href="./../../css/payple_pages.css?v0.8">
+    <script src="../../js/bundle.js?v0.8"></script>
+    <script src="../../js/common.js?v0.8"></script>
     <title>페이플 관리자 페이지</title>
 </head>
 
@@ -728,8 +728,14 @@
                                         <span class="title font-weight-semi-bold">MID</span>
                                         <span class="data">Service0010012345678</span>
                                     </li>
-                                    <li class="list col-md-12 mb-0">
-                                        <span class="title font-weight-semi-bold">상태</span>
+                                    <li class="list col-md-12 mb-0 align-items-center">
+                                            <span class="title font-weight-semi-bold position-relative">
+                                                상태
+                                                    <i class="hover-area">
+                                                        <i class="icon ico_question_gray"></i>
+                                                        <span class="speech-bubble _speech-bubble">파트너가 이용 중인 국내서비스의 상태입니다. </span>
+                                                    </i>
+                                            </span>
                                         <span class="data">심사중</span>
                                     </li>
                                 </ul>
@@ -764,7 +770,7 @@
                                         <span class="title font-weight-semi-bold">가입경로</span>
                                         <span class="data">기타 / 지인소개 등 수기로 작성해준 내용...</span>
                                     </li>
-                                    <li class="list col-md-12 mb-0">
+                                    <li class="list col-md-12 mb-0 align-items-center">
                                         <span class="title font-weight-semi-bold">선택(마케팅)<br>약관동의</span>
                                         <span class="data">동의</span>
                                     </li>
@@ -889,6 +895,82 @@
                                         <button class="btn btn-secondary btn-sm btn-round">수정하기</button>
                                     </div>
                                 </div>
+                                <div class="table-responsive">
+                                    <table class="table table-fixed table-data">
+                                        <colgroup>
+                                            <col style="width: 100px">
+                                            <col style="width: 100px">
+                                            <col style="width: 150px">
+                                            <col style="width: 120px">
+                                        </colgroup>
+                                        <thead>
+                                        <tr>
+                                            <th class="text-center">담당</th>
+                                            <th class="text-center">이름</th>
+                                            <th class="text-center">이메일</th>
+                                            <th class="text-center">휴대폰번호</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td class="text-center align-middle">
+                                                <span>계약 담당자</span>
+                                            </td>
+                                            <td class="text-center align-middle">
+                                                <span>김현철</span>
+                                            </td>
+                                            <td class="text-center align-middle">
+                                                <span>hc.kim@payple.kr</span>
+                                            </td>
+                                            <td class="text-center align-middle">
+                                                <span>010-7308-1234</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center align-middle">
+                                                <span class="">개발 담당자</span>
+                                            </td>
+                                            <td class="text-center align-middle">
+                                                <span class="color-orange-100">미입력</span>
+                                            </td>
+                                            <td class="text-center align-middle">
+                                                <span class="color-orange-100">미입력</span>
+                                            </td>
+                                            <td class="text-center align-middle">
+                                                <span class="color-orange-100">미입력</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center align-middle">
+                                                <span class="">정산 담당자</span>
+                                            </td>
+                                            <td class="text-center align-middle">
+                                                <span class="color-orange-100">미입력</span>
+                                            </td>
+                                            <td class="text-center align-middle">
+                                                <span class="color-orange-100">미입력</span>
+                                            </td>
+                                            <td class="text-center align-middle">
+                                                <span class="color-orange-100">미입력</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center align-middle">
+                                                <span class="">세금계산서</span>
+                                            </td>
+                                            <td class="text-center align-middle">
+                                                <span class="color-gray-200">-</span>
+                                            </td>
+                                            <td class="text-center align-middle">
+                                                <span class="color-orange-100">미입력</span>
+                                            </td>
+                                            <td class="text-center align-middle">
+                                                <span class="color-gray-200">-</span>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                             <!--기본정보 > 담당자 e-->
 
@@ -970,9 +1052,7 @@
                                 <div class="title-area">
                                     <p class="title font-weight-semi-bold d-flex align-items-center">
                                         <i class="icon ico_check_purple"></i><span>API키</span></p>
-                                    <div class="btn-wrap">
-                                        <button class="btn btn-secondary btn-sm btn-round">수정하기</button>
-                                    </div>
+
                                 </div>
                                 <ul class="row signup-list-area">
                                     <li class="list col-md-12">
@@ -1250,7 +1330,26 @@
                             <div class="card">
                                 <div class="title-area">
                                     <p class="title font-weight-semi-bold d-flex align-items-center">
-                                        <i class="icon ico_check_purple"></i><span>정산</span></p>
+                                        <i class="icon ico_check_purple"></i>
+                                        <span>정산</span>
+                                        <i class="hover-area position-relative">
+                                            <i class="icon ico_question_gray"></i>
+                                            <span class="speech-bubble _speech-bubble" style="top: -226px">
+                                                <span class="font-weight-semi-bold">월정산 기준</span><br>
+                                                <span class="font-weight-semi-bold"><span style="margin-right: 5px">&#183;</span>월1회</span><br>
+                                                이번 달 01일 ~ 말일까지의 결제를 다음 달 25일 정산<br>
+                                                <span class="font-weight-semi-bold"><span style="margin-right: 5px">&#183;</span>월2회</span><br>
+                                                a. 이번 달 01일 ~ 15일까지의 결제를 이번 달 23일 정산<br>
+                                                b. 이번 달 16일 ~ 말일까지의 결제를 다음 달 8일 정산<br>
+                                                <br>
+                                                <span class="font-weight-semi-bold">월 4회 기준</span><br>
+                                                <span style="margin-right: 5px">&#183;</span>이번 달 05일 ~ 11일까지의 결제를 이번 달 19일 정산<br>
+                                                <span style="margin-right: 5px">&#183;</span>이번 달 12일 ~ 19일까지의 결제를 이번 달 26일 정산<br>
+                                                <span style="margin-right: 5px">&#183;</span>이번 달 20일 ~ 26일까지의 결제를 다음 달 04일 정산<br>
+                                                <span style="margin-right: 5px">&#183;</span>이번 달 27일 ~ 다음 달 04일까지의 결제를 다음 달 11일 정산<br>
+                                            </span>
+                                        </i>
+                                    </p>
                                     <div class="btn-wrap">
                                         <button class="btn btn-secondary btn-md btn-round">주기 수정하기</button>
                                         <button class="btn btn-secondary btn-md btn-round">계좌 수정하기</button>
@@ -1436,7 +1535,7 @@
                                     </div>
                                 </div>
                                 <ul class="row signup-list-area">
-                                    <li class="list col-md-12">
+                                    <li class="list col-md-12 align-items-start">
                                         <span class="title font-weight-semi-bold">CPID(source_id)</span>
                                         <div class="data-content"><span class="title font-weight-semi-bold">앱카드,<br>빌링(수기)</span><span
                                                 class="data">paypleinc</span></div>
@@ -1641,7 +1740,26 @@
                             <div class="card">
                                 <div class="title-area">
                                     <p class="title font-weight-semi-bold d-flex align-items-center">
-                                        <i class="icon ico_check_purple"></i><span>정산</span></p>
+                                        <i class="icon ico_check_purple"></i>
+                                        <span>정산</span>
+                                        <i class="hover-area position-relative">
+                                            <i class="icon ico_question_gray"></i>
+                                            <span class="speech-bubble _speech-bubble" style="top: -226px">
+                                                <span class="font-weight-semi-bold">월정산 기준</span><br>
+                                                <span class="font-weight-semi-bold"><span style="margin-right: 5px">&#183;</span>월1회</span><br>
+                                                이번 달 01일 ~ 말일까지의 결제를 다음 달 25일 정산<br>
+                                                <span class="font-weight-semi-bold"><span style="margin-right: 5px">&#183;</span>월2회</span><br>
+                                                a. 이번 달 01일 ~ 15일까지의 결제를 이번 달 23일 정산<br>
+                                                b. 이번 달 16일 ~ 말일까지의 결제를 다음 달 8일 정산<br>
+                                                <br>
+                                                <span class="font-weight-semi-bold">월 4회 기준</span><br>
+                                                <span style="margin-right: 5px">&#183;</span>이번 달 05일 ~ 11일까지의 결제를 이번 달 19일 정산<br>
+                                                <span style="margin-right: 5px">&#183;</span>이번 달 12일 ~ 19일까지의 결제를 이번 달 26일 정산<br>
+                                                <span style="margin-right: 5px">&#183;</span>이번 달 20일 ~ 26일까지의 결제를 다음 달 04일 정산<br>
+                                                <span style="margin-right: 5px">&#183;</span>이번 달 27일 ~ 다음 달 04일까지의 결제를 다음 달 11일 정산<br>
+                                            </span>
+                                        </i>
+                                    </p>
                                     <div class="btn-wrap">
                                         <button class="btn btn-secondary btn-md btn-round">주기 수정하기</button>
                                         <button class="btn btn-secondary btn-md btn-round">계좌 수정하기</button>
@@ -1926,7 +2044,26 @@
                             <div class="card">
                                 <div class="title-area">
                                     <p class="title font-weight-semi-bold d-flex align-items-center">
-                                        <i class="icon ico_check_purple"></i><span>정산</span></p>
+                                        <i class="icon ico_check_purple"></i>
+                                        <span>정산</span>
+                                        <i class="hover-area position-relative">
+                                            <i class="icon ico_question_gray"></i>
+                                            <span class="speech-bubble _speech-bubble" style="top: -226px">
+                                                <span class="font-weight-semi-bold">월정산 기준</span><br>
+                                                <span class="font-weight-semi-bold"><span style="margin-right: 5px">&#183;</span>월1회</span><br>
+                                                이번 달 01일 ~ 말일까지의 결제를 다음 달 25일 정산<br>
+                                                <span class="font-weight-semi-bold"><span style="margin-right: 5px">&#183;</span>월2회</span><br>
+                                                a. 이번 달 01일 ~ 15일까지의 결제를 이번 달 23일 정산<br>
+                                                b. 이번 달 16일 ~ 말일까지의 결제를 다음 달 8일 정산<br>
+                                                <br>
+                                                <span class="font-weight-semi-bold">월 4회 기준</span><br>
+                                                <span style="margin-right: 5px">&#183;</span>이번 달 05일 ~ 11일까지의 결제를 이번 달 19일 정산<br>
+                                                <span style="margin-right: 5px">&#183;</span>이번 달 12일 ~ 19일까지의 결제를 이번 달 26일 정산<br>
+                                                <span style="margin-right: 5px">&#183;</span>이번 달 20일 ~ 26일까지의 결제를 다음 달 04일 정산<br>
+                                                <span style="margin-right: 5px">&#183;</span>이번 달 27일 ~ 다음 달 04일까지의 결제를 다음 달 11일 정산<br>
+                                            </span>
+                                        </i>
+                                    </p>
                                     <div class="btn-wrap">
                                         <button class="btn btn-secondary btn-md btn-round">주기 수정하기</button>
                                         <button class="btn btn-secondary btn-md btn-round">계좌 수정하기</button>
@@ -2182,7 +2319,26 @@
                             <div class="card">
                                 <div class="title-area">
                                     <p class="title font-weight-semi-bold d-flex align-items-center">
-                                        <i class="icon ico_check_purple"></i><span>정산</span></p>
+                                        <i class="icon ico_check_purple"></i>
+                                        <span>정산</span>
+                                        <i class="hover-area position-relative">
+                                            <i class="icon ico_question_gray"></i>
+                                            <span class="speech-bubble _speech-bubble" style="top: -226px">
+                                                <span class="font-weight-semi-bold">월정산 기준</span><br>
+                                                <span class="font-weight-semi-bold"><span style="margin-right: 5px">&#183;</span>월1회</span><br>
+                                                이번 달 01일 ~ 말일까지의 결제를 다음 달 25일 정산<br>
+                                                <span class="font-weight-semi-bold"><span style="margin-right: 5px">&#183;</span>월2회</span><br>
+                                                a. 이번 달 01일 ~ 15일까지의 결제를 이번 달 23일 정산<br>
+                                                b. 이번 달 16일 ~ 말일까지의 결제를 다음 달 8일 정산<br>
+                                                <br>
+                                                <span class="font-weight-semi-bold">월 4회 기준</span><br>
+                                                <span style="margin-right: 5px">&#183;</span>이번 달 05일 ~ 11일까지의 결제를 이번 달 19일 정산<br>
+                                                <span style="margin-right: 5px">&#183;</span>이번 달 12일 ~ 19일까지의 결제를 이번 달 26일 정산<br>
+                                                <span style="margin-right: 5px">&#183;</span>이번 달 20일 ~ 26일까지의 결제를 다음 달 04일 정산<br>
+                                                <span style="margin-right: 5px">&#183;</span>이번 달 27일 ~ 다음 달 04일까지의 결제를 다음 달 11일 정산<br>
+                                            </span>
+                                        </i>
+                                    </p>
                                     <div class="btn-wrap">
                                         <button class="btn btn-secondary btn-md btn-round">주기 수정하기</button>
                                         <button class="btn btn-secondary btn-md btn-round">계좌 수정하기</button>
@@ -2242,7 +2398,7 @@
                                         <span class="title font-weight-semi-bold">원천사 선택</span>
                                         <span class="data">나이스</span>
                                     </li>
-                                    <li class="list col-md-12">
+                                    <li class="list col-md-12 align-items-start">
                                         <span class="title font-weight-semi-bold">MID(source_id)</span>
                                         <span class="data">paypleinc</span>
                                     </li>

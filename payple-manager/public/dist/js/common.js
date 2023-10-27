@@ -21,21 +21,17 @@ function openAsideBtn() {
 //selectBox
 function selectBox() {
     let selectBox = $('._select-box')
-
-
+    // selectBox on/off
     selectBox.on('click', function () {
         $(this).toggleClass('active');
     })
-
-    selectBox.find('.option').on('click', function () {
-        let text = $(this).text();
-        let value = $(this).val();
-        let selectBoxValue = $(this).closest('._select-box')
-
-        selectBoxValue.find('._select-value').attr('value', value);
-        selectBoxValue.find('._value-text').text(text).css({'color': '#1F1F1F'});
+    // 셀렉트 박스 클릭 시 문구 및 데이터 수정
+    $(document).on('click','.option' ,function() {
+        const text = $(this).text();
+        const value = $(this).attr("value");
+        $(this).closest('._select-box').find('._value-text').text(text).css('color', '#1F1F1F');
+        $(this).closest('._select-box').find('._select-value').attr('value', value);
     });
-
     //disabled 처리
     if ($("._select-value").is(':disabled')) {
         const disableSelectBox = $("._select-value:disabled")
@@ -46,8 +42,7 @@ function selectBox() {
         })
         disableSelectBox.parent('._select-box').off('click');
     }
-
-
+    //외부클릭시 종료
     $(document).on('click', function (e) {
         let target = $(e.target);
         selectBox.each(function () {
@@ -56,7 +51,6 @@ function selectBox() {
             }
         });
     });
-
 }
 
 /*필터 상세보기 버튼*/

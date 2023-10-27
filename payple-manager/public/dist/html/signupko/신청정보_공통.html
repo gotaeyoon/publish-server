@@ -6,12 +6,13 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" href="https://image.payple.kr/common/favicon.ico" sizes="32x32">
-    <link rel="stylesheet" href="./../../css/payple_component.css?v0.7">
-    <link rel="stylesheet" href="./../../css/payple_pages.css?v0.7">
-    <script src="../../js/bundle.js?v0.7"></script>
-    <script src="../../js/common.js?v0.7"></script>
+    <link rel="stylesheet" href="./../../css/payple_component.css?v0.8">
+    <link rel="stylesheet" href="./../../css/payple_pages.css?v0.8">
+    <script src="../../js/bundle.js?v0.8"></script>
+    <script src="../../js/common.js?v0.8"></script>
     <title>페이플 관리자 페이지</title>
 </head>
+
 
 <body>
 <div class="wrap">
@@ -728,10 +729,10 @@
                                             <input type="hidden" class="select-value _select-value" value="0">
                                             <span class="value-text _value-text">전체</span>
                                             <i class="icon ico_select_arrow_down">아래화살표</i>
-                                            <ul class="options h-auto">
-                                                <li class="option" value="0">전체</li>
-                                                <li class="option" value="1">국내</li>
-                                                <li class="option" value="2">해외</li>
+                                            <ul class="options h-auto _service-status">
+                                                <li class="option _all-select" value="0">전체</li>
+                                                <li class="option _domestic-select" value="1">국내</li>
+                                                <li class="option _domestic-global" value="2">해외</li>
                                             </ul>
                                         </label>
                                     </div>
@@ -739,10 +740,10 @@
                                 <div class="col-xl">
                                     <div class="form-group min-w-190">
                                         <label class="select-box _select-box">
-                                            <input type="hidden" class="select-value _select-value" value="0">
+                                            <input type="hidden" class="select-value _select-value sss" value="0" >
                                             <span class="value-text _value-text">상태(전체)</span>
                                             <i class="icon ico_select_arrow_down">아래화살표</i>
-                                            <ul class="options h-320px">
+                                            <ul class="options h-320px" >
                                                 <li class="option" value="0">전체</li>
                                                 <li class="option" value="1">작성 중</li>
                                                 <li class="option" value="2">심사 중</li>
@@ -756,21 +757,18 @@
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                         <div class="col-xl-auto">
                             <p class="card-title font-weight-semi-bold">결제수단 구분/상태</p>
                             <div class="row row-col-2">
                                 <div class="col-xl">
                                     <div class="form-group min-w-190">
-                                        <label class="select-box _select-box">
+                                        <label class="select-box _select-box _state-label">
                                             <input type="hidden" class="select-value _select-value" value="0">
-                                            <span class="value-text _value-text">상태(전체)</span>
+                                            <span class="value-text _value-text">전체</span>
                                             <i class="icon ico_select_arrow_down">아래화살표</i>
-                                            <ul class="options h-auto">
-                                                <li class="option" value="0">상태(전체)</li>
-                                                <li class="option" value="1">등록</li>
-                                                <li class="option" value="2">해지</li>
+                                            <ul class="options h-auto _service-status-value">
+                                                <li class="option" value="all">전체</li>
                                             </ul>
                                         </label>
                                     </div>
@@ -779,11 +777,16 @@
                                     <div class="form-group min-w-190">
                                         <label class="select-box _select-box">
                                             <input type="hidden" class="select-value _select-value" value="0">
-                                            <span class="value-text _value-text">상태(전체)</span>
+                                            <span class="value-text _value-text">전체</span>
                                             <i class="icon ico_select_arrow_down">아래화살표</i>
                                             <ul class="options h-auto">
-                                                <li class="option" value="0">상태(전체)</li>
-                                                <li class="option" value="1">등록</li>
+                                                <li class="option" value="0">전체</li>
+                                                <li class="option" value="1">작성 중</li>
+                                                <li class="option" value="2">심사 중</li>
+                                                <li class="option" value="2">입점불가</li>
+                                                <li class="option" value="2">계약 중</li>
+                                                <li class="option" value="2">서비스 중</li>
+                                                <li class="option" value="2">정지</li>
                                                 <li class="option" value="2">해지</li>
                                             </ul>
                                         </label>
@@ -791,7 +794,6 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
                     <p class="font-weight-semi-bold card-title">상세검색</p>
                     <div class="row">
@@ -879,8 +881,6 @@
                                 <th class="text-center">홈페이지</th>
                                 <th class="text-center">판매상품</th>
                                 <th class="text-center">로그인</th>
-
-
                             </tr>
                             </thead>
                             <tbody>
@@ -1527,4 +1527,72 @@
     </div>
 </div>
 </body>
+<script>
+    /*
+    * 서비스 구분/상태 값에 따라 결제수단 구분/상태 구별
+    * 클릭 시 상위에 요소 값으로 변경
+    * 개발 시 value값 수정 필요
+    * 기본값은 전체로 맞춰져있어서 html ._service-status-value에 있는 전체의  vlaue값도 맞춰주셔야 합니다.
+    * */
+    let serviceStatus = $('._service-status');
+    let servicestatusValue = $('._service-status-value');
+    let stateSelectValue = $('._state-label').find('._select-value');
+    let stateValueText = $('._state-label').find('._value-text');
+
+    let all = [
+        {name : '전체', value : '1'}
+    ]
+    let domestic = [
+        {name : '카드 - 앱카드' , value : '2-1'},
+        {name : '카드 - 키인' , value : '2-2'},
+        {name : '카드 - 빌링' , value : '2-3.'},
+        {name : '카드 - 간편' , value : '2-4'},
+        {name : '계좌 - 빌링' , value : 'gg'},
+        {name : '카드 - 앱카드' , value : 'hh'},
+        {name : '계좌 - 간편' , value : 'ss'},
+        {name : '카드 - 앱카드' , value : 'dd'},
+        {name : '네이버페이' , value : 'ff'},
+        {name : '카카오페이' , value : 'gg'},
+        {name : '애플페이' , value : 'hh'},
+        {name : '가상계좌' , value : 'rr'},
+    ]
+    let global = [
+        {name :  '카드 - 키인', value : 'asdassssd'},
+        {name :  '카드 - 빌링', value : 'asdasd'},
+        {name : '카드 - 간편' , value : 'dddd'}
+
+    ]
+    let option
+
+    serviceStatus.on('click', 'li.option', function() {
+        var value = $(this).attr('value');
+
+        //전체
+        if(value == 0){
+            option = all
+            stateValueText.html(option[0].name);
+            stateSelectValue.attr("value",option[0].value);
+
+        }
+        //국내
+        else if (value == 1){
+            option = domestic
+            stateValueText.html(option[0].name);
+            stateSelectValue.attr("value",option[0].value);
+        }
+        // 해외
+        else {
+            option = global
+            stateValueText.html(option[0].name);
+            stateSelectValue.attr("value",option[0].value);
+        }
+        // 초기화
+        servicestatusValue.empty();
+        //클릭시 반복문 돌려서 value 호출
+        for ( let i = 0; i < option.length; i++ ) {
+            servicestatusValue.append( '<option class="option _domestic" value="'+ option[i].value + '">' + option[i].name + '</option>' );
+        }
+    });
+
+</script>
 </html>

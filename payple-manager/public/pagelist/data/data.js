@@ -156,7 +156,7 @@ data.domesticPayment = {
             page: '카드_가상계좌_취소_완료'
         },
         {
-            stateClass: 'working',
+            stateClass: 'confirm',
             url: '상담관리',
             category: 'domesticpayment',
             page: '상담관리'
@@ -204,7 +204,7 @@ data.globalPayment = {
             page: '취소_완료'
         },
         {
-            stateClass: 'confirm',
+            stateClass: 'complete',
             url: '결제내역_해외_상세내역',
             category: 'globalpayment',
             page: '결제내역_해외_상세내역'
@@ -258,7 +258,7 @@ data.lnikpay = {
             page: '링크결제_상품내역_국내검색시'
         },
         {
-            stateClass: 'confirm',
+            stateClass: 'complete',
             url: '링크결제_상품내역_해외검색시',
             category: 'linkpay',
             page: '링크결제_상품내역_해외검색시'
@@ -324,16 +324,22 @@ data.signupko = {
     title:'가입,신청정보-국내',
     list:[
         {
-            stateClass: 'working',
+            stateClass: 'confirm',
             url: '신청정보_공통',
             category: 'signupko',
             page: '신청정보_공통'
         },
         {
-            stateClass: 'working',
+            stateClass: 'confirm',
             url: '기본정보_국내',
             category: 'signupko',
             page: '기본정보_국내'
+        },
+        {
+            stateClass: 'working',
+            url: '기본정보_국내_수정',
+            category: 'signupko',
+            page: '기본정보_국내_수정'
         },
     ]
 }
