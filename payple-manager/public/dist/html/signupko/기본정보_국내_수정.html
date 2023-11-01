@@ -6,10 +6,10 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" href="https://image.payple.kr/common/favicon.ico" sizes="32x32">
-    <link rel="stylesheet" href="./../../css/payple_component.css?v0.8">
-    <link rel="stylesheet" href="./../../css/payple_pages.css?v0.8">
-    <script src="../../js/bundle.js?v0.8"></script>
-    <script src="../../js/common.js?v0.8"></script>
+    <link rel="stylesheet" href="./../../css/payple_component.css?v0.81">
+    <link rel="stylesheet" href="./../../css/payple_pages.css?v0.81">
+    <script src="../../js/bundle.js?v0.81"></script>
+    <script src="../../js/common.js?v0.81"></script>
     <title>페이플 관리자 페이지</title>
 </head>
 
@@ -717,7 +717,7 @@
                                         <i class="icon ico_check_purple"></i><span>신청,이용 중인 서비스</span></p>
                                     <div class="btn-wrap">
                                         <!--<button class="btn btn-secondary btn-sm btn-round">수정하기</button>-->
-                                        <button class="btn  btn-sm btn-danger btn-round">취소</button>
+                                        <button class="btn btn-sm btn-round btn-danger">취소</button>
                                         <button class="btn btn-primary btn-sm btn-round">저장</button>
                                     </div>
                                 </div>
@@ -731,15 +731,21 @@
                                         <span class="data">Service0010012345678</span>
                                     </li>
                                     <li class="list col-md-12 mb-0 align-items-center">
-                                        <span class="title font-weight-semi-bold">상태</span>
+                                            <span class="title font-weight-semi-bold position-relative">
+                                                상태
+                                                <!-- <i class="hover-area">
+                                                     <i class="icon ico_question_gray"></i>
+                                                     <span class="speech-bubble _speech-bubble">파트너가 이용 중인 국내서비스의 상태입니다. </span>
+                                                 </i>-->
+                                            </span>
                                         <!--<span class="data">심사중</span>-->
                                         <div class="form-group min-w-190 mb-0">
                                             <label class="select-box _select-box">
                                                 <input type="hidden" class="select-value _select-value" value="0">
-                                                <span class="value-text _value-text">작성 중</span>
+                                                <span class="value-text _value-text">작성중</span>
                                                 <i class="icon ico_select_arrow_down">아래화살표</i>
                                                 <ul class="options h-auto">
-                                                    <li class="option" value="1">작성 중</li>
+                                                    <li class="option" value="1">작성중</li>
                                                     <li class="option" value="2">심사 중</li>
                                                     <li class="option" value="2">입점불가</li>
                                                     <li class="option" value="2">계약 중</li>
@@ -762,6 +768,7 @@
                                     <p class="title font-weight-semi-bold d-flex align-items-center">
                                         <i class="icon ico_check_purple"></i><span>회원</span></p>
                                     <div class="btn-wrap">
+                                        <!--<button class="btn btn-secondary btn-sm btn-round">수정하기</button>-->
                                         <button class="btn btn-sm btn-round btn-danger">취소</button>
                                         <button class="btn btn-primary btn-sm btn-round">저장</button>
                                     </div>
@@ -797,13 +804,14 @@
                                     <li class="list col-md-12">
                                         <span class="title font-weight-semi-bold">구분</span>
                                         <!--<span class="data color-orange-100">미입력</span>-->
+
                                         <div class="form-group min-w-190 mb-0">
                                             <label class="select-box _select-box">
                                                 <input type="hidden" class="select-value _select-value" value="0">
-                                                <span class="value-text _value-text">작성 중</span>
+                                                <span class="value-text _value-text">작성중</span>
                                                 <i class="icon ico_select_arrow_down">아래화살표</i>
                                                 <ul class="options h-auto">
-                                                    <li class="option" value="1">작성 중</li>
+                                                    <li class="option" value="1">작성중</li>
                                                     <li class="option" value="2">심사 중</li>
                                                     <li class="option" value="2">입점불가</li>
                                                     <li class="option" value="2">계약 중</li>
@@ -813,14 +821,20 @@
                                                 </ul>
                                             </label>
                                         </div>
+
                                     </li>
                                     <li class="list col-md-12">
                                         <span class="title font-weight-semi-bold">상호명(국문)</span>
                                         <span class="data">(주)페이플</span>
                                     </li>
-                                    <li class="list col-md-12">
+                                    <li class="list col-md-6">
                                         <span class="title font-weight-semi-bold">상호명(영문)</span>
-                                        <span class="data">Payple</span>
+                                        <!--<span class="data color-orange-100">미입력</span>-->
+                                        <div class="form-group mb-0 w-100">
+                                            <label class="w-100 mb-0">
+                                                <input class="form-control" type="text">
+                                            </label>
+                                        </div>
                                     </li>
                                     <li class="list col-md-12">
                                         <span class="title font-weight-semi-bold">사업자번호</span>
@@ -866,30 +880,33 @@
                                         </div>
                                     </li>
 
-                                    <!--주소검색 버튼-->
+                                    <!--주소검색 버튼 s-->
                                     <li class="list col-md-12 clearfix">
                                         <span class="title"></span>
                                         <div class="w-100">
                                             <button class="btn btn-info btn-sm float-right">주소검색</button>
                                         </div>
                                     </li>
-                                    <!--주소검색 버튼-->
+                                    <!--주소검색 버튼 e-->
+
                                     <li class="list col-md-12">
                                         <span class="title font-weight-semi-bold">사업장 주소</span>
                                         <!--<span class="data color-orange-100">미입력</span>-->
-                                        <div class="address">
+                                        <div class="input-row-list">
                                             <div class="row">
                                                 <div class="col-lg-3">
                                                     <div class="form-group mb-0 w-100">
                                                         <label class="w-100 mb-0 ">
-                                                            <input class="form-control" type="text" disabled placeholder="우편번호">
+                                                            <input class="form-control" type="text" disabled
+                                                                   placeholder="우편번호">
                                                         </label>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg">
                                                     <div class="form-group mb-0 w-100">
                                                         <label class="w-100 mb-0">
-                                                            <input class="form-control" type="text" disabled placeholder="주소">
+                                                            <input class="form-control" type="text" disabled
+                                                                   placeholder="주소">
                                                         </label>
                                                     </div>
                                                 </div>
@@ -943,7 +960,7 @@
                                         <span class="title font-weight-semi-bold">서비스명(국문)</span>
                                         <span class="data">가나다라</span>
                                     </li>
-                                    <li class="list col-md-12">
+                                    <li class="list col-md-6">
                                         <span class="title font-weight-semi-bold">서비스명(영문)</span>
                                         <!--<span class="data">미입력</span>-->
                                         <div class="form-group mb-0 w-100">
@@ -993,9 +1010,181 @@
                                     <p class="title font-weight-semi-bold d-flex align-items-center">
                                         <i class="icon ico_check_purple"></i><span>담당자</span></p>
                                     <div class="btn-wrap">
-                                        <button class="btn btn-secondary btn-sm btn-round">수정하기</button>
+                                        <!--<button class="btn btn-secondary btn-sm btn-round">수정하기</button>-->
+                                        <button class="btn btn-danger btn-sm btn-round">취소</button>
+                                        <button class="btn btn-primary btn-sm btn-round">저장</button>
                                     </div>
                                 </div>
+                                <!--<div class="table-responsive">
+                                    <table class="table table-fixed table-data">
+                                        <colgroup>
+                                            <col style="width: 100px">
+                                            <col style="width: 100px">
+                                            <col style="width: 150px">
+                                            <col style="width: 120px">
+                                        </colgroup>
+                                        <thead>
+                                        <tr>
+                                            <th class="text-center">담당</th>
+                                            <th class="text-center">이름</th>
+                                            <th class="text-center">이메일</th>
+                                            <th class="text-center">휴대폰번호</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td class="text-center align-middle">
+                                                <span>계약 담당자</span>
+                                            </td>
+                                            <td class="text-center align-middle">
+                                                <span>김현철</span>
+                                            </td>
+                                            <td class="text-center align-middle">
+                                                <span>hc.kim@payple.kr</span>
+                                            </td>
+                                            <td class="text-center align-middle">
+                                                <span>010-7308-1234</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center align-middle">
+                                                <span class="">개발 담당자</span>
+                                            </td>
+                                            <td class="text-center align-middle">
+                                                <span class="color-orange-100">미입력</span>
+                                            </td>
+                                            <td class="text-center align-middle">
+                                                <span class="color-orange-100">미입력</span>
+                                            </td>
+                                            <td class="text-center align-middle">
+                                                <span class="color-orange-100">미입력</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center align-middle">
+                                                <span class="">정산 담당자</span>
+                                            </td>
+                                            <td class="text-center align-middle">
+                                                <span class="color-orange-100">미입력</span>
+                                            </td>
+                                            <td class="text-center align-middle">
+                                                <span class="color-orange-100">미입력</span>
+                                            </td>
+                                            <td class="text-center align-middle">
+                                                <span class="color-orange-100">미입력</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center align-middle">
+                                                <span class="">세금계산서</span>
+                                            </td>
+                                            <td class="text-center align-middle">
+                                                <span class="color-gray-200">-</span>
+                                            </td>
+                                            <td class="text-center align-middle">
+                                                <span class="color-orange-100">미입력</span>
+                                            </td>
+                                            <td class="text-center align-middle">
+                                                <span class="color-gray-200">-</span>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>-->
+                                <ul class="row signup-list-area">
+                                    <li class="list col-md-12">
+                                        <span class="title font-weight-semi-bold title-lg">계약 담당자</span>
+                                        <div class="input-row-list">
+                                            <div class="row">
+                                                <div class="col-lg-3">
+                                                    <div class="form-group mb-0 w-100">
+                                                        <label class="w-100 mb-0 ">
+                                                            <input class="form-control" type="text" placeholder="이름">
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg">
+                                                    <div class="form-group mb-0 w-100">
+                                                        <label class="w-100 mb-0">
+                                                            <input class="form-control" type="text" placeholder="이메일">
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg">
+                                                    <div class="form-group mb-0 w-100">
+                                                        <label class="w-100 mb-0">
+                                                            <input class="form-control" type="text" placeholder="휴대폰번호">
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list col-md-12">
+                                        <span class="title font-weight-semi-bold title-lg">개발 담당자</span>
+                                        <div class="input-row-list">
+                                            <div class="row">
+                                                <div class="col-lg-3">
+                                                    <div class="form-group mb-0 w-100">
+                                                        <label class="w-100 mb-0 ">
+                                                            <input class="form-control" type="text" placeholder="이름">
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg">
+                                                    <div class="form-group mb-0 w-100">
+                                                        <label class="w-100 mb-0">
+                                                            <input class="form-control" type="text" placeholder="이메일">
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg">
+                                                    <div class="form-group mb-0 w-100">
+                                                        <label class="w-100 mb-0">
+                                                            <input class="form-control" type="text" placeholder="휴대폰번호">
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list col-md-12">
+                                        <span class="title font-weight-semi-bold title-lg">정산 담당자</span>
+                                        <div class="input-row-list">
+                                            <div class="row">
+                                                <div class="col-lg-3">
+                                                    <div class="form-group mb-0 w-100">
+                                                        <label class="w-100 mb-0 ">
+                                                            <input class="form-control" type="text" placeholder="이름">
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg">
+                                                    <div class="form-group mb-0 w-100">
+                                                        <label class="w-100 mb-0">
+                                                            <input class="form-control" type="text" placeholder="이메일">
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg">
+                                                    <div class="form-group mb-0 w-100">
+                                                        <label class="w-100 mb-0">
+                                                            <input class="form-control" type="text" placeholder="휴대폰번호">
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list col-md-12 mb-0">
+                                        <span class="title font-weight-semi-bold title-lg">세금계산서 이메일</span>
+                                        <div class="form-group mb-0 w-100">
+                                            <label class="w-100 mb-0">
+                                                <input class="form-control" type="text">
+                                            </label>
+                                        </div>
+                                    </li>
+                                </ul>
                             </div>
                             <!--기본정보 > 담당자 e-->
 
@@ -1005,30 +1194,39 @@
                                     <p class="title font-weight-semi-bold d-flex align-items-center">
                                         <i class="icon ico_check_purple"></i><span>가입비</span></p>
                                     <div class="btn-wrap">
-                                        <button class="btn btn-secondary btn-sm btn-round">수정하기</button>
+                                        <!--<button class="btn btn-secondary btn-sm btn-round">수정하기</button>-->
+                                        <button class="btn btn-danger btn-sm btn-round">취소</button>
+                                        <button class="btn btn-primary btn-sm btn-round">저장</button>
                                     </div>
                                 </div>
                                 <ul class="row signup-list-area">
-                                    <li class="list col-md-6">
-                                        <span class="title font-weight-semi-bold">상태</span>
+                                    <li class="list col-md-5">
+                                        <span class="title font-weight-semi-bold" style="flex: 0 0 50px">상태</span>
                                         <!--<span class="data color-orange-100">미입력</span>-->
-                                        <div class="form-group mb-0 w-100">
-                                            <label class="w-100 mb-0">
-                                                <input class="form-control" type="text">
+                                        <div class="form-group min-w-190 mb-0">
+                                            <label class="select-box _select-box">
+                                                <input type="hidden" class="select-value _select-value">
+                                                <span class="value-text _value-text">선택</span>
+                                                <i class="icon ico_select_arrow_down">아래화살표</i>
+                                                <ul class="options h-auto">
+                                                    <li class="option" value="0">납부완료</li>
+                                                    <li class="option" value="1">미납</li>
+                                                    <li class="option" value="2">면제</li>
+                                                </ul>
                                             </label>
                                         </div>
                                     </li>
-                                    <li class="list col-md-6">
+                                    <li class="list col-md-7">
                                         <span class="title font-weight-semi-bold">금액(VAT포함)</span>
-                                        <!--<span class="data color-orange-100">미입력</span>-->
+                                        <!-- <span class="data color-orange-100">미입력</span>-->
                                         <div class="form-group mb-0 w-100">
-                                            <label class="w-100 mb-0">
+                                            <label class="w-100 mb-0 position-relative unit">
                                                 <input class="form-control" type="text">
                                             </label>
                                         </div>
                                     </li>
                                 </ul>
-                                <hr style="margin-top: 0">
+                                <hr class="mt-0">
                                 <div class="title-area">
                                     <p class="title font-weight-semi-bold d-flex align-items-center">
                                         <i class="icon ico_check_purple"></i>
@@ -1041,19 +1239,47 @@
                                         <ul class="data-group">
                                             <li class="data-list">
                                                 <span class="title font-weight-semi-bold">월 정산한도 금액</span>
-                                                <span class="data color-orange-100">미입력</span>
+                                                <!--  <span class="data color-orange-100">미입력</span>-->
+                                                <div class="form-group mb-0 w-100">
+                                                    <label class="w-100 mb-0 position-relative unit">
+                                                        <input class="form-control" type="text">
+                                                    </label>
+                                                </div>
                                             </li>
                                             <li class="data-list">
                                                 <span class="title font-weight-semi-bold">보증보험 구분</span>
-                                                <span class="data color-orange-100">미입력</span>
+                                                <!--  <span class="data color-orange-100">미입력</span>-->
+                                                <div class="form-group min-w-190 w-100 mb-0">
+                                                    <label class="select-box _select-box">
+                                                        <input type="hidden" class="select-value _select-value">
+                                                        <span class="value-text _value-text">선택</span>
+                                                        <i class="icon ico_select_arrow_down">아래화살표</i>
+                                                        <ul class="options h-auto">
+                                                            <li class="option" value="1">가입</li>
+                                                            <li class="option" value="2">미가입</li>
+                                                            <li class="option" value="3">면제</li>
+                                                        </ul>
+                                                    </label>
+                                                </div>
                                             </li>
                                             <li class="data-list">
                                                 <span class="title font-weight-semi-bold">보증보험 금액</span>
-                                                <span class="data color-orange-100">미입력</span>
+                                                <!-- <span class="data color-orange-100">미입력</span>-->
+                                                <div class="form-group mb-0 w-100">
+                                                    <label class="w-100 mb-0 position-relative unit">
+                                                        <input class="form-control" type="text">
+                                                    </label>
+                                                </div>
                                             </li>
                                             <li class="data-list">
                                                 <span class="title font-weight-semi-bold">보증보험 만기일자</span>
-                                                <span class="data color-orange-100">미입력</span>
+                                                <!--<span class="data color-orange-100">미입력</span>-->
+                                                <div class="form-group mb-0 w-100">
+                                                    <label class="calender-input w-auto mb-0">
+                                                        <input class="form-control _dataPickerRange" type="text" style="font-size: 12px">
+                                                        <i class="icon ico_calendar" onclick="$('._modal-calendar').modal('show')">달력이미지</i>
+                                                    </label>
+                                                </div>
                                             </li>
                                         </ul>
                                     </li>
@@ -1062,19 +1288,47 @@
                                         <ul class="data-group">
                                             <li class="data-list">
                                                 <span class="title font-weight-semi-bold">월 정산한도 금액</span>
-                                                <span class="data color-orange-100">미입력</span>
+                                                <!--<span class="data color-orange-100">미입력</span>-->
+                                                <div class="form-group mb-0 w-100">
+                                                    <label class="w-100 mb-0 position-relative unit">
+                                                        <input class="form-control" type="text">
+                                                    </label>
+                                                </div>
                                             </li>
                                             <li class="data-list">
                                                 <span class="title font-weight-semi-bold">보증보험 구분</span>
-                                                <span class="data color-orange-100">미입력</span>
+                                                <!--<span class="data color-orange-100">미입력</span>-->
+                                                <div class="form-group min-w-190 w-100 mb-0">
+                                                    <label class="select-box _select-box">
+                                                        <input type="hidden" class="select-value _select-value">
+                                                        <span class="value-text _value-text">선택</span>
+                                                        <i class="icon ico_select_arrow_down">아래화살표</i>
+                                                        <ul class="options h-auto">
+                                                            <li class="option" value="1">가입</li>
+                                                            <li class="option" value="2">미가입</li>
+                                                            <li class="option" value="3">면제</li>
+                                                        </ul>
+                                                    </label>
+                                                </div>
                                             </li>
                                             <li class="data-list">
                                                 <span class="title font-weight-semi-bold">보증보험 금액</span>
-                                                <span class="data color-orange-100">미입력</span>
+                                                <!--   <span class="data color-orange-100">미입력</span>-->
+                                                <div class="form-group mb-0 w-100">
+                                                    <label class="w-100 mb-0 position-relative unit">
+                                                        <input class="form-control" type="text">
+                                                    </label>
+                                                </div>
                                             </li>
                                             <li class="data-list">
                                                 <span class="title font-weight-semi-bold">보증보험 만기일자</span>
-                                                <span class="data color-orange-100">미입력</span>
+                                                <!-- <span class="data color-orange-100">미입력</span>-->
+                                                <div class="form-group mb-0 w-100">
+                                                    <label class="calender-input w-auto mb-0">
+                                                        <input class="form-control _dataPickerRange" type="text" style="font-size: 12px">
+                                                        <i class="icon ico_calendar" onclick="$('._modal-calendar').modal('show')">달력이미지</i>
+                                                    </label>
+                                                </div>
                                             </li>
                                         </ul>
                                     </li>
@@ -1364,7 +1618,26 @@
                             <div class="card">
                                 <div class="title-area">
                                     <p class="title font-weight-semi-bold d-flex align-items-center">
-                                        <i class="icon ico_check_purple"></i><span>정산</span></p>
+                                        <i class="icon ico_check_purple"></i>
+                                        <span>정산</span>
+                                        <i class="hover-area position-relative">
+                                            <i class="icon ico_question_gray"></i>
+                                            <span class="speech-bubble _speech-bubble" style="top : -240px">
+                                                <span class="font-weight-semi-bold">월정산 기준</span><br>
+                                                <span class="font-weight-semi-bold"><span style="margin-right: 5px">&#183;</span>월1회</span><br>
+                                                이번 달 01일 ~ 말일까지의 결제를 다음 달 25일 정산<br>
+                                                <span class="font-weight-semi-bold"><span style="margin-right: 5px">&#183;</span>월2회</span><br>
+                                                a. 이번 달 01일 ~ 15일까지의 결제를 이번 달 23일 정산<br>
+                                                b. 이번 달 16일 ~ 말일까지의 결제를 다음 달 8일 정산<br>
+                                                <br>
+                                                <span class="font-weight-semi-bold">월 4회 기준</span><br>
+                                                <span style="margin-right: 5px">&#183;</span>이번 달 05일 ~ 11일까지의 결제를 이번 달 19일 정산<br>
+                                                <span style="margin-right: 5px">&#183;</span>이번 달 12일 ~ 19일까지의 결제를 이번 달 26일 정산<br>
+                                                <span style="margin-right: 5px">&#183;</span>이번 달 20일 ~ 26일까지의 결제를 다음 달 04일 정산<br>
+                                                <span style="margin-right: 5px">&#183;</span>이번 달 27일 ~ 다음 달 04일까지의 결제를 다음 달 11일 정산<br>
+                                            </span>
+                                        </i>
+                                    </p>
                                     <div class="btn-wrap">
                                         <button class="btn btn-secondary btn-md btn-round">주기 수정하기</button>
                                         <button class="btn btn-secondary btn-md btn-round">계좌 수정하기</button>
@@ -1376,30 +1649,36 @@
                                         <div class="row data-content">
                                             <div class="col-xl">
                                                 <span class="title  font-weight-semi-bold">구분</span>
-                                                <span class="data color-orange-100">미설정</span>
+                                                <!--<span class="data color-orange-100">미설정</span>-->
+                                                <span class="data">일정산</span>
                                             </div>
                                             <div class="col-xl">
                                                 <span class="title  font-weight-semi-bold">주기</span>
-                                                <span class="data color-orange-100">미입력</span>
+                                                <!--<span class="data color-orange-100">미입력</span>-->
+                                                <span class="data">7일</span>
                                             </div>
                                             <div class="col-xl-4">
+                                                <span>&nbsp;</span>
                                             </div>
                                         </div>
                                     </li>
-                                    <li class="list col-md-12">
+                                    <li class="list col-md-12 mb-0">
                                         <span class="title font-weight-semi-bold">계좌</span>
                                         <div class="row data-content">
                                             <div class="col-xl-4">
                                                 <span class="title font-weight-semi-bold">은행</span>
-                                                <span class="data color-orange-100">미입력</span>
+                                                <!--<span class="data color-orange-100">미입력</span>-->
+                                                <span class="data">우리은행</span>
                                             </div>
                                             <div class="col-xl-4">
                                                 <span class="title font-weight-semi-bold">계좌번호</span>
-                                                <span class="data color-orange-100">미입력</span>
+                                                <!--<span class="data color-orange-100">미입력</span>-->
+                                                <span class="data">1002753710560</span>
                                             </div>
                                             <div class="col-xl-4">
                                                 <span class="title font-weight-semi-bold">예금주명</span>
-                                                <span class="data color-orange-100">미입력</span>
+                                                <!--<span class="data color-orange-100">미입력</span>-->
+                                                <span class="data">정다운</span>
                                             </div>
                                         </div>
                                     </li>
@@ -1414,45 +1693,75 @@
                             <div class="card">
                                 <div class="title-area">
                                     <p class="title font-weight-semi-bold d-flex align-items-center">
-                                        <i class="icon ico_check_purple"></i><span>원천사 정보</span></p>
+                                        <i class="icon ico_check_purple"></i>
+                                        <span>원천사 정보</span>
+                                    </p>
                                     <div class="btn-wrap">
-                                        <button class="btn btn-secondary btn-sm btn-round">수정하기</button>
+                                        <!--<button class="btn btn-secondary btn-sm btn-round">수정하기</button>-->
+                                        <button class="btn btn-sm btn-round btn-danger">취소</button>
+                                        <button class="btn btn-primary btn-sm btn-round">저장</button>
                                     </div>
                                 </div>
                                 <ul class="row signup-list-area">
-                                    <li class="list col-md-12">
+                                    <li class="list col-md-6 mb-0">
                                         <span class="title font-weight-semi-bold">원천사 선택</span>
-                                        <span class="data">나이스+다날</span>
+                                        <!--<span class="data">나이스+다날</span>-->
+                                        <div class="form-group min-w-190 mb-0">
+                                            <label class="select-box _select-box">
+                                                <input type="hidden" class="select-value _select-value" value="0">
+                                                <span class="value-text _value-text">나이스+다날</span>
+                                                <i class="icon ico_select_arrow_down">아래화살표</i>
+                                                <ul class="options h-auto">
+                                                    <li class="option" value="0">나이스+다날</li>
+                                                    <li class="option" value="1">다날+나이스</li>
+                                                    <li class="option" value="2">나이스</li>
+                                                    <li class="option" value="3">다날</li>
+                                                </ul>
+                                            </label>
+                                        </div>
                                     </li>
                                 </ul>
                                 <hr>
                                 <div class="title-area">
                                     <p class="title font-weight-semi-bold d-flex align-items-center">
                                         <i class="icon ico_check_purple"></i><span>나이스</span></p>
-                                    <div class="btn-wrap">
-                                        <button class="caption mt-0 justify-content-end btn-reset text-decoration-underline color-gray-000">
-                                            <i class="icon ico_clock_black"></i>수정이력
-                                        </button>
-                                    </div>
+                                    <!--                                    <div class="btn-wrap">-->
+                                    <!--                                        <button class="caption mt-0 justify-content-end btn-reset text-decoration-underline color-gray-000">-->
+                                    <!--                                            <i class="icon ico_clock_black"></i>수정이력-->
+                                    <!--                                        </button>-->
+                                    <!--                                    </div>-->
                                 </div>
                                 <ul class="row signup-list-area">
-                                    <li class="list col-md-12">
+                                    <li class="list col-xl-8">
                                         <span class="title font-weight-semi-bold">MID(source_id)</span>
-                                        <div class="data-content"><span
-                                                class="title font-weight-semi-bold">나이스+다날</span><span class="data">paypleinc</span>
+                                        <div class="data-content">
+                                            <span class="title font-weight-semi-bold">앱카드</span>
+                                            <!--<span class="data">paypleinc</span>-->
+                                            <div class="form-group mb-0 w-100">
+                                                <label class="w-100 mb-0">
+                                                    <input class="form-control" type="text">
+                                                </label>
+                                            </div>
                                         </div>
                                     </li>
-                                    <li class="list col-md-12">
+                                    <li class="list col-xl-8">
                                         <span class="title font-weight-semi-bold">&nbsp;</span>
-                                        <div class="data-content"><span
-                                                class="title font-weight-semi-bold">빌링(수기)</span><span class="data">paypleinb</span>
+                                        <div class="data-content">
+                                            <span class="title font-weight-semi-bold">빌링(수기)</span>
+                                            <!--<span class="data">paypleinb</span>-->
+                                            <div class="form-group mb-0 w-100">
+                                                <label class="w-100 mb-0">
+                                                    <input class="form-control" type="text">
+                                                </label>
+                                            </div>
                                         </div>
                                     </li>
                                     <li class="list col-md-12">
                                         <span class="title font-weight-semi-bold">가맹점구분 정보<br>(영중소)</span>
-                                        <div class="data-content"><span
-                                                class="title font-weight-semi-bold">적용여부</span><span
-                                                class="data">미적용</span></div>
+                                        <div class="data-content">
+                                            <span class="title font-weight-semi-bold">적용여부</span>
+                                            <span class="data">미적용</span>
+                                        </div>
                                     </li>
                                     <li class="list col-md-12">
                                         <span class="title font-weight-semi-bold">&nbsp;</span>
@@ -1535,7 +1844,8 @@
                                     <li class="list col-md-12">
                                         <span class="title font-weight-semi-bold">&nbsp;</span>
                                         <div class="data-content"><span
-                                                class="title font-weight-semi-bold">구분값</span><span class="data">선 - 일반 / 확 - 미적용</span>
+                                                class="title font-weight-semi-bold">구분값</span>
+                                            <span class="data">선 - 일반 / 확 - 미적용</span>
                                         </div>
                                     </li>
                                 </ul>
@@ -1543,23 +1853,30 @@
                                 <div class="title-area">
                                     <p class="title font-weight-semi-bold d-flex align-items-center">
                                         <i class="icon ico_check_purple"></i><span>다날</span></p>
-                                    <div class="btn-wrap">
+                                    <!--<div class="btn-wrap">
                                         <button class="caption mt-0 justify-content-end btn-reset text-decoration-underline color-gray-000">
-                                            <i class="icon ico_clock_black"></i>수정이력
-                                        </button>
-                                    </div>
+                                            <i class="icon ico_clock_black"></i>수정이력</button>
+                                    </div>-->
                                 </div>
                                 <ul class="row signup-list-area">
-                                    <li class="list col-md-12">
+                                    <li class="list col-xl-8 align-items-start">
                                         <span class="title font-weight-semi-bold">CPID(source_id)</span>
-                                        <div class="data-content"><span class="title font-weight-semi-bold">앱카드,<br>빌링(수기)</span><span
-                                                class="data">paypleinc</span></div>
+                                        <div class="data-content">
+                                            <span class="title font-weight-semi-bold">앱카드,<br>빌링(수기)</span>
+                                            <!--  <span class="data">paypleinc</span>-->
+                                            <div class="form-group mb-0 w-100">
+                                                <label class="w-100 mb-0">
+                                                    <input class="form-control" type="text">
+                                                </label>
+                                            </div>
+                                        </div>
                                     </li>
                                     <li class="list col-md-12">
                                         <span class="title font-weight-semi-bold">가맹점구분 정보<br>(영중소)</span>
-                                        <div class="data-content"><span
-                                                class="title font-weight-semi-bold">적용여부</span><span
-                                                class="data">미적용</span></div>
+                                        <div class="data-content">
+                                            <span class="title font-weight-semi-bold">적용여부</span>
+                                            <span class="data">미적용</span>
+                                        </div>
                                     </li>
                                     <li class="list col-md-12">
                                         <span class="title font-weight-semi-bold">&nbsp;</span>
@@ -1654,27 +1971,58 @@
                                     <p class="title font-weight-semi-bold d-flex align-items-center">
                                         <i class="icon ico_check_purple"></i><span>기타</span></p>
                                     <div class="btn-wrap">
-                                        <button class="btn btn-secondary btn-sm btn-round">수정하기</button>
+                                        <!--<button class="btn btn-secondary btn-sm btn-round">수정하기</button>-->
+                                        <button class="btn btn-sm btn-round btn-danger">취소</button>
+                                        <button class="btn btn-primary btn-sm btn-round">저장</button>
                                     </div>
                                 </div>
                                 <ul class="row signup-list-area">
                                     <li class="list col-md-12">
                                         <span class="title font-weight-semi-bold">결제제한</span>
-                                        <div class="data-content"><span
-                                                class="title font-weight-semi-bold">적용여부</span><span
-                                                class="data color-orange-100">미설정</span></div>
+                                        <div class="data-content">
+                                            <span class="title font-weight-semi-bold">적용여부</span>
+                                            <!--                                            <span class="data color-orange-100">미설정</span>-->
+                                            <div class="form-group mb-0">
+                                                <div class="btn-group w-100 custom-radio-container">
+                                                    <div class="custom-radio-group fsz-0">
+                                                        <input class="radio-input" type="radio" name="example2"
+                                                               checked="" id="customRadio3">
+                                                        <label for="customRadio3"
+                                                               class="btn btn-secondary btn-md">적용</label>
+                                                    </div>
+                                                    <div class="custom-radio-group fsz-0">
+                                                        <input class="radio-input" type="radio" name="example2"
+                                                               id="customRadio4">
+                                                        <label for="customRadio4"
+                                                               class="btn btn-secondary btn-md">미적용</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </li>
-                                    <li class="list col-md-12">
+                                    <li class="list col-xl-8">
                                         <span class="title font-weight-semi-bold">&nbsp;</span>
-                                        <div class="data-content"><span
-                                                class="title font-weight-semi-bold">건당 최소금액</span><span
-                                                class="data color-orange-100">미설정</span></div>
+                                        <div class="data-content">
+                                            <span class="title font-weight-semi-bold">건당 최소금액</span>
+                                            <!--<span class="data color-orange-100">미설정</span>-->
+                                            <div class="form-group mb-0 w-100">
+                                                <label class="w-100 mb-0 position-relative unit">
+                                                    <input class="form-control" type="text">
+                                                </label>
+                                            </div>
+                                        </div>
                                     </li>
-                                    <li class="list col-md-12">
+                                    <li class="list col-xl-8 mb-0">
                                         <span class="title font-weight-semi-bold">&nbsp;</span>
-                                        <div class="data-content"><span
-                                                class="title font-weight-semi-bold">건당 최대금액</span><span
-                                                class="data color-orange-100">미설정</span></div>
+                                        <div class="data-content">
+                                            <span class="title font-weight-semi-bold">건당 최대금액</span>
+                                            <!--<span class="data color-orange-100">미설정</span>-->
+                                            <div class="form-group mb-0 w-100">
+                                                <label class="w-100 mb-0 position-relative unit">
+                                                    <input class="form-control" type="text">
+                                                </label>
+                                            </div>
+                                        </div>
                                     </li>
                                 </ul>
                             </div>
@@ -1751,11 +2099,30 @@
                             </div>
                             <!--계좌정보 > 결제수단,상태,수수료 e-->
 
-                            <!--계좌정보 정산 s-->
+                            <!--계좌정보 > 정산 s-->
                             <div class="card">
                                 <div class="title-area">
                                     <p class="title font-weight-semi-bold d-flex align-items-center">
-                                        <i class="icon ico_check_purple"></i><span>정산</span></p>
+                                        <i class="icon ico_check_purple"></i>
+                                        <span>정산</span>
+                                        <i class="hover-area position-relative">
+                                            <i class="icon ico_question_gray"></i>
+                                            <span class="speech-bubble _speech-bubble" style="top : -240px">
+                                                <span class="font-weight-semi-bold">월정산 기준</span><br>
+                                                <span class="font-weight-semi-bold"><span style="margin-right: 5px">&#183;</span>월1회</span><br>
+                                                이번 달 01일 ~ 말일까지의 결제를 다음 달 25일 정산<br>
+                                                <span class="font-weight-semi-bold"><span style="margin-right: 5px">&#183;</span>월2회</span><br>
+                                                a. 이번 달 01일 ~ 15일까지의 결제를 이번 달 23일 정산<br>
+                                                b. 이번 달 16일 ~ 말일까지의 결제를 다음 달 8일 정산<br>
+                                                <br>
+                                                <span class="font-weight-semi-bold">월 4회 기준</span><br>
+                                                <span style="margin-right: 5px">&#183;</span>이번 달 05일 ~ 11일까지의 결제를 이번 달 19일 정산<br>
+                                                <span style="margin-right: 5px">&#183;</span>이번 달 12일 ~ 19일까지의 결제를 이번 달 26일 정산<br>
+                                                <span style="margin-right: 5px">&#183;</span>이번 달 20일 ~ 26일까지의 결제를 다음 달 04일 정산<br>
+                                                <span style="margin-right: 5px">&#183;</span>이번 달 27일 ~ 다음 달 04일까지의 결제를 다음 달 11일 정산<br>
+                                            </span>
+                                        </i>
+                                    </p>
                                     <div class="btn-wrap">
                                         <button class="btn btn-secondary btn-md btn-round">주기 수정하기</button>
                                         <button class="btn btn-secondary btn-md btn-round">계좌 수정하기</button>
@@ -1767,30 +2134,36 @@
                                         <div class="row data-content">
                                             <div class="col-xl">
                                                 <span class="title  font-weight-semi-bold">구분</span>
-                                                <span class="data color-orange-100">미설정</span>
+                                                <!--<span class="data color-orange-100">미설정</span>-->
+                                                <span class="data">일정산</span>
                                             </div>
                                             <div class="col-xl">
                                                 <span class="title  font-weight-semi-bold">주기</span>
-                                                <span class="data color-orange-100">미입력</span>
+                                                <!--<span class="data color-orange-100">미입력</span>-->
+                                                <span class="data">7일</span>
                                             </div>
                                             <div class="col-xl-4">
+                                                <span>&nbsp;</span>
                                             </div>
                                         </div>
                                     </li>
-                                    <li class="list col-md-12">
+                                    <li class="list col-md-12 mb-0">
                                         <span class="title font-weight-semi-bold">계좌</span>
                                         <div class="row data-content">
                                             <div class="col-xl-4">
                                                 <span class="title font-weight-semi-bold">은행</span>
-                                                <span class="data color-orange-100">미입력</span>
+                                                <!--<span class="data color-orange-100">미입력</span>-->
+                                                <span class="data">우리은행</span>
                                             </div>
                                             <div class="col-xl-4">
                                                 <span class="title font-weight-semi-bold">계좌번호</span>
-                                                <span class="data color-orange-100">미입력</span>
+                                                <!--<span class="data color-orange-100">미입력</span>-->
+                                                <span class="data">1002753710560</span>
                                             </div>
                                             <div class="col-xl-4">
                                                 <span class="title font-weight-semi-bold">예금주명</span>
-                                                <span class="data color-orange-100">미입력</span>
+                                                <!--<span class="data color-orange-100">미입력</span>-->
+                                                <span class="data">정다운</span>
                                             </div>
                                         </div>
                                     </li>
@@ -1799,44 +2172,66 @@
                                     <i class="icon ico_clock_black"></i>정산 주기 수정이력
                                 </button>
                             </div>
-                            <!--계좌정보 정산 e-->
+                            <!--계좌정보 > 정산 e-->
 
-                            <!--계좌정보 정산 s-->
+                            <!--계좌정보 > 원천사 정보 s-->
                             <div class="card">
                                 <div class="title-area">
                                     <p class="title font-weight-semi-bold d-flex align-items-center">
                                         <i class="icon ico_check_purple"></i><span>원천사 정보</span></p>
                                     <div class="btn-wrap">
-                                        <button class="btn btn-secondary btn-sm btn-round">수정하기</button>
+                                        <!--<button class="btn btn-secondary btn-sm btn-round">수정하기</button>-->
+                                        <button class="btn btn-sm btn-round btn-danger">취소</button>
+                                        <button class="btn btn-primary btn-sm btn-round">저장</button>
                                     </div>
                                 </div>
                                 <ul class="row signup-list-area">
-                                    <li class="list col-md-12">
+                                    <li class="list col-xl-7">
                                         <span class="title font-weight-semi-bold">원천사</span>
                                         <span class="data">나이스</span>
                                     </li>
-                                    <li class="list col-md-12">
+                                    <li class="list col-xl-7">
                                         <span class="title font-weight-semi-bold">CMS Code</span>
-                                        <span class="data color-orange-100">미입력</span>
+                                        <!--<span class="data color-orange-100">미입력</span>-->
+                                        <div class="form-group mb-0 w-100">
+                                            <label class="w-100 mb-0">
+                                                <input class="form-control" type="text">
+                                            </label>
+                                        </div>
                                     </li>
-                                    <li class="list col-md-12 ">
+                                    <li class="list col-xl-7 ">
                                         <span class="title font-weight-semi-bold">Client ID</span>
-                                        <span class="data color-orange-100">미입력</span>
+                                        <!--<span class="data color-orange-100">미입력</span>-->
+                                        <div class="form-group mb-0 w-100">
+                                            <label class="w-100 mb-0">
+                                                <input class="form-control" type="text">
+                                            </label>
+                                        </div>
                                     </li>
-                                    <li class="list col-md-12 ">
-                                        <span class="title font-weight-semi-bold">Client ID</span>
-                                        <span class="data color-orange-100">미입력</span>
+                                    <li class="list col-xl-7 ">
+                                        <span class="title font-weight-semi-bold">Client Secret</span>
+                                        <!--<span class="data color-orange-100">미입력</span>-->
+                                        <div class="form-group mb-0 w-100">
+                                            <label class="w-100 mb-0">
+                                                <input class="form-control" type="text">
+                                            </label>
+                                        </div>
                                     </li>
-                                    <li class="list col-md-12 mb-0">
-                                        <span class="title font-weight-semi-bold">Client ID</span>
-                                        <span class="data color-orange-100">미입력</span>
+                                    <li class="list col-xl-7 mb-0">
+                                        <span class="title font-weight-semi-bold">API-Key</span>
+                                        <!--<span class="data color-orange-100">미입력</span>-->
+                                        <div class="form-group mb-0 w-100">
+                                            <label class="w-100 mb-0">
+                                                <input class="form-control" type="text">
+                                            </label>
+                                        </div>
                                     </li>
                                 </ul>
                                 <button class="caption justify-content-end btn-reset text-decoration-underline color-gray-000">
                                     <i class="icon ico_clock_black"></i>수정이력
                                 </button>
                             </div>
-                            <!--계좌정보 정산 e-->
+                            <!--계좌정보 > 원천사 정보 e-->
 
                             <!--계좌정보 > 기타 s-->
                             <div class="card">
@@ -1844,27 +2239,58 @@
                                     <p class="title font-weight-semi-bold d-flex align-items-center">
                                         <i class="icon ico_check_purple"></i><span>기타</span></p>
                                     <div class="btn-wrap">
-                                        <button class="btn btn-secondary btn-sm btn-round">수정하기</button>
+                                        <!--<button class="btn btn-secondary btn-sm btn-round">수정하기</button>-->
+                                        <button class="btn btn-sm btn-round btn-danger">취소</button>
+                                        <button class="btn btn-primary btn-sm btn-round">저장</button>
                                     </div>
                                 </div>
                                 <ul class="row signup-list-area">
                                     <li class="list col-md-12">
                                         <span class="title font-weight-semi-bold">결제제한</span>
-                                        <div class="data-content"><span
-                                                class="title font-weight-semi-bold">적용여부</span><span
-                                                class="data color-orange-100">미설정</span></div>
+                                        <div class="data-content">
+                                            <span class="title font-weight-semi-bold">적용여부</span>
+                                            <!--                                            <span class="data color-orange-100">미설정</span>-->
+                                            <div class="form-group mb-0">
+                                                <div class="btn-group w-100 custom-radio-container">
+                                                    <div class="custom-radio-group fsz-0">
+                                                        <input class="radio-input" type="radio" name="example1"
+                                                               checked="" id="customRadio1">
+                                                        <label for="customRadio1"
+                                                               class="btn btn-secondary btn-md">적용</label>
+                                                    </div>
+                                                    <div class="custom-radio-group fsz-0">
+                                                        <input class="radio-input" type="radio" name="example1"
+                                                               id="customRadio2">
+                                                        <label for="customRadio2"
+                                                               class="btn btn-secondary btn-md">미적용</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </li>
-                                    <li class="list col-md-12">
+                                    <li class="list col-xl-8">
                                         <span class="title font-weight-semi-bold">&nbsp;</span>
-                                        <div class="data-content"><span
-                                                class="title font-weight-semi-bold">건당 최소금액</span><span
-                                                class="data color-orange-100">미설정</span></div>
+                                        <div class="data-content">
+                                            <span class="title font-weight-semi-bold">건당 최소금액</span>
+                                            <!--<span class="data color-orange-100">미설정</span>-->
+                                            <div class="form-group mb-0 w-100">
+                                                <label class="w-100 mb-0 position-relative unit">
+                                                    <input class="form-control" type="text">
+                                                </label>
+                                            </div>
+                                        </div>
                                     </li>
-                                    <li class="list col-md-12">
+                                    <li class="list col-xl-8 mb-0">
                                         <span class="title font-weight-semi-bold">&nbsp;</span>
-                                        <div class="data-content"><span
-                                                class="title font-weight-semi-bold">건당 최대금액</span><span
-                                                class="data color-orange-100">미설정</span></div>
+                                        <div class="data-content">
+                                            <span class="title font-weight-semi-bold">건당 최대금액</span>
+                                            <!--<span class="data color-orange-100">미설정</span>-->
+                                            <div class="form-group mb-0 w-100">
+                                                <label class="w-100 mb-0 position-relative unit">
+                                                    <input class="form-control" type="text">
+                                                </label>
+                                            </div>
+                                        </div>
                                     </li>
                                 </ul>
                             </div>
@@ -2040,7 +2466,26 @@
                             <div class="card">
                                 <div class="title-area">
                                     <p class="title font-weight-semi-bold d-flex align-items-center">
-                                        <i class="icon ico_check_purple"></i><span>정산</span></p>
+                                        <i class="icon ico_check_purple"></i>
+                                        <span>정산</span>
+                                        <i class="hover-area position-relative">
+                                            <i class="icon ico_question_gray"></i>
+                                            <span class="speech-bubble _speech-bubble" style="top : -240px">
+                                                <span class="font-weight-semi-bold">월정산 기준</span><br>
+                                                <span class="font-weight-semi-bold"><span style="margin-right: 5px">&#183;</span>월1회</span><br>
+                                                이번 달 01일 ~ 말일까지의 결제를 다음 달 25일 정산<br>
+                                                <span class="font-weight-semi-bold"><span style="margin-right: 5px">&#183;</span>월2회</span><br>
+                                                a. 이번 달 01일 ~ 15일까지의 결제를 이번 달 23일 정산<br>
+                                                b. 이번 달 16일 ~ 말일까지의 결제를 다음 달 8일 정산<br>
+                                                <br>
+                                                <span class="font-weight-semi-bold">월 4회 기준</span><br>
+                                                <span style="margin-right: 5px">&#183;</span>이번 달 05일 ~ 11일까지의 결제를 이번 달 19일 정산<br>
+                                                <span style="margin-right: 5px">&#183;</span>이번 달 12일 ~ 19일까지의 결제를 이번 달 26일 정산<br>
+                                                <span style="margin-right: 5px">&#183;</span>이번 달 20일 ~ 26일까지의 결제를 다음 달 04일 정산<br>
+                                                <span style="margin-right: 5px">&#183;</span>이번 달 27일 ~ 다음 달 04일까지의 결제를 다음 달 11일 정산<br>
+                                            </span>
+                                        </i>
+                                    </p>
                                     <div class="btn-wrap">
                                         <button class="btn btn-secondary btn-md btn-round">주기 수정하기</button>
                                         <button class="btn btn-secondary btn-md btn-round">계좌 수정하기</button>
@@ -2052,30 +2497,36 @@
                                         <div class="row data-content">
                                             <div class="col-xl">
                                                 <span class="title  font-weight-semi-bold">구분</span>
-                                                <span class="data color-orange-100">미설정</span>
+                                                <!--<span class="data color-orange-100">미설정</span>-->
+                                                <span class="data">일정산</span>
                                             </div>
                                             <div class="col-xl">
                                                 <span class="title  font-weight-semi-bold">주기</span>
-                                                <span class="data color-orange-100">미입력</span>
+                                                <!--<span class="data color-orange-100">미입력</span>-->
+                                                <span class="data">7일</span>
                                             </div>
                                             <div class="col-xl-4">
+                                                <span>&nbsp;</span>
                                             </div>
                                         </div>
                                     </li>
-                                    <li class="list col-md-12">
+                                    <li class="list col-md-12 mb-0">
                                         <span class="title font-weight-semi-bold">계좌</span>
                                         <div class="row data-content">
                                             <div class="col-xl-4">
                                                 <span class="title font-weight-semi-bold">은행</span>
-                                                <span class="data color-orange-100">미입력</span>
+                                                <!--<span class="data color-orange-100">미입력</span>-->
+                                                <span class="data">우리은행</span>
                                             </div>
                                             <div class="col-xl-4">
                                                 <span class="title font-weight-semi-bold">계좌번호</span>
-                                                <span class="data color-orange-100">미입력</span>
+                                                <!--<span class="data color-orange-100">미입력</span>-->
+                                                <span class="data">1002753710560</span>
                                             </div>
                                             <div class="col-xl-4">
                                                 <span class="title font-weight-semi-bold">예금주명</span>
-                                                <span class="data color-orange-100">미입력</span>
+                                                <!--<span class="data color-orange-100">미입력</span>-->
+                                                <span class="data">정다운</span>
                                             </div>
                                         </div>
                                     </li>
@@ -2091,9 +2542,6 @@
                                 <div class="title-area">
                                     <p class="title font-weight-semi-bold d-flex align-items-center">
                                         <i class="icon ico_check_purple"></i><span>원천사 정보</span></p>
-                                    <div class="btn-wrap">
-                                        <button class="btn btn-secondary btn-sm btn-round">수정하기</button>
-                                    </div>
                                 </div>
                                 <ul class="row signup-list-area">
                                     <li class="list col-md-12">
@@ -2204,27 +2652,58 @@
                                     <p class="title font-weight-semi-bold d-flex align-items-center">
                                         <i class="icon ico_check_purple"></i><span>기타</span></p>
                                     <div class="btn-wrap">
-                                        <button class="btn btn-secondary btn-sm btn-round">수정하기</button>
+                                        <!--<button class="btn btn-secondary btn-sm btn-round">수정하기</button>-->
+                                        <button class="btn btn-sm btn-round btn-danger">취소</button>
+                                        <button class="btn btn-primary btn-sm btn-round">저장</button>
                                     </div>
                                 </div>
                                 <ul class="row signup-list-area">
                                     <li class="list col-md-12">
                                         <span class="title font-weight-semi-bold">결제제한</span>
-                                        <div class="data-content"><span
-                                                class="title font-weight-semi-bold">적용여부</span><span
-                                                class="data color-orange-100">미설정</span></div>
+                                        <div class="data-content">
+                                            <span class="title font-weight-semi-bold">적용여부</span>
+                                            <!--                                            <span class="data color-orange-100">미설정</span>-->
+                                            <div class="form-group mb-0">
+                                                <div class="btn-group w-100 custom-radio-container">
+                                                    <div class="custom-radio-group fsz-0">
+                                                        <input class="radio-input" type="radio" name="example3"
+                                                               checked="" id="customRadio5">
+                                                        <label for="customRadio5"
+                                                               class="btn btn-secondary btn-md">적용</label>
+                                                    </div>
+                                                    <div class="custom-radio-group fsz-0">
+                                                        <input class="radio-input" type="radio" name="example3"
+                                                               id="customRadio6">
+                                                        <label for="customRadio6"
+                                                               class="btn btn-secondary btn-md">미적용</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </li>
-                                    <li class="list col-md-12">
+                                    <li class="list col-xl-8">
                                         <span class="title font-weight-semi-bold">&nbsp;</span>
-                                        <div class="data-content"><span
-                                                class="title font-weight-semi-bold">건당 최소금액</span><span
-                                                class="data color-orange-100">미설정</span></div>
+                                        <div class="data-content">
+                                            <span class="title font-weight-semi-bold">건당 최소금액</span>
+                                            <!--<span class="data color-orange-100">미설정</span>-->
+                                            <div class="form-group mb-0 w-100">
+                                                <label class="w-100 mb-0 position-relative unit">
+                                                    <input class="form-control" type="text">
+                                                </label>
+                                            </div>
+                                        </div>
                                     </li>
-                                    <li class="list col-md-12">
+                                    <li class="list col-xl-8 mb-0">
                                         <span class="title font-weight-semi-bold">&nbsp;</span>
-                                        <div class="data-content"><span
-                                                class="title font-weight-semi-bold">건당 최대금액</span><span
-                                                class="data color-orange-100">미설정</span></div>
+                                        <div class="data-content">
+                                            <span class="title font-weight-semi-bold">건당 최대금액</span>
+                                            <!--<span class="data color-orange-100">미설정</span>-->
+                                            <div class="form-group mb-0 w-100">
+                                                <label class="w-100 mb-0 position-relative unit">
+                                                    <input class="form-control" type="text">
+                                                </label>
+                                            </div>
+                                        </div>
                                     </li>
                                 </ul>
                             </div>
@@ -2296,7 +2775,26 @@
                             <div class="card">
                                 <div class="title-area">
                                     <p class="title font-weight-semi-bold d-flex align-items-center">
-                                        <i class="icon ico_check_purple"></i><span>정산</span></p>
+                                        <i class="icon ico_check_purple"></i>
+                                        <span>정산</span>
+                                        <i class="hover-area position-relative">
+                                            <i class="icon ico_question_gray"></i>
+                                            <span class="speech-bubble _speech-bubble" style="top : -240px">
+                                                <span class="font-weight-semi-bold">월정산 기준</span><br>
+                                                <span class="font-weight-semi-bold"><span style="margin-right: 5px">&#183;</span>월1회</span><br>
+                                                이번 달 01일 ~ 말일까지의 결제를 다음 달 25일 정산<br>
+                                                <span class="font-weight-semi-bold"><span style="margin-right: 5px">&#183;</span>월2회</span><br>
+                                                a. 이번 달 01일 ~ 15일까지의 결제를 이번 달 23일 정산<br>
+                                                b. 이번 달 16일 ~ 말일까지의 결제를 다음 달 8일 정산<br>
+                                                <br>
+                                                <span class="font-weight-semi-bold">월 4회 기준</span><br>
+                                                <span style="margin-right: 5px">&#183;</span>이번 달 05일 ~ 11일까지의 결제를 이번 달 19일 정산<br>
+                                                <span style="margin-right: 5px">&#183;</span>이번 달 12일 ~ 19일까지의 결제를 이번 달 26일 정산<br>
+                                                <span style="margin-right: 5px">&#183;</span>이번 달 20일 ~ 26일까지의 결제를 다음 달 04일 정산<br>
+                                                <span style="margin-right: 5px">&#183;</span>이번 달 27일 ~ 다음 달 04일까지의 결제를 다음 달 11일 정산<br>
+                                            </span>
+                                        </i>
+                                    </p>
                                     <div class="btn-wrap">
                                         <button class="btn btn-secondary btn-md btn-round">주기 수정하기</button>
                                         <button class="btn btn-secondary btn-md btn-round">계좌 수정하기</button>
@@ -2308,30 +2806,36 @@
                                         <div class="row data-content">
                                             <div class="col-xl">
                                                 <span class="title  font-weight-semi-bold">구분</span>
-                                                <span class="data color-orange-100">미설정</span>
+                                                <!--<span class="data color-orange-100">미설정</span>-->
+                                                <span class="data">일정산</span>
                                             </div>
                                             <div class="col-xl">
                                                 <span class="title  font-weight-semi-bold">주기</span>
-                                                <span class="data color-orange-100">미입력</span>
+                                                <!--<span class="data color-orange-100">미입력</span>-->
+                                                <span class="data">7일</span>
                                             </div>
                                             <div class="col-xl-4">
+                                                <span>&nbsp;</span>
                                             </div>
                                         </div>
                                     </li>
-                                    <li class="list col-md-12">
+                                    <li class="list col-md-12 mb-0">
                                         <span class="title font-weight-semi-bold">계좌</span>
                                         <div class="row data-content">
                                             <div class="col-xl-4">
                                                 <span class="title font-weight-semi-bold">은행</span>
-                                                <span class="data color-orange-100">미입력</span>
+                                                <!--<span class="data color-orange-100">미입력</span>-->
+                                                <span class="data">우리은행</span>
                                             </div>
                                             <div class="col-xl-4">
                                                 <span class="title font-weight-semi-bold">계좌번호</span>
-                                                <span class="data color-orange-100">미입력</span>
+                                                <!--<span class="data color-orange-100">미입력</span>-->
+                                                <span class="data">1002753710560</span>
                                             </div>
                                             <div class="col-xl-4">
                                                 <span class="title font-weight-semi-bold">예금주명</span>
-                                                <span class="data color-orange-100">미입력</span>
+                                                <!--<span class="data color-orange-100">미입력</span>-->
+                                                <span class="data">정다운</span>
                                             </div>
                                         </div>
                                     </li>
@@ -2356,7 +2860,7 @@
                                         <span class="title font-weight-semi-bold">원천사 선택</span>
                                         <span class="data">나이스</span>
                                     </li>
-                                    <li class="list col-md-12">
+                                    <li class="list col-md-12 align-items-start">
                                         <span class="title font-weight-semi-bold">MID(source_id)</span>
                                         <span class="data">paypleinc</span>
                                     </li>
@@ -2457,21 +2961,46 @@
                                     <p class="title font-weight-semi-bold d-flex align-items-center">
                                         <i class="icon ico_check_purple"></i><span>기타</span></p>
                                     <div class="btn-wrap">
-                                        <button class="btn btn-secondary btn-sm btn-round">수정하기</button>
+                                        <!--<button class="btn btn-secondary btn-sm btn-round">수정하기</button>-->
+                                        <button class="btn btn-sm btn-round btn-danger">취소</button>
+                                        <button class="btn btn-primary btn-sm btn-round">저장</button>
                                     </div>
                                 </div>
                                 <ul class="row signup-list-area">
                                     <li class="list col-md-12">
                                         <span class="title font-weight-semi-bold">결제제한</span>
-                                        <div class="data-content"><span
-                                                class="title font-weight-semi-bold">적용여부</span><span
-                                                class="data color-orange-100">미설정</span></div>
+                                        <div class="data-content">
+                                            <span class="title font-weight-semi-bold">적용여부</span>
+                                            <!--                                            <span class="data color-orange-100">미설정</span>-->
+                                            <div class="form-group mb-0">
+                                                <div class="btn-group w-100 custom-radio-container">
+                                                    <div class="custom-radio-group fsz-0">
+                                                        <input class="radio-input" type="radio" name="example4"
+                                                               checked="" id="customRadio7">
+                                                        <label for="customRadio7"
+                                                               class="btn btn-secondary btn-md">적용</label>
+                                                    </div>
+                                                    <div class="custom-radio-group fsz-0">
+                                                        <input class="radio-input" type="radio" name="example4"
+                                                               id="customRadio8">
+                                                        <label for="customRadio8"
+                                                               class="btn btn-secondary btn-md">미적용</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </li>
-                                    <li class="list col-md-12">
+                                    <li class="list col-xl-8 mb-0">
                                         <span class="title font-weight-semi-bold">&nbsp;</span>
-                                        <div class="data-content"><span
-                                                class="title font-weight-semi-bold">건당 최대 입금액</span><span
-                                                class="data color-orange-100">미설정</span></div>
+                                        <div class="data-content">
+                                            <span class="title font-weight-semi-bold">건당 최대 입금액</span>
+                                            <!--<span class="data color-orange-100">미설정</span>-->
+                                            <div class="form-group mb-0 w-100">
+                                                <label class="w-100 mb-0 position-relative unit">
+                                                    <input class="form-control" type="text">
+                                                </label>
+                                            </div>
+                                        </div>
                                     </li>
                                 </ul>
                             </div>
@@ -2551,7 +3080,7 @@
                                             </div>
                                         </div>
                                     </li>
-                                    <li class="list col-md-12">
+                                    <li class="list col-md-12 mb-0">
                                         <span class="title font-weight-semi-bold">가상계좌</span>
                                         <div class="row data-content">
                                             <div class="col-xl-4">
