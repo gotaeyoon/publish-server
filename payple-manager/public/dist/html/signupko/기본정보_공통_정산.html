@@ -666,77 +666,634 @@
 </div>
         <article class="content-container">
             <!-- 컨텐츠 s-->
-            <section class="notice-section">
-                <h3 class="main-title font-weight-bold">공지사항</h3>
-                <div class="card">
-                    <h5 class="filter-title font-weight-semi-bold">
-                        <i class="icon ico_edit_purple"></i>
-                        <span>게시글</span>
-                    </h5>
-                    <ul class="row notice-detail-list">
-                        <li class="col-lg-6">
-                            <span class="title font-weight-semi-bold">제목</span>
-                            <span class="desc">[정산] 해외 결제 정산 기준 안내</span>
-                        </li>
-                        <li class="col-lg-6">
-                            <span class="title font-weight-semi-bold">최종 수정자</span>
-                            <span class="desc">정다운</span>
-                        </li>
-                        <li class="col-lg-6">
-                            <span class="title font-weight-semi-bold">작성일</span>
-                            <span class="desc">2022-12-27</span>
-                        </li>
-                        <li class="col-lg-6">
-                            <span class="title font-weight-semi-bold">최종 수정일</span>
-                            <span class="desc">2022-12-28</span>
-                        </li>
-                        <li class="col-lg-6">
-                            <span class="title font-weight-semi-bold">작성자</span>
-                            <span class="desc">정다운</span>
-                        </li>
-                        <li class="col-lg-6">
-                            <span class="title font-weight-semi-bold">공개여부</span>
-                            <span class="desc">공개</span>
-                        </li>
-                        <li class="col-lg-6">
-                            <span class="title font-weight-semi-bold">조회수</span>
-                            <span class="desc">100</span>
+            <section class="signup-section">
+                <!--탭 버튼 s-->
+                <div class="nav-tabs-layout">
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" data-toggle="tab" data-target="#dummy2"
+                                    aria-controls="dummy1">카드
+                            </button>
                         </li>
                     </ul>
-                    <div class="text-container">
-                        <p class="title font-weight-semi-bold">내용</p>
-                        <div class="text-view">
-                            <!--content 영역-->
+                </div>
+                <!--탭 버튼 e-->
+
+                <!--탭 컨텐츠 s-->
+                <div class="signup-layout">
+                    <div class="tab-content">
+                        <!--카드 정보 s-->
+                        <div class="tab-pane active" id="dummy2" role="tabpanel">
+
+                            <!--정산 기본값-->
+                            <div class="card">
+                                <div class="title-area">
+                                    <p class="title font-weight-semi-bold d-flex align-items-center">
+                                        <i class="icon ico_check_purple"></i>
+                                        <span>정산</span>
+                                        <i class="hover-area position-relative">
+                                            <i class="icon ico_question_gray"></i>
+                                            <span class="speech-bubble _speech-bubble" style="top : -240px">
+                                                <span class="font-weight-semi-bold">월정산 기준</span><br>
+                                                <span class="font-weight-semi-bold"><span style="margin-right: 5px">&#183;</span>월1회</span><br>
+                                                이번 달 01일 ~ 말일까지의 결제를 다음 달 25일 정산<br>
+                                                <span class="font-weight-semi-bold"><span style="margin-right: 5px">&#183;</span>월2회</span><br>
+                                                a. 이번 달 01일 ~ 15일까지의 결제를 이번 달 23일 정산<br>
+                                                b. 이번 달 16일 ~ 말일까지의 결제를 다음 달 8일 정산<br>
+                                                <br>
+                                                <span class="font-weight-semi-bold">월 4회 기준</span><br>
+                                                <span style="margin-right: 5px">&#183;</span>이번 달 05일 ~ 11일까지의 결제를 이번 달 19일 정산<br>
+                                                <span style="margin-right: 5px">&#183;</span>이번 달 12일 ~ 19일까지의 결제를 이번 달 26일 정산<br>
+                                                <span style="margin-right: 5px">&#183;</span>이번 달 20일 ~ 26일까지의 결제를 다음 달 04일 정산<br>
+                                                <span style="margin-right: 5px">&#183;</span>이번 달 27일 ~ 다음 달 04일까지의 결제를 다음 달 11일 정산<br>
+                                            </span>
+                                        </i>
+                                    </p>
+                                    <div class="btn-wrap">
+                                        <button class="btn btn-secondary btn-md btn-round">주기 수정하기</button>
+                                        <button class="btn btn-secondary btn-md btn-round">계좌 수정하기</button>
+                                    </div>
+                                </div>
+                                <ul class="row signup-list-area">
+                                    <li class="list col-md-12">
+                                        <span class="title font-weight-semi-bold">주기</span>
+                                        <div class="row data-content">
+                                            <div class="col-xl">
+                                                <span class="title  font-weight-semi-bold">구분</span>
+                                                <span class="data color-orange-100">미설정</span>
+                                            </div>
+                                            <div class="col-xl">
+                                                <span class="title  font-weight-semi-bold">주기</span>
+                                                <span class="data color-orange-100">미입력</span>
+                                            </div>
+                                            <div class="col-xl-4">
+                                                <span>&nbsp;</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list col-md-12 mb-0">
+                                        <span class="title font-weight-semi-bold">계좌</span>
+                                        <div class="row data-content">
+                                            <div class="col-xl-4">
+                                                <span class="title font-weight-semi-bold">은행</span>
+                                                <span class="data color-orange-100">미입력</span>
+                                            </div>
+                                            <div class="col-xl-4">
+                                                <span class="title font-weight-semi-bold">계좌번호</span>
+                                                <span class="data color-orange-100">미입력</span>
+                                            </div>
+                                            <div class="col-xl-4">
+                                                <span class="title font-weight-semi-bold">예금주명</span>
+                                                <span class="data color-orange-100">미입력</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="caption position-relative clearfix">
+                                    <button class="btn-reset text-decoration-underline color-gray-000 float-right">
+                                        <i class="icon ico_clock_black"></i>정산 주기 수정이력
+                                    </button>
+                                </div>
+                            </div>
+                            <!--정산 기본값-->
+
+                            <!--정산 계좌수정하기 클릭시 s-->
+                            <div class="card">
+                                <div class="title-area">
+                                    <p class="title font-weight-semi-bold d-flex align-items-center">
+                                        <i class="icon ico_check_purple"></i>
+                                        <span>정산</span>
+                                        <i class="hover-area position-relative">
+                                            <i class="icon ico_question_gray"></i>
+                                            <span class="speech-bubble _speech-bubble" style="top : -240px">
+                                                <span class="font-weight-semi-bold">월정산 기준</span><br>
+                                                <span class="font-weight-semi-bold"><span style="margin-right: 5px">&#183;</span>월1회</span><br>
+                                                이번 달 01일 ~ 말일까지의 결제를 다음 달 25일 정산<br>
+                                                <span class="font-weight-semi-bold"><span style="margin-right: 5px">&#183;</span>월2회</span><br>
+                                                a. 이번 달 01일 ~ 15일까지의 결제를 이번 달 23일 정산<br>
+                                                b. 이번 달 16일 ~ 말일까지의 결제를 다음 달 8일 정산<br>
+                                                <br>
+                                                <span class="font-weight-semi-bold">월 4회 기준</span><br>
+                                                <span style="margin-right: 5px">&#183;</span>이번 달 05일 ~ 11일까지의 결제를 이번 달 19일 정산<br>
+                                                <span style="margin-right: 5px">&#183;</span>이번 달 12일 ~ 19일까지의 결제를 이번 달 26일 정산<br>
+                                                <span style="margin-right: 5px">&#183;</span>이번 달 20일 ~ 26일까지의 결제를 다음 달 04일 정산<br>
+                                                <span style="margin-right: 5px">&#183;</span>이번 달 27일 ~ 다음 달 04일까지의 결제를 다음 달 11일 정산<br>
+                                            </span>
+                                        </i>
+                                    </p>
+                                    <div class="btn-wrap">
+                                        <!--<button class="btn btn-secondary btn-md btn-round">주기 수정하기</button>-->
+                                        <!--<button class="btn btn-secondary btn-md btn-round">계좌 수정하기</button>-->
+                                        <button class="btn btn-sm btn-round btn-danger">취소</button>
+                                        <button class="btn btn-sm btn-round btn-primary">저장</button>
+                                    </div>
+                                </div>
+                                <ul class="row signup-list-area">
+                                    <li class="list col-md-12">
+                                        <span class="title font-weight-semi-bold">주기</span>
+                                        <div class="row data-content">
+                                            <div class="col-xl">
+                                                <span class="title  font-weight-semi-bold">구분</span>
+                                                <span class="data">일정산</span>
+                                            </div>
+                                            <div class="col-xl">
+                                                <span class="title  font-weight-semi-bold">주기</span>
+                                                <span class="data">7일</span>
+                                            </div>
+                                            <div class="col-xl-4">
+                                                <span>&nbsp;</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list col-md-12 mb-0">
+                                        <span class="title font-weight-semi-bold">계좌</span>
+                                        <!--  <div class="row data-content">
+                                              <div class="col-xl-4">
+                                                  <span class="title font-weight-semi-bold">은행</span>
+                                                  <span class="data color-orange-100">미입력</span>
+                                              </div>
+                                              <div class="col-xl-4">
+                                                  <span class="title font-weight-semi-bold">계좌번호</span>
+                                                  <span class="data color-orange-100">미입력</span>
+                                              </div>
+                                              <div class="col-xl-4">
+                                                  <span class="title font-weight-semi-bold">예금주명</span>
+                                                  <span class="data color-orange-100">미입력</span>
+                                              </div>
+                                          </div>-->
+                                        <div class="row data-content">
+                                            <div class="col-xl">
+                                                <div class="form-group mb-0 w-100 min-w-190">
+                                                    <label class="select-box _select-box">
+                                                        <input type="hidden" class="select-value _select-value">
+                                                        <span class="value-text _value-text">은행 선택</span>
+                                                        <i class="icon ico_select_arrow_down">아래화살표</i>
+                                                        <ul class="options h-320px">
+                                                            <li class="option" value="1">KDB산업은행</li>
+                                                            <li class="option" value="2">IBK기업은행</li>
+                                                            <li class="option" value="3">KB국민은행</li>
+                                                            <li class="option" value="4">수협은행(수협중앙회)</li>
+                                                            <li class="option" value="5">NH농협은행</li>
+                                                            <li class="option" value="6">농협중앙회(단위농축협)</li>
+                                                            <li class="option" value="7">우리은행</li>
+                                                            <li class="option" value="8">SC제일은행</li>
+                                                            <li class="option" value="9">한국시티은행</li>
+                                                            <li class="option" value="10">대구은행</li>
+                                                            <li class="option" value="11">부산은행</li>
+                                                            <li class="option" value="12">광주은행</li>
+                                                            <li class="option" value="13">제주은행</li>
+                                                            <li class="option" value="14">전북은행</li>
+                                                            <li class="option" value="15">경남은행</li>
+                                                            <li class="option" value="16">하나은행</li>
+                                                            <li class="option" value="17">신한은행</li>
+                                                            <li class="option" value="18">케이뱅크</li>
+                                                            <li class="option" value="19">카카오뱅크</li>
+                                                            <li class="option" value="20">토스뱅크</li>
+                                                            <li class="option" value="21">새마을금고중앙회</li>
+                                                            <li class="option" value="22">신협중앙회</li>
+                                                            <li class="option" value="23">저축은행중앙회</li>
+                                                            <li class="option" value="24">산림조합중앙회</li>
+                                                            <li class="option" value="25">우정사업본부(우체국)</li>
+                                                        </ul>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl">
+                                                <div class="form-group mb-0 w-100 min-w-190">
+                                                    <label class="w-100 mb-0">
+                                                        <input class="form-control" type="text" placeholder="계좌번호 입력">
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl">
+                                                <div class="form-group mb-0">
+                                                    <label class="w-100 mb-0">
+                                                        <input class="form-control" type="text" disabled placeholder="예금주명">
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-auto">
+                                                <button class="btn btn-info btn-sm">조회</button>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="caption position-relative clearfix">
+                                   <!-- <button class="btn-reset text-decoration-underline color-gray-000 float-right">
+                                        <i class="icon ico_clock_black"></i>정산 주기 수정이력
+                                    </button>-->
+                                </div>
+                            </div>
+                            <!--정산 계좌수정하기 클릭시 e-->
+
+                            <!--정산 조회 validation 성공시-->
+                            <div class="card">
+                                <div class="title-area">
+                                    <p class="title font-weight-semi-bold d-flex align-items-center">
+                                        <i class="icon ico_check_purple"></i>
+                                        <span>정산</span>
+                                        <i class="hover-area position-relative">
+                                            <i class="icon ico_question_gray"></i>
+                                            <span class="speech-bubble _speech-bubble" style="top : -240px">
+                                                <span class="font-weight-semi-bold">월정산 기준</span><br>
+                                                <span class="font-weight-semi-bold"><span style="margin-right: 5px">&#183;</span>월1회</span><br>
+                                                이번 달 01일 ~ 말일까지의 결제를 다음 달 25일 정산<br>
+                                                <span class="font-weight-semi-bold"><span style="margin-right: 5px">&#183;</span>월2회</span><br>
+                                                a. 이번 달 01일 ~ 15일까지의 결제를 이번 달 23일 정산<br>
+                                                b. 이번 달 16일 ~ 말일까지의 결제를 다음 달 8일 정산<br>
+                                                <br>
+                                                <span class="font-weight-semi-bold">월 4회 기준</span><br>
+                                                <span style="margin-right: 5px">&#183;</span>이번 달 05일 ~ 11일까지의 결제를 이번 달 19일 정산<br>
+                                                <span style="margin-right: 5px">&#183;</span>이번 달 12일 ~ 19일까지의 결제를 이번 달 26일 정산<br>
+                                                <span style="margin-right: 5px">&#183;</span>이번 달 20일 ~ 26일까지의 결제를 다음 달 04일 정산<br>
+                                                <span style="margin-right: 5px">&#183;</span>이번 달 27일 ~ 다음 달 04일까지의 결제를 다음 달 11일 정산<br>
+                                            </span>
+                                        </i>
+                                    </p>
+                                    <div class="btn-wrap">
+                                        <!--<button class="btn btn-secondary btn-md btn-round">주기 수정하기</button>-->
+                                        <!--<button class="btn btn-secondary btn-md btn-round">계좌 수정하기</button>-->
+                                        <button class="btn btn-sm btn-round btn-danger">취소</button>
+                                        <button class="btn btn-sm btn-round btn-primary">저장</button>
+                                    </div>
+                                </div>
+                                <ul class="row signup-list-area">
+                                    <li class="list col-md-12">
+                                        <span class="title font-weight-semi-bold">주기</span>
+                                        <div class="row data-content">
+                                            <div class="col-xl">
+                                                <span class="title  font-weight-semi-bold">구분</span>
+                                                <span class="data">일정산</span>
+                                            </div>
+                                            <div class="col-xl">
+                                                <span class="title  font-weight-semi-bold">주기</span>
+                                                <span class="data">7일</span>
+                                            </div>
+                                            <div class="col-xl-4">
+                                                <span>&nbsp;</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list col-md-12 mb-0">
+                                        <span class="title font-weight-semi-bold">계좌</span>
+                                        <!--  <div class="row data-content">
+                                              <div class="col-xl-4">
+                                                  <span class="title font-weight-semi-bold">은행</span>
+                                                  <span class="data color-orange-100">미입력</span>
+                                              </div>
+                                              <div class="col-xl-4">
+                                                  <span class="title font-weight-semi-bold">계좌번호</span>
+                                                  <span class="data color-orange-100">미입력</span>
+                                              </div>
+                                              <div class="col-xl-4">
+                                                  <span class="title font-weight-semi-bold">예금주명</span>
+                                                  <span class="data color-orange-100">미입력</span>
+                                              </div>
+                                          </div>-->
+                                        <div class="row data-content">
+                                            <div class="col-xl">
+                                                <div class="form-group mb-0 w-100 min-w-190">
+                                                    <label class="select-box _select-box">
+                                                        <input type="hidden" class="select-value _select-value"  value="7">
+                                                        <span class="value-text _value-text color-red-100">우리은행</span>
+                                                        <i class="icon ico_select_arrow_down">아래화살표</i>
+                                                        <ul class="options h-320px">
+                                                            <li class="option" value="1">KDB산업은행</li>
+                                                            <li class="option" value="2">IBK기업은행</li>
+                                                            <li class="option" value="3">KB국민은행</li>
+                                                            <li class="option" value="4">수협은행(수협중앙회)</li>
+                                                            <li class="option" value="5">NH농협은행</li>
+                                                            <li class="option" value="6">농협중앙회(단위농축협)</li>
+                                                            <li class="option" value="7">우리은행</li>
+                                                            <li class="option" value="8">SC제일은행</li>
+                                                            <li class="option" value="9">한국시티은행</li>
+                                                            <li class="option" value="10">대구은행</li>
+                                                            <li class="option" value="11">부산은행</li>
+                                                            <li class="option" value="12">광주은행</li>
+                                                            <li class="option" value="13">제주은행</li>
+                                                            <li class="option" value="14">전북은행</li>
+                                                            <li class="option" value="15">경남은행</li>
+                                                            <li class="option" value="16">하나은행</li>
+                                                            <li class="option" value="17">신한은행</li>
+                                                            <li class="option" value="18">케이뱅크</li>
+                                                            <li class="option" value="19">카카오뱅크</li>
+                                                            <li class="option" value="20">토스뱅크</li>
+                                                            <li class="option" value="21">새마을금고중앙회</li>
+                                                            <li class="option" value="22">신협중앙회</li>
+                                                            <li class="option" value="23">저축은행중앙회</li>
+                                                            <li class="option" value="24">산림조합중앙회</li>
+                                                            <li class="option" value="25">우정사업본부(우체국)</li>
+                                                        </ul>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl">
+                                                <div class="form-group mb-0 w-100 min-w-190">
+                                                    <label class="w-100 mb-0">
+                                                        <input class="form-control color-red-100"  type="text" value="1002753710560">
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl">
+                                                <div class="form-group mb-0">
+                                                    <label class="w-100 mb-0">
+                                                        <input class="form-control color-red-100" type="text" disabled value="정다운">
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-auto">
+                                                <button class="btn btn-info btn-sm">조회</button>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="caption position-relative clearfix">
+                              <!--      <button class="btn-reset text-decoration-underline color-gray-000 float-right">
+                                        <i class="icon ico_clock_black"></i>정산 주기 수정이력
+                                    </button>-->
+                                    <p class="alert-text color-red-100"><i class="icon"></i><span>법적등록계좌(압류,가압류,예금주사망등 기타)입니다.</span></p>
+                                </div>
+                            </div>
+                            <!--정산 조회 validation 성공시 e-->
+
+                            <div class="card">
+                                <div class="title-area">
+                                    <p class="title font-weight-semi-bold d-flex align-items-center">
+                                        <i class="icon ico_check_purple"></i>
+                                        <span>정산</span>
+                                        <i class="hover-area position-relative">
+                                            <i class="icon ico_question_gray"></i>
+                                            <span class="speech-bubble _speech-bubble" style="top : -240px">
+                                                <span class="font-weight-semi-bold">월정산 기준</span><br>
+                                                <span class="font-weight-semi-bold"><span style="margin-right: 5px">&#183;</span>월1회</span><br>
+                                                이번 달 01일 ~ 말일까지의 결제를 다음 달 25일 정산<br>
+                                                <span class="font-weight-semi-bold"><span style="margin-right: 5px">&#183;</span>월2회</span><br>
+                                                a. 이번 달 01일 ~ 15일까지의 결제를 이번 달 23일 정산<br>
+                                                b. 이번 달 16일 ~ 말일까지의 결제를 다음 달 8일 정산<br>
+                                                <br>
+                                                <span class="font-weight-semi-bold">월 4회 기준</span><br>
+                                                <span style="margin-right: 5px">&#183;</span>이번 달 05일 ~ 11일까지의 결제를 이번 달 19일 정산<br>
+                                                <span style="margin-right: 5px">&#183;</span>이번 달 12일 ~ 19일까지의 결제를 이번 달 26일 정산<br>
+                                                <span style="margin-right: 5px">&#183;</span>이번 달 20일 ~ 26일까지의 결제를 다음 달 04일 정산<br>
+                                                <span style="margin-right: 5px">&#183;</span>이번 달 27일 ~ 다음 달 04일까지의 결제를 다음 달 11일 정산<br>
+                                            </span>
+                                        </i>
+                                    </p>
+                                    <div class="btn-wrap">
+                                        <!--<button class="btn btn-secondary btn-md btn-round">주기 수정하기</button>
+                                        <button class="btn btn-secondary btn-md btn-round">계좌 수정하기</button>-->
+                                        <button class="btn btn-sm btn-round btn-danger">취소</button>
+                                        <button class="btn btn-sm btn-round btn-primary">저장</button>
+                                    </div>
+                                </div>
+                                <ul class="row signup-list-area">
+                                    <li class="list col-md-12">
+                                        <span class="title font-weight-semi-bold">주기</span>
+                                        <div class="row data-content">
+                                            <div class="col-xl">
+                                                <span class="title  font-weight-semi-bold">구분</span>
+                                                <span class="data">일정산</span>
+                                            </div>
+                                            <div class="col-xl">
+                                                <span class="title  font-weight-semi-bold">주기</span>
+                                                <span class="data">7일</span>
+                                            </div>
+                                            <div class="col-xl-4">
+                                                <span>&nbsp;</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list col-md-12 mb-0">
+                                        <span class="title font-weight-semi-bold">계좌</span>
+                                        <!--  <div class="row data-content">
+                                              <div class="col-xl-4">
+                                                  <span class="title font-weight-semi-bold">은행</span>
+                                                  <span class="data color-orange-100">미입력</span>
+                                              </div>
+                                              <div class="col-xl-4">
+                                                  <span class="title font-weight-semi-bold">계좌번호</span>
+                                                  <span class="data color-orange-100">미입력</span>
+                                              </div>
+                                              <div class="col-xl-4">
+                                                  <span class="title font-weight-semi-bold">예금주명</span>
+                                                  <span class="data color-orange-100">미입력</span>
+                                              </div>
+                                          </div>-->
+                                        <div class="row data-content">
+                                            <div class="col-xl">
+                                                <div class="form-group mb-0 w-100 min-w-190">
+                                                    <label class="select-box _select-box">
+                                                        <input type="hidden" class="select-value _select-value" value="7">
+                                                        <span class="value-text _value-text">우리은행</span>
+                                                        <i class="icon ico_select_arrow_down">아래화살표</i>
+                                                        <ul class="options h-320px">
+                                                            <li class="option" value="1">KDB산업은행</li>
+                                                            <li class="option" value="2">IBK기업은행</li>
+                                                            <li class="option" value="3">KB국민은행</li>
+                                                            <li class="option" value="4">수협은행(수협중앙회)</li>
+                                                            <li class="option" value="5">NH농협은행</li>
+                                                            <li class="option" value="6">농협중앙회(단위농축협)</li>
+                                                            <li class="option" value="7">우리은행</li>
+                                                            <li class="option" value="8">SC제일은행</li>
+                                                            <li class="option" value="9">한국시티은행</li>
+                                                            <li class="option" value="10">대구은행</li>
+                                                            <li class="option" value="11">부산은행</li>
+                                                            <li class="option" value="12">광주은행</li>
+                                                            <li class="option" value="13">제주은행</li>
+                                                            <li class="option" value="14">전북은행</li>
+                                                            <li class="option" value="15">경남은행</li>
+                                                            <li class="option" value="16">하나은행</li>
+                                                            <li class="option" value="17">신한은행</li>
+                                                            <li class="option" value="18">케이뱅크</li>
+                                                            <li class="option" value="19">카카오뱅크</li>
+                                                            <li class="option" value="20">토스뱅크</li>
+                                                            <li class="option" value="21">새마을금고중앙회</li>
+                                                            <li class="option" value="22">신협중앙회</li>
+                                                            <li class="option" value="23">저축은행중앙회</li>
+                                                            <li class="option" value="24">산림조합중앙회</li>
+                                                            <li class="option" value="25">우정사업본부(우체국)</li>
+                                                        </ul>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl">
+                                                <div class="form-group mb-0 w-100 min-w-190">
+                                                    <label class="w-100 mb-0">
+                                                        <input class="form-control " type="text" value="1002753710560">
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl">
+                                                <div class="form-group mb-0">
+                                                    <label class="w-100 mb-0">
+                                                        <input class="form-control " type="text" disabled value="정다운">
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-auto">
+                                                <button class="btn btn-info btn-sm">조회</button>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="caption position-relative clearfix">
+                                   <!-- <button class="btn-reset text-decoration-underline color-gray-000 float-right">
+                                        <i class="icon ico_clock_black"></i>정산 주기 수정이력
+                                    </button>-->
+                                    <p class="alert-text color-purple-100"><i class="icon"></i><span>정상 계좌로 확인되었습니다.</span></p>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="title-area">
+                                    <p class="title font-weight-semi-bold d-flex align-items-center">
+                                        <i class="icon ico_check_purple"></i>
+                                        <span>정산</span>
+                                        <i class="hover-area position-relative">
+                                            <i class="icon ico_question_gray"></i>
+                                            <span class="speech-bubble _speech-bubble" style="top : -240px">
+                                                <span class="font-weight-semi-bold">월정산 기준</span><br>
+                                                <span class="font-weight-semi-bold"><span style="margin-right: 5px">·</span>월1회</span><br>
+                                                이번 달 01일 ~ 말일까지의 결제를 다음 달 25일 정산<br>
+                                                <span class="font-weight-semi-bold"><span style="margin-right: 5px">·</span>월2회</span><br>
+                                                a. 이번 달 01일 ~ 15일까지의 결제를 이번 달 23일 정산<br>
+                                                b. 이번 달 16일 ~ 말일까지의 결제를 다음 달 8일 정산<br>
+                                                <br>
+                                                <span class="font-weight-semi-bold">월 4회 기준</span><br>
+                                                <span style="margin-right: 5px">·</span>이번 달 05일 ~ 11일까지의 결제를 이번 달 19일 정산<br>
+                                                <span style="margin-right: 5px">·</span>이번 달 12일 ~ 19일까지의 결제를 이번 달 26일 정산<br>
+                                                <span style="margin-right: 5px">·</span>이번 달 20일 ~ 26일까지의 결제를 다음 달 04일 정산<br>
+                                                <span style="margin-right: 5px">·</span>이번 달 27일 ~ 다음 달 04일까지의 결제를 다음 달 11일 정산<br>
+                                            </span>
+                                        </i>
+                                    </p>
+                                    <div class="btn-wrap">
+                                        <button class="btn btn-secondary btn-md btn-round">주기 수정하기</button>
+                                        <button class="btn btn-secondary btn-md btn-round">계좌 수정하기</button>
+                                    </div>
+                                </div>
+                                <ul class="row signup-list-area">
+                                    <li class="list col-md-12">
+                                        <span class="title font-weight-semi-bold">주기</span>
+                                        <div class="row data-content">
+                                            <div class="col-xl">
+                                                <span class="title  font-weight-semi-bold">구분</span>
+                                                <!--<span class="data color-orange-100">미설정</span>-->
+                                                <span class="data">일정산</span>
+                                            </div>
+                                            <div class="col-xl">
+                                                <span class="title  font-weight-semi-bold">주기</span>
+                                                <!--<span class="data color-orange-100">미입력</span>-->
+                                                <span class="data">7일</span>
+                                            </div>
+                                            <div class="col-xl-4">
+                                                <span>&nbsp;</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list col-md-12 mb-0">
+                                        <span class="title font-weight-semi-bold">계좌</span>
+                                        <div class="row data-content">
+                                            <div class="col-xl-4">
+                                                <span class="title font-weight-semi-bold">은행</span>
+                                                <!--<span class="data color-orange-100">미입력</span>-->
+                                                <span class="data">우리은행</span>
+                                            </div>
+                                            <div class="col-xl-4">
+                                                <span class="title font-weight-semi-bold">계좌번호</span>
+                                                <!--<span class="data color-orange-100">미입력</span>-->
+                                                <span class="data">1002753710560</span>
+                                            </div>
+                                            <div class="col-xl-4">
+                                                <span class="title font-weight-semi-bold">예금주명</span>
+                                                <!--<span class="data color-orange-100">미입력</span>-->
+                                                <span class="data">정다운</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="caption position-relative clearfix">
+                                    <button class="btn-reset text-decoration-underline color-gray-000 float-right">
+                                        <i class="icon ico_clock_black"></i>정산 주기 수정이력
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="title-area">
+                                    <p class="title font-weight-semi-bold d-flex align-items-center">
+                                        <i class="icon ico_check_purple"></i>
+                                        <span>정산</span>
+                                        <i class="hover-area position-relative">
+                                            <i class="icon ico_question_gray"></i>
+                                            <span class="speech-bubble _speech-bubble" style="top : -240px">
+                                                <span class="font-weight-semi-bold">월정산 기준</span><br>
+                                                <span class="font-weight-semi-bold"><span style="margin-right: 5px">&#183;</span>월1회</span><br>
+                                                이번 달 01일 ~ 말일까지의 결제를 다음 달 25일 정산<br>
+                                                <span class="font-weight-semi-bold"><span style="margin-right: 5px">&#183;</span>월2회</span><br>
+                                                a. 이번 달 01일 ~ 15일까지의 결제를 이번 달 23일 정산<br>
+                                                b. 이번 달 16일 ~ 말일까지의 결제를 다음 달 8일 정산<br>
+                                                <br>
+                                                <span class="font-weight-semi-bold">월 4회 기준</span><br>
+                                                <span style="margin-right: 5px">&#183;</span>이번 달 05일 ~ 11일까지의 결제를 이번 달 19일 정산<br>
+                                                <span style="margin-right: 5px">&#183;</span>이번 달 12일 ~ 19일까지의 결제를 이번 달 26일 정산<br>
+                                                <span style="margin-right: 5px">&#183;</span>이번 달 20일 ~ 26일까지의 결제를 다음 달 04일 정산<br>
+                                                <span style="margin-right: 5px">&#183;</span>이번 달 27일 ~ 다음 달 04일까지의 결제를 다음 달 11일 정산<br>
+                                            </span>
+                                        </i>
+                                    </p>
+                                    <div class="btn-wrap">
+                                        <button class="btn btn-secondary btn-md btn-round">주기 수정하기</button>
+                                        <button class="btn btn-secondary btn-md btn-round">계좌 수정하기</button>
+                                    </div>
+                                </div>
+                                <ul class="row signup-list-area">
+                                    <li class="list col-md-12">
+                                        <span class="title font-weight-semi-bold">주기</span>
+                                        <div class="row data-content">
+                                            <div class="col-xl">
+                                                <span class="title  font-weight-semi-bold">구분</span>
+                                                <span class="data">일정산</span>
+                                            </div>
+                                            <div class="col-xl">
+                                                <span class="title  font-weight-semi-bold">주기</span>
+                                                <span class="data">7일</span>
+                                            </div>
+                                            <div class="col-xl-4">
+                                                <span>&nbsp;</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list col-md-12 mb-0">
+                                        <span class="title font-weight-semi-bold">계좌</span>
+                                        <div class="row data-content">
+                                            <div class="col-xl-4">
+                                                <span class="title font-weight-semi-bold">은행</span>
+                                                <span class="data color-orange-100">미입력</span>
+                                            </div>
+                                            <div class="col-xl-4">
+                                                <span class="title font-weight-semi-bold">계좌번호</span>
+                                                <span class="data color-orange-100">미입력</span>
+                                            </div>
+                                            <div class="col-xl-4">
+                                                <span class="title font-weight-semi-bold">예금주명</span>
+                                                <span class="data color-orange-100">미입력</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="caption position-relative clearfix">
+                                    <button class="btn-reset text-decoration-underline color-gray-000 float-right">
+                                        <i class="icon ico_clock_black"></i>정산 주기 수정이력
+                                    </button>
+                                </div>
+                            </div>
+
                         </div>
-                    </div>
-                    <ul class="prev-next-text-list">
-                        <li class="next">
-                            <a href="#">
-                                <i>▲</i>
-                                <span class="title">다음글</span>
-                                <span class="content">
-                               [시스템] 케이뱅크(계좌이체) 전산시스템 작업공지[2023-07-09(일)]
-                            </span>
-                            </a>
-                        </li>
-                        <li class="prev">
-                            <a href="#">
-                                <i>▼</i>
-                                <span class="title">이전글</span>
-                                <span class="content">
-                                [시스템] 케이뱅크(계좌이체) 전산시스템 작업공지[2023-07-09(일)]
-                            </span>
-                            </a>
-                        </li>
-                    </ul>
-                    <div class="clearfix mt-3">
-                        <div class="float-right">
-                            <button class="btn btn-secondary btn-sm btn-round" style="margin-right: 14px;padding: 6px 12px;">목록</button>
-                            <button class="btn btn-primary btn-md btn-round">수정하기</button>
-                        </div>
+                        <!--카드 정보 e-->
                     </div>
                 </div>
-
+                <!--탭 컨텐츠 e-->
             </section>
             <!-- 컨텐츠 e-->
         </article>

@@ -331,6 +331,12 @@ data.signupko = {
         },
         {
             stateClass: 'confirm',
+            url: '기본정보_공통_정산',
+            category: 'signupko',
+            page: '기본정보_공통_정산'
+        },
+        {
+            stateClass: 'confirm',
             url: '기본정보_국내',
             category: 'signupko',
             page: '기본정보_국내'
