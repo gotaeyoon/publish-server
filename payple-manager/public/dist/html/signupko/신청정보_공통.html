@@ -6,10 +6,10 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" href="https://image.payple.kr/common/favicon.ico" sizes="32x32">
-    <link rel="stylesheet" href="./../../css/payple_component.css?v0.82">
-    <link rel="stylesheet" href="./../../css/payple_pages.css?v0.82">
-    <script src="../../js/bundle.js?v0.82"></script>
-    <script src="../../js/common.js?v0.82"></script>
+    <link rel="stylesheet" href="./../../css/payple_component.css?v0.822">
+    <link rel="stylesheet" href="./../../css/payple_pages.css?v0.822">
+    <script src="../../js/bundle.js?v0.822"></script>
+    <script src="../../js/common.js?v0.822"></script>
     <title>페이플 관리자 페이지</title>
 </head>
 
@@ -1352,7 +1352,7 @@
 </footer>
 </div>
 <div class="modal fade _modal-calendar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered calender_modal">
+    <div class="modal-dialog modal-dialog-centered calender-modal">
         <div class="modal-content">
             <div class="modal-body">
                 <div class="_modalDataPicker">
@@ -1530,72 +1530,5 @@
     </div>
 </div>
 </body>
-<script>
-    /*
-    * 서비스 구분/상태 값에 따라 결제수단 구분/상태 구별
-    * 클릭 시 상위에 요소 값으로 변경
-    * 개발 시 value값 수정 필요
-    * 기본값은 전체로 맞춰져있어서 html ._service-status-value에 있는 전체의  vlaue값도 맞춰주셔야 합니다.
-    * */
-    let serviceStatus = $('._service-status');
-    let servicestatusValue = $('._service-status-value');
-    let stateSelectValue = $('._state-label').find('._select-value');
-    let stateValueText = $('._state-label').find('._value-text');
 
-    let all = [
-        {name : '전체', value : '1'}
-    ]
-    let domestic = [
-        {name : '카드 - 앱카드' , value : '2-1'},
-        {name : '카드 - 키인' , value : '2-2'},
-        {name : '카드 - 빌링' , value : '2-3.'},
-        {name : '카드 - 간편' , value : '2-4'},
-        {name : '계좌 - 빌링' , value : 'gg'},
-        {name : '카드 - 앱카드' , value : 'hh'},
-        {name : '계좌 - 간편' , value : 'ss'},
-        {name : '카드 - 앱카드' , value : 'dd'},
-        {name : '네이버페이' , value : 'ff'},
-        {name : '카카오페이' , value : 'gg'},
-        {name : '애플페이' , value : 'hh'},
-        {name : '가상계좌' , value : 'rr'},
-    ]
-    let global = [
-        {name :  '카드 - 키인', value : 'asdassssd'},
-        {name :  '카드 - 빌링', value : 'asdasd'},
-        {name : '카드 - 간편' , value : 'dddd'}
-
-    ]
-    let option
-
-    serviceStatus.on('click', 'li.option', function() {
-        var value = $(this).attr('value');
-
-        //전체
-        if(value == 0){
-            option = all
-            stateValueText.html(option[0].name);
-            stateSelectValue.attr("value",option[0].value);
-
-        }
-        //국내
-        else if (value == 1){
-            option = domestic
-            stateValueText.html(option[0].name);
-            stateSelectValue.attr("value",option[0].value);
-        }
-        // 해외
-        else {
-            option = global
-            stateValueText.html(option[0].name);
-            stateSelectValue.attr("value",option[0].value);
-        }
-        // 초기화
-        servicestatusValue.empty();
-        //클릭시 반복문 돌려서 value 호출
-        for ( let i = 0; i < option.length; i++ ) {
-            servicestatusValue.append( '<option class="option _domestic" value="'+ option[i].value + '">' + option[i].name + '</option>' );
-        }
-    });
-
-</script>
 </html>

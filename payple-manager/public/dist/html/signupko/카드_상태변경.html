@@ -664,651 +664,80 @@
         </ul>
     </div>
 </div>
-        <!-- 컨텐츠 s-->
         <article class="content-container">
-            <section class="link-history-section">
-                <h3 class="main-title font-weight-bold">링크-상품내역</h3>
-                <div class="card">
-                    <h5 class="filter-title font-weight-semi-bold">
-                        <i class="icon ico_filter"></i>
-                        <span>필터</span>
-                    </h5>
-                    <div class="row">
-                        <div class="col-xl-auto">
-                            <p class="card-title font-weight-semi-bold">기간</p>
-                            <div class="row row-col-3">
-                                <div class="col-xl">
-                                    <div class="form-group">
-                                        <div class="btn-group w-100 custom-radio-container">
-                                            <div class="custom-radio-group fsz-0">
-                                                <input class="radio-input" type="radio" name="example1" checked
-                                                       id="customRadio1">
-                                                <label for="customRadio1" class="btn btn-secondary btn-md">생성일</label>
-                                            </div>
-                                            <div class="custom-radio-group fsz-0">
-                                                <input class="radio-input" type="radio" name="example1"
-                                                       id="customRadio2">
-                                                <label for="customRadio2" class="btn btn-secondary btn-md">종료일</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-auto">
-                                    <div class="form-group">
-                                        <div class="btn-group-month">
-                                            <button class="btn btn-secondary" id="threeMonthAgoBtn">3개월</button>
-                                            <button class="btn btn-secondary" id="lastMonthBtn">지난달</button>
-                                            <button class="btn btn-secondary" id="thisMonthBtn">이번달</button>
-                                            <button class="btn btn-secondary" id="yesterdayBtn">어제</button>
-                                            <button class="btn btn-secondary" id="todayBtn">오늘</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-auto">
-                                    <div class="form-group">
-                                        <label class="calender-input mb-0">
-                                            <input class="form-control _dataPickerRange" type="text">
-                                            <i class="icon ico_calendar" onclick="$('._modal-calendar').modal('show')">달력이미지</i>
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-auto">
-                            <p class="font-weight-semi-bold card-title">서비스</p>
-                            <div class="row">
-                                <div class="col-xl">
-                                    <div class="form-group">
-                                        <div class="btn-group w-100 custom-radio-container">
-                                            <div class="custom-radio-group">
-                                                <input class="radio-input" type="radio" name="example2" checked
-                                                       id="customRadio3">
-                                                <label for="customRadio3" class="btn btn-secondary btn-md">전체</label>
-                                            </div>
-                                            <div class="custom-radio-group ">
-                                                <input class="radio-input" type="radio" name="example2"
-                                                       id="customRadio4">
-                                                <label for="customRadio4" class="btn btn-secondary btn-md">국내</label>
-                                            </div>
-                                            <div class="custom-radio-group ">
-                                                <input class="radio-input" type="radio" name="example2"
-                                                       id="customRadio5">
-                                                <label for="customRadio5"
-                                                       class="btn btn-secondary btn-md">해외</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-auto">
-                            <p class="font-weight-semi-bold card-title">결제수단</p>
-                            <div class="row">
-                                <div class="col-xl">
-                                    <div class="form-group">
-                                        <div class="btn-group w-100 custom-radio-container">
-                                            <div class="custom-radio-group">
-                                                <input class="radio-input" type="radio" name="example3" checked
-                                                       id="customRadio10">
-                                                <label for="customRadio10" class="btn btn-secondary btn-md">전체</label>
-                                            </div>
-                                            <div class="custom-radio-group ">
-                                                <input class="radio-input" type="radio" name="example3"
-                                                       id="customRadio12">
-                                                <label for="customRadio12"
-                                                       class="btn btn-secondary btn-md">판매중</label>
-                                            </div>
-                                            <div class="custom-radio-group ">
-                                                <input class="radio-input" type="radio" name="example3"
-                                                       id="customRadio13">
-                                                <label for="customRadio13"
-                                                       class="btn btn-secondary btn-md">판매완료</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="font-weight-semi-bold card-title">상세검색</p>
-                    <div class="row">
-                        <div class="col-xl">
-                            <div class="form-group">
-                                <label class="w-100 mb-0">
-                                    <input class="form-control search" type="text" placeholder="상호명">
-                                </label>
-                            </div>
-                        </div>
-                        <div class="col-xl">
-                            <div class="form-group">
-                                <label class="w-100 mb-0">
-                                    <input class="form-control search" type="text" placeholder="서비스명">
-                                </label>
-                            </div>
-                        </div>
-                        <div class="col-xl">
-                            <div class="form-group">
-                                <label class="w-100 mb-0">
-                                    <input class="form-control search" type="text" placeholder="서비스 MID">
-                                </label>
-                            </div>
-                        </div>
-                        <div class="col-xl">
-                            <div class="form-group">
-                                <label class="w-100 mb-0">
-                                    <input class="form-control search" type="text" placeholder="상품명">
-                                </label>
-                            </div>
-                        </div>
-                        <div class="col-xl-d-none">&nbsp;</div>
-                    </div>
-                    <div class="clearfix filter-button-area ">
-                        <div class="float-right">
-                            <a class=" align-bottom" href="">Clear all</a>
-                            <button class="btn btn-dark btn-round ml-3 btn-md">조회하기</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="result-title-area d-flex justify-content-between align-items-center">
-                        <h5 class="result-title font-weight-semi-bold">
-                            <i class="icon ico_bs_list"></i>
-                            <span>조회결과</span>
-                        </h5>
-                        <div>
-                            <button class="btn-reset"><i class="icon ico_excel">엑셀출력</i></button>
-                        </div>
-                    </div>
-                    <div class="table-responsive">
-                        <table class="table table-spread table-fixed">
-                            <colgroup>
-                                <col style="width: 50px">
-                                <col style="width: 170px">
-                                <col style="width: 170px">
-                                <col style="width: 86px">
-                                <col style="width: 300px">
-                                <col style="width: 60px">
-                                <col style="width: 70px">
-                                <col style="width: 112px">
+            <!-- 컨텐츠 s-->
+            <section class="signup-section">
 
-                                <col style="width: 103px">
-                                <col style="width: 150px">
-                                <col style="width: 81px">
-                                <col style="width: 64px">
-                                <col style="width: 64px">
-                                <col style="width: 64px">
-                            </colgroup>
-                            <thead>
-                            <tr>
-                                <th class="text-center">No</th>
-                                <th class="text-center">상호명/서비스명</th>
-                                <th class="text-center">서비스 MID</th>
-                                <th class="text-center">URL</th>
-                                <th class="text-center">상품명 / 옵션</th>
-                                <th class="text-center">서비스</th>
-                                <th class="text-center">승인통화</th>
-                                <th class="text-center">판매가</th>
-                                <th class="text-center">생성일시</th>
-                                <th class="text-center">판매기간</th>
-                                <th class="text-center">판매상태</th>
-                                <th class="text-center">조회수</th>
-                                <th class="text-center">결제수</th>
-                                <th class="text-center">재고</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td class="text-center align-middle"><span>10</span></td>
-                                <td class="align-middle">
-                                    <span>(주)하임인터내셔널</span><br>
-                                    <span>하임인터내셔널</span>
-                                </td>
-                                <td class="align-middle text-center"><span>Service0010012345678</span></td>
-                                <td class="align-middle">
-                                    <div class="d-flex justify-content-between">
-                                        <button class="btn-reset">
-                                            <i class="icon ico_copy_gray">url Copy</i>
-                                        </button>
-                                        <button class="btn btn-copy">Copy</button>
-                                    </div>
-                                </td>
-                                <td class="align-middle text-left"><span class="ellipsis">Service0010012345678Se2345678Service0010012345678Service0010012345678</span></td>
-                                <td class="align-middle text-center"><span>국내</span></td>
-                                <td class="align-middle text-center"><span>KRW</span></td>
-                                <td class="align-middle text-right"><span>100,000</span></td>
-                                <td class="align-middle text-center"><span>2023-07-28<br>12:05:55</span></td>
-                                <td class="align-middle text-left">
-                                    <div>
-                                        <i class="icon ico-circle-red"></i>
-                                        <span>2023-08-25 00:00:00</span><br>
-                                        <span>~</span>
-                                        <span>2023-08-27 00:00:00</span>
-                                    </div>
-                                </td>
-                                <td class="align-middle text-center"><span class="color-gray-200">판매완료</span></td>
-                                <td class="align-middle text-center"><span class="color-gray-200">-</span></td>
-                                <td class="align-middle text-center">
-                                    <span class="font-weight-bold"><a class="text-decoration-underline"
-                                                                      href="">0</a></span>
-                                </td>
-                                <td class="align-middle text-center"><span>50</span></td>
-                            </tr>
-                            <tr>
-                                <td class="text-center align-middle"><span>10</span></td>
-                                <td class="align-middle">
-                                    <span>에이비성형외과의원</span><br>
-                                    <span>에이비성형외과의원</span>
-                                </td>
-                                <td class="align-middle text-center"><span>Service0010012345678</span></td>
-                                <td class="align-middle">
-                                    <div class="d-flex justify-content-between">
-                                        <button class="btn-reset">
-                                            <i class="icon ico_copy_gray">url Copy</i>
-                                        </button>
-                                        <button class="btn btn-copy">Copy</button>
-                                    </div>
-                                </td>
-                                <td class="align-middle text-left"><span  class="ellipsis">Service0010012345678</span></td>
-                                <td class="align-middle text-center"><span>해외</span></td>
-                                <td class="align-middle text-center"><span>USD</span></td>
-                                <td class="align-middle text-right"><span>2,595.61</span></td>
-                                <td class="align-middle text-center"><span>2023-07-28<br>12:05:55</span></td>
-                                <td class="align-middle text-left">
-                                    <div>
-                                        <i class="icon ico-circle-red"></i>
-                                        <span>2023-08-25 00:00:00</span><br>
-                                        <span>~</span>
-                                        <span>2023-08-27 00:00:00</span>
-                                    </div>
-                                </td>
-                                <td class="align-middle text-center"><span class="color-gray-200">판매완료</span></td>
-                                <td class="align-middle text-center"><span class="color-gray-200">-</span></td>
-                                <td class="align-middle text-center">
-                                    <span class="font-weight-bold"><a class="text-decoration-underline"
-                                                                      href="">0</a></span>
-                                </td>
-                                <td class="align-middle text-center"><span>0</span></td>
-                            </tr>
-                            <tr>
-                                <td class="text-center align-middle"><span>10</span></td>
-                                <td class="align-middle">
-                                    <span>에이비성형외과의원</span><br>
-                                    <span>에이비성형외과의원</span>
-                                </td>
-                                <td class="align-middle text-center"><span>Service0010012345678</span></td>
-                                <td class="align-middle">
-                                    <div class="d-flex justify-content-between">
-                                        <button class="btn-reset">
-                                            <i class="icon ico_copy_gray">url Copy</i>
-                                        </button>
-                                        <button class="btn btn-copy">Copy</button>
-                                    </div>
-                                </td>
-                                <td class="align-middle text-left">
-                                    <span class="ellipsis">Service0010012345678</span><br>
-                                    <span class="ellipsis"><span class="color-purple-100 mr-1">옵션</span>Service0010012345678Service0010012345678Service00100ice00100ice0010012345678</span>
-                                </td>
-                                <td class="align-middle text-center"><span>해외</span></td>
-                                <td class="align-middle text-center"><span>JPY</span></td>
-                                <td class="align-middle text-right"><span>100,000</span></td>
-                                <td class="align-middle text-center"><span>2023-07-28<br>12:05:55</span></td>
-                                <td class="align-middle text-left">
-                                    <div>
-                                        <i class="icon ico-circle-transparent"></i>
-                                        <span>2023-08-25 00:00:00</span><br>
-                                        <span>~</span>
-                                        <span>2023-08-27 00:00:00</span>
-                                    </div>
-                                </td>
-                                <td class="align-middle text-center"><span>판매중</span></td>
-                                <td class="align-middle text-center"><span>100</span></td>
-                                <td class="align-middle text-center">
-                                    <span class="font-weight-bold"><a class="text-decoration-underline"
-                                                                      href="">0</a></span>
-                                </td>
-                                <td class="align-middle text-center"><span>0</span></td>
-                            </tr>
-                            <tr>
-                                <td class="text-center align-middle"><span>10</span></td>
-                                <td class="align-middle">
-                                    <span>에이비성형외과의원</span><br>
-                                    <span>에이비성형외과의원</span>
-                                </td>
-                                <td class="align-middle text-center"><span>Service0010012345678</span></td>
-                                <td class="align-middle">
-                                    <div class="d-flex justify-content-between">
-                                        <button class="btn-reset">
-                                            <i class="icon ico_copy_gray">url Copy</i>
-                                        </button>
-                                        <button class="btn btn-copy">Copy</button>
-                                    </div>
-                                </td>
-                                <td class="align-middle text-left">
-                                    <span class="ellipsis">Service0010012345678</span><br>
-                                    <span class="ellipsis"><span class="color-purple-100 mr-1">옵션</span>Service0010012345678</span>
-                                </td>
-                                <td class="align-middle text-center"><span>국내</span></td>
-                                <td class="align-middle text-center"><span>KRW</span></td>
-                                <td class="align-middle text-right"><span>100,000</span></td>
-                                <td class="align-middle text-center"><span>2023-07-28<br>12:05:55</span></td>
-                                <td class="align-middle text-left">
-                                    <div>
-                                        <i class="icon ico-circle-transparent"></i>
-                                        <span>2023-08-25 00:00:00</span><br>
-                                        <span>~</span>
-                                        <span>2023-08-27 00:00:00</span>
-                                    </div>
-                                </td>
-                                <td class="align-middle text-center"><span>판매중</span></td>
-                                <td class="align-middle text-center"><span>100</span></td>
-                                <td class="align-middle text-center">
-                                    <span class="font-weight-bold"><a class="text-decoration-underline"
-                                                                      href="">0</a></span>
-                                </td>
-                                <td class="align-middle text-center"><span>0</span></td>
-                            </tr>
-                            <tr>
-                                <td class="text-center align-middle"><span>10</span></td>
-                                <td class="align-middle">
-                                    <span>에이비성형외과의원</span><br>
-                                    <span>에이비성형외과의원</span>
-                                </td>
-                                <td class="align-middle text-center"><span>Service0010012345678</span></td>
-                                <td class="align-middle">
-                                    <div class="d-flex justify-content-between">
-                                        <button class="btn-reset">
-                                            <i class="icon ico_copy_gray">url Copy</i>
-                                        </button>
-                                        <button class="btn btn-copy">Copy</button>
-                                    </div>
-                                </td>
-                                <td class="align-middle text-left">
-                                    <span class="ellipsis">Service0010012345678</span><br>
-                                    <span class="ellipsis"><span class="color-purple-100 mr-1">옵션</span>Service0010012345678</span>
-                                </td>
-                                <td class="align-middle text-center"><span>국내</span></td>
-                                <td class="align-middle text-center"><span>KRW</span></td>
-                                <td class="align-middle text-right"><span>100,000</span></td>
-                                <td class="align-middle text-center"><span>2023-07-28<br>12:05:55</span></td>
-                                <td class="align-middle text-left">
-                                    <div>
-                                        <span class="color-gray-200 d-flex justify-content-center">-</span>
-                                    </div>
-                                </td>
-                                <td class="align-middle text-center"><span>판매중</span></td>
-                                <td class="align-middle text-center"><span>100</span></td>
-                                <td class="align-middle text-center">
-                                    <span class="font-weight-bold"><a class="text-decoration-underline"
-                                                                      href="">0</a></span>
-                                </td>
-                                <td class="align-middle text-center"><span>0</span></td>
-                            </tr>
-                            <tr>
-                                <td class="text-center align-middle"><span>10</span></td>
-                                <td class="align-middle">
-                                    <span>에이비성형외과의원</span><br>
-                                    <span>에이비성형외과의원</span>
-                                </td>
-                                <td class="align-middle text-center"><span>Service0010012345678</span></td>
-                                <td class="align-middle">
-                                    <div class="d-flex justify-content-between">
-                                        <button class="btn-reset">
-                                            <i class="icon ico_copy_gray">url Copy</i>
-                                        </button>
-                                        <button class="btn btn-copy">Copy</button>
-                                    </div>
-                                </td>
-                                <td class="align-middle text-left"><span class="ellipsis">Service0010012345678</span></td>
-                                <td class="align-middle text-center"><span>국내</span></td>
-                                <td class="align-middle text-center"><span>KRW</span></td>
-                                <td class="align-middle text-right"><span>100,000</span></td>
-                                <td class="align-middle text-center"><span>2023-07-28<br>12:05:55</span></td>
-                                <td class="align-middle text-left">
-                                    <div>
-                                        <i class="icon ico-circle-transparent"></i>
-                                        <span>2023-08-25 00:00:00</span><br>
-                                        <span>~</span>
-                                        <span>2023-08-27 00:00:00</span>
-                                    </div>
-                                </td>
-                                <td class="align-middle text-center"><span>판매중</span></td>
-                                <td class="align-middle text-center"><span>100</span></td>
-                                <td class="align-middle text-center">
-                                    <span class="font-weight-bold"><a class="text-decoration-underline"
-                                                                      href="">50</a></span>
-                                </td>
-                                <td class="align-middle text-center"><span>50</span></td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="pagination-area">
-    <ul class="pagination-list">
-        <li class="pagination-icon">
-            <i class="icon ico_first_page">처음으로가기</i>
-        </li>
-        <li class="pagination-icon">
-            <i class="icon ico_previous_page">이전으로가기</i>
-        </li>
-        <li class="active">1</li>
-        <li>2</li>
-        <li>3</li>
-        <li>4</li>
-        <li class="pagination-icon">
-            <i class="icon ico_next_page">다음으로가기</i>
-        </li>
-        <li class="pagination-icon">
-            <i class="icon ico_last_page">맨뒤로가기</i>
-        </li>
-    </ul>
-</div>
-                </div>
-                <div class="card">
-                    <div class="result-title-area d-flex justify-content-between align-items-center">
-                        <h5 class="result-title font-weight-semi-bold">
-                            <i class="icon ico_bs_list"></i>
-                            <span>링크 상세내역</span>
-                        </h5>
-                    </div>
-                    <div class="search-detail-content">
-                        <div class="title-data-area">
-                            <p class="title">상호명/서비스명</p>
-                            <p class="data">(주)하임인터내셔널/하임인터내셔널</p>
-                        </div>
-                        <div class="title-data-area">
-                            <p class="title">서비스</p>
-                            <p class="data">해외</p>
-                        </div>
-                        <div class="title-data-area">
-                            <p class="title">링크 생성일</p>
-                            <p class="data">2023-08-26</p>
-                        </div>
-                        <div class="title-data-area">
-                            <p class="title">결제통화</p>
-                            <p class="data">USD</p>
-                        </div>
-                        <div class="title-data-area">
-                            <p class="title">상품명</p>
-                            <p class="data">이미영님-뉴트리원 비비랩 더 콜라겐 트리플S 시즌3 12개월 ds11 (2023-09-03) 추가배송비 결제</p>
-                        </div>
-                        <div class="title-data-area">
-                            <p class="title">상품설명</p>
-                            <p class="data">-</p>
-                        </div>
-                        <div class="title-data-area">
-                            <p class="title">메모</p>
-                            <p class="data">23307 여수웅천점 이불 단품 1개 </p>
-                        </div>
-                    </div>
-                    <hr>
-                    <p class="font-weight-semi-bold">결제 내역</p>
-                    <div class="color-card-list global">
-                        <div>
-                            <div class="color-card sky-blue">
-                                <p class="title">클릭</p>
-                                <div class="data">
-                                    <i>1</i>
-                                    <span>번</span>
-                                </div>
-                            </div>
-                            <div class="color-card purple">
-                                <p class="title">결제완료</p>
-                                <div class="data">
-                                    <i>10</i>
-                                    <span>건</span>
-                                </div>
-                            </div>
-                            <div class="color-card purple account">
-                                <p class="title">결제금액</p>
-                                <div class="data">
-                                    <i>540.000</i>
-                                    <span>USD</span>
-                                </div>
 
+                <div class="slide-modal-wrap _slide-modal-wrap _slide-modal-wrap-cancel show">
+                    <div class="slide-modal slide-modal-sm">
+                        <div class="slide-modal-header">
+                            <h3 class="title font-weight-bold">상태수정</h3>
+                            <i class="ico_close_btn _close-slide-modal-btn"></i>
+                        </div>
+                        <div class="slide-modal-body">
+                            <div class="cancel-content position-relative">
+                                <!--성공 alert s (show 추가시 생성)-->
+                                <div class="toast-popup primary show">
+                                    <p class="text-left"><i class="icon"></i><span class="text">1건이 상태 변경 완료되었습니다.</span>
+                                    </p>
+                                </div>
+                                <!--성공 alert e-->
+
+
+                                <!--취소금액 input s-->
+                                <p class="account-text font-weight-semi-bold"><span class="title">취소액</span>
+                                    <label class="mb-0"><input class="form-control" value="8,000"></label>
+                                    <span class="unit">원</span>
+                                </p>
+
+
+
+
+                                <!--취소 영수증 테이블 s-->
+                                <table class="table-data-row">
+                                    <colgroup>
+                                        <col style="width:30%">
+                                        <col style="width:70%">
+                                    </colgroup>
+                                    <tbody><tr>
+                                        <th>주문번호</th>
+                                        <td>1111aaaa</td>
+                                    </tr>
+                                    <tr>
+                                        <th>상품명</th>
+                                        <td>상품명입니다.</td>
+                                    </tr>
+                                    <tr>
+                                        <th>주문자명</th>
+                                        <td>김*철</td>
+                                    </tr>
+                                    <tr>
+                                        <th>원 거래일시</th>
+                                        <td>2023-08-20 11:01:55</td>
+                                    </tr>
+                                    <tr>
+                                        <th>원 거래액</th>
+                                        <td>10,000</td>
+                                    </tr>
+                                    <tr>
+                                        <th>취소 가능액</th>
+                                        <td>8,000</td>
+                                    </tr>
+                                    </tbody></table>
+                                <!--취소 영수증 테이블 e-->
+                            </div>
+                        </div>
+                        <div class="slide-modal-footer clearfix">
+                            <div class="float-right">
+                                <button class="btn btn-primary btn-md">진행하기</button>
                             </div>
                         </div>
                     </div>
-                    <div class="table-responsive">
-                        <table class="table table-spread table-fixed">
-                            <colgroup>
-                                <col style="width: 50px">
-                                <col style="width: 220px">
-                                <col style="width: 100px">
-                                <col style="width: 75px">
-                                <col style="width: 90px">
-                                <col style="width: 90px">
-                                <col style="width: 70px">
-                                <col style="width: 100px">
-                                <col style="width: 50px">
-                                <col style="width: 74px">
-                                <col style="width: 100px">
-                                <col style="width: 160px">
-                                <col style="width: 85px">
-
-                                <col style="width: 74px">
-                                <col style="width: 74px">
-                            </colgroup>
-                            <thead>
-                            <tr>
-                                <th class="text-center">No</th>
-                                <th class="text-center">주문번호</th>
-                                <th class="text-center">결제방식</th>
-                                <th class="text-center">상태</th>
-                                <th class="text-center">거래일시</th>
-                                <th class="text-center">환불일시</th>
-                                <th class="text-center">승인통화</th>
-                                <th class="text-center">거래액</th>
-                                <th class="text-center">DM</th>
-                                <th class="text-center">주문자명</th>
-                                <th class="text-center">브랜드</th>
-                                <th class="text-center">카드번호</th>
-                                <th class="text-center">DCC 여부</th>
-
-                                <th class="text-center">상담하기</th>
-                                <th class="text-center">취소하기</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr class="color-red-100">
-                                <td class="text-center align-middle"><span>10</span></td>
-                                <td class="text-left align-middle"><span>collection_20230829011711870489_76356</span>
-                                </td>
-                                <td class="text-center align-middle"><span>카드-비밀번호</span></td>
-                                <td class="text-center align-middle"><span>결제완료</span></td>
-                                <td class="text-center align-middle"><span>2023-07-28<br>12:05:55</span></td>
-                                <td class="text-center align-middle"><span>2023-07-28<br>12:05:55</span></td>
-                                <td class="text-center align-middle"><span>KRW</span></td>
-                                <td class="text-right align-middle"><span>100,000</span></td>
-                                <td class="text-center align-middle"><span class="underline-text color-red-100 line-bg-red-200">100</span></td>
-                                <td class="text-center align-middle"><span>정*운</span></td>
-                                <td class="text-center align-middle"><span>MASTER</span></td>
-                                <td class="text-center align-middle"><span>1234-56**-****-0987</span></td>
-                                <td class="text-center align-middle"><span>Y</span></td>
-
-                                <td class="text-center align-middle">
-                                    <button class="btn-reset" onclick="openSlideModal('_slide-modal-wrap','-tab')"><i
-                                            class="icon ico_consulting"></i></button>
-                                </td>
-                                <td class="text-center align-middle"><span><button class="btn btn-danger btn-sm"
-                                                                                   onclick="openSlideModal('_slide-modal-wrap','-cancel')">취소</button></span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="text-center align-middle"><span>10</span></td>
-                                <td class="text-left align-middle"><span>collection_20230829011711870489_76356</span>
-                                </td>
-                                <td class="text-center align-middle"><span>카드-비밀번호</span></td>
-                                <td class="text-center align-middle"><span>결제완료</span></td>
-                                <td class="text-center align-middle"><span>2023-07-28<br>12:05:55</span></td>
-                                <td class="text-center align-middle"><span>2023-07-28<br>12:05:55</span></td>
-                                <td class="text-center align-middle"><span>KRW</span></td>
-                                <td class="text-right align-middle"><span>100,000</span></td>
-                                <td class="text-center align-middle"><span>70</span></td>
-                                <td class="text-center align-middle"><span>정*운</span></td>
-                                <td class="text-center align-middle"><span>MASTER</span></td>
-                                <td class="text-center align-middle"><span>1234-56**-****-0987</span></td>
-                                <td class="text-center align-middle"><span>Y</span></td>
-
-                                <td class="text-center align-middle">
-                                    <button class="btn-reset" onclick="openSlideModal('_slide-modal-wrap','-tab')"><i
-                                            class="icon ico_consulting"></i></button>
-                                </td>
-                                <td class="text-center align-middle"><span><button class="btn btn-danger btn-sm"
-                                                                                   onclick="openSlideModal('_slide-modal-wrap','-cancel')">취소</button></span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="text-center align-middle"><span>10</span></td>
-                                <td class="text-left align-middle"><span>collection_20230829011711870489_76356</span>
-                                </td>
-                                <td class="text-center align-middle"><span>카드-비밀번호</span></td>
-                                <td class="text-center align-middle"><span>결제완료</span></td>
-                                <td class="text-center align-middle"><span>2023-07-28<br>12:05:55</span></td>
-                                <td class="text-center align-middle"><span>2023-07-28<br>12:05:55</span></td>
-                                <td class="text-center align-middle"><span>KRW</span></td>
-                                <td class="text-right align-middle"><span>100,000</span></td>
-                                <td class="text-center align-middle"><span class="underline-text color-red-100 line-bg-red-200">100</span></td>
-                                <td class="text-center align-middle"><span>정*운</span></td>
-                                <td class="text-center align-middle"><span>MASTER</span></td>
-                                <td class="text-center align-middle"><span>1234-56**-****-0987</span></td>
-                                <td class="text-center align-middle"><span>Y</span></td>
-
-                                <td class="text-center align-middle">
-                                    <button class="btn-reset" onclick="openSlideModal('_slide-modal-wrap','-tab')"><i
-                                            class="icon ico_consulting"></i></button>
-                                </td>
-                                <td class="text-center align-middle"><span><button class="btn btn-danger btn-sm"
-                                                                                   onclick="openSlideModal('_slide-modal-wrap','-cancel')">취소</button></span>
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="pagination-area">
-    <ul class="pagination-list">
-        <li class="pagination-icon">
-            <i class="icon ico_first_page">처음으로가기</i>
-        </li>
-        <li class="pagination-icon">
-            <i class="icon ico_previous_page">이전으로가기</i>
-        </li>
-        <li class="active">1</li>
-        <li>2</li>
-        <li>3</li>
-        <li>4</li>
-        <li class="pagination-icon">
-            <i class="icon ico_next_page">다음으로가기</i>
-        </li>
-        <li class="pagination-icon">
-            <i class="icon ico_last_page">맨뒤로가기</i>
-        </li>
-    </ul>
-</div>
                 </div>
             </section>
+            <!-- 컨텐츠 e-->
         </article>
-        <!-- 컨텐츠 e-->
-
     </main>
     <footer>
     <div class="footer">
@@ -1317,18 +746,14 @@
     </div>
 </footer>
 </div>
-<!--달력 s-->
-<div class="modal fade _modal-calendar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered calender-modal">
-        <div class="modal-content">
-            <div class="modal-body">
-                <div class="_modalDataPicker"></div>
-            </div>
-        </div>
-    </div>
-</div>
-<!--달력 e-->
-
 
 </body>
 </html>
+
+
+
+
+
+
+
+

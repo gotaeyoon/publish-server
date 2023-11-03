@@ -269,25 +269,25 @@ data.notice = {
     title:'공지사항',
     list:[
         {
-            stateClass: 'confirm',
+            stateClass: 'complete',
             url: '공지사항',
             category: 'notice',
             page: '공지사항'
         },
         {
-            stateClass: 'confirm',
+            stateClass: 'complete',
             url: '공지사항_작성',
             category: 'notice',
             page: '공지사항_작성'
         },
         {
-            stateClass: 'confirm',
+            stateClass: 'complete',
             url: '공지사항_수정',
             category: 'notice',
             page: '공지사항_수정'
         },
         {
-            stateClass: 'confirm',
+            stateClass: 'complete',
             url: '공지사항_상세',
             category: 'notice',
             page: '공지사항_상세'
@@ -299,19 +299,19 @@ data.notice = {
             page: '이메일발송하기_체크박스체크전'
         },
         {
-            stateClass: 'confirm',
+            stateClass: 'complete',
             url: '이메일발송하기_체크박스체크후',
             category: 'notice',
             page: '이메일발송하기_체크박스체크후'
         },
         {
-            stateClass: 'confirm',
+            stateClass: 'complete',
             url: '이메일발송하기_발송후_더블체크',
             category: 'notice',
             page: '이메일발송하기_발송후_더블체크'
         },
         {
-            stateClass: 'confirm',
+            stateClass: 'complete',
             url: '이메일발송하기_완료',
             category: 'notice',
             page: '이메일발송하기_완료'
@@ -347,6 +347,24 @@ data.signupko = {
             category: 'signupko',
             page: '기본정보_국내_수정'
         },
+        {
+            stateClass: 'working',
+            url: '카드_상태변경',
+            category: 'signupko',
+            page: '카드_상태변경'
+        },
+        {
+            stateClass: 'working',
+            url: '카드_수수료변경',
+            category: 'signupko',
+            page: '카드_수수료변경'
+        },
+        {
+            stateClass: 'working',
+            url: '카드_수수료이력보기',
+            category: 'signupko',
+            page: '카드_수수료이력보기'
+        },
     ]
 }
 data.signupen = {
@@ -366,6 +384,37 @@ data.signupen = {
         },
     ]
 }
+data.emailfilter = {
+    title:'이메일관리',
+    list:[
+        {
+            stateClass: 'confirm',
+            url: '이메일관리',
+            category: 'emailfilter',
+            page: '이메일관리'
+        },
+        {
+            stateClass: 'confirm',
+            url: '이메일관리_상세내용확인',
+            category: 'emailfilter',
+            page: '이메일관리_상세내용확인'
+        },
+        {
+            stateClass: 'confirm',
+            url: '이메일관리_작성하기',
+            category: 'emailfilter',
+            page: '이메일관리_작성하기'
+        },
+        {
+            stateClass: 'confirm',
+            url: '이메일관리_작성하기팝업',
+            category: 'emailfilter',
+            page: '이메일관리_작성하기팝업'
+        },
+
+    ]
+}
+
 
 
 
