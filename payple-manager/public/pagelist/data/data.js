@@ -155,12 +155,7 @@ data.domesticPayment = {
             category: 'domesticpayment',
             page: '카드_가상계좌_취소_완료'
         },
-        {
-            stateClass: 'confirm',
-            url: '상담관리',
-            category: 'domesticpayment',
-            page: '상담관리'
-        },
+
         {
             stateClass: 'complete',
             url: '거래상세',
@@ -410,6 +405,48 @@ data.emailfilter = {
             url: '이메일관리_작성하기팝업',
             category: 'emailfilter',
             page: '이메일관리_작성하기팝업'
+        },
+
+    ]
+}
+data.consulting = {
+    title:'상담관리',
+    list:[
+        {
+            stateClass: 'confirm',
+            url: '상담관리',
+            category: 'consulting',
+            page: '상담관리'
+        },
+        {
+            stateClass: 'confirm',
+            url: '상담관리_등록하기',
+            category: 'consulting',
+            page: '상담관리_등록하기'
+        },
+        {
+            stateClass: 'confirm',
+            url: '상담관리_수정하기',
+            category: 'consulting',
+            page: '상담관리_수정하기'
+        },
+        {
+            stateClass: 'confirm',
+            url: '상담관리_모달',
+            category: 'consulting',
+            page: '상담관리_모달'
+        },
+        {
+            stateClass: 'confirm',
+            url: '상호명조회_조회결과있음',
+            category: 'consulting',
+            page: '상호명조회_조회결과있음'
+        },
+        {
+            stateClass: 'confirm',
+            url: '상호명조회_조회결과없음',
+            category: 'consulting',
+            page: '상호명조회_조회결과없음'
         },
 
     ]
