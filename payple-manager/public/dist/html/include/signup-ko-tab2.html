@@ -1,0 +1,532 @@
+<!--카드 정보 s-->
+<div class="tab-pane" id="dummy2" role="tabpanel">
+    <!--카드정보 > 결제수단 상태, 수수료 s -->
+    <div class="card">
+        <div class="title-area">
+            <p class="title font-weight-semi-bold d-flex align-items-center">
+                <i class="icon ico_check_purple"></i><span>결제수단 상태, 수수료</span></p>
+            <div class="btn-wrap">
+                <button class="btn btn-secondary btn-md btn-round">상태 수정하기</button>
+                <button class="btn btn-secondary btn-md btn-round">수수료 수정하기</button>
+            </div>
+        </div>
+        <div class="table-responsive ">
+            <table class="table table-fixed table-data mb-0">
+                <colgroup>
+                    <col style="width: 150px">
+                    <col style="width: 120px">
+                    <col style="width: 90px">
+                    <col style="width: 90px">
+                    <col style="width: 90px">
+                    <col style="width: 90px">
+                    <col style="width: 90px">
+                </colgroup>
+                <thead>
+                <tr>
+                    <th class="text-center font-weight-semi-bold"><span></span></th>
+                    <th class="text-center font-weight-semi-bold"><span>상태</span></th>
+                    <th class="text-center font-weight-semi-bold"><span>영세</span></th>
+                    <th class="text-center font-weight-semi-bold"><span>중소1</span></th>
+                    <th class="text-center font-weight-semi-bold"><span>중소2</span></th>
+                    <th class="text-center font-weight-semi-bold"><span>중소3</span></th>
+                    <th class="text-center font-weight-semi-bold"><span>일반</span></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="text-center align-middle">
+                        <span class="font-weight-semi-bold">키인</span>
+                    </td>
+                    <td class="text-center align-middle">
+                        <span class="color-green-100">심사중</span>
+                    </td>
+                    <td class="text-center align-middle">
+                        <span>1.70%</span>
+                    </td>
+                    <td class="text-center align-middle">
+                        <span>2.30%</span>
+                    </td>
+                    <td class="text-center align-middle">
+                        <span>2.45%</span>
+                    </td>
+                    <td class="text-center align-middle">
+                        <span>2.70%</span>
+                    </td>
+                    <td class="text-center align-middle">
+                        <span>2.90%</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center align-middle">
+                        <span class="font-weight-semi-bold">카카오페이</span>
+                    </td>
+                    <td class="text-center align-middle">
+                        <span class="color-blue-100">계약중</span>
+                    </td>
+                    <td class="text-center align-middle">
+                        <span>1.70%</span>
+                    </td>
+                    <td class="text-center align-middle">
+                        <span>2.30%</span>
+                    </td>
+                    <td class="text-center align-middle">
+                        <span>2.45%</span>
+                    </td>
+                    <td class="text-center align-middle">
+                        <span>2.70%</span>
+                    </td>
+                    <td class="text-center align-middle">
+                        <span>2.90%</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center align-middle">
+                        <span class="font-weight-semi-bold">비밀번호간편</span>
+                    </td>
+                    <td class="text-center align-middle">
+                        <span class="color-red-100">입점불가</span>
+                    </td>
+                    <td class="text-center align-middle">
+                        <span>1.70%</span>
+                    </td>
+                    <td class="text-center align-middle">
+                        <span>2.30%</span>
+                    </td>
+                    <td class="text-center align-middle">
+                        <span>2.45%</span>
+                    </td>
+                    <td class="text-center align-middle">
+                        <span>2.70%</span>
+                    </td>
+                    <td class="text-center align-middle">
+                        <span>2.90%</span>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="caption position-relative clearfix">
+            <button class="btn-reset text-decoration-underline color-gray-000 float-right">
+                <i class="icon ico_clock_black"></i>수수료 수정이력
+            </button>
+        </div>
+    </div>
+    <!--카드정보 > 결제수단 상태, 수수료 e-->
+
+    <!--카드정보 > 정산 s-->
+    <div class="card">
+        <div class="title-area">
+            <p class="title font-weight-semi-bold d-flex align-items-center">
+                <i class="icon ico_check_purple"></i>
+                <span>정산</span>
+                <i class="hover-area position-relative">
+                    <i class="icon ico_question_gray"></i>
+                    <span class="speech-bubble _speech-bubble" style="top : -240px">
+                                                <span class="font-weight-semi-bold">월정산 기준</span><br>
+                                                <span class="font-weight-semi-bold"><span style="margin-right: 5px">&#183;</span>월1회</span><br>
+                                                이번 달 01일 ~ 말일까지의 결제를 다음 달 25일 정산<br>
+                                                <span class="font-weight-semi-bold"><span style="margin-right: 5px">&#183;</span>월2회</span><br>
+                                                a. 이번 달 01일 ~ 15일까지의 결제를 이번 달 23일 정산<br>
+                                                b. 이번 달 16일 ~ 말일까지의 결제를 다음 달 8일 정산<br>
+                                                <br>
+                                                <span class="font-weight-semi-bold">월 4회 기준</span><br>
+                                                <span style="margin-right: 5px">&#183;</span>이번 달 05일 ~ 11일까지의 결제를 이번 달 19일 정산<br>
+                                                <span style="margin-right: 5px">&#183;</span>이번 달 12일 ~ 19일까지의 결제를 이번 달 26일 정산<br>
+                                                <span style="margin-right: 5px">&#183;</span>이번 달 20일 ~ 26일까지의 결제를 다음 달 04일 정산<br>
+                                                <span style="margin-right: 5px">&#183;</span>이번 달 27일 ~ 다음 달 04일까지의 결제를 다음 달 11일 정산<br>
+                                            </span>
+                </i>
+            </p>
+            <div class="btn-wrap">
+                <button class="btn btn-secondary btn-md btn-round">주기 수정하기</button>
+                <button class="btn btn-secondary btn-md btn-round">계좌 수정하기</button>
+            </div>
+        </div>
+        <ul class="row signup-list-area">
+            <li class="list col-md-12">
+                <span class="title font-weight-semi-bold">주기</span>
+                <div class="row data-content">
+                    <div class="col-xl">
+                        <span class="title  font-weight-semi-bold">구분</span>
+                        <!--<span class="data color-orange-100">미설정</span>-->
+                        <span class="data">일정산</span>
+                    </div>
+                    <div class="col-xl">
+                        <span class="title  font-weight-semi-bold">주기</span>
+                        <!--<span class="data color-orange-100">미입력</span>-->
+                        <span class="data">7일</span>
+                    </div>
+                    <div class="col-xl-4">
+                        <span>&nbsp;</span>
+                    </div>
+                </div>
+            </li>
+            <li class="list col-md-12 mb-0">
+                <span class="title font-weight-semi-bold">계좌</span>
+                <div class="row data-content">
+                    <div class="col-xl-4">
+                        <span class="title font-weight-semi-bold">은행</span>
+                        <!--<span class="data color-orange-100">미입력</span>-->
+                        <span class="data">우리은행</span>
+                    </div>
+                    <div class="col-xl-4">
+                        <span class="title font-weight-semi-bold">계좌번호</span>
+                        <!--<span class="data color-orange-100">미입력</span>-->
+                        <span class="data">1002753710560</span>
+                    </div>
+                    <div class="col-xl-4">
+                        <span class="title font-weight-semi-bold">예금주명</span>
+                        <!--<span class="data color-orange-100">미입력</span>-->
+                        <span class="data">정다운</span>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <div class="caption position-relative clearfix">
+            <button class="btn-reset text-decoration-underline color-gray-000 float-right">
+                <i class="icon ico_clock_black"></i>정산 주기 수정이력
+            </button>
+        </div>
+    </div>
+    <!--카드정보 > 정산 e-->
+
+    <!--카드정보 > 원천사 정보&나이스&다날-->
+    <div class="card">
+        <div class="title-area">
+            <p class="title font-weight-semi-bold d-flex align-items-center">
+                <i class="icon ico_check_purple"></i>
+                <span>원천사 정보</span>
+            </p>
+            <div class="btn-wrap">
+                <!--<button class="btn btn-secondary btn-sm btn-round">수정하기</button>-->
+                <button class="btn btn-sm btn-round btn-danger">취소</button>
+                <button class="btn btn-primary btn-sm btn-round">저장</button>
+            </div>
+        </div>
+        <ul class="row signup-list-area">
+            <li class="list col-md-6 mb-0">
+                <span class="title font-weight-semi-bold">원천사 선택</span>
+                <!--<span class="data">나이스+다날</span>-->
+                <div class="form-group min-w-190 mb-0">
+                    <label class="select-box _select-box">
+                        <input type="hidden" class="select-value _select-value" value="0">
+                        <span class="value-text _value-text">나이스+다날</span>
+                        <i class="icon ico_select_arrow_down">아래화살표</i>
+                        <ul class="options h-auto">
+                            <li class="option" value="0">나이스+다날</li>
+                            <li class="option" value="1">다날+나이스</li>
+                            <li class="option" value="2">나이스</li>
+                            <li class="option" value="3">다날</li>
+                        </ul>
+                    </label>
+                </div>
+            </li>
+        </ul>
+        <hr>
+        <div class="title-area">
+            <p class="title font-weight-semi-bold d-flex align-items-center">
+                <i class="icon ico_check_purple"></i><span>나이스</span></p>
+            <!--                                    <div class="btn-wrap">-->
+            <!--                                        <button class="caption mt-0 justify-content-end btn-reset text-decoration-underline color-gray-000">-->
+            <!--                                            <i class="icon ico_clock_black"></i>수정이력-->
+            <!--                                        </button>-->
+            <!--                                    </div>-->
+        </div>
+        <ul class="row signup-list-area">
+            <li class="list col-xl-8">
+                <span class="title font-weight-semi-bold">MID(source_id)</span>
+                <div class="data-content">
+                    <span class="title font-weight-semi-bold">앱카드</span>
+                    <!--<span class="data">paypleinc</span>-->
+                    <div class="form-group mb-0 w-100">
+                        <label class="w-100 mb-0">
+                            <input class="form-control" type="text">
+                        </label>
+                    </div>
+                </div>
+            </li>
+            <li class="list col-xl-8">
+                <span class="title font-weight-semi-bold">&nbsp;</span>
+                <div class="data-content">
+                    <span class="title font-weight-semi-bold">빌링(수기)</span>
+                    <!--<span class="data">paypleinb</span>-->
+                    <div class="form-group mb-0 w-100">
+                        <label class="w-100 mb-0">
+                            <input class="form-control" type="text">
+                        </label>
+                    </div>
+                </div>
+            </li>
+            <li class="list col-md-12">
+                <span class="title font-weight-semi-bold">가맹점구분 정보<br>(영중소)</span>
+                <div class="data-content">
+                    <span class="title font-weight-semi-bold">적용여부</span>
+                    <span class="data">미적용</span>
+                </div>
+            </li>
+            <li class="list col-md-12">
+                <span class="title font-weight-semi-bold">&nbsp;</span>
+                <div class="data-content">
+                    <span class="title font-weight-semi-bold">적용 카드사</span>
+                    <ul class="checkbox-list-area">
+                        <li>
+                            <label class="">
+                                <input type="checkbox" class="custom-checkbox" disabled="">
+                                <i class="icon ico_checkbox">체크박스</i>
+                                <span>신한</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="">
+                                <input type="checkbox" class="custom-checkbox checked-disabled"
+                                       disabled="">
+                                <i class="icon ico_checkbox">체크박스</i>
+                                <span>삼성</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label class=" checked-disabled">
+                                <input type="checkbox" class="custom-checkbox" disabled="">
+                                <i class="icon ico_checkbox">체크박스</i>
+                                <span>KB국민</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label class=" checked-disabled">
+                                <input type="checkbox" class="custom-checkbox" disabled="">
+                                <i class="icon ico_checkbox">체크박스</i>
+                                <span>현대</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label class=" checked-disabled">
+                                <input type="checkbox" class="custom-checkbox" disabled="">
+                                <i class="icon ico_checkbox">체크박스</i>
+                                <span>BC</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label class=" checked-disabled">
+                                <input type="checkbox" class="custom-checkbox" disabled="">
+                                <i class="icon ico_checkbox">체크박스</i>
+                                <span>하나</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="checked-disabled">
+                                <input type="checkbox" class="custom-checkbox" disabled="">
+                                <i class="icon ico_checkbox">체크박스</i>
+                                <span>롯데</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label class=" checked-disabled">
+                                <input type="checkbox" class="custom-checkbox" disabled="">
+                                <i class="icon ico_checkbox">체크박스</i>
+                                <span>NH농협</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label class=" checked-disabled">
+                                <input type="checkbox" class="custom-checkbox" disabled="">
+                                <i class="icon ico_checkbox">체크박스</i>
+                                <span>우리</span>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="list col-md-12">
+                <span class="title font-weight-semi-bold">&nbsp;</span>
+                <div class="data-content"><span
+                        class="title font-weight-semi-bold">적용일자</span><span
+                        class="data">미적용</span></div>
+            </li>
+            <li class="list col-md-12">
+                <span class="title font-weight-semi-bold">&nbsp;</span>
+                <div class="data-content"><span
+                        class="title font-weight-semi-bold">구분값</span>
+                    <span class="data">선 - 일반 / 확 - 미적용</span>
+                </div>
+            </li>
+        </ul>
+        <hr>
+        <div class="title-area">
+            <p class="title font-weight-semi-bold d-flex align-items-center">
+                <i class="icon ico_check_purple"></i><span>다날</span></p>
+            <!--<div class="btn-wrap">
+                <button class="caption mt-0 justify-content-end btn-reset text-decoration-underline color-gray-000">
+                    <i class="icon ico_clock_black"></i>수정이력</button>
+            </div>-->
+        </div>
+        <ul class="row signup-list-area">
+            <li class="list col-xl-8 align-items-start">
+                <span class="title font-weight-semi-bold">CPID(source_id)</span>
+                <div class="data-content">
+                    <span class="title font-weight-semi-bold">앱카드,<br>빌링(수기)</span>
+                    <!--  <span class="data">paypleinc</span>-->
+                    <div class="form-group mb-0 w-100">
+                        <label class="w-100 mb-0">
+                            <input class="form-control" type="text">
+                        </label>
+                    </div>
+                </div>
+            </li>
+            <li class="list col-md-12">
+                <span class="title font-weight-semi-bold">가맹점구분 정보<br>(영중소)</span>
+                <div class="data-content">
+                    <span class="title font-weight-semi-bold">적용여부</span>
+                    <span class="data">미적용</span>
+                </div>
+            </li>
+            <li class="list col-md-12">
+                <span class="title font-weight-semi-bold">&nbsp;</span>
+                <div class="data-content">
+                    <span class="title font-weight-semi-bold">적용 카드사</span>
+                    <ul class="checkbox-list-area">
+                        <li>
+                            <label class="">
+                                <input type="checkbox" class="custom-checkbox" disabled="">
+                                <i class="icon ico_checkbox">체크박스</i>
+                                <span>신한</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="">
+                                <input type="checkbox" class="custom-checkbox checked-disabled"
+                                       disabled="">
+                                <i class="icon ico_checkbox">체크박스</i>
+                                <span>삼성</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label class=" checked-disabled">
+                                <input type="checkbox" class="custom-checkbox" disabled="">
+                                <i class="icon ico_checkbox">체크박스</i>
+                                <span>KB국민</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label class=" checked-disabled">
+                                <input type="checkbox" class="custom-checkbox" disabled="">
+                                <i class="icon ico_checkbox">체크박스</i>
+                                <span>현대</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label class=" checked-disabled">
+                                <input type="checkbox" class="custom-checkbox" disabled="">
+                                <i class="icon ico_checkbox">체크박스</i>
+                                <span>BC</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label class=" checked-disabled">
+                                <input type="checkbox" class="custom-checkbox" disabled="">
+                                <i class="icon ico_checkbox">체크박스</i>
+                                <span>하나</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="checked-disabled">
+                                <input type="checkbox" class="custom-checkbox" disabled="">
+                                <i class="icon ico_checkbox">체크박스</i>
+                                <span>롯데</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label class=" checked-disabled">
+                                <input type="checkbox" class="custom-checkbox" disabled="">
+                                <i class="icon ico_checkbox">체크박스</i>
+                                <span>NH농협</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label class=" checked-disabled">
+                                <input type="checkbox" class="custom-checkbox" disabled="">
+                                <i class="icon ico_checkbox">체크박스</i>
+                                <span>우리</span>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="list col-md-12">
+                <span class="title font-weight-semi-bold">&nbsp;</span>
+                <div class="data-content"><span
+                        class="title font-weight-semi-bold">적용일자</span><span
+                        class="data">미적용</span></div>
+            </li>
+            <li class="list col-md-12">
+                <span class="title font-weight-semi-bold">&nbsp;</span>
+                <div class="data-content"><span
+                        class="title font-weight-semi-bold">구분값</span><span class="data">선 - 일반 / 확 - 미적용</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <!--카드정보 > 기타 s-->
+    <div class="card">
+        <div class="title-area">
+            <p class="title font-weight-semi-bold d-flex align-items-center">
+                <i class="icon ico_check_purple"></i><span>기타</span></p>
+            <div class="btn-wrap">
+                <!--<button class="btn btn-secondary btn-sm btn-round">수정하기</button>-->
+                <button class="btn btn-sm btn-round btn-danger">취소</button>
+                <button class="btn btn-primary btn-sm btn-round">저장</button>
+            </div>
+        </div>
+        <ul class="row signup-list-area">
+            <li class="list col-md-12">
+                <span class="title font-weight-semi-bold">결제제한</span>
+                <div class="data-content">
+                    <span class="title font-weight-semi-bold">적용여부</span>
+                    <!--                                            <span class="data color-orange-100">미설정</span>-->
+                    <div class="form-group mb-0">
+                        <div class="btn-group w-100 custom-radio-container">
+                            <div class="custom-radio-group fsz-0">
+                                <input class="radio-input" type="radio" name="example2"
+                                       checked="" id="customRadio3">
+                                <label for="customRadio3"
+                                       class="btn btn-secondary btn-md">적용</label>
+                            </div>
+                            <div class="custom-radio-group fsz-0">
+                                <input class="radio-input" type="radio" name="example2"
+                                       id="customRadio4">
+                                <label for="customRadio4"
+                                       class="btn btn-secondary btn-md">미적용</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="list col-xl-8">
+                <span class="title font-weight-semi-bold">&nbsp;</span>
+                <div class="data-content">
+                    <span class="title font-weight-semi-bold">건당 최소금액</span>
+                    <!--<span class="data color-orange-100">미설정</span>-->
+                    <div class="form-group mb-0 w-100">
+                        <label class="w-100 mb-0 position-relative unit">
+                            <input class="form-control _only-number" type="tel">
+                        </label>
+                    </div>
+                </div>
+            </li>
+            <li class="list col-xl-8 mb-0">
+                <span class="title font-weight-semi-bold">&nbsp;</span>
+                <div class="data-content">
+                    <span class="title font-weight-semi-bold">건당 최대금액</span>
+                    <!--<span class="data color-orange-100">미설정</span>-->
+                    <div class="form-group mb-0 w-100">
+                        <label class="w-100 mb-0 position-relative unit">
+                            <input class="form-control _only-number" type="tel">
+                        </label>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--카드정보 > 기타 e-->
+</div>
+<!--카드 정보 e-->

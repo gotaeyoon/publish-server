@@ -69,10 +69,10 @@ function showDetailBtn(){
 }
 
 // 달력 모달 생성
-function showRangeModal() {
-    const modalDataPicker = $('._modalDataPicker');
-    const dateRangePicker = $('._dataPickerRange');
-    dateRangePicker.daterangepicker(
+function showRangeDateModal() {
+    const modalRangeDate = $('._modalRangeDate');
+    const inputRangeDate = $('._inputRangeDate');
+    inputRangeDate.daterangepicker(
         {
             linkedCalendars: true,
             autoApply: true,
@@ -89,12 +89,10 @@ function showRangeModal() {
             "applyButtonClasses": "apply_range_btn",
             "cancelButtonClasses": "cancel_range_btn",
             "showCustomRangeLabelranges": false,
-            "parentEl": modalDataPicker,
+            "parentEl": modalRangeDate,
         },
-        function (start, end, label) {
-
-        });
-    dateRangePicker.on('hide.daterangepicker', function (ev, picker) {
+    );
+    inputRangeDate.on('hide.daterangepicker', function (ev, picker) {
         $('._modal-calendar').modal('hide')
     });
 
@@ -102,40 +100,62 @@ function showRangeModal() {
     $('#threeMonthAgoBtn').on('click', function () {
         const startDate = moment().subtract(3, 'month');
         const endDate = moment();
-        dateRangePicker.data('daterangepicker').setStartDate(startDate);
-        dateRangePicker.data('daterangepicker').setEndDate(endDate);
+        inputRangeDate.data('daterangepicker').setStartDate(startDate);
+        inputRangeDate.data('daterangepicker').setEndDate(endDate);
     });
     // Last Month 버튼 클릭 시 지난달 범위 선택
     $('#lastMonthBtn').on('click', function () {
         const startDate = moment().subtract(1, 'month');
         const endDate = moment();
-        dateRangePicker.data('daterangepicker').setStartDate(startDate);
-        dateRangePicker.data('daterangepicker').setEndDate(endDate);
+        inputRangeDate.data('daterangepicker').setStartDate(startDate);
+        inputRangeDate.data('daterangepicker').setEndDate(endDate);
     });
 
     // This Month 버튼 클릭 시 이번달 범위 선택
     $('#thisMonthBtn').click(function () {
         const startDate = moment().startOf('month');
         const endDate = moment();
-        dateRangePicker.data('daterangepicker').setStartDate(startDate);
-        dateRangePicker.data('daterangepicker').setEndDate(endDate);
+        inputRangeDate.data('daterangepicker').setStartDate(startDate);
+        inputRangeDate.data('daterangepicker').setEndDate(endDate);
     });
 
     // Yesterday 버튼 클릭 시 어제 범위 선택
     $('#yesterdayBtn').click(function () {
         const startDate = moment().subtract(1, 'day');
         const endDate = moment().subtract(1, 'day');
-        dateRangePicker.data('daterangepicker').setStartDate(startDate);
-        dateRangePicker.data('daterangepicker').setEndDate(endDate);
+        inputRangeDate.data('daterangepicker').setStartDate(startDate);
+        inputRangeDate.data('daterangepicker').setEndDate(endDate);
     });
 
     // Today 버튼 클릭 시 오늘 범위 선택
     $('#todayBtn').click(function () {
         var startDate = moment();
         var endDate = moment();
-        dateRangePicker.data('daterangepicker').setStartDate(startDate);
-        dateRangePicker.data('daterangepicker').setEndDate(endDate);
+        inputRangeDate.data('daterangepicker').setStartDate(startDate);
+        inputRangeDate.data('daterangepicker').setEndDate(endDate);
     });
+}
+
+
+
+function showSingleDateModal(){
+    const modalSingleDate = $('._modalSingleDate');
+    const inputSingleDate = $('._inputSingleDate');
+    inputSingleDate.daterangepicker(
+        {
+            singleDatePicker: true,
+            linkedCalendars: true,
+            autoApply: true,
+            "locale": {
+                "format": "YYYY-MM-DD",
+                "separator": "~",
+                "weekLabel": "주",
+                "daysOfWeek": ["일", "월", "화", "수", "목", "금", "토"],
+                "monthNames": ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"],
+            },
+        },
+    );
+
 }
 
 /*검색시 데이터가 없는 경우*/
@@ -202,7 +222,7 @@ function checkInputNumber(){
 
 /*전체 실행*/
 $(document).ready(function () {
-    showRangeModal();
+    showRangeDateModal();
     asideSlideBtn();
     openAsideBtn();
     selectBox();
@@ -213,4 +233,5 @@ $(document).ready(function () {
     showDetailBtn();
     checkNoData();
     checkInputNumber();
+    showSingleDateModal();
 })

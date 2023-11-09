@@ -48,7 +48,7 @@ data.guide = {
             page: 'table'
         },
         {
-            stateClass: 'working',
+            stateClass: 'complete',
             url: 'modal',
             category: 'guide',
             page: 'modal'
@@ -60,7 +60,7 @@ data.guide = {
             page: 'tab'
         },
         {
-            stateClass: 'working',
+            stateClass: 'complete',
             url: 'icon',
             category: 'guide',
             page: 'icon'
@@ -343,7 +343,13 @@ data.signupko = {
             page: '기본정보_국내_수정'
         },
         {
-            stateClass: 'working',
+            stateClass: 'confirm',
+            url: '카드_구분값_수정이력',
+            category: 'signupko',
+            page: '카드_구분값_수정이력'
+        },
+        {
+            stateClass: 'confirm',
             url: '카드_상태변경',
             category: 'signupko',
             page: '카드_상태변경'
@@ -355,10 +361,76 @@ data.signupko = {
             page: '카드_수수료변경'
         },
         {
-            stateClass: 'working',
-            url: '카드_수수료이력보기',
+            stateClass: 'confirm',
+            url: '카드_수수료_수정이력',
             category: 'signupko',
-            page: '카드_수수료이력보기'
+            page: '카드_수수료_수정이력'
+        },
+        {
+            stateClass: 'working',
+            url: '카드_정산주기_수정',
+            category: 'signupko',
+            page: '카드_정산주기_수정'
+        },
+        {
+            stateClass: 'confirm',
+            url: '카드_정산주기_수정이력',
+            category: 'signupko',
+            page: '카드_정산주기_수정이력'
+        },
+        {
+            stateClass: 'confirm',
+            url: '계좌_상태변경',
+            category: 'signupko',
+            page: '계좌_상태변경'
+        },
+        {
+            stateClass: 'working',
+            url: '계좌_수수료수정',
+            category: 'signupko',
+            page: '계좌_수수료수정'
+        },
+        {
+            stateClass: 'confirm',
+            url: '계좌_수수료_수정이력',
+            category: 'signupko',
+            page: '계좌_수수료_수정이력'
+        },
+        {
+            stateClass: 'confirm',
+            url: '페이_상태변경',
+            category: 'signupko',
+            page: '페이_상태변경'
+        },
+        {
+            stateClass: 'working',
+            url: '페이_수수료수정',
+            category: 'signupko',
+            page: '페이_수수료수정'
+        },
+        {
+            stateClass: 'confirm',
+            url: '페이_수수료_수정이력',
+            category: 'signupko',
+            page: '페이_수수료_수정이력'
+        },
+        {
+            stateClass: 'confirm',
+            url: '가상계좌_상태수정',
+            category: 'signupko',
+            page: '가상계좌_상태수정'
+        },
+        {
+            stateClass: 'working',
+            url: '가상계좌_수수료수정',
+            category: 'signupko',
+            page: '가상계좌_수수료수정'
+        },
+        {
+            stateClass: 'confirm',
+            url: '가상계좌_수수료_수정이력',
+            category: 'signupko',
+            page: '가상계좌_수수료_수정이력'
         },
     ]
 }

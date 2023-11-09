@@ -6,10 +6,10 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" href="https://image.payple.kr/common/favicon.ico" sizes="32x32">
-    <link rel="stylesheet" href="./../../css/payple_component.css?v0.83">
-    <link rel="stylesheet" href="./../../css/payple_pages.css?v0.83">
-    <script src="../../js/bundle.js?v0.83"></script>
-    <script src="../../js/common.js?v0.83"></script>
+    <link rel="stylesheet" href="./../../css/payple_component.css?v0.9">
+    <link rel="stylesheet" href="./../../css/payple_pages.css?v0.9">
+    <script src="../../js/bundle.js?v0.9"></script>
+    <script src="../../js/common.js?v0.9"></script>
     <title>페이플 관리자 페이지</title>
 </head>
 
@@ -19,16 +19,30 @@
 <div class="wrap">
     <div class="guide-section">
         <div class="card mb-5">
-            <h3 style="margin-bottom: 30px; font-weight: 600">모달</h3>
+            <h3 style="margin-bottom: 30px; font-weight: 600">슬라이드 모달</h3>
             <div>
-                <button class="btn btn-secondary _open_slide_modal">슬라이드 모달</button>
+                <button class="btn btn-secondary _open_slide_modal"  onclick="openSlideModal('_slide-modal-wrap','-lg')">슬라이드 모달(lg)</button>
+                <button class="btn btn-secondary _open_slide_modal"  onclick="openSlideModal('_slide-modal-wrap','-md')">슬라이드 모달(md)</button>
+                <button class="btn btn-secondary _open_slide_modal"  onclick="openSlideModal('_slide-modal-wrap','-sm')">슬라이드 모달(sm)</button>
+            </div>
+        </div>
+        <div class="card mb-5">
+            <h3 style="margin-bottom: 30px; font-weight: 600">달력 모달</h3>
+            <p class="color-orange-100">가이드 INPUT 참고</p>
+        </div>
+        <div class="card mb-5">
+            <h3 style="margin-bottom: 30px; font-weight: 600">confirm 모달</h3>
+            <div>
+                <button class="btn btn-secondary _confirm-modal-open">confirm 모달</button>
             </div>
         </div>
     </div>
 </div>
-<div class="slide-modal-wrap _slide-modal-wrap">
-    <div class="slide-modal">
+
+<div class="slide-modal-wrap _slide-modal-wrap _slide-modal-wrap-lg ">
+    <div class="slide-modal slide-modal-lg">
         <div class="slide-modal-header">
+            <h3 class="title font-weight-bold">큰모달</h3>
             <i class="ico_close_btn _close-slide-modal-btn"></i>
         </div>
         <div class="slide-modal-body">
@@ -39,5 +53,59 @@
         </div>
     </div>
 </div>
+<div class="slide-modal-wrap _slide-modal-wrap _slide-modal-wrap-md">
+    <div class="slide-modal slide-modal-md">
+        <div class="slide-modal-header">
+            <h3 class="title font-weight-bold">중간모달</h3>
+            <i class="ico_close_btn _close-slide-modal-btn"></i>
+        </div>
+        <div class="slide-modal-body">
+
+        </div>
+        <div class="slide-modal-footer">
+
+        </div>
+    </div>
+</div>
+<div class="slide-modal-wrap _slide-modal-wrap _slide-modal-wrap-sm">
+    <div class="slide-modal slide-modal-sm">
+        <div class="slide-modal-header">
+            <h3 class="title font-weight-bold">작은모달</h3>
+            <i class="ico_close_btn _close-slide-modal-btn"></i>
+        </div>
+        <div class="slide-modal-body">
+
+        </div>
+        <div class="slide-modal-footer">
+
+        </div>
+    </div>
+</div>
+
+<div class="modal fade confirm-modal _confirm-modal">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+
+            </div>
+            <div class="modal-body">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">취소</button>
+                <button type="button" class="btn btn-primary">발송하기</button>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
+
+
+
+<script>
+
+    /*email send 호출*/
+    $('._confirm-modal-open').on('click',function(){
+        $('._confirm-modal').modal('show')
+    })
+</script>
 </html>

@@ -6,10 +6,10 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" href="https://image.payple.kr/common/favicon.ico" sizes="32x32">
-    <link rel="stylesheet" href="./../../css/payple_component.css?v0.83">
-    <link rel="stylesheet" href="./../../css/payple_pages.css?v0.83">
-    <script src="../../js/bundle.js?v0.83"></script>
-    <script src="../../js/common.js?v0.83"></script>
+    <link rel="stylesheet" href="./../../css/payple_component.css?v0.9">
+    <link rel="stylesheet" href="./../../css/payple_pages.css?v0.9">
+    <script src="../../js/bundle.js?v0.9"></script>
+    <script src="../../js/common.js?v0.9"></script>
     <title>페이플 관리자 페이지</title>
 </head>
 
@@ -724,10 +724,10 @@
                                                 <i class="icon ico_select_arrow_down">아래화살표</i>
                                                 <ul class="options h-auto">
                                                     <li class="option" value="1">작성중</li>
-                                                    <li class="option" value="2">심사 중</li>
+                                                    <li class="option" value="2">심사중</li>
                                                     <li class="option" value="2">입점불가</li>
-                                                    <li class="option" value="2">계약 중</li>
-                                                    <li class="option" value="2">서비스 중</li>
+                                                    <li class="option" value="2">계약중</li>
+                                                    <li class="option" value="2">서비스중</li>
                                                     <li class="option" value="2">정지</li>
                                                     <li class="option" value="2">해지</li>
                                                 </ul>
@@ -790,10 +790,10 @@
                                                 <i class="icon ico_select_arrow_down">아래화살표</i>
                                                 <ul class="options h-auto">
                                                     <li class="option" value="1">작성중</li>
-                                                    <li class="option" value="2">심사 중</li>
+                                                    <li class="option" value="2">심사중</li>
                                                     <li class="option" value="2">입점불가</li>
-                                                    <li class="option" value="2">계약 중</li>
-                                                    <li class="option" value="2">서비스 중</li>
+                                                    <li class="option" value="2">계약중</li>
+                                                    <li class="option" value="2">서비스중</li>
                                                     <li class="option" value="2">정지</li>
                                                     <li class="option" value="2">해지</li>
                                                 </ul>
@@ -1258,7 +1258,7 @@
                                                 <!--<span class="data color-orange-100">미입력</span>-->
                                                 <div class="form-group mb-0 w-100">
                                                     <label class="calender-input w-auto mb-0">
-                                                        <input class="form-control _dataPickerRange" type="text" style="font-size: 12px">
+                                                        <input class="form-control _inputRangeDate" type="text" style="font-size: 12px">
                                                         <i class="icon ico_calendar" onclick="$('._modal-calendar').modal('show')">달력이미지</i>
                                                     </label>
                                                 </div>
@@ -1307,7 +1307,7 @@
                                                 <!-- <span class="data color-orange-100">미입력</span>-->
                                                 <div class="form-group mb-0 w-100">
                                                     <label class="calender-input w-auto mb-0">
-                                                        <input class="form-control _dataPickerRange" type="text" style="font-size: 12px">
+                                                        <input class="form-control _inputRangeDate" type="text" style="font-size: 12px">
                                                         <i class="icon ico_calendar" onclick="$('._modal-calendar').modal('show')">달력이미지</i>
                                                     </label>
                                                 </div>
@@ -1519,77 +1519,77 @@
                                         </div>
                                         <div class="tbody">
                                             <div class="custom-table-tr">
-                                                <div class="title-area">
+                                                <div class="custom-table-td">
                                                     <span class="title font-weight-semi-bold">키인</span>
                                                 </div>
-                                                <div class="d-flex flex-wrap">
-                                                    <div class="data-area">
-                                                        <div class="data">
+                                                <div>
+                                                    <div class="custom-table-group-td">
+                                                        <div class="custom-table-td">
                                                             <span class="color-green-100">심사중</span>
                                                         </div>
-                                                        <div class="data">
+                                                        <div class="custom-table-td">
                                                             <span>KRW</span>
                                                         </div>
-                                                        <div class="data">
+                                                        <div class="custom-table-td">
                                                             <span>3.90%</span>
                                                         </div>
-                                                        <div class="data">
+                                                        <div class="custom-table-td">
                                                             <span></span>
                                                         </div>
                                                     </div>
-                                                    <div class="data-area">
-                                                        <div class="data">
+                                                    <div class="custom-table-group-td">
+                                                        <div class="custom-table-td">
                                                             <span class="color-green-100">심사중</span>
                                                         </div>
-                                                        <div class="data">
+                                                        <div class="custom-table-td">
                                                             <span>JPY</span>
                                                         </div>
-                                                        <div class="data">
+                                                        <div class="custom-table-td">
                                                             <span>3.90%</span>
                                                         </div>
-                                                        <div class="data">
+                                                        <div class="custom-table-td">
                                                             <span></span>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="custom-table-tr">
-                                                <div class="title-area">
+                                                <div class="custom-table-td">
                                                     <span class="title font-weight-semi-bold">빌링</span>
                                                 </div>
-                                                <div class="d-flex flex-wrap">
-                                                    <div class="data-area">
-                                                        <div class="data">
+                                                <div>
+                                                    <div class="custom-table-group-td">
+                                                        <div class="custom-table-td">
                                                             <span class="color-green-100">심사중</span>
                                                         </div>
-                                                        <div class="data">
+                                                        <div class="custom-table-td">
                                                             <span>KRW</span>
                                                         </div>
-                                                        <div class="data">
+                                                        <div class="custom-table-td">
                                                             <span>3.90%</span>
                                                         </div>
-                                                        <div class="data">
+                                                        <div class="custom-table-td">
                                                             <span></span>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="custom-table-tr">
-                                                <div class="title-area">
+                                                <div class="custom-table-td">
                                                     <span class="title font-weight-semi-bold">비밀번호간편	</span>
                                                 </div>
-                                                <div class="d-flex flex-wrap">
-                                                    <div class="data-area">
-                                                        <div class="data">
+                                                <div>
+                                                    <div class="custom-table-group-td">
+                                                        <div class="custom-table-td">
                                                             <span class="color-green-100">심사중</span>
                                                         </div>
-                                                        <div class="data">
+                                                        <div class="custom-table-td">
                                                             <span>KRW</span>
                                                         </div>
-                                                        <div class="data">
+                                                        <div class="custom-table-td">
                                                             <span>3.90%</span>
                                                         </div>
-                                                        <div class="data">
+                                                        <div class="custom-table-td">
                                                             <span></span>
                                                         </div>
                                                     </div>

@@ -6,10 +6,10 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" href="https://image.payple.kr/common/favicon.ico" sizes="32x32">
-    <link rel="stylesheet" href="./../../css/payple_component.css?v0.83">
-    <link rel="stylesheet" href="./../../css/payple_pages.css?v0.83">
-    <script src="../../js/bundle.js?v0.83"></script>
-    <script src="../../js/common.js?v0.83"></script>
+    <link rel="stylesheet" href="./../../css/payple_component.css?v0.9">
+    <link rel="stylesheet" href="./../../css/payple_pages.css?v0.9">
+    <script src="../../js/bundle.js?v0.9"></script>
+    <script src="../../js/common.js?v0.9"></script>
     <title>페이플 관리자 페이지</title>
 </head>
 
@@ -690,7 +690,7 @@
                                 <div class="col-xl-auto">
                                     <div class="form-group">
                                         <label class="calender-input mb-0">
-                                            <input class="form-control _dataPickerRange" type="text">
+                                            <input class="form-control _inputRangeDate" type="text">
                                             <i class="icon ico_calendar" onclick="$('._modal-calendar').modal('show')">달력이미지</i>
                                         </label>
                                     </div>
@@ -928,7 +928,7 @@
                             <span>조회합계</span>
                         </h5>
                     </div>
-                    <div class="row">
+                    <div class="row flex-xl-row">
                         <div class="col-xl">
                             <div class="box secondary">
                                 <p class="title">합계</p>
@@ -937,25 +937,25 @@
                         </div>
                         <div class="col-xl">
                             <div class="box primary">
-                                <p class="title">합계</p>
+                                <p class="title"><i class="icon ico_circle_email"></i>이메일</p>
                                 <p class="desc"><span class="data">100</span>건</p>
                             </div>
                         </div>
                         <div class="col-xl">
                             <div class="box primary">
-                                <p class="title">합계</p>
+                                <p class="title"><i class="icon ico_circle_phone"></i>유선</p>
                                 <p class="desc"><span class="data">100</span>건</p>
                             </div>
                         </div>
                         <div class="col-xl">
                             <div class="box primary">
-                                <p class="title">합계</p>
+                                <p class="title"><i class="icon ico_circle_speech_bubble"></i>채널톡</p>
                                 <p class="desc"><span class="data">100</span>건</p>
                             </div>
                         </div>
                         <div class="col-xl">
                             <div class="box primary">
-                                <p class="title">합계</p>
+                                <p class="title"><i class="icon ico_circle_ellipsis"></i>기타</p>
                                 <p class="desc"><span class="data">100</span>건</p>
                             </div>
                         </div>
@@ -990,8 +990,8 @@
                                 <col style="width: 220px">
                                 <col style="width: 125px">
                                 <col style="width: 250px">
-                                <col style="width: 125px">
-                                <col style="width: 64px">
+                                <col style="width: 250px">
+                                <col style="width: 120px">
                                 <col style="width: 105px">
                                 <col style="width: 105px">
                             </colgroup>
@@ -1172,7 +1172,7 @@
     <div class="modal-dialog modal-dialog-centered calender-modal">
         <div class="modal-content">
             <div class="modal-body">
-                <div class="_modalDataPicker"></div>
+                <div class="_modalRangeDate"></div>
             </div>
         </div>
     </div>
