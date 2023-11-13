@@ -6,10 +6,10 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" href="https://image.payple.kr/common/favicon.ico" sizes="32x32">
-    <link rel="stylesheet" href="./../../css/payple_component.css?v0.9">
-    <link rel="stylesheet" href="./../../css/payple_pages.css?v0.9">
-    <script src="../../js/bundle.js?v0.9"></script>
-    <script src="../../js/common.js?v0.9"></script>
+    <link rel="stylesheet" href="./../../css/payple_component.css?v1.0">
+    <link rel="stylesheet" href="./../../css/payple_pages.css?v1.0">
+    <script src="../../js/bundle.js?v1.0"></script>
+    <script src="../../js/common.js?v1.0"></script>
     <title>페이플 관리자 페이지</title>
 </head>
 
@@ -668,15 +668,15 @@
         <article class="content-container">
             <!-- 컨텐츠 s-->
             <section class="signup-section">
-                <h3 class="main-title font-weight-bold">가입, 신청정보</h3>
+                <h3 class="font-h1 mb30 font-weight-bold">가입, 신청정보</h3>
                 <div class="card">
-                    <h5 class="sub-title font-weight-semi-bold">
+                    <h5 class="d-flex align-items-center font-h3 mb20">
                         <i class="icon ico_filter"></i>
-                        <span>필터</span>
+                        <span class="ml9 font-weight-semi-bold">필터</span>
                     </h5>
                     <div class="row">
                         <div class="col-xl-auto">
-                            <p class="card-title font-weight-semi-bold">기간</p>
+                            <p class="font-p2 mb12 font-weight-semi-bold">기간</p>
                             <div class="row row-col-3">
                                 <div class="col-xl">
                                     <div class="form-group">
@@ -698,7 +698,7 @@
                                 </div>
                                 <div class="col-xl-auto">
                                     <div class="form-group">
-                                        <div class="input-btn-group">
+                                        <div class="time-range-btn-group">
                                             <button class="btn btn-secondary" id="threeMonthAgoBtn">3개월</button>
                                             <button class="btn btn-secondary" id="lastMonthBtn">지난달</button>
                                             <button class="btn btn-secondary" id="thisMonthBtn">이번달</button>
@@ -709,7 +709,7 @@
                                 </div>
                                 <div class="col-xl-auto">
                                     <div class="form-group">
-                                        <label class="calender-input mb-0">
+                                        <label class="calender-input mb0">
                                             <input class="form-control _inputRangeDate" type="text">
                                             <i class="icon ico_calendar" onclick="$('._modal-calendar').modal('show')">달력이미지</i>
                                         </label>
@@ -721,7 +721,7 @@
                     </div>
                     <div class="row">
                         <div class="col-xl-auto">
-                            <p class="card-title font-weight-semi-bold">서비스 구분/상태</p>
+                            <p class="font-p2 mb12 font-weight-semi-bold">서비스 구분/상태</p>
                             <div class="row row-col-2">
                                 <div class="col-xl">
                                     <div class="form-group min-w-190">
@@ -759,7 +759,7 @@
                             </div>
                         </div>
                         <div class="col-xl-auto">
-                            <p class="card-title font-weight-semi-bold">결제수단 구분/상태</p>
+                            <p class="font-p2 mb12 font-weight-semi-bold">결제수단 구분/상태</p>
                             <div class="row row-col-2">
                                 <div class="col-xl">
                                     <div class="form-group min-w-190">
@@ -795,39 +795,39 @@
                             </div>
                         </div>
                     </div>
-                    <p class="font-weight-semi-bold card-title">상세검색</p>
+                    <p class="font-weight-semi-bold font-p2 mb12">상세검색</p>
                     <div class="row">
                         <div class="col-xl">
                             <div class="form-group">
-                                <label class="w-100 mb-0">
+                                <label class="w-100 mb0">
                                     <input class="form-control search" type="text" placeholder="상호명">
                                 </label>
                             </div>
                         </div>
                         <div class="col-xl">
                             <div class="form-group">
-                                <label class="w-100 mb-0">
+                                <label class="w-100 mb0">
                                     <input class="form-control search" type="text" placeholder="서비스명">
                                 </label>
                             </div>
                         </div>
                         <div class="col-xl">
                             <div class="form-group">
-                                <label class="w-100 mb-0">
+                                <label class="w-100 mb0">
                                     <input class="form-control search" type="text" placeholder="서비스 MID">
                                 </label>
                             </div>
                         </div>
                         <div class="col-xl">
                             <div class="form-group">
-                                <label class="w-100 mb-0">
+                                <label class="w-100 mb0">
                                     <input class="form-control search" type="text" placeholder="가입자명">
                                 </label>
                             </div>
                         </div>
                         <div class="col-xl">
                             <div class="form-group">
-                                <label class="w-100 mb-0">
+                                <label class="w-100 mb0">
                                     <input class="form-control search" type="text" placeholder="이메일">
                                 </label>
                             </div>
@@ -841,10 +841,10 @@
                     </div>
                 </div>
                 <div class="card">
-                    <div class="result-title-area d-flex justify-content-between align-items-center">
-                        <h5 class="result-title font-weight-semi-bold">
+                    <div class="mb25 d-flex justify-content-between align-items-center">
+                        <h5 class="font-h2 d-flex align-items-center mb0 font-weight-semi-bold">
                             <i class="icon ico_bs_list"></i>
-                            <span>조회결과</span>
+                            <span class="ml9">조회결과</span>
                         </h5>
                         <div>
                             <button class="btn-reset"><i class="icon ico_excel">엑셀출력</i></button>

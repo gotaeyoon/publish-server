@@ -523,6 +523,23 @@ data.consulting = {
 
     ]
 }
+data.mkt = {
+    title:'마케팅',
+    list:[
+        {
+            stateClass: 'confirm',
+            url: '제휴_참여신청',
+            category: 'mkt',
+            page: '제휴_참여신청'
+        },
+        {
+            stateClass: 'confirm',
+            url: '제휴_혜택신청',
+            category: 'mkt',
+            page: '제휴_혜택신청'
+        },
+    ]
+}
 
 
 

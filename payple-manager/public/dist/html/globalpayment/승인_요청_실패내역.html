@@ -6,10 +6,10 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" href="https://image.payple.kr/common/favicon.ico" sizes="32x32">
-    <link rel="stylesheet" href="./../../css/payple_component.css?v0.9">
-    <link rel="stylesheet" href="./../../css/payple_pages.css?v0.9">
-    <script src="../../js/bundle.js?v0.9"></script>
-    <script src="../../js/common.js?v0.9"></script>
+    <link rel="stylesheet" href="./../../css/payple_component.css?v1.0">
+    <link rel="stylesheet" href="./../../css/payple_pages.css?v1.0">
+    <script src="../../js/bundle.js?v1.0"></script>
+    <script src="../../js/common.js?v1.0"></script>
     <title>페이플 관리자 페이지</title>
 </head>
 
@@ -667,19 +667,19 @@
         <!-- 컨텐츠 s-->
         <article class="content-container">
             <section class="payment-history-section">
-                <h3 class="main-title font-weight-bold">승인-요청, 실패내역</h3>
+                <h3 class="font-h1 mb30 font-weight-bold">승인-요청, 실패내역</h3>
                 <div class="card">
-                    <h5 class="sub-title font-weight-semi-bold">
+                    <h5 class="d-flex align-items-center font-h3 mb20">
                         <i class="icon ico_filter"></i>
-                        <span>필터</span>
+                        <span class="ml9 font-weight-semi-bold">필터</span>
                     </h5>
                     <div class="row">
                         <div class="col-xl-auto">
-                            <p class="card-title font-weight-semi-bold">기간</p>
+                            <p class="font-p2 mb12 font-weight-semi-bold">기간</p>
                             <div class="row row-col-2">
                                 <div class="col-xl-auto">
                                     <div class="form-group">
-                                        <div class="input-btn-group">
+                                        <div class="time-range-btn-group">
                                             <button class="btn btn-secondary" id="threeMonthAgoBtn">3개월</button>
                                             <button class="btn btn-secondary" id="lastMonthBtn">지난달</button>
                                             <button class="btn btn-secondary" id="thisMonthBtn">이번달</button>
@@ -690,7 +690,7 @@
                                 </div>
                                 <div class="col-xl-auto">
                                     <div class="form-group">
-                                        <label class="calender-input mb-0">
+                                        <label class="calender-input mb0">
                                             <input class="form-control _inputRangeDate" type="text">
                                             <i class="icon ico_calendar" onclick="$('._modal-calendar').modal('show')">달력이미지</i>
                                         </label>
@@ -699,7 +699,7 @@
                             </div>
                         </div>
                         <div class="col-xl-auto">
-                            <p class="font-weight-semi-bold card-title">결제상태</p>
+                            <p class="font-weight-semi-bold font-p2 mb12">결제상태</p>
                             <div class="row">
                                 <div class="col-xl">
                                     <div class="form-group">
@@ -726,7 +726,7 @@
                             </div>
                         </div>
                         <div class="col-xl-auto">
-                            <p class="font-weight-semi-bold card-title">결제수단</p>
+                            <p class="font-weight-semi-bold font-p2 mb12">결제수단</p>
                             <div class="row">
                                 <div class="col-xl">
                                     <div class="form-group">
@@ -759,19 +759,19 @@
                             </div>
                         </div>
                     </div>
-                    <p class="font-weight-semi-bold card-title">상세검색</p>
+                    <p class="font-weight-semi-bold font-p2 mb12">상세검색</p>
                     <div class="row">
                         <div class="col-xl">
                             <div class="card-number-input">
                                 <div class="form-group first-number">
-                                    <label class="mb-0 w-100 ">
+                                    <label class="mb0 w-100 ">
                                         <input class="form-control _only-number search" type="text"
                                                placeholder="카드/계좌 앞 6자리">
                                     </label>
 
                                 </div>
                                 <div class="form-group last-number">
-                                    <label class="mb-0 w-100">
+                                    <label class="mb0 w-100">
                                         <input class="form-control search _only-number" type="text" placeholder="뒤 4자리">
                                     </label>
                                 </div>
@@ -779,14 +779,14 @@
                         </div>
                         <div class="col-xl">
                             <div class="form-group">
-                                <label class="w-100 mb-0">
+                                <label class="w-100 mb0">
                                     <input class="form-control search" type="text" placeholder="거래액">
                                 </label>
                             </div>
                         </div>
                         <div class="col-xl">
                             <div class="form-group">
-                                <label class="w-100 mb-0">
+                                <label class="w-100 mb0">
                                     <input class="form-control search" type="text" placeholder="주문번호">
                                 </label>
                             </div>
@@ -798,28 +798,28 @@
                     <div class="row">
                         <div class="col-xl">
                             <div class="form-group">
-                                <label class="w-100 mb-0">
+                                <label class="w-100 mb0">
                                     <input class="form-control search" type="text" placeholder="상호명">
                                 </label>
                             </div>
                         </div>
                         <div class="col-xl">
                             <div class="form-group">
-                                <label class="w-100 mb-0">
+                                <label class="w-100 mb0">
                                     <input class="form-control search" type="text" placeholder="서비스명">
                                 </label>
                             </div>
                         </div>
                         <div class="col-xl">
                             <div class="form-group">
-                                <label class="w-100 mb-0">
+                                <label class="w-100 mb0">
                                     <input class="form-control search" type="text" placeholder="서비스 MID">
                                 </label>
                             </div>
                         </div>
                         <div class="col-xl">
                             <div class="form-group">
-                                <label class="w-100 mb-0">
+                                <label class="w-100 mb0">
                                     <input class="form-control search" type="text" placeholder="빌링키">
                                 </label>
                             </div>
@@ -829,34 +829,38 @@
                     <div class="row">
                         <div class="col-xl">
                             <div class="form-group">
-                                <label class="w-100 mb-0">
+                                <label class="w-100 mb0">
                                     <input class="form-control search" type="text" placeholder="주문자명">
                                 </label>
                             </div>
                         </div>
                         <div class="col-xl">
                             <div class="form-group">
-                                <label class="w-100 mb-0">
+                                <label class="w-100 mb0">
                                     <input class="form-control search" type="text" placeholder="상품명">
                                 </label>
                             </div>
                         </div>
                         <div class="col-xl">
                             <div class="form-group">
-                                <label class="w-100 mb-0 position-relative">
+                                <label class="w-100 mb0 position-relative">
                                     <input class="form-control search" type="text" placeholder="PID(거래 ID)">
-                                    <i class="icon ico_question_gray input-ico-hover _input_ico_hover"></i>
-                                    <span class="speech-bubble _input_cation">거래마다 다르며 결제, 취소 모두 다른 PID</span>
+                                    <div class="input-ico-hover-area">
+                                        <i class="icon ico_question_gray input-ico-hover "></i>
+                                        <span class="speech-bubble ">거래마다 다르며 결제, 취소 모두 다른 PID</span>
+                                    </div>
                                 </label>
                             </div>
                         </div>
                         <div class="col-xl">
                             <div class="form-group">
-                                <label class="w-100 mb-0 position-relative">
+                                <label class="w-100 mb0 position-relative">
                                     <input class="form-control search question" type="text"
                                            placeholder="OPID(원거래 ID)">
-                                    <i class="icon ico_question_gray input-ico-hover _input_ico_hover"></i>
-                                    <span class="speech-bubble _input_cation">거래마다 다르며 결제, 취소의 OPID는 동일</span>
+                                    <div class="input-ico-hover-area">
+                                        <i class="icon ico_question_gray input-ico-hover "></i>
+                                        <span class="speech-bubble ">거래마다 다르며 결제, 취소의 OPID는 동일</span>
+                                    </div>
                                 </label>
                             </div>
                         </div>
@@ -905,10 +909,10 @@
                     </div>
                 </div>
                 <div class="card">
-                    <div class="result-title-area d-flex justify-content-between align-items-center">
-                        <h5 class="result-title font-weight-semi-bold">
+                    <div class="mb25 d-flex justify-content-between align-items-center">
+                        <h5 class="font-h2 d-flex align-items-center mb0 font-weight-semi-bold">
                             <i class="icon ico_bs_list"></i>
-                            <span>조회결과</span>
+                            <span class="ml9">조회결과</span>
                         </h5>
                         <div>
                             <button class="btn-reset"><i class="icon ico_excel">엑셀출력</i></button>
@@ -968,12 +972,13 @@
                                 </td>
                                 <td class="align-middle text-center"><span>Service0010012345678</span></td>
                                 <td class="align-middle text-center"><span class="color-orange-100">요청</span></td>
-                                <td class="align-middle text-left"><span>Decline-Invalid Card Verification Number(CVN)</span></td>
+                                <td class="align-middle text-left">
+                                    <span>Decline-Invalid Card Verification Number(CVN)</span></td>
                                 <td class="align-middle text-center"><span>카드-앱카드</span></td>
                                 <td class="align-middle">
                                     <a class=" color-blue-100" href="javascript:void(0)"
                                        onclick="openSlideModal('_slide-modal-wrap','-detail')">abcdeabcdeabcdeabcdeabcde</a>
-                                    <span class="color-gray-000 d-inline-block">(56465456456456)</span>
+                                    <div class="color-gray-000">(56465456456456)</div>
                                 </td>
                                 <td class="align-middle">
                                     <span>193979811939798119397981199397981193979811939798119397981</span></td>
@@ -989,7 +994,7 @@
                                 <td class="align-middle"><span>LEE+HELEN+HYOJUNG님의 2023년 08월 29일 진료비</span></td>
                                 <td class="align-middle text-center"><span>김*김</span></td>
                                 <td class="align-middle text-center"><span>VISA</span></td>
-                              
+
                                 <td class="align-middle text-center"><span>1234-56**-****-0987</span></td>
                                 <td class="align-middle text-center"><span>Y</span></td>
                             </tr>
@@ -1001,12 +1006,13 @@
                                 </td>
                                 <td class="align-middle text-center"><span>Service0010012345678</span></td>
                                 <td class="align-middle text-center"><span>실패</span></td>
-                                <td class="align-middle text-left"><span>Decline-Invalid Card Verification Number(CVN)</span></td>
+                                <td class="align-middle text-left">
+                                    <span>Decline-Invalid Card Verification Number(CVN)</span></td>
                                 <td class="align-middle text-center"><span>카드-앱카드</span></td>
                                 <td class="align-middle">
                                     <a class=" color-blue-100" href="javascript:void(0)"
                                        onclick="openSlideModal('_slide-modal-wrap','-detail')">abcdeabcdeabcdeabcdeabcde</a>
-                                    <span class="color-gray-000 d-inline-block">(56465456456456)</span>
+                                    <div class="color-gray-000">(56465456456456)</div>
                                 </td>
                                 <td class="align-middle">
                                     <span>193979811939798119397981199397981193979811939798119397981</span></td>
@@ -1018,11 +1024,12 @@
                                 </td>
                                 <td class="text-right align-middle"><span>100,000</span></td>
                                 <td class="text-right align-middle"><span>2,500</span></td>
-                                <td class="text-center align-middle"><span class="underline-text color-red-100 line-bg-red-200">100</span></td>
+                                <td class="text-center align-middle"><span
+                                        class="bg-underline-text color-red-100 line-bg-red-200">100</span></td>
                                 <td class="align-middle"><span>LEE+HELEN+HYOJUNG님의 2023년 08월 29일 진료비</span></td>
                                 <td class="align-middle text-center"><span>김*김</span></td>
                                 <td class="align-middle text-center"><span>VISA</span></td>
-                              
+
                                 <td class="align-middle text-center"><span>1234-56**-****-0987</span></td>
                                 <td class="align-middle text-center"><span>Y</span></td>
                             </tr>
@@ -1034,12 +1041,13 @@
                                 </td>
                                 <td class="align-middle text-center"><span>Service0010012345678</span></td>
                                 <td class="align-middle text-center"><span>실패</span></td>
-                                <td class="align-middle text-left"><span>Decline-Invalid Card Verification Number(CVN)</span></td>
+                                <td class="align-middle text-left">
+                                    <span>Decline-Invalid Card Verification Number(CVN)</span></td>
                                 <td class="align-middle text-center"><span>카드-앱카드</span></td>
                                 <td class="align-middle">
                                     <a class=" color-blue-100" href="javascript:void(0)"
                                        onclick="openSlideModal('_slide-modal-wrap','-detail')">abcdeabcdeabcdeabcdeabcde</a>
-                                    <span class="color-gray-000 d-inline-block">(56465456456456)</span>
+                                    <div class="color-gray-000">(56465456456456)</div>
                                 </td>
                                 <td class="align-middle">
                                     <span>193979811939798119397981199397981193979811939798119397981</span></td>
@@ -1051,11 +1059,12 @@
                                 </td>
                                 <td class="text-right align-middle"><span>100,000</span></td>
                                 <td class="text-right align-middle"><span>2,500</span></td>
-                                <td class="text-center align-middle"><span class="underline-text color-red-100 line-bg-red-200">100</span></td>
+                                <td class="text-center align-middle"><span
+                                        class="bg-underline-text color-red-100 line-bg-red-200">100</span></td>
                                 <td class="align-middle"><span>LEE+HELEN+HYOJUNG님의 2023년 08월 29일 진료비</span></td>
                                 <td class="align-middle text-center"><span>김*김</span></td>
                                 <td class="align-middle text-center"><span>VISA</span></td>
-                              
+
                                 <td class="align-middle text-center"><span>1234-56**-****-0987</span></td>
                                 <td class="align-middle text-center"><span>Y</span></td>
                             </tr>
@@ -1067,12 +1076,13 @@
                                 </td>
                                 <td class="align-middle text-center"><span>Service0010012345678</span></td>
                                 <td class="align-middle text-center"><span>실패</span></td>
-                                <td class="align-middle text-left"><span>Decline-Invalid Card Verification Number(CVN)</span></td>
+                                <td class="align-middle text-left">
+                                    <span>Decline-Invalid Card Verification Number(CVN)</span></td>
                                 <td class="align-middle text-center"><span>카드-앱카드</span></td>
                                 <td class="align-middle">
                                     <a class=" color-blue-100" href="javascript:void(0)"
                                        onclick="openSlideModal('_slide-modal-wrap','-detail')">abcdeabcdeabcdeabcdeabcde</a>
-                                    <span class="color-gray-000 d-inline-block">(56465456456456)</span>
+                                    <div class="color-gray-000">(56465456456456)</div>
                                 </td>
                                 <td class="align-middle">
                                     <span>193979811939798119397981199397981193979811939798119397981</span></td>
@@ -1084,11 +1094,12 @@
                                 </td>
                                 <td class="text-right align-middle"><span>100,000</span></td>
                                 <td class="text-right align-middle"><span>2,500</span></td>
-                                <td class="text-center align-middle"><span class="underline-text color-red-100 line-bg-red-200">100</span></td>
+                                <td class="text-center align-middle"><span
+                                        class="bg-underline-text color-red-100 line-bg-red-200">100</span></td>
                                 <td class="align-middle"><span>LEE+HELEN+HYOJUNG님의 2023년 08월 29일 진료비</span></td>
                                 <td class="align-middle text-center"><span>김*김</span></td>
                                 <td class="align-middle text-center"><span>VISA</span></td>
-                              
+
                                 <td class="align-middle text-center"><span>1234-56**-****-0987</span></td>
                                 <td class="align-middle text-center"><span>Y</span></td>
                             </tr>
@@ -1100,12 +1111,13 @@
                                 </td>
                                 <td class="align-middle text-center"><span>Service0010012345678</span></td>
                                 <td class="align-middle text-center"><span class="color-orange-100">요청</span></td>
-                                <td class="align-middle text-left"><span>Decline-Invalid Card Verification Number(CVN)</span></td>
+                                <td class="align-middle text-left">
+                                    <span>Decline-Invalid Card Verification Number(CVN)</span></td>
                                 <td class="align-middle text-center"><span>카드-앱카드</span></td>
                                 <td class="align-middle">
                                     <a class=" color-blue-100" href="javascript:void(0)"
                                        onclick="openSlideModal('_slide-modal-wrap','-detail')">abcdeabcdeabcdeabcdeabcde</a>
-                                    <span class="color-gray-000 d-inline-block">(56465456456456)</span>
+                                    <div class="color-gray-000">(56465456456456)</div>
                                 </td>
                                 <td class="align-middle">
                                     <span>193979811939798119397981199397981193979811939798119397981</span></td>
@@ -1117,11 +1129,12 @@
                                 </td>
                                 <td class="text-right align-middle"><span>100,000</span></td>
                                 <td class="text-right align-middle"><span>2,500</span></td>
-                                <td class="text-center align-middle"><span class="underline-text color-red-100 line-bg-red-200">100</span></td>
+                                <td class="text-center align-middle"><span
+                                        class="bg-underline-text color-red-100 line-bg-red-200">100</span></td>
                                 <td class="align-middle"><span>LEE+HELEN+HYOJUNG님의 2023년 08월 29일 진료비</span></td>
                                 <td class="align-middle text-center"><span>김*김</span></td>
                                 <td class="align-middle text-center"><span>VISA</span></td>
-                              
+
                                 <td class="align-middle text-center"><span>1234-56**-****-0987</span></td>
                                 <td class="align-middle text-center"><span>Y</span></td>
                             </tr>
@@ -1133,12 +1146,13 @@
                                 </td>
                                 <td class="align-middle text-center"><span>Service0010012345678</span></td>
                                 <td class="align-middle text-center"><span class="color-orange-100">요청</span></td>
-                                <td class="align-middle text-left"><span>Decline-Invalid Card Verification Number(CVN)</span></td>
+                                <td class="align-middle text-left">
+                                    <span>Decline-Invalid Card Verification Number(CVN)</span></td>
                                 <td class="align-middle text-center"><span>카드-앱카드</span></td>
                                 <td class="align-middle">
                                     <a class=" color-blue-100" href="javascript:void(0)"
                                        onclick="openSlideModal('_slide-modal-wrap','-detail')">abcdeabcdeabcdeabcdeabcde</a>
-                                    <span class="color-gray-000 d-inline-block">(56465456456456)</span>
+                                    <div class="color-gray-000">(56465456456456)</div>
                                 </td>
                                 <td class="align-middle">
                                     <span>193979811939798119397981199397981193979811939798119397981</span></td>
@@ -1150,11 +1164,12 @@
                                 </td>
                                 <td class="text-right align-middle"><span>100,000</span></td>
                                 <td class="text-right align-middle"><span>2,500</span></td>
-                                <td class="text-center align-middle"><span class="underline-text color-red-100 line-bg-red-200">100</span></td>
+                                <td class="text-center align-middle"><span
+                                        class="bg-underline-text color-red-100 line-bg-red-200">100</span></td>
                                 <td class="align-middle"><span>LEE+HELEN+HYOJUNG님의 2023년 08월 29일 진료비</span></td>
                                 <td class="align-middle text-center"><span>김*김</span></td>
                                 <td class="align-middle text-center"><span>VISA</span></td>
-                              
+
                                 <td class="align-middle text-center"><span>1234-56**-****-0987</span></td>
                                 <td class="align-middle text-center"><span>Y</span></td>
                             </tr>
@@ -1166,12 +1181,13 @@
                                 </td>
                                 <td class="align-middle text-center"><span>Service0010012345678</span></td>
                                 <td class="align-middle text-center"><span>실패</span></td>
-                                <td class="align-middle text-left"><span>Decline-Invalid Card Verification Number(CVN)</span></td>
+                                <td class="align-middle text-left">
+                                    <span>Decline-Invalid Card Verification Number(CVN)</span></td>
                                 <td class="align-middle text-center"><span>카드-앱카드</span></td>
                                 <td class="align-middle">
                                     <a class=" color-blue-100" href="javascript:void(0)"
                                        onclick="openSlideModal('_slide-modal-wrap','-detail')">abcdeabcdeabcdeabcdeabcde</a>
-                                    <span class="color-gray-000 d-inline-block">(56465456456456)</span>
+                                    <div class="color-gray-000">(56465456456456)</div>
                                 </td>
                                 <td class="align-middle">
                                     <span>193979811939798119397981199397981193979811939798119397981</span></td>
@@ -1183,11 +1199,12 @@
                                 </td>
                                 <td class="text-right align-middle"><span>100,000</span></td>
                                 <td class="text-right align-middle"><span>2,500</span></td>
-                                <td class="text-center align-middle"><span class="underline-text color-red-100 line-bg-red-200">100</span></td>
+                                <td class="text-center align-middle"><span
+                                        class="bg-underline-text color-red-100 line-bg-red-200">100</span></td>
                                 <td class="align-middle"><span>LEE+HELEN+HYOJUNG님의 2023년 08월 29일 진료비</span></td>
                                 <td class="align-middle text-center"><span>김*김</span></td>
                                 <td class="align-middle text-center"><span>VISA</span></td>
-                              
+
                                 <td class="align-middle text-center"><span>1234-56**-****-0987</span></td>
                                 <td class="align-middle text-center"><span>Y</span></td>
                             </tr>
@@ -1199,12 +1216,13 @@
                                 </td>
                                 <td class="align-middle text-center"><span>Service0010012345678</span></td>
                                 <td class="align-middle text-center"><span>실패</span></td>
-                                <td class="align-middle text-left"><span>Decline-Invalid Card Verification Number(CVN)</span></td>
+                                <td class="align-middle text-left">
+                                    <span>Decline-Invalid Card Verification Number(CVN)</span></td>
                                 <td class="align-middle text-center"><span>카드-앱카드</span></td>
                                 <td class="align-middle">
                                     <a class=" color-blue-100" href="javascript:void(0)"
                                        onclick="openSlideModal('_slide-modal-wrap','-detail')">abcdeabcdeabcdeabcdeabcde</a>
-                                    <span class="color-gray-000 d-inline-block">(56465456456456)</span>
+                                    <div class="color-gray-000">(56465456456456)</div>
                                 </td>
                                 <td class="align-middle">
                                     <span>193979811939798119397981199397981193979811939798119397981</span></td>
@@ -1220,7 +1238,7 @@
                                 <td class="align-middle"><span>LEE+HELEN+HYOJUNG님의 2023년 08월 29일 진료비</span></td>
                                 <td class="align-middle text-center"><span>김*김</span></td>
                                 <td class="align-middle text-center"><span>VISA</span></td>
-                              
+
                                 <td class="align-middle text-center"><span>1234-56**-****-0987</span></td>
                                 <td class="align-middle text-center"><span>Y</span></td>
                             </tr>
@@ -1232,12 +1250,13 @@
                                 </td>
                                 <td class="align-middle text-center"><span>Service0010012345678</span></td>
                                 <td class="align-middle text-center"><span>실패</span></td>
-                                <td class="align-middle text-left"><span>Decline-Invalid Card Verification Number(CVN)</span></td>
+                                <td class="align-middle text-left">
+                                    <span>Decline-Invalid Card Verification Number(CVN)</span></td>
                                 <td class="align-middle text-center"><span>카드-앱카드</span></td>
                                 <td class="align-middle">
                                     <a class=" color-blue-100" href="javascript:void(0)"
                                        onclick="openSlideModal('_slide-modal-wrap','-detail')">abcdeabcdeabcdeabcdeabcde</a>
-                                    <span class="color-gray-000 d-inline-block">(56465456456456)</span>
+                                    <div class="color-gray-000">(56465456456456)</div>
                                 </td>
                                 <td class="align-middle">
                                     <span>193979811939798119397981199397981193979811939798119397981</span></td>
@@ -1253,7 +1272,7 @@
                                 <td class="align-middle"><span>LEE+HELEN+HYOJUNG님의 2023년 08월 29일 진료비</span></td>
                                 <td class="align-middle text-center"><span>김*김</span></td>
                                 <td class="align-middle text-center"><span>VISA</span></td>
-                              
+
                                 <td class="align-middle text-center"><span>1234-56**-****-0987</span></td>
                                 <td class="align-middle text-center"><span>Y</span></td>
                             </tr>
@@ -1265,12 +1284,13 @@
                                 </td>
                                 <td class="align-middle text-center"><span>Service0010012345678</span></td>
                                 <td class="align-middle text-center"><span>실패</span></td>
-                                <td class="align-middle text-left"><span>Decline-Invalid Card Verification Number(CVN)</span></td>
+                                <td class="align-middle text-left">
+                                    <span>Decline-Invalid Card Verification Number(CVN)</span></td>
                                 <td class="align-middle text-center"><span>카드-앱카드</span></td>
                                 <td class="align-middle">
                                     <a class=" color-blue-100" href="javascript:void(0)"
                                        onclick="openSlideModal('_slide-modal-wrap','-detail')">abcdeabcdeabcdeabcdeabcde</a>
-                                    <span class="color-gray-000 d-inline-block">(56465456456456)</span>
+                                    <div class="color-gray-000">(56465456456456)</div>
                                 </td>
                                 <td class="align-middle">
                                     <span>193979811939798119397981199397981193979811939798119397981</span></td>
@@ -1282,11 +1302,12 @@
                                 </td>
                                 <td class="text-right align-middle"><span>100,000</span></td>
                                 <td class="text-right align-middle"><span>2,500</span></td>
-                                <td class="text-center align-middle"><span class="underline-text color-red-100 line-bg-red-200">100</span></td>
+                                <td class="text-center align-middle"><span
+                                        class="bg-underline-text color-red-100 line-bg-red-200">100</span></td>
                                 <td class="align-middle"><span>LEE+HELEN+HYOJUNG님의 2023년 08월 29일 진료비</span></td>
                                 <td class="align-middle text-center"><span>김*김</span></td>
                                 <td class="align-middle text-center"><span>VISA</span></td>
-                              
+
                                 <td class="align-middle text-center"><span>1234-56**-****-0987</span></td>
                                 <td class="align-middle text-center"><span>Y</span></td>
                             </tr>
@@ -1342,7 +1363,7 @@
 <div class="slide-modal-wrap _slide-modal-wrap _slide-modal-wrap-detail ">
     <div class="slide-modal slide-modal-lg">
         <div class="slide-modal-header">
-            <h3 class="title font-weight-bold">상세내역</h3>
+            <h3 class="font-h1 mb0 font-weight-bold">상세내역</h3>
             <i class="ico_close_btn _close-slide-modal-btn"></i>
         </div>
         <div class="slide-modal-body">
@@ -1461,7 +1482,8 @@
                             <div class="info-block-row">
                                 <div class="info-block">
                                     <div class="title"><span>ID</span></div>
-                                    <div class="content"><span>ABCDEABCDEABCDEABCDEABCDEABCDEABCDEABCDEABCDEABCDE</span></div>
+                                    <div class="content"><span>ABCDEABCDEABCDEABCDEABCDEABCDEABCDEABCDEABCDEABCDE</span>
+                                    </div>
                                 </div>
                                 <div class="info-block">
                                     <div class="title"><span>User Administrative Area</span></div>
@@ -1491,13 +1513,15 @@
                             <div class="info-block-row">
                                 <div class="info-block one">
                                     <div class="title"><span>User Agent</span></div>
-                                    <div class="content fsz-15px"><span>Mozilla/5.0(Maintosh; Intel Mac OS X 10_15_7) AppleWebKit/57.36(KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36</span></div>
+                                    <div class="content fsz-15px"><span>Mozilla/5.0(Maintosh; Intel Mac OS X 10_15_7) AppleWebKit/57.36(KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36</span>
+                                    </div>
                                 </div>
                             </div>
                             <div class="info-block-row">
                                 <div class="info-block one">
                                     <div class="title"><span>User Accept</span></div>
-                                    <div class="content fsz-15px"><span>application/json, text/javascript. */*, q=0.01</span></div>
+                                    <div class="content fsz-15px">
+                                        <span>application/json, text/javascript. */*, q=0.01</span></div>
                                 </div>
                             </div>
                         </div>
@@ -1516,7 +1540,8 @@
                             <div class="info-block-row">
                                 <div class="info-block one">
                                     <div class="title"><span>Information Codes</span></div>
-                                    <div class="content fsz-15px"><span>COR-BA : 청구지 주소에 수정 요소가 있거나 정규화될 수 있습니다.<br>MM-BIN : 카드번호(BIN) 앞 6자리가 국가와 일치하지 않습니다.</span></div>
+                                    <div class="content fsz-15px"><span>COR-BA : 청구지 주소에 수정 요소가 있거나 정규화될 수 있습니다.<br>MM-BIN : 카드번호(BIN) 앞 6자리가 국가와 일치하지 않습니다.</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1533,7 +1558,8 @@
                             <div class="info-block-row">
                                 <div class="info-block one">
                                     <div class="title"><span>Transaction ID</span></div>
-                                    <div class="content"><span>abcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcde</span></div>
+                                    <div class="content"><span>abcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcde</span>
+                                    </div>
                                 </div>
                             </div>
                             <div class="info-block-row">

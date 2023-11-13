@@ -172,7 +172,6 @@ function checkNoData() {
 function openSlideModal(modalName, i) {
     $("." + modalName + i).addClass('show');
 }
-
 function closeSlideModal() {
     $('._close-slide-modal-btn').on('click', function () {
         $('._slide-modal-wrap').removeClass('show');
@@ -182,7 +181,6 @@ function closeSlideModal() {
 /*Aside 메뉴 호버 시 툴팁 호출*/
 function showAsideTooltip() {
     let links = $('.link');
-    
     links.mouseover(function () {
         const hoverTitle = $(this).find('a');
         const top = hoverTitle[0].getBoundingClientRect().top;
@@ -202,17 +200,7 @@ function showAsideMobileBtn() {
         }
     })
 }
-/*input caption 생성*/
-function showInputCaption() {
-    $('._input_ico_hover').hover(
-        function () {
-            $(this).siblings('._input_cation').css('display', 'block')
-        },
-        function () {
-            $(this).siblings('._input_cation').css('display', 'none')
-        }
-    )
-}
+
 /*input 숫자만 입력*/
 function checkInputNumber(){
     $('._only-number').on('input',function(){
@@ -229,7 +217,7 @@ $(document).ready(function () {
     closeSlideModal();
     showAsideTooltip();
     showAsideMobileBtn();
-    showInputCaption();
+
     showDetailBtn();
     checkNoData();
     checkInputNumber();

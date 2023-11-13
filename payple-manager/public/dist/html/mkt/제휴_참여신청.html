@@ -666,141 +666,512 @@
 </div>
         <!-- 컨텐츠 s-->
         <article class="content-container">
-            <section class="email-filter-section">
-                <h3 class="font-h1 mb30 font-weight-bold">이메일 발송하기</h3>
+            <section class="mkt-section">
+                <div class="toast-popup show primary">
+                    <p class="text-center"><i class="icon"></i><span class="text">1건이 상태 변경 완료되었습니다.</span></p>
+                </div>
+                <h3 class="font-h1 mb30 font-weight-bold">제휴-참여 신청</h3>
                 <div class="card">
                     <h5 class="d-flex align-items-center font-h3 mb20">
-                        <i class="icon ico_edit_purple"></i>
-                        <span class="ml9 font-weight-semi-bold">발송 대상자 선택</span>
+                        <i class="icon ico_filter"></i>
+                        <span class="ml9 font-weight-semi-bold">필터</span>
                     </h5>
                     <div class="row">
-                        <div class="col-xl">
-                            <p class="font-p2 mb12 font-weight-semi-bold">서비스 구분</p>
-                            <div class="form-group">
-                                <label class="select-box _select-box">
-                                    <input type="hidden" class="select-value _select-value" value="0">
-                                    <span class="value-text _value-text">전체</span>
-                                    <i class="icon ico_select_arrow_down">아래화살표</i>
-                                    <ul class="options h-auto _service-status">
-                                        <li class="option _all-select" value="0">전체</li>
-                                        <li class="option _domestic-select" value="1">국내</li>
-                                        <li class="option _domestic-global" value="2">해외</li>
-                                    </ul>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="col-xl">
-                            <p class="font-p2 mb12 font-weight-semi-bold">결제수단</p>
-                            <div class="form-group">
-                                <label class="select-box _select-box _state-label">
-                                    <input type="hidden" class="select-value _select-value" value="0">
-                                    <span class="value-text _value-text">전체</span>
-                                    <i class="icon ico_select_arrow_down">아래화살표</i>
-                                    <ul class="options h-auto _service-status-value">
-                                        <li class="option" value="all">전체</li>
-                                    </ul>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="col-xl">
-                            <p class="font-p2 mb12 font-weight-semi-bold">원천사</p>
-                            <div class="form-group ">
-                                <label class="select-box _select-box">
-                                    <input type="hidden" class="select-value _select-value" value="0">
-                                    <span class="value-text _value-text">전체</span>
-                                    <i class="icon ico_select_arrow_down">아래화살표</i>
-                                    <ul class="options h-auto">
-                                        <li class="option" value="0">전체</li>
-                                        <li class="option" value="1">나이스</li>
-                                        <li class="option" value="2">다날</li>
-                                        <li class="option" value="2">오픈뱅킹</li>
-                                        <li class="option" value="2">롯데카드</li>
-                                    </ul>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="col-xl">
-                            <p class="font-p2 mb12 font-weight-semi-bold">수신자</p>
-                            <div class="form-group ">
-                                <label class="select-box _select-box">
-                                    <input type="hidden" class="select-value _select-value" value="0">
-                                    <span class="value-text _value-text">전체</span>
-                                    <i class="icon ico_select_arrow_down">아래화살표</i>
-                                    <ul class="options">
-                                        <li class="option" value="0">전체</li>
-                                        <li class="option" value="1">회사공식, 고객센터</li>
-                                        <li class="option" value="2">계약 담당자</li>
-                                        <li class="option" value="2">개발 담당자</li>
-                                        <li class="option" value="2">정산 담당자</li>
-                                    </ul>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="col-xl">
-                            <p class="font-p2 mb12 font-weight-semi-bold">템플릿</p>
-                            <div class="form-group">
-                                <label class="select-box _select-box">
-                                    <input type="hidden" class="select-value _select-value" value="0">
-                                    <span class="value-text _value-text">빈 템플릿</span>
-                                    <i class="icon ico_select_arrow_down">아래화살표</i>
-                                    <ul class="options">
-                                        <li class="option" value="0">빈 템플릿</li>
-                                        <li class="option" value="1">시스템 점검</li>
-                                        <li class="option" value="2">장애 - 발생</li>
-                                        <li class="option" value="2">장애 - 복구완료(즉시)</li>
-                                        <li class="option" value="2">장애 - 복구완료(원인파악 이후)</li>
-                                    </ul>
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xl">
-                            <p class="font-weight-semi-bold font-p2 mb12">알림톡 발송</p>
-                            <div class="form-group">
-                                <div class="btn-group w-100 custom-radio-container">
-                                    <div class="custom-radio-group fsz-0">
-                                        <input class="radio-input" type="radio" name="example1" checked=""
-                                               id="customRadio1">
-                                        <label for="customRadio1" class="btn btn-secondary btn-md">발송</label>
+                        <div class="col-xl-auto">
+                            <p class="font-p2 mb12 font-weight-semi-bold">기간</p>
+                            <div class="row row-col-2">
+                                <div class="col-xl-auto">
+                                    <div class="form-group">
+                                        <div class="time-range-btn-group">
+                                            <button class="btn btn-secondary" id="threeMonthAgoBtn">3개월</button>
+                                            <button class="btn btn-secondary" id="lastMonthBtn">지난달</button>
+                                            <button class="btn btn-secondary" id="thisMonthBtn">이번달</button>
+                                            <button class="btn btn-secondary" id="yesterdayBtn">어제</button>
+                                            <button class="btn btn-secondary" id="todayBtn">오늘</button>
+                                        </div>
                                     </div>
-                                    <div class="custom-radio-group fsz-0">
-                                        <input class="radio-input" type="radio" name="example1" id="customRadio2">
-                                        <label for="customRadio2" class="btn btn-secondary btn-md">미발송</label>
+                                </div>
+                                <div class="col-xl-auto">
+                                    <div class="form-group">
+                                        <label class="calender-input mb0">
+                                            <input class="form-control _inputRangeDate" type="text">
+                                            <i class="icon ico_calendar" onclick="$('._modal-calendar').modal('show')">달력이미지</i>
+                                        </label>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-d-none">&nbsp;</div>
-                        <div class="col-xl-d-none">&nbsp;</div>
-                        <div class="col-xl-d-none">&nbsp;</div>
-                        <div class="col-xl-d-none">&nbsp;</div>
-                    </div>
-                </div>
-                <div class="card">
-                    <h5 class="d-flex align-items-center font-h3 mb20">
-                        <i class="icon ico_edit_purple"></i>
-                        <span class="ml9 font-weight-semi-bold">발송 이메일 작성</span>
-                    </h5>
-                    <div class="text-area-container">
-                        <p class="sub-title">문의내용</p>
-                        <div class="form-group">
-                            <label class="w-100 mb0">
-                                <input class="form-control" type="text">
-                            </label>
-                        </div>
-                        <p class="sub-title">내용</p>
-                        <div class="form-group">
-                            <label class="w-100 mb0">
-                                <textarea class="form-control text-area"></textarea>
-                            </label>
-                        </div>
-                        <div class="clearfix mt-3">
-                            <div class="float-right">
-                                <button class="btn btn-primary btn-md btn-round _send-email">발송하기</button>
+                        <div class="col-xl-auto">
+                            <p class="font-weight-semi-bold font-p2 mb12">신청혜택 유형</p>
+                            <div class="row">
+                                <div class="col-xl">
+                                    <div class="form-group">
+                                        <div class="btn-group w-100 custom-radio-container">
+                                            <div class="custom-radio-group">
+                                                <input class="radio-input" type="radio" name="example2" checked=""
+                                                       id="customRadio3">
+                                                <label for="customRadio3" class="btn btn-secondary btn-md">전체</label>
+                                            </div>
+                                            <div class="custom-radio-group ">
+                                                <input class="radio-input" type="radio" name="example2"
+                                                       id="customRadio4">
+                                                <label for="customRadio4" class="btn btn-secondary btn-md">파트너</label>
+                                            </div>
+                                            <div class="custom-radio-group ">
+                                                <input class="radio-input" type="radio" name="example2"
+                                                       id="customRadio5">
+                                                <label for="customRadio5" class="btn btn-secondary btn-md">방문자</label>
+                                            </div>
+                                            <div class="custom-radio-group ">
+                                                <input class="radio-input" type="radio" name="example2"
+                                                       id="customRadio6">
+                                                <label for="customRadio6" class="btn btn-secondary btn-md">방문자</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <p class="font-weight-semi-bold font-p2 mb12">상세검색</p>
+                    <div class="row">
+                        <div class="col-xl">
+                            <div class="form-group">
+                                <label class="select-box _select-box">
+                                    <input type="hidden" class="select-value _select-value" value="0">
+                                    <span class="value-text _value-text">진행상태(전체)</span>
+                                    <i class="icon ico_select_arrow_down">아래화살표</i>
+                                    <ul class="options h-auto _service-status">
+                                        <li class="option _all-select" value="0">전체</li>
+                                        <li class="option _domestic-select" value="1">접수</li>
+                                        <li class="option _domestic-global" value="2">협의중</li>
+                                        <li class="option _domestic-global" value="2">협의불가</li>
+                                        <li class="option _domestic-global" value="2">진행중</li>
+                                        <li class="option _domestic-global" value="2">진행종료</li>
+                                    </ul>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-xl">
+                            <div class="form-group">
+                                <label class="w-100 mb0">
+                                    <input class="form-control search" type="text" placeholder="상호명/서비스명">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-xl">
+                            <div class="form-group">
+                                <label class="w-100 mb0">
+                                    <input class="form-control search" type="text" placeholder="담당자명">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-xl">
+                            <div class="form-group">
+                                <label class="w-100 mb0">
+                                    <input class="form-control search" type="text" placeholder="이메일">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-xl-d-none">&nbsp;</div>
+                    </div>
+                    <div class="clearfix filter-button-area">
+                        <div class="float-right">
+                            <a class=" align-bottom" href="">Clear all</a>
+                            <button class="btn btn-dark btn-round ml-3 btn-md">조회하기</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="mb25 d-flex justify-content-between align-items-center">
+                        <h5 class="font-h2 d-flex align-items-center mb0 font-weight-semi-bold">
+                            <i class="icon ico_bs_list"></i>
+                            <span class="ml9">조회결과</span>
+                        </h5>
+                        <div class="btn-wrap d-flex align-items-center">
+                            <div class="form-group min-w-120 mb0 mr11">
+                                <label class="select-box _select-box">
+                                    <input type="hidden" class="select-value _select-value" value="0">
+                                    <span class="value-text _value-text">선택</span>
+                                    <i class="icon ico_select_arrow_down">아래화살표</i>
+                                    <ul class="options h-auto _service-status">
+                                        <li class="option _all-select" value="0">선택</li>
+                                        <li class="option _domestic-select" value="1">협의중</li>
+                                        <li class="option _domestic-global" value="2">협의불가</li>
+                                        <li class="option _domestic-global" value="2">진행중</li>
+                                        <li class="option _domestic-global" value="2">진행종료</li>
+
+                                    </ul>
+                                </label>
+                            </div>
+                            <button class="btn btn-md btn-info btn-round mr20">
+                                <i class="icon ico_check_blue mr5">상태변경</i>
+                                상태변경
+                            </button>
+                            <button class="btn-reset"><i class="icon ico_excel">엑셀출력</i></button>
+                        </div>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-spread table-fixed">
+                            <colgroup>
+                                <col style="width: 40px">
+                                <col style="width: 100px">
+                                <col style="width: 70px">
+                                <col style="width: 160px">
+                                <col style="width: 130px">
+                                <col style="width: 150px">
+                                <col style="width: 90px">
+                                <col style="width: 100px">
+                                <col style="width: 160px">
+                                <col style="width: 500px">
+
+                            </colgroup>
+                            <thead>
+                            <tr>
+                                <th class="text-center"></th>
+                                <th class="text-center">발송일시</th>
+                                <th class="text-center">진행상태</th>
+                                <th class="text-center">상호명/서비스명</th>
+                                <th class="text-center">담당자명/직책</th>
+                                <th class="text-center">이메일</th>
+                                <th class="text-center">파트너 여부</th>
+                                <th class="text-center">신청혜택 유형</th>
+                                <th class="text-center">홈페이지 URL</th>
+                                <th class="text-center">상세내용</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td class="text-center align-middle ">
+                                    <label class="mb0">
+                                        <input type="checkbox" name="notice" class="custom-checkbox"
+                                               onclick="checkOnlyOne(this)">
+                                        <i class="icon ico_checkbox">체크박스</i>
+                                    </label>
+                                </td>
+                                <td class="text-center align-middle"><span>2023-07-28<br>12:05:55</span></td>
+                                <td class="text-center align-middle">
+                                    <span>협의불가</span>
+                                </td>
+                                <td class="text-center align-middle"><span>(주)피클</span><br><span>피클플러스플러스플러스</span></td>
+                                <td class="text-center align-middle"><span>정다운</span>/<span>대표</span></td>
+                                <td class="text-center align-middle"><span>send.me@payple.kr</span></td>
+                                <td class="text-center align-middle">
+                                    <span>N</span>
+                                </td>
+                                <td class="text-center align-middle"><span>파트너</span></td>
+                                <td class="text-center align-middle"><span>payple.kr</span></td>
+                                <td class="text-left align-middle">
+                                    <div class="mb4"><span class="font-weight-semi-bold">제공 목적 : </span><span>고객 획득 홈페이지 URL : https://1point.kr</span></div>
+                                    <div class="mb4"><span class="font-weight-semi-bold">혜택내용 : </span><span>서비스 크레딧(전문가 고용비) 총 30만원 제공</span></div>
+                                    <div class="mb4"><span class="font-weight-semi-bold">제공기간 : </span><span>협의 </span></div>
+                                    <div><span class="font-weight-semi-bold">참고 : </span><span>쿼타북 제휴 페이지(https://quotabook.com/ko-benefit/1point)</span></div>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td class="text-center align-middle ">
+                                    <label class="mb0">
+                                        <input type="checkbox" name="notice" class="custom-checkbox"
+                                               onclick="checkOnlyOne(this)">
+                                        <i class="icon ico_checkbox">체크박스</i>
+                                    </label>
+                                </td>
+                                <td class="text-center align-middle"><span>2023-07-28<br>12:05:55</span></td>
+                                <td class="text-center align-middle">
+                                    <span>협의중</span>
+                                </td>
+                                <td class="text-center align-middle"><span>(주)피클</span><br><span>피클플러스플러스플러스</span></td>
+                                <td class="text-center align-middle"><span>정다운</span>/<span>대표</span></td>
+                                <td class="text-center align-middle"><span>send.me@payple.kr</span></td>
+                                <td class="text-center align-middle">
+                                    <span>N</span>
+                                </td>
+                                <td class="text-center align-middle"><span>파트너</span></td>
+                                <td class="text-center align-middle"><span>payple.kr</span></td>
+                                <td class="text-left align-middle">
+                                    <div class="mb4"><span class="font-weight-semi-bold">제공 목적 : </span><span>고객 획득 홈페이지 URL : https://1point.kr고객 획득 홈페이지 URL : https://1point.kr고객 획득 홈페이지 URL : https://1point.kr고객 획득 홈페이지 URL : https://1point.kr고객 획득 홈페이지 URL : https://1point.kr</span></div>
+                                    <div class="mb4"><span class="font-weight-semi-bold">혜택내용 : </span><span>서비스 크레딧(전문가 고용비) 스 크레딧(전문가 고용비) 스 크레딧(전문가 고용비) 스 크레딧(전문가 고용비) 스 크레딧(전문가 고용비) 총 30만원 제공</span></div>
+                                    <div class="mb4"><span class="font-weight-semi-bold">제공기간 : </span><span>협의 </span></div>
+                                    <div><span class="font-weight-semi-bold">참고 : </span><span>쿼타북 제휴 페이지(https://quotabook.com/ 페이지(https://quotabook.com/ 페이지(https://quotabook.com/ 페이지(https://quotabook.com/ 페이지(https://quotabook.com/ 페이지(https://quotabook.com/ko-benefit/1point)</span></div>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td class="text-center align-middle ">
+                                    <label class="mb0">
+                                        <input type="checkbox" name="notice" class="custom-checkbox"
+                                               onclick="checkOnlyOne(this)">
+                                        <i class="icon ico_checkbox">체크박스</i>
+                                    </label>
+                                </td>
+                                <td class="text-center align-middle"><span>2023-07-28<br>12:05:55</span></td>
+                                <td class="text-center align-middle">
+                                    <span>진행중</span>
+                                </td>
+                                <td class="text-center align-middle"><span>(주)피클</span><br><span>피클플러스플러스플러스</span></td>
+                                <td class="text-center align-middle"><span>정다운</span>/<span>대표</span></td>
+                                <td class="text-center align-middle"><span>send.me@payple.kr</span></td>
+                                <td class="text-center align-middle">
+                                    <span>N</span>
+                                </td>
+                                <td class="text-center align-middle"><span>파트너</span></td>
+                                <td class="text-center align-middle"><span>payple.kr</span></td>
+                                <td class="text-left align-middle">
+                                    <div class="mb4"><span class="font-weight-semi-bold">제공 목적 : </span><span>고객 획득 홈페이지 URL : https://1point.kr</span></div>
+                                    <div class="mb4"><span class="font-weight-semi-bold">혜택내용 : </span><span>서비스 크레딧(전문가 고용비) 총 30만원 제공</span></div>
+                                    <div class="mb4"><span class="font-weight-semi-bold">제공기간 : </span><span>협의 </span></div>
+                                    <div><span class="font-weight-semi-bold">참고 : </span><span>쿼타북 제휴 페이지(https://quotabook.com/ko-benefit/1point)</span></div>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td class="text-center align-middle ">
+                                    <label class="mb0">
+                                        <input type="checkbox" name="notice" class="custom-checkbox"
+                                               onclick="checkOnlyOne(this)">
+                                        <i class="icon ico_checkbox">체크박스</i>
+                                    </label>
+                                </td>
+                                <td class="text-center align-middle"><span>2023-07-28<br>12:05:55</span></td>
+                                <td class="text-center align-middle">
+                                    <span>협의불가</span>
+                                </td>
+                                <td class="text-center align-middle"><span>(주)피클</span><br><span>피클플러스플러스플러스</span></td>
+                                <td class="text-center align-middle"><span>정다운</span>/<span>대표</span></td>
+                                <td class="text-center align-middle"><span>send.me@payple.kr</span></td>
+                                <td class="text-center align-middle">
+                                    <span>N</span>
+                                </td>
+                                <td class="text-center align-middle"><span>파트너</span></td>
+                                <td class="text-center align-middle"><span>payple.kr</span></td>
+                                <td class="text-left align-middle">
+                                    <div class="mb4"><span class="font-weight-semi-bold">제공 목적 : </span><span>고객 획득 홈페이지 URL : https://1point.kr</span></div>
+                                    <div class="mb4"><span class="font-weight-semi-bold">혜택내용 : </span><span>서비스 크레딧(전문가 고용비) 총 30만원 제공</span></div>
+                                    <div class="mb4"><span class="font-weight-semi-bold">제공기간 : </span><span>협의 </span></div>
+                                    <div><span class="font-weight-semi-bold">참고 : </span><span>쿼타북 제휴 페이지(https://quotabook.com/ko-benefit/1point)</span></div>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td class="text-center align-middle ">
+                                    <label class="mb0">
+                                        <input type="checkbox" name="notice" class="custom-checkbox"
+                                               onclick="checkOnlyOne(this)">
+                                        <i class="icon ico_checkbox">체크박스</i>
+                                    </label>
+                                </td>
+                                <td class="text-center align-middle"><span>2023-07-28<br>12:05:55</span></td>
+                                <td class="text-center align-middle">
+                                    <span>협의불가</span>
+                                </td>
+                                <td class="text-center align-middle"><span>(주)피클</span><br><span>피클플러스플러스플러스</span></td>
+                                <td class="text-center align-middle"><span>정다운</span>/<span>대표</span></td>
+                                <td class="text-center align-middle"><span>send.me@payple.kr</span></td>
+                                <td class="text-center align-middle">
+                                    <span>N</span>
+                                </td>
+                                <td class="text-center align-middle"><span>파트너</span></td>
+                                <td class="text-center align-middle"><span>payple.kr</span></td>
+                                <td class="text-left align-middle">
+                                    <div class="mb4"><span class="font-weight-semi-bold">제공 목적 : </span><span>고객 획득 홈페이지 URL : https://1point.kr</span></div>
+                                    <div class="mb4"><span class="font-weight-semi-bold">혜택내용 : </span><span>서비스 크레딧(전문가 고용비) 총 30만원 제공</span></div>
+                                    <div class="mb4"><span class="font-weight-semi-bold">제공기간 : </span><span>협의 </span></div>
+                                    <div><span class="font-weight-semi-bold">참고 : </span><span>쿼타북 제휴 페이지(https://quotabook.com/ko-benefit/1point)</span></div>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td class="text-center align-middle ">
+                                    <label class="mb0">
+                                        <input type="checkbox" name="notice" class="custom-checkbox"
+                                               onclick="checkOnlyOne(this)">
+                                        <i class="icon ico_checkbox">체크박스</i>
+                                    </label>
+                                </td>
+                                <td class="text-center align-middle"><span>2023-07-28<br>12:05:55</span></td>
+                                <td class="text-center align-middle">
+                                    <span>진행종료</span>
+                                </td>
+                                <td class="text-center align-middle"><span>(주)피클</span><br><span>피클플러스플러스플러스</span></td>
+                                <td class="text-center align-middle"><span>정다운</span>/<span>대표</span></td>
+                                <td class="text-center align-middle"><span>send.me@payple.kr</span></td>
+                                <td class="text-center align-middle">
+                                    <span>N</span>
+                                </td>
+                                <td class="text-center align-middle"><span>파트너</span></td>
+                                <td class="text-center align-middle"><span>payple.kr</span></td>
+                                <td class="text-left align-middle">
+                                    <div class="mb4"><span class="font-weight-semi-bold">제공 목적 : </span><span>고객 획득 홈페이지 URL : https://1point.kr</span></div>
+                                    <div class="mb4"><span class="font-weight-semi-bold">혜택내용 : </span><span>서비스 크레딧(전문가 고용비) 총 30만원 제공</span></div>
+                                    <div class="mb4"><span class="font-weight-semi-bold">제공기간 : </span><span>협의 </span></div>
+                                    <div><span class="font-weight-semi-bold">참고 : </span><span>쿼타북 제휴 페이지(https://quotabook.com/ko-benefit/1point)</span></div>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td class="text-center align-middle ">
+                                    <label class="mb0">
+                                        <input type="checkbox" name="notice" class="custom-checkbox"
+                                               onclick="checkOnlyOne(this)">
+                                        <i class="icon ico_checkbox">체크박스</i>
+                                    </label>
+                                </td>
+                                <td class="text-center align-middle"><span>2023-07-28<br>12:05:55</span></td>
+                                <td class="text-center align-middle">
+                                    <span>협의불가</span>
+                                </td>
+                                <td class="text-center align-middle"><span>(주)피클</span><br><span>피클플러스플러스플러스</span></td>
+                                <td class="text-center align-middle"><span>정다운</span>/<span>대표</span></td>
+                                <td class="text-center align-middle"><span>send.me@payple.kr</span></td>
+                                <td class="text-center align-middle">
+                                    <span>N</span>
+                                </td>
+                                <td class="text-center align-middle"><span>파트너</span></td>
+                                <td class="text-center align-middle"><span>payple.kr</span></td>
+                                <td class="text-left align-middle">
+                                    <div class="mb4"><span class="font-weight-semi-bold">제공 목적 : </span><span>고객 획득 홈페이지 URL : https://1point.kr</span></div>
+                                    <div class="mb4"><span class="font-weight-semi-bold">혜택내용 : </span><span>서비스 크레딧(전문가 고용비) 총 30만원 제공</span></div>
+                                    <div class="mb4"><span class="font-weight-semi-bold">제공기간 : </span><span>협의 </span></div>
+                                    <div><span class="font-weight-semi-bold">참고 : </span><span>쿼타북 제휴 페이지(https://quotabook.com/ko-benefit/1point)</span></div>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td class="text-center align-middle ">
+                                    <label class="mb0">
+                                        <input type="checkbox" name="notice" class="custom-checkbox"
+                                               onclick="checkOnlyOne(this)">
+                                        <i class="icon ico_checkbox">체크박스</i>
+                                    </label>
+                                </td>
+                                <td class="text-center align-middle"><span>2023-07-28<br>12:05:55</span></td>
+                                <td class="text-center align-middle">
+                                    <span>협의불가</span>
+                                </td>
+                                <td class="text-center align-middle"><span>(주)피클</span><br><span>피클플러스플러스플러스</span></td>
+                                <td class="text-center align-middle"><span>정다운</span>/<span>대표</span></td>
+                                <td class="text-center align-middle"><span>send.me@payple.kr</span></td>
+                                <td class="text-center align-middle">
+                                    <span>N</span>
+                                </td>
+                                <td class="text-center align-middle"><span>파트너</span></td>
+                                <td class="text-center align-middle"><span>payple.kr</span></td>
+                                <td class="text-left align-middle">
+                                    <div class="mb4"><span class="font-weight-semi-bold">제공 목적 : </span><span>고객 획득 홈페이지 URL : https://1point.kr</span></div>
+                                    <div class="mb4"><span class="font-weight-semi-bold">혜택내용 : </span><span>서비스 크레딧(전문가 고용비) 총 30만원 제공</span></div>
+                                    <div class="mb4"><span class="font-weight-semi-bold">제공기간 : </span><span>협의 </span></div>
+                                    <div><span class="font-weight-semi-bold">참고 : </span><span>쿼타북 제휴 페이지(https://quotabook.com/ko-benefit/1point)</span></div>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td class="text-center align-middle ">
+                                    <label class="mb0">
+                                        <input type="checkbox" name="notice" class="custom-checkbox"
+                                               onclick="checkOnlyOne(this)">
+                                        <i class="icon ico_checkbox">체크박스</i>
+                                    </label>
+                                </td>
+                                <td class="text-center align-middle"><span>2023-07-28<br>12:05:55</span></td>
+                                <td class="text-center align-middle">
+                                    <span>협의불가</span>
+                                </td>
+                                <td class="text-center align-middle"><span>(주)피클</span><br><span>피클플러스플러스플러스</span></td>
+                                <td class="text-center align-middle"><span>정다운</span>/<span>대표</span></td>
+                                <td class="text-center align-middle"><span>send.me@payple.kr</span></td>
+                                <td class="text-center align-middle">
+                                    <span>N</span>
+                                </td>
+                                <td class="text-center align-middle"><span>파트너</span></td>
+                                <td class="text-center align-middle"><span>payple.kr</span></td>
+                                <td class="text-left align-middle">
+                                    <div class="mb4"><span class="font-weight-semi-bold">제공 목적 : </span><span>고객 획득 홈페이지 URL : https://1point.kr</span></div>
+                                    <div class="mb4"><span class="font-weight-semi-bold">혜택내용 : </span><span>서비스 크레딧(전문가 고용비) 총 30만원 제공</span></div>
+                                    <div class="mb4"><span class="font-weight-semi-bold">제공기간 : </span><span>협의 </span></div>
+                                    <div><span class="font-weight-semi-bold">참고 : </span><span>쿼타북 제휴 페이지(https://quotabook.com/ko-benefit/1point)</span></div>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td class="text-center align-middle ">
+                                    <label class="mb0">
+                                        <input type="checkbox" name="notice" class="custom-checkbox"
+                                               onclick="checkOnlyOne(this)">
+                                        <i class="icon ico_checkbox">체크박스</i>
+                                    </label>
+                                </td>
+                                <td class="text-center align-middle"><span>2023-07-28<br>12:05:55</span></td>
+                                <td class="text-center align-middle">
+                                    <span>협의불가</span>
+                                </td>
+                                <td class="text-center align-middle"><span>(주)피클</span><br><span>피클플러스플러스플러스</span></td>
+                                <td class="text-center align-middle"><span>정다운</span>/<span>대표</span></td>
+                                <td class="text-center align-middle"><span>send.me@payple.kr</span></td>
+                                <td class="text-center align-middle">
+                                    <span>N</span>
+                                </td>
+                                <td class="text-center align-middle"><span>파트너</span></td>
+                                <td class="text-center align-middle"><span>payple.kr</span></td>
+                                <td class="text-left align-middle">
+                                    <div class="mb4"><span class="font-weight-semi-bold">제공 목적 : </span><span>고객 획득 홈페이지 URL : https://1point.kr</span></div>
+                                    <div class="mb4"><span class="font-weight-semi-bold">혜택내용 : </span><span>서비스 크레딧(전문가 고용비) 총 30만원 제공</span></div>
+                                    <div class="mb4"><span class="font-weight-semi-bold">제공기간 : </span><span>협의 </span></div>
+                                    <div><span class="font-weight-semi-bold">참고 : </span><span>쿼타북 제휴 페이지(https://quotabook.com/ko-benefit/1point)</span></div>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td class="text-center align-middle ">
+                                    <label class="mb0">
+                                        <input type="checkbox" name="notice" class="custom-checkbox"
+                                               onclick="checkOnlyOne(this)">
+                                        <i class="icon ico_checkbox">체크박스</i>
+                                    </label>
+                                </td>
+                                <td class="text-center align-middle"><span>2023-07-28<br>12:05:55</span></td>
+                                <td class="text-center align-middle">
+                                    <span>협의불가</span>
+                                </td>
+                                <td class="text-center align-middle"><span>(주)피클</span><br><span>피클플러스플러스플러스</span></td>
+                                <td class="text-center align-middle"><span>정다운</span>/<span>대표</span></td>
+                                <td class="text-center align-middle"><span>send.me@payple.kr</span></td>
+                                <td class="text-center align-middle">
+                                    <span>N</span>
+                                </td>
+                                <td class="text-center align-middle"><span>파트너</span></td>
+                                <td class="text-center align-middle"><span>payple.kr</span></td>
+                                <td class="text-left align-middle">
+                                    <div class="mb4"><span class="font-weight-semi-bold">제공 목적 : </span><span>고객 획득 홈페이지 URL : https://1point.kr</span></div>
+                                    <div class="mb4"><span class="font-weight-semi-bold">혜택내용 : </span><span>서비스 크레딧(전문가 고용비) 총 30만원 제공</span></div>
+                                    <div class="mb4"><span class="font-weight-semi-bold">제공기간 : </span><span>협의 </span></div>
+                                    <div><span class="font-weight-semi-bold">참고 : </span><span>쿼타북 제휴 페이지(https://quotabook.com/ko-benefit/1point)</span></div>
+                                </td>
+
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="pagination-area">
+    <ul class="pagination-list">
+        <li class="pagination-icon">
+            <i class="icon ico_first_page">처음으로가기</i>
+        </li>
+        <li class="pagination-icon">
+            <i class="icon ico_previous_page">이전으로가기</i>
+        </li>
+        <li class="active">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li class="pagination-icon">
+            <i class="icon ico_next_page">다음으로가기</i>
+        </li>
+        <li class="pagination-icon">
+            <i class="icon ico_last_page">맨뒤로가기</i>
+        </li>
+    </ul>
+</div>
                 </div>
             </section>
         </article>
@@ -824,99 +1195,18 @@
     </div>
 </div>
 <!--달력 e-->
-
-<!--발송 팝업 s-->
-<div class="modal fade confirm-modal _confirm-modal">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-body">
-                <div class="content">
-                    <i class="icon ico_exclamation_purple"></i>
-                    <p class="text-center">1000건의 이메일,알림톡이 발송됩니다.<br>진행할까요?</p>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-danger" data-dismiss="modal">취소</button>
-                <button type="button" class="btn btn-primary">발송하기</button>
-            </div>
-        </div>
-    </div>
-</div>
-<!--발송 팝업 e-->
-<script>
-    $('._confirm-modal').modal('show')
-    /*email send 호출*/
-    /*$('._send-email').on('click',function(){
-        $('._confirm-modal').modal('show')
-    })*/
-</script>
 </body>
 <script>
-    /*
-    * 서비스 구분/상태 값에 따라 결제수단 구분/상태 구별
-    * 클릭 시 상위에 요소 값으로 변경
-    * 개발 시 value값 수정 필요
-    * 기본값은 전체로 맞춰져있어서 html ._service-status-value에 있는 전체의  vlaue값도 맞춰주셔야 합니다.
-    * */
-    let serviceStatus = $('._service-status');
-    let servicestatusValue = $('._service-status-value');
-    let stateSelectValue = $('._state-label').find('._select-value');
-    let stateValueText = $('._state-label').find('._value-text');
-
-    let all = [
-        {name: '전체', value: '1'}
-    ]
-    let domestic = [
-        {name: '카드 - 앱카드', value: '2-1'},
-        {name: '카드 - 키인', value: '2-2'},
-        {name: '카드 - 빌링', value: '2-3.'},
-        {name: '카드 - 간편', value: '2-4'},
-        {name: '계좌 - 빌링', value: 'gg'},
-        {name: '카드 - 앱카드', value: 'hh'},
-        {name: '계좌 - 간편', value: 'ss'},
-        {name: '카드 - 앱카드', value: 'dd'},
-        {name: '네이버페이', value: 'ff'},
-        {name: '카카오페이', value: 'gg'},
-        {name: '애플페이', value: 'hh'},
-        {name: '가상계좌', value: 'rr'},
-    ]
-    let global = [
-        {name: '카드 - 키인', value: 'asdassssd'},
-        {name: '카드 - 빌링', value: 'asdasd'},
-        {name: '카드 - 간편', value: 'dddd'}
-
-    ]
-    let option
-
-    serviceStatus.on('click', 'li.option', function () {
-        var value = $(this).attr('value');
-
-        //전체
-        if (value == 0) {
-            option = all
-            stateValueText.html(option[0].name);
-            stateSelectValue.attr("value", option[0].value);
-
+    /*체크박스 단일 선택 */
+    function checkOnlyOne(target) {
+        if ($(target).is(":checked")) {
+            $(target).prop("checked", true);
+            $(target).closest("tr").siblings("tr").find($("input[name='notice']")).prop("checked", false);
+            $(target).closest("tr").siblings("tr").removeClass('bg-purple-300')
+            $(target).closest("tr").addClass('bg-purple-300')
+        } else {
+            $(target).prop("checked", false);
         }
-        //국내
-        else if (value == 1) {
-            option = domestic
-            stateValueText.html(option[0].name);
-            stateSelectValue.attr("value", option[0].value);
-        }
-        // 해외
-        else {
-            option = global
-            stateValueText.html(option[0].name);
-            stateSelectValue.attr("value", option[0].value);
-        }
-        // 초기화
-        servicestatusValue.empty();
-        //클릭시 반복문 돌려서 value 호출
-        for (let i = 0; i < option.length; i++) {
-            servicestatusValue.append('<option class="option _domestic" value="' + option[i].value + '">' + option[i].name + '</option>');
-        }
-    });
-
+    }
 </script>
 </html>
