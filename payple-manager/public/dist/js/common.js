@@ -58,7 +58,7 @@ function showDetailBtn(){
     const moreSearchBtn = $('._more-search-btn')
     let count = 0;
     moreSearchBtn.on('click',function(){
-        $('.detail-search').toggleClass('d-block')
+        $('._detail-search').toggleClass('d-block')
         count++;
         if(count % 2 === 0){
             moreSearchBtn.text('More Search');
