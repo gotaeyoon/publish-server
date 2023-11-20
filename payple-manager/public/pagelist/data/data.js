@@ -355,7 +355,7 @@ data.signupko = {
             page: '카드_상태변경'
         },
         {
-            stateClass: 'working',
+            stateClass: 'confirm',
             url: '카드_수수료변경',
             category: 'signupko',
             page: '카드_수수료변경'
@@ -385,7 +385,7 @@ data.signupko = {
             page: '계좌_상태변경'
         },
         {
-            stateClass: 'working',
+            stateClass: 'confirm',
             url: '계좌_수수료수정',
             category: 'signupko',
             page: '계좌_수수료수정'
@@ -403,7 +403,7 @@ data.signupko = {
             page: '페이_상태변경'
         },
         {
-            stateClass: 'working',
+            stateClass: 'confirm',
             url: '페이_수수료수정',
             category: 'signupko',
             page: '페이_수수료수정'
@@ -421,7 +421,7 @@ data.signupko = {
             page: '가상계좌_상태수정'
         },
         {
-            stateClass: 'working',
+            stateClass: 'confirm',
             url: '가상계좌_수수료수정',
             category: 'signupko',
             page: '가상계좌_수수료수정'

@@ -664,85 +664,265 @@
             <!-- 컨텐츠 s-->
             <section class="signup-section">
                 <div class="slide-modal-wrap _slide-modal-wrap _slide-modal-wrap-cancel show">
-                    <div class="slide-modal slide-modal-xl">
+                    <div class="slide-modal slide-modal-lg">
                         <div class="slide-modal-header">
-                            <h3 class="font-h1 mb0 font-weight-bold">정산주기 수정이력</h3>
+                            <h3 class="font-h1 mb0 font-weight-bold">수수료 변경이력</h3>
                             <i class="ico_close_btn _close-slide-modal-btn"></i>
                         </div>
                         <div class="slide-modal-body">
                             <div class="position-relative">
                                 <div class="toast-popup primary show">
                                     <p class="text-left"><i class="icon"></i><span
-                                            class="text">정산주기 대기가 취소처리 되었습니다.</span></p>
+                                            class="text">수수료 변경 대기가 취소처리 되었습니다.</span></p>
                                 </div>
-                                <div class="table-view-area">
-                                    <div class="table-responsive">
-                                        <div class="custom-data-table font-p1  table-col-6">
+                                <div>
+                                    <p class="font-h2 font-weight-semi-bold mb24">수정할 수수료 입력</p>
+                                    <div class="table-responsive mb80">
+                                        <div class="custom-input-table">
                                             <div class="thead">
-                                                <div class="custom-table-th">
-                                                    <span class="">변경일</span>
-                                                </div>
-                                                <div class="custom-table-th">
-                                                    <span class="">적용일</span>
-                                                </div>
-                                                <div class="custom-table-th">
-                                                    <span class="">상태</span>
-                                                </div>
-                                                <div class="custom-table-th">
-                                                    <span class="">구분</span>
-                                                </div>
-                                                <div class="custom-table-th">
-                                                    <span class="">주기</span>
-                                                </div>
-                                                <div class="custom-table-th">
-                                                    <span class="">대기취소</span>
-                                                </div>
+                                                <div class="custom-table-th"><span></span></div>
+                                                <div class="custom-table-th"><span class="font-h3">영세</span></div>
+                                                <div class="custom-table-th"><span class="font-h3">중소1</span></div>
+                                                <div class="custom-table-th"><span class="font-h3">중소2</span></div>
+                                                <div class="custom-table-th"><span class="font-h3">중소3</span></div>
+                                                <div class="custom-table-th"><span class="font-h3">일반</span></div>
                                             </div>
                                             <div class="tbody">
                                                 <div class="custom-table-tr">
+                                                    <div class="custom-table-td"><span class="font-h3">네이버페이</span></div>
                                                     <div class="custom-table-td">
-                                                        <span class="data ">2023-02-21</span>
+                                                        <div class="form-group mb0">
+                                                            <label class="w-100 mb0 position-relative">
+                                                                <input class="form-control " type="text">
+                                                                <span class="position-absolute util">%</span>
+                                                            </label>
+                                                        </div>
                                                     </div>
                                                     <div class="custom-table-td">
-                                                        <span class="data ">2023-04-01</span>
+                                                        <div class="form-group mb0">
+                                                            <label class="w-100 mb0 position-relative">
+                                                                <input class="form-control " type="text">
+                                                                <span class="position-absolute util">%</span>
+                                                            </label>
+                                                        </div>
                                                     </div>
                                                     <div class="custom-table-td">
-                                                        <span>대기</span>
+                                                        <div class="form-group mb0">
+                                                            <label class="w-100 mb0 position-relative">
+                                                                <input class="form-control " type="text">
+                                                                <span class="position-absolute util">%</span>
+                                                            </label>
+                                                        </div>
                                                     </div>
                                                     <div class="custom-table-td">
-                                                        <span>일정산</span>
+                                                        <div class="form-group mb0">
+                                                            <label class="w-100 mb0 position-relative">
+                                                                <input class="form-control " type="text">
+                                                                <span class="position-absolute util">%</span>
+                                                            </label>
+                                                        </div>
                                                     </div>
                                                     <div class="custom-table-td">
-                                                        <span>7일</span>
-                                                    </div>
-                                                    <div class="custom-table-td">
-                                                        <button class="btn btn-sm btn-danger min-w-40 px-0 py-0">취소</button>
+                                                        <div class="form-group mb0">
+                                                            <label class="w-100 mb0 position-relative">
+                                                                <input class="form-control " type="text">
+                                                                <span class="position-absolute util">%</span>
+                                                            </label>
+                                                        </div>
                                                     </div>
                                                 </div>
                                                 <div class="custom-table-tr">
+                                                    <div class="custom-table-td"><span class="font-h3">네이버페이 포인트</span></div>
                                                     <div class="custom-table-td">
-                                                        <span class="data ">2023-02-21</span>
+                                                        <div class="form-group mb0">
+                                                            <label class="w-100 mb0 position-relative">
+                                                                <input class="form-control " type="text" disabled>
+                                                                <span class="position-absolute util">%</span>
+                                                            </label>
+                                                        </div>
                                                     </div>
                                                     <div class="custom-table-td">
-                                                        <span class="data ">2023-11-01</span>
+                                                        <div class="form-group mb0">
+                                                            <label class="w-100 mb0 position-relative">
+                                                                <input class="form-control " type="text" disabled>
+                                                                <span class="position-absolute util">%</span>
+                                                            </label>
+                                                        </div>
                                                     </div>
                                                     <div class="custom-table-td">
-                                                        <span>완료</span>
+                                                        <div class="form-group mb0">
+                                                            <label class="w-100 mb0 position-relative">
+                                                                <input class="form-control " type="text" disabled>
+                                                                <span class="position-absolute util">%</span>
+                                                            </label>
+                                                        </div>
                                                     </div>
                                                     <div class="custom-table-td">
-                                                        <span>월정산</span>
+                                                        <div class="form-group mb0">
+                                                            <label class="w-100 mb0 position-relative">
+                                                                <input class="form-control " type="text" disabled>
+                                                                <span class="position-absolute util">%</span>
+                                                            </label>
+                                                        </div>
                                                     </div>
                                                     <div class="custom-table-td">
-                                                        <span>월 4회</span>
+                                                        <div class="form-group mb0">
+                                                            <label class="w-100 mb0 position-relative">
+                                                                <input class="form-control " type="text">
+                                                                <span class="position-absolute util">%</span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="custom-table-tr">
+                                                    <div class="custom-table-td"><span class="font-h3">카카오페이</span></div>
+                                                    <div class="custom-table-td">
+                                                        <div class="form-group mb0">
+                                                            <label class="w-100 mb0 position-relative">
+                                                                <input class="form-control " type="text">
+                                                                <span class="position-absolute util">%</span>
+                                                            </label>
+                                                        </div>
                                                     </div>
                                                     <div class="custom-table-td">
-
+                                                        <div class="form-group mb0">
+                                                            <label class="w-100 mb0 position-relative">
+                                                                <input class="form-control " type="text">
+                                                                <span class="position-absolute util">%</span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="custom-table-td">
+                                                        <div class="form-group mb0">
+                                                            <label class="w-100 mb0 position-relative">
+                                                                <input class="form-control " type="text">
+                                                                <span class="position-absolute util">%</span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="custom-table-td">
+                                                        <div class="form-group mb0">
+                                                            <label class="w-100 mb0 position-relative">
+                                                                <input class="form-control " type="text">
+                                                                <span class="position-absolute util">%</span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="custom-table-td">
+                                                        <div class="form-group mb0">
+                                                            <label class="w-100 mb0 position-relative">
+                                                                <input class="form-control " type="text">
+                                                                <span class="position-absolute util">%</span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="custom-table-tr">
+                                                    <div class="custom-table-td"><span class="font-h3">카카오페이 머니</span></div>
+                                                    <div class="custom-table-td">
+                                                        <div class="form-group mb0">
+                                                            <label class="w-100 mb0 position-relative">
+                                                                <input class="form-control " type="text" disabled>
+                                                                <span class="position-absolute util">%</span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="custom-table-td">
+                                                        <div class="form-group mb0">
+                                                            <label class="w-100 mb0 position-relative">
+                                                                <input class="form-control " type="text" disabled>
+                                                                <span class="position-absolute util">%</span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="custom-table-td">
+                                                        <div class="form-group mb0">
+                                                            <label class="w-100 mb0 position-relative">
+                                                                <input class="form-control " type="text" disabled>
+                                                                <span class="position-absolute util">%</span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="custom-table-td">
+                                                        <div class="form-group mb0">
+                                                            <label class="w-100 mb0 position-relative">
+                                                                <input class="form-control " type="text" disabled>
+                                                                <span class="position-absolute util">%</span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="custom-table-td">
+                                                        <div class="form-group mb0">
+                                                            <label class="w-100 mb0 position-relative">
+                                                                <input class="form-control " type="text">
+                                                                <span class="position-absolute util">%</span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="custom-table-tr">
+                                                    <div class="custom-table-td"><span class="font-h3">애플페이</span></div>
+                                                    <div class="custom-table-td">
+                                                        <div class="form-group mb0">
+                                                            <label class="w-100 mb0 position-relative">
+                                                                <input class="form-control " type="text">
+                                                                <span class="position-absolute util">%</span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="custom-table-td">
+                                                        <div class="form-group mb0">
+                                                            <label class="w-100 mb0 position-relative">
+                                                                <input class="form-control " type="text">
+                                                                <span class="position-absolute util">%</span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="custom-table-td">
+                                                        <div class="form-group mb0">
+                                                            <label class="w-100 mb0 position-relative">
+                                                                <input class="form-control " type="text">
+                                                                <span class="position-absolute util">%</span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="custom-table-td">
+                                                        <div class="form-group mb0">
+                                                            <label class="w-100 mb0 position-relative">
+                                                                <input class="form-control " type="text">
+                                                                <span class="position-absolute util">%</span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="custom-table-td">
+                                                        <div class="form-group mb0">
+                                                            <label class="w-100 mb0 position-relative">
+                                                                <input class="form-control " type="text">
+                                                                <span class="position-absolute util">%</span>
+                                                            </label>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="date-fix-area">
+                                        <span class="title font-h3 font-weight-semi-bold">수정 적용일</span>
+                                        <div class="form-group mb0 w-100">
+                                            <label class="calender-input mb0">
+                                                <input class="form-control _inputSingleDate" type="text" style="font-size: 12px">
+                                                <i class="icon ico_calendar">달력이미지</i>
+                                            </label>
+                                            <div class="mt10 color-blue-100 font-p3"><i class="ico_danger_blue icon mr8"></i>적용일 00:00:00 거래부터 변경 수수료가 적용됩니다.</div>
+                                        </div>
+                                    </div>
+
                                 </div>
+                            </div>
+                        </div>
+                        <div class="slide-modal-footer clearfix">
+                            <div class="float-right">
+                                <button class="btn btn-primary btn-md">스케쥴 등록하기</button>
                             </div>
                         </div>
                     </div>
