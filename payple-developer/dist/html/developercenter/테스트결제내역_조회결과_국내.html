@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--    서버반영시 -->
+<!--    <link rel="stylesheet" href="https://image.payple.kr/onboard/css/payple_component.css?ver=1.8">-->
+<!--    <link rel="stylesheet" href="https://image.payple.kr/onboard/css/payple_pages.css?ver=1.8">-->
+<!--    <script src="https://image.payple.kr/onboard/js/bundle.js?ver=1.8"></script>-->
+<!--    <script src="https://image.payple.kr/onboard/js/common.js?ver=1.8"></script>-->
+    <!--    로컬작업시-->
+    <link rel="stylesheet" href="../../css/payple_component.css?ver=1.6">
+    <link rel="stylesheet" href="../../css/payple_pages.css?ver=1.6">
+    <script src="../../js/bundle.js?ver=1.6"></script>
+    <script src="../../js/common.js?ver=1.6"></script>
+</head>
+<body>
+<header class="header developer_center">
+    <div class="header__container">
+        <div class="aside_button _aside_button">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="header__navi">
+            <h1 class="header__logo">
+                <a href="https://onboard.payple.co" target="_blank">
+                    <img src="../../img/common/header__logo.png" alt="페이플로고">
+                </a>
+            </h1>
+            <span class="text">개발자센터</span>
+        </div>
+        <div class="position_relative">
+            <i class="icon ico_account_btn _ico_account_btn">계정관리</i>
+            <ul class=" position_absolute header__account_info _header__account_info">
+                <li>
+                    <span>dw.junglses@payple.kr</span>
+                </li>
+                <li>
+                    <a href=""><i class="icon ico_setting"></i><span>계정설정</span></a>
+                </li>
+                <li>
+                    <a href=""><i class="icon ico_logout"></i><span>로그아웃</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+<main class="developer_container">
+    <aside class="aside">
+    <div class="layout">
+        <p class="sub_title">서비스 선택</p>
+        <div class="select_box _select_box">
+            <div class="select_value">
+                테스트 상점
+            </div>
+            <i class="icon ico_select_arrow_down">아래화살표</i>
+            <ul class="options">
+                <li class="option" value="1">테스트 상점</li>
+                <li class="option" value="2">배고파요</li>
+                <li class="option" value="3">졸려염</li>
+                <li class="option" value="4">배고파영</li>
+            </ul>
+        </div>
+    </div>
+    <div class="layout">
+        <p class="sub_title">설정</p>
+        <ul class="link_lists">
+            <li class="link active"><a href="#"><i class="icon ico_key"></i>API 키</a></li>
+            <li class="link"><a href="#"><i class="icon ico_paper_plane"></i>웹훅</a></li>
+            <li class="link"><a href="#"><i class="icon ico_shield_check"></i>White IP</a></li>
+            <li class="link"><a href="#"><i class="icon ico_document_sign"></i>테스트 결제내역</a></li>
+        </ul>
+    </div>
+    <div class="layout">
+        <p class="sub_title">가이드</p>
+        <ul class="link_lists">
+            <li class="link"><a href="#"><i class="icon ico_book_alt"></i>개발가이드</a></li>
+            <li class="link"><a href="#"><i class="icon ico_interrogation"></i>자주 묻는 질문</a></li>
+            <li class="link"><a href="#"><i class="icon ico_github"></i>Github</a></li>
+        </ul>
+    </div>
+</aside>
+    <article class="developer_content">
+        <section class="developer_section">
+            <div class="title_area">
+                <p class="title test">테스트 결제 내역</p>
+            </div>
+            <div class="developer_card">
+                <div class="title_area">
+                    <p class="title test">검색 필터</p>
+                    <i class="icon ico_restart">검색필터초기화</i>
+                </div>
+                <div class="input__area__list one_line">
+                    <div class="input__area default">
+                        <p class="input_title">구분</p>
+                        <div class="select_box _select_box">
+                            <div class="select_value" value="0">
+                                전체
+                            </div>
+                            <i class="icon ico_select_arrow_down">아래화살표</i>
+                            <ul class="options">
+                                <li class="option" value="0">전체</li>
+                                <li class="option" value="1">국내</li>
+                                <li class="option" value="2">해외</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="input__area update_date">
+                        <p class="input_title">결제일자</p>
+                        <div class="position_relative">
+                            <input type="text" class="form_control _twoCalender" id="myDateRangePicker" name="dateRangePicker">
+                            <label for="myDateRangePicker" class="input__date" onclick="openModal('modal01')">
+                                <i class="icon ico_calender"></i>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="btn_area">
+                        <button class="btn btn_secondary">조회하기</button>
+                    </div>
+                </div>
+            </div>
+            <div class="developer_card">
+                <div class="title_area">
+                    <p class="title test">조회결과 - 국내</p>
+                </div>
+                <div class="response_table">
+                    <table>
+                        <colgroup>
+                            <col style="width: 50px">
+                            <col style="width: 180px">
+                            <col style="width: 110px">
+                            <col style="width: 55px">
+                            <col style="width: 120px">
+                            <col style="width: 210px">
+                            <col style="width: 210px">
+                            <col style="width: 240px">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                            <th class="text_center">No</th>
+                            <th>결제일시</th>
+                            <th>결제수단</th>
+                            <th>상태</th>
+                            <th class="text_center">결제금액</th>
+                            <th>주문번호</th>
+                            <th>PID</th>
+                            <th>상품명</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <!--조회결과 있음 S-->
+                        <tr>
+                            <td class="text_center">10</td>
+                            <td class="">2023-06-29 17:23:59</td>
+                            <td>카드빌링</td>
+                            <td>승인</td>
+                            <td class=" text_center">10,000,000</td>
+                            <td class="">O2023-2728-5039-6573</td>
+                            <td class="">O2023-2728-5039-6573</td>
+                            <td class="">이초아님의 처방전</td>
+                        </tr>
+                        <tr>
+                            <td class="text_center">10</td>
+                            <td class="">2023-06-29 17:23:59</td>
+                            <td>카드빌링</td>
+                            <td>승인</td>
+                            <td class=" text_center">10,000,000</td>
+                            <td class="">O2023-2728-5039-6573</td>
+                            <td class="">O2023-2728-5039-6573</td>
+                            <td class="">이초아님의 처방전</td>
+                        </tr>
+                        <tr>
+                            <td class="text_center">10</td>
+                            <td class="">2023-06-29 17:23:59</td>
+                            <td>카드빌링</td>
+                            <td>승인</td>
+                            <td class=" text_center">10,000,000</td>
+                            <td class="">O2023-2728-5039-6573</td>
+                            <td class="">O2023-2728-5039-6573</td>
+                            <td class="">이초아님의 처방전</td>
+                        </tr>
+                        <tr>
+                            <td class="text_center">10</td>
+                            <td class="">2023-06-29 17:23:59</td>
+                            <td>카드빌링</td>
+                            <td>승인</td>
+                            <td class=" text_center">10,000,000</td>
+                            <td class="">O2023-2728-5039-6573</td>
+                            <td class="">O2023-2728-5039-6573</td>
+                            <td class="">이초아님의 처방전</td>
+                        </tr>
+                        <tr>
+                            <td class="text_center">10</td>
+                            <td class="">2023-06-29 17:23:59</td>
+                            <td>카드빌링</td>
+                            <td>승인</td>
+                            <td class=" text_center">10,000,000</td>
+                            <td class="">O2023-2728-5039-6573</td>
+                            <td class="">O2023-2728-5039-6573</td>
+                            <td class="">이초아님의 처방전</td>
+                        </tr>
+                        <tr>
+                            <td class="text_center">10</td>
+                            <td class="">2023-06-29 17:23:59</td>
+                            <td>카드빌링</td>
+                            <td>승인</td>
+                            <td class=" text_center">10,000,000</td>
+                            <td class="">O2023-2728-5039-6573</td>
+                            <td class="">O2023-2728-5039-6573</td>
+                            <td class="">이초아님의 처방전</td>
+                        </tr>
+                        <tr>
+                            <td class="text_center">10</td>
+                            <td class="">2023-06-29 17:23:59</td>
+                            <td>카드빌링</td>
+                            <td>승인</td>
+                            <td class=" text_center">10,000,000</td>
+                            <td class="">O2023-2728-5039-6573</td>
+                            <td class="">O2023-2728-5039-6573</td>
+                            <td class="">이초아님의 처방전</td>
+                        </tr>
+                        <!--조회결과 있음 E-->
+
+
+                        <!--조회결과 없음 s-->
+                        <!--<tr><td class="empty_data no_search" colspan="7">조회결과가 없습니다.</td></tr>-->
+                        <!--조회결과 없음 e-->
+                        </tbody>
+                    </table>
+                </div>
+<!--                <div class="response_table">-->
+<!--                    <table>-->
+<!--                        <colgroup>-->
+<!--                            <col style="width: 5%">-->
+<!--                            <col style="width: 10%">-->
+<!--                            <col style="width: 10%">-->
+<!--                            <col style="width: 8%">-->
+<!--                            <col style="width: 12%">-->
+<!--                            <col style="width: 20%">-->
+<!--                            <col style="width: 20%">-->
+<!--                            <col>-->
+<!--                        </colgroup>-->
+<!--                        <thead>-->
+<!--                        <tr>-->
+<!--                            <th class="text_center">No</th>-->
+<!--                            <th>결제일시</th>-->
+<!--                            <th>결제수단</th>-->
+<!--                            <th>상태</th>-->
+<!--                            <th class="text_center">결제금액</th>-->
+<!--                            <th>주문번호</th>-->
+<!--                            <th>TID</th>-->
+<!--                            <th>상품명</th>-->
+<!--                        </tr>-->
+<!--                        </thead>-->
+<!--                        <tbody>-->
+<!--                        &lt;!&ndash;조회결과 있음 S&ndash;&gt;-->
+<!--                        <tr>-->
+<!--                            <td class="text_center">10</td>-->
+<!--                            <td class="">2023-06-29 17:23:59</td>-->
+<!--                            <td>카드빌링</td>-->
+<!--                            <td>승인</td>-->
+<!--                            <td class=" text_center">10,000,000</td>-->
+<!--                            <td class="">O2023-2728-5039-6573</td>-->
+<!--                            <td class="">O2023-2728-5039-6573</td>-->
+<!--                            <td class="">이초아님의 처방전</td>-->
+<!--                        </tr>-->
+<!--                        <tr>-->
+<!--                            <td class="text_center">10</td>-->
+<!--                            <td class="">2023-06-29 17:23:59</td>-->
+<!--                            <td>카드빌링</td>-->
+<!--                            <td>승인</td>-->
+<!--                            <td class=" text_center">10,000,000</td>-->
+<!--                            <td class="">O2023-2728-5039-6573</td>-->
+<!--                            <td class="">O2023-2728-5039-6573</td>-->
+<!--                            <td class="">이초아님의 처방전</td>-->
+<!--                        </tr>-->
+<!--                        <tr>-->
+<!--                            <td class="text_center">10</td>-->
+<!--                            <td class="">2023-06-29 17:23:59</td>-->
+<!--                            <td>카드빌링</td>-->
+<!--                            <td>승인</td>-->
+<!--                            <td class=" text_center">10,000,000</td>-->
+<!--                            <td class="">O2023-2728-5039-6573</td>-->
+<!--                            <td class="">O2023-2728-5039-6573</td>-->
+<!--                            <td class="">이초아님의 처방전</td>-->
+<!--                        </tr>-->
+<!--                        <tr>-->
+<!--                            <td class="text_center">10</td>-->
+<!--                            <td class="">2023-06-29 17:23:59</td>-->
+<!--                            <td>카드빌링</td>-->
+<!--                            <td>승인</td>-->
+<!--                            <td class=" text_center">10,000,000</td>-->
+<!--                            <td class="">O2023-2728-5039-6573</td>-->
+<!--                            <td class="">O2023-2728-5039-6573</td>-->
+<!--                            <td class="">이초아님의 처방전</td>-->
+<!--                        </tr>-->
+<!--                        <tr>-->
+<!--                            <td class="text_center">10</td>-->
+<!--                            <td class="">2023-06-29 17:23:59</td>-->
+<!--                            <td>카드빌링</td>-->
+<!--                            <td>승인</td>-->
+<!--                            <td class=" text_center">10,000,000</td>-->
+<!--                            <td class="">O2023-2728-5039-6573</td>-->
+<!--                            <td class="">O2023-2728-5039-6573</td>-->
+<!--                            <td class="">이초아님의 처방전</td>-->
+<!--                        </tr>-->
+<!--                        <tr>-->
+<!--                            <td class="text_center">10</td>-->
+<!--                            <td class="">2023-06-29 17:23:59</td>-->
+<!--                            <td>카드빌링</td>-->
+<!--                            <td>승인</td>-->
+<!--                            <td class=" text_center">10,000,000</td>-->
+<!--                            <td class="">O2023-2728-5039-6573</td>-->
+<!--                            <td class="">O2023-2728-5039-6573</td>-->
+<!--                            <td class="">이초아님의 처방전</td>-->
+<!--                        </tr>-->
+<!--                        <tr>-->
+<!--                            <td class="text_center">10</td>-->
+<!--                            <td class="">2023-06-29 17:23:59</td>-->
+<!--                            <td>카드빌링</td>-->
+<!--                            <td>승인</td>-->
+<!--                            <td class=" text_center">10,000,000</td>-->
+<!--                            <td class="">O2023-2728-5039-6573</td>-->
+<!--                            <td class="">O2023-2728-5039-6573</td>-->
+<!--                            <td class="">이초아님의 처방전</td>-->
+<!--                        </tr>-->
+<!--                        &lt;!&ndash;조회결과 있음 E&ndash;&gt;-->
+
+
+<!--                        &lt;!&ndash;조회결과 없음 s&ndash;&gt;-->
+<!--                        &lt;!&ndash;<tr><td class="empty_data no_search" colspan="7">조회결과가 없습니다.</td></tr>&ndash;&gt;-->
+<!--                        &lt;!&ndash;조회결과 없음 e&ndash;&gt;-->
+<!--                        </tbody>-->
+<!--                    </table>-->
+<!--                </div>-->
+                <div class="pagination_area">
+                    <span class="pagination_arrow first_button"><i class="icon ico_pagination_left_arrow_first"></i></span>
+                    <span class="pagination_arrow"><i class="icon ico_pagination_left_arrow"></i></span>
+                    <ul class="pagination_list">
+                        <li class="active">1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                    </ul>
+                    <span class="pagination_arrow"><i class="icon ico_pagination_right_arrow"></i></span>
+                    <span class="pagination_arrow last_button"><i class="icon ico_pagination_right_arrow_last"></i></span>
+                </div>
+            </div>
+            <div class="developer_card">
+                <div class="title_area">
+                    <p class="title test">조회결과 - 해외</p>
+                </div>
+                <div class="response_table">
+                    <table>
+                        <colgroup>
+                            <col style="width: 50px">
+                            <col style="width: 180px">
+                            <col style="width: 110px">
+                            <col style="width: 55px">
+                            <col style="width: 55px">
+                            <col style="width: 120px">
+                            <col style="width: 210px">
+                            <col style="width: 240px">
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th class="text_center">No</th>
+                            <th>결제일시</th>
+                            <th>결제수단</th>
+                            <th>상태</th>
+                            <th>통화</th>
+                            <th class="text_center">결제금액</th>
+                            <th>주문번호</th>
+                            <th>상품명</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <!--조회결과 있음 S-->
+                        <tr>
+                            <td class="text_center">10</td>
+                            <td class="">2023-06-29 17:23:59</td>
+                            <td>카드빌링</td>
+                            <td>승인</td>
+                            <td>KRW</td>
+                            <td class=" text_center">10,000,000</td>
+                            <td class="">O2023-2728-5039-6573</td>
+                            <td class="">이초아님의 처방전</td>
+                        </tr>
+                        <tr>
+                            <td class="text_center">10</td>
+                            <td class="">2023-06-29 17:23:59</td>
+                            <td>카드빌링</td>
+                            <td>승인</td>
+                            <td>KRW</td>
+                            <td class=" text_center">10,000,000</td>
+                            <td class="">O2023-2728-5039-6573</td>
+                            <td class="">이초아님의 처방전</td>
+                        </tr>
+                        <tr>
+                            <td class="text_center">10</td>
+                            <td class="">2023-06-29 17:23:59</td>
+                            <td>카드빌링</td>
+                            <td>승인</td>
+                            <td>KRW</td>
+                            <td class=" text_center">10,000,000</td>
+                            <td class="">O2023-2728-5039-6573</td>
+                            <td class="">이초아님의 처방전</td>
+                        </tr>
+                        <tr>
+                            <td class="text_center">10</td>
+                            <td class="">2023-06-29 17:23:59</td>
+                            <td>카드빌링</td>
+                            <td>승인</td>
+                            <td>KRW</td>
+                            <td class=" text_center">10,000,000</td>
+                            <td class="">O2023-2728-5039-6573</td>
+                            <td class="">이초아님의 처방전</td>
+                        </tr>
+                        <tr>
+                            <td class="text_center">10</td>
+                            <td class="">2023-06-29 17:23:59</td>
+                            <td>카드빌링</td>
+                            <td>승인</td>
+                            <td>KRW</td>
+                            <td class=" text_center">10,000,000</td>
+                            <td class="">O2023-2728-5039-6573</td>
+                            <td class="">이초아님의 처방전</td>
+                        </tr>
+                        <!--조회결과 있음 E-->
+
+                        <!--조회결과 없음 s-->
+                        <!--<tr><td class="empty_data no_search" colspan="8">조회결과가 없습니다.</td></tr>-->
+                        <!--조회결과 없음 e-->
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="pagination_area">
+                    <span class="pagination_arrow first_button"><i class="icon ico_pagination_left_arrow_first"></i></span>
+                    <span class="pagination_arrow"><i class="icon ico_pagination_left_arrow"></i></span>
+                    <ul class="pagination_list">
+                        <li class="active">1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                    </ul>
+                    <span class="pagination_arrow"><i class="icon ico_pagination_right_arrow"></i></span>
+                    <span class="pagination_arrow last_button"><i class="icon ico_pagination_right_arrow_last"></i></span>
+                </div>
+            </div>
+        </section>
+    </article>
+</main>
+<div class="modal filter_non modal01">
+    <div class="modal_dialog modal_date_range">
+        <div id="datepickerParent"></div>
+    </div>
+</div>
+
+</body>
+</html>

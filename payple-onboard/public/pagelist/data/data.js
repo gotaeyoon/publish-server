@@ -487,37 +487,37 @@ data.membership = {
         // },
 
         {
-            stateClass: 'confirm',
+            stateClass: 'complete',
             url: '통합관리자_초대완료_관리자없음',
             category: 'membership',
             page: '통합관리자_초대완료_관리자없음'
         },
         {
-            stateClass: 'confirm',
+            stateClass: 'complete',
             url: '통합관리자_초대완료_관리자있음',
             category: 'membership',
             page: '통합관리자_초대완료_관리자있음'
         },
         {
-            stateClass: 'confirm',
+            stateClass: 'complete',
             url: '통합관리자_초대완료_상세보기',
             category: 'membership',
             page: '통합관리자_초대완료_상세보기'
         },
         {
-            stateClass: 'confirm',
+            stateClass: 'complete',
             url: '상점관리자_초대완료_관리자없음',
             category: 'membership',
             page: '상점관리자_초대완료_관리자없음'
         },
         {
-            stateClass: 'confirm',
+            stateClass: 'complete',
             url: '상점관리자_초대완료_관리자있음',
             category: 'membership',
             page: '상점관리자_초대완료_관리자있음'
         },
         {
-            stateClass: 'confirm',
+            stateClass: 'complete',
             url: '상점관리자_초대완료_상세보기',
             category: 'membership',
             page: '상점관리자_초대완료_상세보기'

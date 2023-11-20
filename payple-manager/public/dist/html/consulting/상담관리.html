@@ -6,10 +6,10 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" href="https://image.payple.kr/common/favicon.ico" sizes="32x32">
-    <link rel="stylesheet" href="./../../css/payple_component.css?v1.2">
-    <link rel="stylesheet" href="./../../css/payple_pages.css?v1.2">
-    <script src="../../js/bundle.js?v1.2"></script>
-    <script src="../../js/common.js?v1.2"></script>
+    <link rel="stylesheet" href="./../../css/payple_component.css?v1.3">
+    <link rel="stylesheet" href="./../../css/payple_pages.css?v1.3">
+    <script src="../../js/bundle.js?v1.3"></script>
+    <script src="../../js/common.js?v1.3"></script>
     <title>페이플 관리자 페이지</title>
 </head>
 
@@ -669,9 +669,9 @@
             <section class="consulting-section">
                 <h3 class="font-h1 mb30 font-weight-bold">상담관리</h3>
                 <div class="card">
-                    <h5 class="d-flex align-items-center font-h3 mb20">
+                    <h5 class="d-flex align-items-center mb20">
                         <i class="icon ico_filter"></i>
-                        <span class="ml9 font-weight-semi-bold">필터</span>
+                        <span class="ml9 font-weight-semi-bold font-h3">필터</span>
                     </h5>
                     <div class="row">
                         <div class="col-xl-auto">
@@ -704,19 +704,19 @@
                                     <div class="form-group">
                                         <div class="btn-group w-100 custom-radio-container">
                                             <div class="custom-radio-group">
-                                                <input class="radio-input" type="radio" name="example2" checked=""
+                                                <input class="radio-input" type="radio" name="example1" checked=""
+                                                       id="customRadio1">
+                                                <label for="customRadio1" class="btn btn-secondary btn-md">전체</label>
+                                            </div>
+                                            <div class="custom-radio-group ">
+                                                <input class="radio-input" type="radio" name="example1"
+                                                       id="customRadio2">
+                                                <label for="customRadio2" class="btn btn-secondary btn-md">처리중</label>
+                                            </div>
+                                            <div class="custom-radio-group ">
+                                                <input class="radio-input" type="radio" name="example1"
                                                        id="customRadio3">
-                                                <label for="customRadio3" class="btn btn-secondary btn-md">전체</label>
-                                            </div>
-                                            <div class="custom-radio-group ">
-                                                <input class="radio-input" type="radio" name="example2"
-                                                       id="customRadio4">
-                                                <label for="customRadio4" class="btn btn-secondary btn-md">처리중</label>
-                                            </div>
-                                            <div class="custom-radio-group ">
-                                                <input class="radio-input" type="radio" name="example2"
-                                                       id="customRadio5">
-                                                <label for="customRadio5" class="btn btn-secondary btn-md">처리완료</label>
+                                                <label for="customRadio3" class="btn btn-secondary btn-md">처리완료</label>
                                             </div>
                                         </div>
                                     </div>
@@ -730,24 +730,29 @@
                                     <div class="form-group">
                                         <div class="btn-group w-100 custom-radio-container">
                                             <div class="custom-radio-group">
-                                                <input class="radio-input" type="radio" name="example2" checked="" id="customRadio7">
-                                                <label for="customRadio7" class="btn btn-secondary btn-md">전체</label>
+                                                <input class="radio-input" type="radio" name="example2" checked=""
+                                                       id="customRadio4">
+                                                <label for="customRadio4" class="btn btn-secondary btn-md">전체</label>
                                             </div>
                                             <div class="custom-radio-group ">
-                                                <input class="radio-input" type="radio" name="example2" id="customRadio8">
-                                                <label for="customRadio8" class="btn btn-secondary btn-md">유선</label>
+                                                <input class="radio-input" type="radio" name="example2"
+                                                       id="customRadio5">
+                                                <label for="customRadio5" class="btn btn-secondary btn-md">유선</label>
                                             </div>
                                             <div class="custom-radio-group ">
-                                                <input class="radio-input" type="radio" name="example2" id="customRadio9">
-                                                <label for="customRadio9" class="btn btn-secondary btn-md">채널톡</label>
+                                                <input class="radio-input" type="radio" name="example2"
+                                                       id="customRadio6">
+                                                <label for="customRadio6" class="btn btn-secondary btn-md">채널톡</label>
                                             </div>
                                             <div class="custom-radio-group ">
-                                                <input class="radio-input" type="radio" name="example2" id="customRadio10">
-                                                <label for="customRadio10" class="btn btn-secondary btn-md">이메일</label>
+                                                <input class="radio-input" type="radio" name="example2"
+                                                       id="customRadio7">
+                                                <label for="customRadio7" class="btn btn-secondary btn-md">이메일</label>
                                             </div>
                                             <div class="custom-radio-group ">
-                                                <input class="radio-input" type="radio" name="example2" id="customRadio11">
-                                                <label for="customRadio11" class="btn btn-secondary btn-md">기타</label>
+                                                <input class="radio-input" type="radio" name="example2"
+                                                       id="customRadio8">
+                                                <label for="customRadio8" class="btn btn-secondary btn-md">기타</label>
                                             </div>
                                         </div>
                                     </div>
@@ -821,10 +826,10 @@
                                     <i class="icon ico_select_arrow_down">아래화살표</i>
                                     <ul class="options">
                                         <li class="option" value="0">전체</li>
-                                        <li class="option" value="1">회사공식, 고객센터</li>
-                                        <li class="option" value="2">계약 담당자</li>
-                                        <li class="option" value="2">개발 담당자</li>
-                                        <li class="option" value="2">정산 담당자</li>
+                                        <li class="option" value="1">고객</li>
+                                        <li class="option" value="2">기존파트너</li>
+                                        <li class="option" value="2">신규파트너</li>
+                                        <li class="option" value="2">기타</li>
                                     </ul>
                                 </label>
                             </div>
@@ -900,16 +905,9 @@
                         </div>
                         <div class="col-xl">
                             <p class="font-p2 mb12 font-weight-semi-bold">담당자</p>
-                            <div class="form-group ">
-                                <label class="select-box _select-box">
-                                    <input type="hidden" class="select-value _select-value" value="0">
-                                    <span class="value-text _value-text">전체</span>
-                                    <i class="icon ico_select_arrow_down">아래화살표</i>
-                                    <ul class="options h-auto">
-                                        <li class="option" value="0">전체</li>
-                                        <li class="option" value="1">신지혜</li>
-                                        <li class="option" value="2">이용주</li>
-                                    </ul>
+                            <div class="form-group">
+                                <label class="w-100 mb0">
+                                    <input class="form-control search" type="text">
                                 </label>
                             </div>
                         </div>
@@ -923,53 +921,54 @@
                 </div>
                 <div class="card">
                     <div class="mb25 d-flex justify-content-between align-items-center">
-                        <h5 class="font-h2 d-flex align-items-center mb0 font-weight-semi-bold">
+                        <h5 class="d-flex align-items-center mb0 font-weight-semi-bold">
                             <i class="icon ico_bs_list"></i>
-                            <span>조회합계</span>
+                            <span class="font-h3 ml9">조회합계</span>
                         </h5>
                     </div>
-                    <div class="row flex-xl-row">
+                    <div class="row mx-0 flex-xl-row account-list-group">
                         <div class="col-xl">
-                            <div class="box secondary">
-                                <p class="title">합계</p>
-                                <p class="desc"><span class="data">100</span>건</p>
+                            <div class="text-center account-list">
+                                <p class="font-h3 color-gray-000 title">합계</p>
+                                <p class="font-h1 color-blue-100 font-weight-semi-bold count">100</p>
                             </div>
                         </div>
                         <div class="col-xl">
-                            <div class="box primary">
-                                <p class="title"><i class="icon ico_circle_email"></i>이메일</p>
-                                <p class="desc"><span class="data">100</span>건</p>
+                            <div class="text-center account-list">
+                                <p class="font-h3 color-gray-000 title">이메일</p>
+                                <p class="font-h1 color-purple-100 font-weight-semi-bold count">10</p>
                             </div>
                         </div>
                         <div class="col-xl">
-                            <div class="box primary">
-                                <p class="title"><i class="icon ico_circle_phone"></i>유선</p>
-                                <p class="desc"><span class="data">100</span>건</p>
+                            <div class="text-center account-list">
+                                <p class="font-h3 color-gray-000 title">유선</p>
+                                <p class="font-h1 color-purple-100 font-weight-semi-bold count">10</p>
                             </div>
                         </div>
                         <div class="col-xl">
-                            <div class="box primary">
-                                <p class="title"><i class="icon ico_circle_speech_bubble"></i>채널톡</p>
-                                <p class="desc"><span class="data">100</span>건</p>
+                            <div class="text-center account-list">
+                                <p class="font-h3 color-gray-000 title">채널톡</p>
+                                <p class="font-h1 color-purple-100 font-weight-semi-bold count">10</p>
                             </div>
                         </div>
                         <div class="col-xl">
-                            <div class="box primary">
-                                <p class="title"><i class="icon ico_circle_ellipsis"></i>기타</p>
-                                <p class="desc"><span class="data">100</span>건</p>
+                            <div class="text-center account-list">
+                                <p class="font-h3 color-gray-000 title">기타</p>
+                                <p class="font-h1 color-purple-100 font-weight-semi-bold count">100</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="card">
                     <div class="mb25 d-flex justify-content-between align-items-center">
-                        <h5 class="font-h2 d-flex align-items-center mb0 font-weight-semi-bold">
+                        <h5 class="d-flex align-items-center mb0 font-weight-semi-bold">
                             <i class="icon ico_bs_list"></i>
-                            <span class="ml9">조회결과</span>
+                            <span class="font-h3 ml9">조회결과</span>
                         </h5>
                         <div class="btn-wrap">
-                            <button class="btn btn-md btn-primary mr-3">
-                                등록하기
+                            <button class="btn btn-md btn-info mr15 btn-round">
+                                <i class="icon ico_edit_blue"></i>
+                                <span class="align-middle ml5">상담등록</span>
                             </button>
                             <button class="btn-reset"><i class="icon ico_excel">엑셀출력</i></button>
                         </div>
@@ -1020,7 +1019,9 @@
                             <tr>
                                 <td class="text-center align-middle"><span>No</span></td>
                                 <td class="text-center align-middle"><span>2023-07-26<br>12:05:55</span></td>
-                                <td class="text-center align-middle"><a target="_blank" href="#" class="color-gray-000 text-underline">처리완료</a></td>
+                                <td class="text-center align-middle"><a target="_blank" href="#"
+                                                                        class="color-gray-000 text-underline">처리완료</a>
+                                </td>
                                 <td class="text-center align-middle"><span>이메일</span></td>
                                 <td class="text-center align-middle"><span>기존 파트너</span></td>
                                 <td class="text-left align-middle"><span>(주)하임인터내셔널<br>하임인터내셔널</span></td>
@@ -1028,9 +1029,11 @@
                                 <td class="text-center align-middle"><span>국내</span></td>
                                 <td class="text-center align-middle"><span>카드-비밀번호</span></td>
                                 <td class="text-center align-middle"><span>2023-07-26<br>12:05:55</span></td>
-                                <td class="text-left align-middle"><span>collection_20230829011724409401_46503</span></td>
+                                <td class="text-left align-middle"><span>collection_20230829011724409401_46503</span>
+                                </td>
                                 <td class="text-center align-middle"><span>카드-비밀번호</span></td>
-                                <td class="text-center align-middle"><span class="ellipsis">고객센터 연락받지 않아 강성불만 접수고객...</span></td>
+                                <td class="text-center align-middle"><span
+                                        class="ellipsis">고객센터 연락받지 않아 강성불만 접수고객...</span></td>
                                 <td class="text-center align-middle"><span class="ellipsis">변경처리 후 파트너 안내 완료</span></td>
                                 <td class="text-center align-middle"><span>010-7308-3111</span></td>
                                 <td class="text-center align-middle"><span>신지혜</span></td>
@@ -1039,7 +1042,9 @@
                             <tr>
                                 <td class="text-center align-middle"><span>No</span></td>
                                 <td class="text-center align-middle"><span>2023-07-26<br>12:05:55</span></td>
-                                <td class="text-center align-middle"><a target="_blank" href="#" class="color-orange-100 text-underline">처리중</a></td>
+                                <td class="text-center align-middle"><a target="_blank" href="#"
+                                                                        class="color-orange-100 text-underline">처리중</a>
+                                </td>
                                 <td class="text-center align-middle"><span>이메일</span></td>
                                 <td class="text-center align-middle"><span>기존 파트너</span></td>
                                 <td class="text-left align-middle"><span>(주)하임인터내셔널<br>하임인터내셔널</span></td>
@@ -1047,9 +1052,11 @@
                                 <td class="text-center align-middle"><span>국내</span></td>
                                 <td class="text-center align-middle"><span>카드-비밀번호</span></td>
                                 <td class="text-center align-middle"><span>2023-07-26<br>12:05:55</span></td>
-                                <td class="text-left align-middle"><span>collection_20230829011724409401_46503</span></td>
+                                <td class="text-left align-middle"><span>collection_20230829011724409401_46503</span>
+                                </td>
                                 <td class="text-center align-middle"><span>카드-비밀번호</span></td>
-                                <td class="text-center align-middle"><span class="ellipsis">고객센터 연락받지 않아 강성불만 접수고객...</span></td>
+                                <td class="text-center align-middle"><span
+                                        class="ellipsis">고객센터 연락받지 않아 강성불만 접수고객...</span></td>
                                 <td class="text-center align-middle"><span class="ellipsis">변경처리 후 파트너 안내 완료</span></td>
                                 <td class="text-center align-middle"><span>010-7308-3111</span></td>
                                 <td class="text-center align-middle"><span>신지혜</span></td>
@@ -1058,7 +1065,9 @@
                             <tr>
                                 <td class="text-center align-middle"><span>No</span></td>
                                 <td class="text-center align-middle"><span>2023-07-26<br>12:05:55</span></td>
-                                <td class="text-center align-middle"><a target="_blank" href="#" class="color-gray-000 text-underline">처리완료</a></td>
+                                <td class="text-center align-middle"><a target="_blank" href="#"
+                                                                        class="color-gray-000 text-underline">처리완료</a>
+                                </td>
                                 <td class="text-center align-middle"><span>이메일</span></td>
                                 <td class="text-center align-middle"><span>기존 파트너</span></td>
                                 <td class="text-left align-middle"><span>(주)하임인터내셔널<br>하임인터내셔널</span></td>
@@ -1066,9 +1075,11 @@
                                 <td class="text-center align-middle"><span>국내</span></td>
                                 <td class="text-center align-middle"><span>카드-비밀번호</span></td>
                                 <td class="text-center align-middle"><span>2023-07-26<br>12:05:55</span></td>
-                                <td class="text-left align-middle"><span>collection_20230829011724409401_46503</span></td>
+                                <td class="text-left align-middle"><span>collection_20230829011724409401_46503</span>
+                                </td>
                                 <td class="text-center align-middle"><span>카드-비밀번호</span></td>
-                                <td class="text-center align-middle"><span class="ellipsis">고객센터 연락받지 않아 강성불만 접수고객...</span></td>
+                                <td class="text-center align-middle"><span
+                                        class="ellipsis">고객센터 연락받지 않아 강성불만 접수고객...</span></td>
                                 <td class="text-center align-middle"><span class="ellipsis">변경처리 후 파트너 안내 완료</span></td>
                                 <td class="text-center align-middle"><span>010-7308-3111</span></td>
                                 <td class="text-center align-middle"><span>신지혜</span></td>
@@ -1077,7 +1088,9 @@
                             <tr>
                                 <td class="text-center align-middle"><span>No</span></td>
                                 <td class="text-center align-middle"><span>2023-07-26<br>12:05:55</span></td>
-                                <td class="text-center align-middle"><a target="_blank" href="#" class="color-gray-000 text-underline">처리완료</a></td>
+                                <td class="text-center align-middle"><a target="_blank" href="#"
+                                                                        class="color-gray-000 text-underline">처리완료</a>
+                                </td>
                                 <td class="text-center align-middle"><span>이메일</span></td>
                                 <td class="text-center align-middle"><span>기존 파트너</span></td>
                                 <td class="text-left align-middle"><span>(주)하임인터내셔널<br>하임인터내셔널</span></td>
@@ -1085,9 +1098,11 @@
                                 <td class="text-center align-middle"><span>국내</span></td>
                                 <td class="text-center align-middle"><span>카드-비밀번호</span></td>
                                 <td class="text-center align-middle"><span>2023-07-26<br>12:05:55</span></td>
-                                <td class="text-left align-middle"><span>collection_20230829011724409401_46503</span></td>
+                                <td class="text-left align-middle"><span>collection_20230829011724409401_46503</span>
+                                </td>
                                 <td class="text-center align-middle"><span>카드-비밀번호</span></td>
-                                <td class="text-center align-middle"><span class="ellipsis">고객센터 연락받지 않아 강성불만 접수고객...</span></td>
+                                <td class="text-center align-middle"><span
+                                        class="ellipsis">고객센터 연락받지 않아 강성불만 접수고객...</span></td>
                                 <td class="text-center align-middle"><span class="ellipsis">변경처리 후 파트너 안내 완료</span></td>
                                 <td class="text-center align-middle"><span>010-7308-3111</span></td>
                                 <td class="text-center align-middle"><span>신지혜</span></td>
@@ -1096,7 +1111,9 @@
                             <tr>
                                 <td class="text-center align-middle"><span>No</span></td>
                                 <td class="text-center align-middle"><span>2023-07-26<br>12:05:55</span></td>
-                                <td class="text-center align-middle"><a target="_blank" href="#" class="color-gray-000 text-underline">처리완료</a></td>
+                                <td class="text-center align-middle"><a target="_blank" href="#"
+                                                                        class="color-gray-000 text-underline">처리완료</a>
+                                </td>
                                 <td class="text-center align-middle"><span>이메일</span></td>
                                 <td class="text-center align-middle"><span>기존 파트너</span></td>
                                 <td class="text-left align-middle"><span>(주)하임인터내셔널<br>하임인터내셔널</span></td>
@@ -1104,9 +1121,11 @@
                                 <td class="text-center align-middle"><span>국내</span></td>
                                 <td class="text-center align-middle"><span>카드-비밀번호</span></td>
                                 <td class="text-center align-middle"><span>2023-07-26<br>12:05:55</span></td>
-                                <td class="text-left align-middle"><span>collection_20230829011724409401_46503</span></td>
+                                <td class="text-left align-middle"><span>collection_20230829011724409401_46503</span>
+                                </td>
                                 <td class="text-center align-middle"><span>카드-비밀번호</span></td>
-                                <td class="text-center align-middle"><span class="ellipsis">고객센터 연락받지 않아 강성불만 접수고객...</span></td>
+                                <td class="text-center align-middle"><span
+                                        class="ellipsis">고객센터 연락받지 않아 강성불만 접수고객...</span></td>
                                 <td class="text-center align-middle"><span class="ellipsis">변경처리 후 파트너 안내 완료</span></td>
                                 <td class="text-center align-middle"><span>010-7308-3111</span></td>
                                 <td class="text-center align-middle"><span>신지혜</span></td>
@@ -1115,7 +1134,9 @@
                             <tr>
                                 <td class="text-center align-middle"><span>No</span></td>
                                 <td class="text-center align-middle"><span>2023-07-26<br>12:05:55</span></td>
-                                <td class="text-center align-middle"><a target="_blank" href="#" class="color-gray-000 text-underline">처리완료</a></td>
+                                <td class="text-center align-middle"><a target="_blank" href="#"
+                                                                        class="color-gray-000 text-underline">처리완료</a>
+                                </td>
                                 <td class="text-center align-middle"><span>이메일</span></td>
                                 <td class="text-center align-middle"><span>기존 파트너</span></td>
                                 <td class="text-left align-middle"><span>(주)하임인터내셔널<br>하임인터내셔널</span></td>
@@ -1123,9 +1144,11 @@
                                 <td class="text-center align-middle"><span>국내</span></td>
                                 <td class="text-center align-middle"><span>카드-비밀번호</span></td>
                                 <td class="text-center align-middle"><span>2023-07-26<br>12:05:55</span></td>
-                                <td class="text-left align-middle"><span>collection_20230829011724409401_46503</span></td>
+                                <td class="text-left align-middle"><span>collection_20230829011724409401_46503</span>
+                                </td>
                                 <td class="text-center align-middle"><span>카드-비밀번호</span></td>
-                                <td class="text-center align-middle"><span class="ellipsis">고객센터 연락받지 않아 강성불만 접수고객...</span></td>
+                                <td class="text-center align-middle"><span
+                                        class="ellipsis">고객센터 연락받지 않아 강성불만 접수고객...</span></td>
                                 <td class="text-center align-middle"><span class="ellipsis">변경처리 후 파트너 안내 완료</span></td>
                                 <td class="text-center align-middle"><span>010-7308-3111</span></td>
                                 <td class="text-center align-middle"><span>신지혜</span></td>

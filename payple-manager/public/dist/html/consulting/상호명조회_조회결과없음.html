@@ -6,10 +6,10 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" href="https://image.payple.kr/common/favicon.ico" sizes="32x32">
-    <link rel="stylesheet" href="./../../css/payple_component.css?v1.2">
-    <link rel="stylesheet" href="./../../css/payple_pages.css?v1.2">
-    <script src="../../js/bundle.js?v1.2"></script>
-    <script src="../../js/common.js?v1.2"></script>
+    <link rel="stylesheet" href="./../../css/payple_component.css?v1.3">
+    <link rel="stylesheet" href="./../../css/payple_pages.css?v1.3">
+    <script src="../../js/bundle.js?v1.3"></script>
+    <script src="../../js/common.js?v1.3"></script>
     <title>페이플 관리자 페이지</title>
 </head>
 
@@ -28,19 +28,19 @@
             <i class="ico_close_btn _close-slide-modal-btn"></i>
         </div>
         <div class="slide-modal-body">
-            <div class="consulting-service-search-area">
-                <p class="sub-title">상호명/서비스명</p>
+            <div class="search-table-group">
+                <p class="font-weight-semi-bold mb15 color-gray-100 font-p2">상호명/서비스명</p>
                 <div class="search-area">
                     <div class="form-group mb0">
-                        <label class="mb0">
+                        <label class="w-100 mb0">
                             <input class="form-control search" type="text">
                         </label>
                     </div>
                     <button class="btn btn-sm btn-primary">조회</button>
                 </div>
-                <p class="sub-title">조회결과</p>
+                <p class="font-weight-semi-bold mb15 color-gray-100 font-p2">조회결과</p>
                 <div class="table-responsive">
-                    <table class="table table-fixed table-not-spread">
+                    <table class="table table-fixed table-not-spread table-th-gray-100">
                         <colgroup>
                             <col style="width: 45px">
                             <col style="width: 300px">
@@ -56,14 +56,19 @@
                         <tbody>
                         <tr class="empty-data _empty-data">
                             <td class="text-center" colspan="3">
-                                <span>검색 결과가 존재하지 않습니다.</span>
+                                <i class="icon ico_document_gray"></i>
+                                <p class="font-p1 mt36">조회결과가 없습니다.</p>
                             </td>
                         </tr>
-
                         </tbody>
                     </table>
                 </div>
             </div>
+        </div>
+        <div class="slide-modal-footer clearfix">
+         <!--   <div class="float-right">
+                <button class="btn btn-primary btn-md">진행하기</button>
+            </div>-->
         </div>
     </div>
 </div>

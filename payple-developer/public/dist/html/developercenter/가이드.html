@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--    서버반영시 -->
+<!--    <link rel="stylesheet" href="https://image.payple.kr/onboard/css/payple_component.css?ver=1.8">-->
+<!--    <link rel="stylesheet" href="https://image.payple.kr/onboard/css/payple_pages.css?ver=1.8">-->
+<!--    <script src="https://image.payple.kr/onboard/js/bundle.js?ver=1.8"></script>-->
+<!--    <script src="https://image.payple.kr/onboard/js/common.js?ver=1.8"></script>-->
+    <!--    로컬작업시-->
+    <link rel="stylesheet" href="../../css/payple_component.css?ver=1.6">
+    <link rel="stylesheet" href="../../css/payple_pages.css?ver=1.6">
+    <script src="../../js/bundle.js?ver=1.6"></script>
+    <script src="../../js/common.js?ver=1.6"></script>
+</head>
+<body>
+<header class="header developer_center">
+    <div class="header__container">
+        <div class="aside_button _aside_button">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="header__navi">
+            <h1 class="header__logo">
+                <a href="https://onboard.payple.co" target="_blank">
+                    <img src="../../img/common/header__logo.png" alt="페이플로고">
+                </a>
+            </h1>
+            <span class="text">개발자센터</span>
+        </div>
+        <div class="position_relative">
+            <i class="icon ico_account_btn _ico_account_btn">계정관리</i>
+            <ul class=" position_absolute header__account_info _header__account_info">
+                <li>
+                    <span>dw.junglses@payple.kr</span>
+                </li>
+                <li>
+                    <a href=""><i class="icon ico_setting"></i><span>계정설정</span></a>
+                </li>
+                <li>
+                    <a href=""><i class="icon ico_logout"></i><span>로그아웃</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+<main class="developer_container">
+    <aside class="aside">
+    <div class="layout">
+        <p class="sub_title">서비스 선택</p>
+        <div class="select_box _select_box">
+            <div class="select_value">
+                테스트 상점
+            </div>
+            <i class="icon ico_select_arrow_down">아래화살표</i>
+            <ul class="options">
+                <li class="option" value="1">테스트 상점</li>
+                <li class="option" value="2">배고파요</li>
+                <li class="option" value="3">졸려염</li>
+                <li class="option" value="4">배고파영</li>
+            </ul>
+        </div>
+    </div>
+    <div class="layout">
+        <p class="sub_title">설정</p>
+        <ul class="link_lists">
+            <li class="link active"><a href="#"><i class="icon ico_key"></i>API 키</a></li>
+            <li class="link"><a href="#"><i class="icon ico_paper_plane"></i>웹훅</a></li>
+            <li class="link"><a href="#"><i class="icon ico_shield_check"></i>White IP</a></li>
+            <li class="link"><a href="#"><i class="icon ico_document_sign"></i>테스트 결제내역</a></li>
+        </ul>
+    </div>
+    <div class="layout">
+        <p class="sub_title">가이드</p>
+        <ul class="link_lists">
+            <li class="link"><a href="#"><i class="icon ico_book_alt"></i>개발가이드</a></li>
+            <li class="link"><a href="#"><i class="icon ico_interrogation"></i>자주 묻는 질문</a></li>
+            <li class="link"><a href="#"><i class="icon ico_github"></i>Github</a></li>
+        </ul>
+    </div>
+</aside>
+    <article class="developer_content">
+        <section class="developer_section">
+            <h2 style="margin-bottom: 30px">타이틀종류</h2>
+            <div style="border: 1px solid #d9d9d9; padding:20px 30px; margin-bottom: 30px">
+                <div class="title_area">
+                    <p class="title test">API 키</p>
+                    <a href="#" target="_blank" class="guide_link"><span>가이드 확인하기</span>→</a>
+                </div>
+                <div style="margin-bottom: 30px"></div>
+                <div class="title_area">
+                    <p class="title">White IP</p>
+                </div>
+                <div style="margin-bottom: 30px"></div>
+                <div class="title_area">
+                    <p class="title test">웹훅</p>
+                </div>
+                <div class="title_area detail">
+                    <p class="title test"><a href="#">웹훅</a></p>
+                    <span><i class="icon ico_right_arrow_gary"></i>상세정보</span>
+                </div>
+            </div>
+            <h2 style="margin-bottom: 30px">input</h2>
+            <div style="border: 1px solid #d9d9d9; padding: 20px 30px; margin-bottom: 30px">
+                <div class="input__area">
+                    <p class="input_title">client_key</p>
+                    <div class="input_copy_box">
+                        <label>
+                            <input class="form_control" disabled="" value="dw.jung@payple.kr">
+                        </label>
+                        <i class="icon ico_copy"></i>
+                    </div>
+                </div>
+            </div>
+            <div style="border: 1px solid #d9d9d9; padding: 20px 30px; margin-bottom: 30px">
+                <div>
+                    <h6>달력테스트진행</h6>
+                    <div class="position_relative">
+                        <input type="text" class="form_control _twoCalender" id="myDateRangePicker" name="dateRangePicker"/>
+                        <label for="myDateRangePicker" class="input__date" onclick="openModal('modal01')">
+                            <i class="icon ico_calender"></i>
+                        </label>
+                    </div>
+                </div>
+                <div class="modal filter_non modal01">
+                    <div class="modal_dialog modal_date_range">
+                        <div id="datepickerParent"></div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="developer_card" style="margin-bottom: 30px">
+                <div class="title_area">
+                    <p class="title test">웹훅 목록</p>
+                </div>
+                <div class="input__area__list">
+                    <div class="input__area data">
+                        <p class="input_title">수신할 데이터</p>
+                        <div class="select_box _select_box">
+                            <div class="select_value">
+                                전체
+                            </div>
+                            <i class="icon ico_select_arrow_down">아래화살표</i>
+                            <ul class="options">
+                                <li class="option" value="1">결제결과 - 카드일반(국내, 해외)</li>
+                                <li class="option" value="2">결제결과 - 카드빌링(국내, 해외)</li>
+                                <li class="option" value="3">결제결과 - 계좌일반</li>
+                                <li class="option" value="4">결제결과 - 계좌빌링</li>
+                                <li class="option" value="5">결제결과 - 네이버페이</li>
+                                <li class="option" value="6">결제결과 - 카카오페이</li>
+                                <li class="option" value="7">결제결과 - 애플페이</li>
+                                <li class="option" value="8">결제결과 - 삼성페이</li>
+                                <li class="option" value="9">결제결과 - 가상계좌</li>
+                                <li class="option" value="10">카드 등록, 해지</li>
+                                <li class="option" value="11">계좌 등록, 해지</li>
+                                <li class="option" value="12">이체결과 - 허브</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="input__area url">
+                        <p class="input_title">URL</p>
+                        <div class="position_relative">
+                            <label><input class="form_control" placeholder="https://"></label>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="btn_area">
+                    <button class="btn btn_secondary">호출 테스트</button>
+                    <button class="btn btn_secondary">등록하기</button>
+                </div>
+            </div>
+            <div class="developer_card" style="margin-bottom: 30px">
+                <div class="title_area">
+                    <p class="title test">White IP 등록</p>
+                </div>
+                <div class="input__area__list">
+                    <div class="input__area input_one__button__area">
+                        <p class="input_title">IP</p>
+                        <div class="input_one__button">
+                            <label><input class="form_control _input_ip" placeholder="123.10.101.12"></label>
+                            <button class="btn btn_secondary">등록하기</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h2 style="margin-bottom: 30px">table</h2>
+            <div class="developer_card" style="margin-bottom: 30px">
+                <div class="title_area">
+                    <p class="title test">웹훅 목록</p>
+                    <i class="icon ico_trashcan"></i>
+                </div>
+                <div class="response_table">
+                    <table>
+                        <colgroup>
+                            <col style="width: 10%">
+                            <col style="width: 20%">
+                            <col style="width: 30%">
+                            <col style="width: 40%">
+                        </colgroup>
+                        <tr>
+                            <th class="check_table">
+                                <label>
+                                    <input type="checkbox">
+                                    <i class="icon ico_checkBox">체크박스</i>
+                                </label>
+                            </th>
+                            <th>이름</th>
+                            <th>URL</th>
+                            <th>수신 데이터</th>
+                        </tr>
+                        <tr>
+                            <td class="empty_data" colspan="4">등록된 웹훅이 없습니다.</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="developer_card" style="margin-bottom: 30px">
+                <div class="title_area">
+                    <p class="title test">White IP 목록</p>
+                    <i class="icon ico_trashcan"></i>
+                </div>
+                <div class="response_table">
+                    <table>
+                        <colgroup>
+                            <col style="width: 10%">
+                            <col style="width: 30%">
+                            <col style="width: 60%">
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <th class="check_table">
+                                <label>
+                                    <input type="checkbox">
+                                    <i class="icon ico_checkBox">체크박스</i>
+                                </label>
+                            </th>
+                            <th>IP</th>
+                            <th>URL</th>
+
+                        </tr>
+                        <tr>
+                            <td class="check_table">
+                                <label>
+                                    <input type="checkbox" name="chk">
+                                    <i class="icon ico_checkBox">체크박스</i>
+                                </label>
+                            </td>
+                            <td>131.12.101.22</td>
+                            <td>2023-06-29 17:23:59</td>
+                        </tr>
+                        <tr>
+                            <td class="check_table">
+                                <label>
+                                    <input type="checkbox" name="chk">
+                                    <i class="icon ico_checkBox">체크박스</i>
+                                </label>
+                            </td>
+                            <td>131.12.101.22</td>
+                            <td>2023-06-29 17:23:59</td>
+                        </tr>
+                        <tr>
+                            <td class="check_table">
+                                <label>
+                                    <input type="checkbox" name="chk">
+                                    <i class="icon ico_checkBox">체크박스</i>
+                                </label>
+                            </td>
+                            <td>131.12.101.22</td>
+                            <td>2023-06-29 17:23:59</td>
+                        </tr>
+                        <tr>
+                            <td class="check_table">
+                                <label>
+                                    <input type="checkbox" name="chk">
+                                    <i class="icon ico_checkBox">체크박스</i>
+                                </label>
+                            </td>
+                            <td>131.12.101.22</td>
+                            <td>2023-06-29 17:23:59</td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="developer_card" style="margin-bottom: 30px">
+                <div class="title_area">
+                    <p class="title test">White IP 목록</p>
+                    <i class="icon ico_trashcan"></i>
+                </div>
+                <div class="response_table">
+                    <table>
+                        <colgroup>
+                            <col style="width: 10%">
+                            <col style="width: 30%">
+                            <col style="width: 60%">
+                        </colgroup>
+                        <tr>
+                            <th class="check_table">
+                                <label>
+                                    <input type="checkbox">
+                                    <i class="icon ico_checkBox">체크박스</i>
+                                </label>
+                            </th>
+                            <th>IP</th>
+                            <th>URL</th>
+
+                        </tr>
+                        <tr>
+                            <td class="empty_data" colspan="4">등록된 White IP가 없습니다.</td>
+                        </tr>
+
+                    </table>
+                </div>
+            </div>
+            <div class="developer_card" style="margin-bottom: 30px">
+                <div class="title_area">
+                    <p class="title test">웹훅 목록</p>
+                    <i class="icon ico_trashcan"></i>
+                </div>
+                <div class="response_table">
+                    <table>
+                        <colgroup>
+                            <col style="width: 10%">
+                            <col style="width: 20%">
+                            <col style="width: 30%">
+                            <col style="width: 40%">
+                        </colgroup>
+                        <tr>
+                            <th class="check_table">
+                                <label>
+                                    <input type="checkbox" class="_check_all">
+                                    <i class="icon ico_checkBox">체크박스</i>
+                                </label>
+                            </th>
+                            <th>이름</th>
+                            <th>URL</th>
+                            <th>수신 데이터</th>
+                        </tr>
+                        <tr>
+                            <td class="check_table">
+                                <label>
+                                    <input type="checkbox" name="chk">
+                                    <i class="icon ico_checkBox">체크박스</i>
+                                </label>
+                            </td>
+                            <td class="name_data"><a href="#">M_카드일반</a></td>
+                            <td>wwww.aaaaa.aaaa</td>
+                            <td>결제 - 카드일반(국내, 해외)</td>
+                        </tr>
+                        <tr>
+                            <td class="check_table">
+                                <label>
+                                    <input type="checkbox" name="chk">
+                                    <i class="icon ico_checkBox">체크박스</i>
+                                </label>
+                            </td>
+                            <td class="name_data"><a href="#">M_카드일반</a></td>
+                            <td>wwww.aaaaa.aaaa</td>
+                            <td>결제 - 카드일반(국내, 해외)</td>
+                        </tr>
+                        <tr>
+                            <td class="check_table">
+                                <label>
+                                    <input type="checkbox" name="chk">
+                                    <i class="icon ico_checkBox">체크박스</i>
+                                </label>
+                            </td>
+                            <td class="name_data"><a href="#">M_카드일반</a></td>
+                            <td>wwww.aaaaa.aaaa</td>
+                            <td>결제 - 카드일반(국내, 해외)</td>
+                        </tr>
+                        <tr>
+                            <td class="check_table">
+                                <label>
+                                    <input type="checkbox" name="chk">
+                                    <i class="icon ico_checkBox">체크박스</i>
+                                </label>
+                            </td>
+                            <td class="name_data"><a href="#">M_카드일반</a></td>
+                            <td>wwww.aaaaa.aaaa</td>
+                            <td>결제 - 카드일반(국내, 해외)</td>
+                        </tr>
+                        <tr>
+                            <td class="check_table">
+                                <label>
+                                    <input type="checkbox" name="chk">
+                                    <i class="icon ico_checkBox">체크박스</i>
+                                </label>
+                            </td>
+                            <td class="name_data"><a href="#">M_카드일반</a></td>
+                            <td>wwww.aaaaa.aaaa</td>
+                            <td>결제 - 카드일반(국내, 해외)</td>
+                        </tr>
+                        <tr>
+                            <td class="check_table">
+                                <label>
+                                    <input type="checkbox" name="chk">
+                                    <i class="icon ico_checkBox">체크박스</i>
+                                </label>
+                            </td>
+                            <td class="name_data"><a href="#">M_카드일반</a></td>
+                            <td>wwww.aaaaa.aaaa</td>
+                            <td>결제 - 카드일반(국내, 해외)</td>
+                        </tr>
+                        <tr>
+                            <td class="check_table">
+                                <label>
+                                    <input type="checkbox" name="chk">
+                                    <i class="icon ico_checkBox">체크박스</i>
+                                </label>
+                            </td>
+                            <td class="name_data"><a href="#">M_카드일반</a></td>
+                            <td>wwww.aaaaa.aaaa</td>
+                            <td>결제 - 카드일반(국내, 해외)</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="pagination_area">
+                    <span class="pagination_arrow"><i class="icon ico_pagination_left_arrow"></i></span>
+                    <ul class="pagination_list">
+                        <li class="active">1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                    </ul>
+                    <span class="pagination_arrow"><i class="icon ico_pagination_right_arrow"></i></span>
+                </div>
+            </div>
+            <div class="search_result_area">
+                <div class="title_area">
+                    <p class="title">조회 결과</p>
+                    <i class="icon ico_excel"></i>
+                </div>
+                <div class="border_line">
+                    <table>
+                        <colgroup>
+                            <col style="width: 5%">
+                            <col style="width: 24%">
+                            <col style="width: 10%">
+                            <col style="width: 7%">
+                            <col style="width: 7%">
+                            <col style="width: 20%">
+                            <col style="width: 15%">
+                        </colgroup>
+                        <tr>
+                            <th>No</th>
+                            <th>업데이트 일시</th>
+                            <th>http 상태</th>
+                            <th>실행</th>
+                            <th>성공</th>
+                            <th>실패정보</th>
+                            <th>재발송 횟수</th>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>2023-06-29 17:23:59</td>
+                            <td>200</td>
+                            <td><i class="icon ico_yes"></i></td>
+                            <td><i class="icon ico_yes"></i></td>
+                            <td></td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>2023-06-29 17:23:59</td>
+                            <td>200</td>
+                            <td><i class="icon ico_yes"></i></td>
+                            <td><i class="icon ico_no"></i></td>
+                            <td>curl_error_msg</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>2023-06-29 17:23:59</td>
+                            <td>200</td>
+                            <td><i class="icon ico_yes"></i></td>
+                            <td><i class="icon ico_no"></i></td>
+                            <td>curl_error_msg</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>2023-06-29 17:23:59</td>
+                            <td>200</td>
+                            <td><i class="icon ico_yes"></i></td>
+                            <td><i class="icon ico_no"></i></td>
+                            <td>curl_error_msg</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>2023-06-29 17:23:59</td>
+                            <td>200</td>
+                            <td><i class="icon ico_yes"></i></td>
+                            <td><i class="icon ico_no"></i></td>
+                            <td>curl_error_msg</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>2023-06-29 17:23:59</td>
+                            <td>200</td>
+                            <td><i class="icon ico_yes"></i></td>
+                            <td><i class="icon ico_no"></i></td>
+                            <td>curl_error_msg</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>2023-06-29 17:23:59</td>
+                            <td>200</td>
+                            <td><i class="icon ico_yes"></i></td>
+                            <td><i class="icon ico_no"></i></td>
+                            <td>curl_error_msg</td>
+                            <td>0</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </article>
+</main>
+</body>
+</html>

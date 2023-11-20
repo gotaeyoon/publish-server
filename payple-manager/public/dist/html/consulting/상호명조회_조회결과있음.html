@@ -6,10 +6,10 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" href="https://image.payple.kr/common/favicon.ico" sizes="32x32">
-    <link rel="stylesheet" href="./../../css/payple_component.css?v1.2">
-    <link rel="stylesheet" href="./../../css/payple_pages.css?v1.2">
-    <script src="../../js/bundle.js?v1.2"></script>
-    <script src="../../js/common.js?v1.2"></script>
+    <link rel="stylesheet" href="./../../css/payple_component.css?v1.3">
+    <link rel="stylesheet" href="./../../css/payple_pages.css?v1.3">
+    <script src="../../js/bundle.js?v1.3"></script>
+    <script src="../../js/common.js?v1.3"></script>
     <title>페이플 관리자 페이지</title>
 </head>
 
@@ -28,19 +28,19 @@
             <i class="ico_close_btn _close-slide-modal-btn"></i>
         </div>
         <div class="slide-modal-body">
-            <div class="consulting-service-search-area">
-                <p class="sub-title">상호명/서비스명</p>
+            <div class="search-table-group">
+                <p class="font-weight-semi-bold mb15 color-gray-100 font-p2">상호명/서비스명</p>
                 <div class="search-area">
                     <div class="form-group mb0">
-                        <label class="mb0">
+                        <label class="w-100 mb0">
                             <input class="form-control search" type="text">
                         </label>
                     </div>
                     <button class="btn btn-sm btn-primary">조회</button>
                 </div>
-                <p class="sub-title">조회결과</p>
+                <p class="font-weight-semi-bold mb15 color-gray-100 font-p2">조회결과</p>
                 <div class="table-responsive">
-                    <table class="table table-fixed table-not-spread">
+                    <table class="table table-fixed table-not-spread table-th-gray-100">
                         <colgroup>
                             <col style="width: 45px">
                             <col style="width: 300px">
@@ -48,9 +48,9 @@
                         </colgroup>
                         <thead>
                         <tr>
-                            <th class="text-center"></th>
-                            <th class="text-center">상호명</th>
-                            <th class="text-center">서비스명</th>
+                            <th class="text-center font-p1"></th>
+                            <th class="text-center font-p1">상호명</th>
+                            <th class="text-center font-p1">서비스명</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -63,25 +63,10 @@
                                 </label>
                             </td>
                             <td class="text-center align-middle ">
-                                <span>(주)페이플</span>
+                                <span class="font-p1">(주)페이플</span>
                             </td>
                             <td class="text-center align-middle ">
-                                <span>모두의 간편결제</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="text-center align-middle ">
-                                <label class="mb0">
-                                    <input type="checkbox" name="notice" class="custom-checkbox"
-                                           onclick="checkOnlyOne(this)">
-                                    <i class="icon ico_checkbox">체크박스</i>
-                                </label>
-                            </td>
-                            <td class="text-center align-middle ">
-                                <span>(주)페이플</span>
-                            </td>
-                            <td class="text-center align-middle ">
-                                <span>모빌리티페이</span>
+                                <span class="font-p1">모두의 간편결제</span>
                             </td>
                         </tr>
                         <tr>
@@ -93,10 +78,10 @@
                                 </label>
                             </td>
                             <td class="text-center align-middle ">
-                                <span>페이랩</span>
+                                <span class="font-p1">(주)페이플</span>
                             </td>
                             <td class="text-center align-middle ">
-                                <span>페이플쇼핑몰</span>
+                                <span class="font-p1">모빌리티페이</span>
                             </td>
                         </tr>
                         <tr>
@@ -108,16 +93,36 @@
                                 </label>
                             </td>
                             <td class="text-center align-middle ">
-                                <span>김페이(주)</span>
+                                <span class="font-p1">페이랩</span>
                             </td>
                             <td class="text-center align-middle ">
-                                <span>펀고리</span>
+                                <span class="font-p1">페이플쇼핑몰</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center align-middle ">
+                                <label class="mb0">
+                                    <input type="checkbox" name="notice" class="custom-checkbox"
+                                           onclick="checkOnlyOne(this)">
+                                    <i class="icon ico_checkbox">체크박스</i>
+                                </label>
+                            </td>
+                            <td class="text-center align-middle ">
+                                <span class="font-p1">김페이(주)</span>
+                            </td>
+                            <td class="text-center align-middle ">
+                                <span class="font-p1">펀고리</span>
                             </td>
                         </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
+        </div>
+        <div class="slide-modal-footer clearfix">
+               <div class="float-right">
+                   <button class="btn btn-primary btn-md _check-btn" disabled>확인</button>
+               </div>
         </div>
     </div>
 </div>
@@ -130,6 +135,7 @@
             $(target).closest("tr").siblings("tr").find($("input[name='notice']")).prop("checked", false);
             $(target).closest("tr").siblings("tr").removeClass('bg-purple-300')
             $(target).closest("tr").addClass('bg-purple-300')
+            $('._check-btn').attr('disabled',false)
         } else {
             $(target).prop("checked", false);
         }
