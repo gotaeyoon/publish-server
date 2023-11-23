@@ -367,7 +367,7 @@ data.signupko = {
             page: '카드_수수료_수정이력'
         },
         {
-            stateClass: 'working',
+            stateClass: 'confirm',
             url: '카드_정산주기_수정',
             category: 'signupko',
             page: '카드_정산주기_수정'
